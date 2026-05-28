@@ -34,8 +34,17 @@ When you re-use the source, keep or copy the license information also in the sou
 
 When you want to re-use and refer to the content, please do so like the following:
 
-> Content based on [Project XY (GitHub)](https://github.com/xy/xy) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+> Content based on [Data Definition Specification (GitHub)](https://github.com/cdisc-org/DataExchange-DDS) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
+## Limitations
+This project is under active development, so there may be some rough edges, and you should expect changes. We are
+entering Phase 2 of the CDISC 360i Program, so there will be some exploratory work to come as we learn.
 
+This project is provided "as is" without any warranty or guarantee of suitability for any particular purpose.
+
+## Related Projects
+Here are some related projects:
+- [Data Definition Engine](https://github.com/cdisc-org/data-definition-engine)
+- [CDISC 360i Program repository](https://github.com/cdisc-org/360i)
 
 
