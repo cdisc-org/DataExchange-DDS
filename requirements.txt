@@ -1,0 +1,16 @@
+cdisc-library-client==0.1.6
+linkml==1.11.1
+mkdocs==1.6.1
+mkdocs-autorefs==1.4.4
+mkdocs-material==9.7.6
+mkdocs-material-extensions==1.3.1
+mkdocs-mermaid2-plugin==1.2.3
+mkdocstrings==1.0.4
+mkdocstrings-python==2.0.3
+numpy==2.4.6
+odmlib==0.1.4
+openpyxl==3.1.5
+pandas==3.0.3
+pytest==9.0.3
+yamllint==1.38.0
+

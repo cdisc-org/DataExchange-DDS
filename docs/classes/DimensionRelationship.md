@@ -1,0 +1,328 @@
+---
+search:
+  boost: 10.0
+---
+
+# Class: DimensionRelationship 
+
+
+_A relationship element that associates a DataAttribute with a specific Dimension at a specific level_
+
+
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [odm:class/DimensionRelationship](https://cdisc.org/odm2/class/DimensionRelationship)
+
+
+```mermaid
+erDiagram
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
+}
+Comment {
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+ComponentList {
+    stringList components  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
+DataAttribute {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+    string role  
+}
+Dimension {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+    string role  
+}
+DimensionRelationship {
+
+}
+Item {
+    DataType dataType  
+    integer length  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string cdiscNotes  
+    string crfCompletionInstructions  
+    integer decimalDigits  
+    string displayFormat  
+    boolean hasNoData  
+    string implementationNotes  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string preSpecifiedValue  
+    string purpose  
+    string role  
+    integer significantDigits  
+    string uuid  
+    string wasDerivedFrom  
+}
+Method {
+    MethodType type  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ComponentList ||--}o Coding : "coding"
+DataAttribute ||--|o Method : "imputation, missingHandling"
+DataAttribute ||--|| Item : "item"
+DataAttribute ||--}o Coding : "coding"
+DataAttribute ||--}o Comment : "comments"
+DataAttribute ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Dimension ||--|o Method : "imputation, missingHandling"
+Dimension ||--|| Item : "item"
+Dimension ||--}o Coding : "coding"
+Dimension ||--}o Comment : "comments"
+Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DimensionRelationship ||--|o ComponentList : "groupKey"
+DimensionRelationship ||--|o DataAttribute : "attribute"
+DimensionRelationship ||--}o Dimension : "dimensions"
+Item ||--|o CodeList : "codeList, roleCodeList"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--|o Method : "method"
+Item ||--|o Origin : "origin"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--}o WhereClause : "applicableWhen"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+
+```
+
+
+
+<!-- no inheritance hierarchy -->
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [dimensions](../slots/dimensions.md) | * <br/> [Dimension](../classes/Dimension.md) |  | direct |
+| [groupKey](../slots/groupKey.md) | 0..1 <br/> [ComponentList](../classes/ComponentList.md) | Set of dimensions that this definition depends on | direct |
+| [attribute](../slots/attribute.md) | 0..1 <br/> [DataAttribute](../classes/DataAttribute.md) |  | direct |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://cdisc.org/define-json
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | odm:DimensionRelationship |
+| native | odm:DimensionRelationship |
+| exact | sdmx:DimensionRelationship |
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+```yaml
+name: DimensionRelationship
+description: A relationship element that associates a DataAttribute with a specific
+  Dimension at a specific level
+from_schema: https://cdisc.org/define-json
+exact_mappings:
+- sdmx:DimensionRelationship
+attributes:
+  dimensions:
+    name: dimensions
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - sdmx:DimensionDescriptor
+    domain_of:
+    - DataStructureDefinition
+    - DimensionRelationship
+    range: Dimension
+    multivalued: true
+  groupKey:
+    name: groupKey
+    description: Set of dimensions that this definition depends on
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - sdmx:GroupDimensionDescriptor
+    domain_of:
+    - GroupRelationship
+    - DimensionRelationship
+    range: ComponentList
+  attribute:
+    name: attribute
+    from_schema: https://cdisc.org/define-json
+    domain_of:
+    - Resource
+    - MeasureRelationship
+    - DataflowRelationship
+    - GroupRelationship
+    - DimensionRelationship
+    - ObservationRelationship
+    range: DataAttribute
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: DimensionRelationship
+description: A relationship element that associates a DataAttribute with a specific
+  Dimension at a specific level
+from_schema: https://cdisc.org/define-json
+exact_mappings:
+- sdmx:DimensionRelationship
+attributes:
+  dimensions:
+    name: dimensions
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - sdmx:DimensionDescriptor
+    owner: DimensionRelationship
+    domain_of:
+    - DataStructureDefinition
+    - DimensionRelationship
+    range: Dimension
+    multivalued: true
+  groupKey:
+    name: groupKey
+    description: Set of dimensions that this definition depends on
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - sdmx:GroupDimensionDescriptor
+    owner: DimensionRelationship
+    domain_of:
+    - GroupRelationship
+    - DimensionRelationship
+    range: ComponentList
+  attribute:
+    name: attribute
+    from_schema: https://cdisc.org/define-json
+    owner: DimensionRelationship
+    domain_of:
+    - Resource
+    - MeasureRelationship
+    - DataflowRelationship
+    - GroupRelationship
+    - DimensionRelationship
+    - ObservationRelationship
+    range: DataAttribute
+
+```
+</details></div>

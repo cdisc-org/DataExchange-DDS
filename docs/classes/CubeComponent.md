@@ -1,0 +1,694 @@
+---
+search:
+  boost: 10.0
+---
+
+# Class: CubeComponent 
+
+
+_An abstract data field that represents a component in a data structure definition, referencing an Item for its definition_
+
+
+
+<div data-search-exclude markdown="1">
+
+
+* __NOTE__: this is an abstract class and should not be instantiated directly
+
+
+URI: [odm:class/CubeComponent](https://cdisc.org/odm2/class/CubeComponent)
+
+
+```mermaid
+erDiagram
+CodeList {
+    string formatName  
+    DataType dataType  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    boolean isNonStandard  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+}
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
+}
+Comment {
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+ConceptProperty {
+    integer maxOccurs  
+    integer minOccurs  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+Condition {
+    string implementsCondition  
+    LogicalOperator operator  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+CubeComponent {
+    string role  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+DocumentReference {
+    string leafID  
+    integerList pages  
+    string relationship  
+    string title  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    string label  
+    string uuid  
+    string version  
+}
+FormalExpression {
+    string expression  
+    string returnType  
+    string context  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
+Item {
+    DataType dataType  
+    integer length  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string cdiscNotes  
+    string crfCompletionInstructions  
+    integer decimalDigits  
+    string displayFormat  
+    boolean hasNoData  
+    string implementationNotes  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string preSpecifiedValue  
+    string purpose  
+    string role  
+    integer significantDigits  
+    string uuid  
+    string wasDerivedFrom  
+}
+Method {
+    MethodType type  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+Origin {
+    OriginSource source  
+    OriginType type  
+}
+RangeCheck {
+    stringList checkValues  
+    Comparator comparator  
+    string item  
+    SoftHard softHard  
+    LogicalOperator operator  
+}
+ReifiedConcept {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+}
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+WhereClause {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+
+CodeList ||--|o Resource : "externalCodeList"
+CodeList ||--|o Standard : "standard"
+CodeList ||--}o CodeListItem : "codeListItems"
+CodeList ||--}o Coding : "coding"
+CodeList ||--}o Comment : "comments"
+CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ConceptProperty ||--|o CodeList : "codeList"
+ConceptProperty ||--}o Coding : "coding"
+ConceptProperty ||--}o Comment : "comments"
+ConceptProperty ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+CubeComponent ||--|o Method : "imputation, missingHandling"
+CubeComponent ||--|| Item : "item"
+CubeComponent ||--}o Coding : "coding"
+CubeComponent ||--}o Comment : "comments"
+CubeComponent ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DocumentReference ||--}o Coding : "coding"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+Item ||--|o CodeList : "codeList, roleCodeList"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--|o Method : "method"
+Item ||--|o Origin : "origin"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--}o WhereClause : "applicableWhen"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Origin ||--}o DocumentReference : "documents"
+Origin ||--}o SourceItem : "sourceItems"
+RangeCheck ||--}o FormalExpression : "expressions"
+ReifiedConcept ||--}o Coding : "coding"
+ReifiedConcept ||--}o Comment : "comments"
+ReifiedConcept ||--}o ConceptProperty : "properties"
+ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+WhereClause ||--}o Coding : "coding"
+WhereClause ||--}o Comment : "comments"
+WhereClause ||--}o Condition : "conditions"
+WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+
+```
+
+
+
+
+## Inheritance
+* [GovernedElement](../classes/GovernedElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md) [Governed](../classes/Governed.md)]
+    * **CubeComponent**
+        * [Measure](../classes/Measure.md)
+        * [Dimension](../classes/Dimension.md)
+        * [DataAttribute](../classes/DataAttribute.md)
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [item](../slots/item.md) | 1 <br/> [Item](../classes/Item.md) | Reference to the Item that defines this component's data structure and properties | direct |
+| [role](../slots/role.md) | 0..1 <br/> [String](../types/String.md) | The role this component plays in its Structure Definition | direct |
+| [missingHandling](../slots/missingHandling.md) | 0..1 <br/> [Method](../classes/Method.md) | The method for handling missing values in the measure property | direct |
+| [imputation](../slots/imputation.md) | 0..1 <br/> [Method](../classes/Method.md) | The imputation method used for the measure property | direct |
+| [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
+| [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
+| [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [mandatory](../slots/mandatory.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | Is this element required? | [Governed](../classes/Governed.md) |
+| [comments](../slots/comments.md) | * <br/> [Comment](../classes/Comment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
+| [siteOrSponsorComments](../slots/siteOrSponsorComments.md) | * <br/> [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
+| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
+| [lastUpdated](../slots/lastUpdated.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | When the resource was last updated | [Governed](../classes/Governed.md) |
+| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
+| [wasDerivedFrom](../slots/wasDerivedFrom.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Item](../classes/Item.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[MetaDataVersion](../classes/MetaDataVersion.md)&nbsp;or&nbsp;<br />[CodeList](../classes/CodeList.md)&nbsp;or&nbsp;<br />[ReifiedConcept](../classes/ReifiedConcept.md)&nbsp;or&nbsp;<br />[ConceptProperty](../classes/ConceptProperty.md)&nbsp;or&nbsp;<br />[Condition](../classes/Condition.md)&nbsp;or&nbsp;<br />[Method](../classes/Method.md)&nbsp;or&nbsp;<br />[NominalOccurrence](../classes/NominalOccurrence.md)&nbsp;or&nbsp;<br />[Dataflow](../classes/Dataflow.md)&nbsp;or&nbsp;<br />[CubeComponent](../classes/CubeComponent.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[ProvisionAgreement](../classes/ProvisionAgreement.md) | Reference to another item that this item implements or extends, e.g. a template Item definition. | [Governed](../classes/Governed.md) |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [GovernedElement](../classes/GovernedElement.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Governed](../classes/Governed.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [MetaDataVersion](../classes/MetaDataVersion.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Item](../classes/Item.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [ItemGroup](../classes/ItemGroup.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [CodeList](../classes/CodeList.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Comment](../classes/Comment.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [ReifiedConcept](../classes/ReifiedConcept.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [ConceptProperty](../classes/ConceptProperty.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [WhereClause](../classes/WhereClause.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Condition](../classes/Condition.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Method](../classes/Method.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [NominalOccurrence](../classes/NominalOccurrence.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [DataStructureDefinition](../classes/DataStructureDefinition.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Dataflow](../classes/Dataflow.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [CubeComponent](../classes/CubeComponent.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Measure](../classes/Measure.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Dimension](../classes/Dimension.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [DataAttribute](../classes/DataAttribute.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [DataProduct](../classes/DataProduct.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [ProvisionAgreement](../classes/ProvisionAgreement.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Analysis](../classes/Analysis.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+| [Display](../classes/Display.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [CubeComponent](../classes/CubeComponent.md) |
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://cdisc.org/define-json
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | odm:CubeComponent |
+| native | odm:CubeComponent |
+| exact | sdmx:Component |
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+```yaml
+name: CubeComponent
+description: An abstract data field that represents a component in a data structure
+  definition, referencing an Item for its definition
+from_schema: https://cdisc.org/define-json
+exact_mappings:
+- sdmx:Component
+is_a: GovernedElement
+abstract: true
+attributes:
+  item:
+    name: item
+    description: Reference to the Item that defines this component's data structure
+      and properties
+    from_schema: https://cdisc.org/define-json
+    domain_of:
+    - RangeCheck
+    - SourceItem
+    - CubeComponent
+    - ObservationRelationship
+    range: Item
+    required: true
+  role:
+    name: role
+    description: The role this component plays in its Structure Definition
+    from_schema: https://cdisc.org/define-json
+    domain_of:
+    - IsODMItem
+    - Organization
+    - CubeComponent
+  missingHandling:
+    name: missingHandling
+    description: The method for handling missing values in the measure property
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    domain_of:
+    - CubeComponent
+    range: Method
+  imputation:
+    name: imputation
+    description: The imputation method used for the measure property
+    from_schema: https://cdisc.org/define-json
+    domain_of:
+    - Timing
+    - CubeComponent
+    range: Method
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: CubeComponent
+description: An abstract data field that represents a component in a data structure
+  definition, referencing an Item for its definition
+from_schema: https://cdisc.org/define-json
+exact_mappings:
+- sdmx:Component
+is_a: GovernedElement
+abstract: true
+attributes:
+  item:
+    name: item
+    description: Reference to the Item that defines this component's data structure
+      and properties
+    from_schema: https://cdisc.org/define-json
+    owner: CubeComponent
+    domain_of:
+    - RangeCheck
+    - SourceItem
+    - CubeComponent
+    - ObservationRelationship
+    range: Item
+    required: true
+  role:
+    name: role
+    description: The role this component plays in its Structure Definition
+    from_schema: https://cdisc.org/define-json
+    owner: CubeComponent
+    domain_of:
+    - IsODMItem
+    - Organization
+    - CubeComponent
+  missingHandling:
+    name: missingHandling
+    description: The method for handling missing values in the measure property
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - CubeComponent
+    range: Method
+  imputation:
+    name: imputation
+    description: The imputation method used for the measure property
+    from_schema: https://cdisc.org/define-json
+    owner: CubeComponent
+    domain_of:
+    - Timing
+    - CubeComponent
+    range: Method
+  OID:
+    name: OID
+    description: Local identifier within this study/context. Use CDISC OID format
+      for regulatory submissions, or simple strings for internal use.
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    identifier: true
+    owner: CubeComponent
+    domain_of:
+    - Identifiable
+    range: string
+    required: true
+  uuid:
+    name: uuid
+    description: Universal unique identifier
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Identifiable
+    range: string
+  name:
+    name: name
+    description: Short name or identifier, used for field names
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Labelled
+    - DefClass
+    - SubClass
+    - Standard
+    range: string
+  description:
+    name: description
+    description: Detailed description, shown in tooltips
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Labelled
+    - CodeListItem
+    range: string
+    any_of:
+    - range: string
+    - range: TranslatedText
+  coding:
+    name: coding
+    description: Semantic tags for this element
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Labelled
+    - CodeListItem
+    - SourceItem
+    range: Coding
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  label:
+    name: label
+    description: Human-readable label, shown in UIs
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - skos:prefLabel
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Labelled
+    range: string
+    any_of:
+    - range: string
+    - range: TranslatedText
+  aliases:
+    name: aliases
+    description: Alternative name or identifier
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - skos:altLabel
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Labelled
+    - CodeListItem
+    range: string
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+    any_of:
+    - range: string
+    - range: TranslatedText
+  mandatory:
+    name: mandatory
+    description: Is this element required?
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: boolean
+  comments:
+    name: comments
+    description: Comment on the element, such as a rationale for its inclusion or
+      exclusion
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: Comment
+    multivalued: true
+    inlined: false
+  siteOrSponsorComments:
+    name: siteOrSponsorComments
+    description: Comment on the element, such as a rationale for its inclusion or
+      exclusion
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: SiteOrSponsorComment
+    multivalued: true
+    inlined: false
+  purpose:
+    name: purpose
+    description: Purpose or rationale for this data element
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: string
+    any_of:
+    - range: string
+    - range: TranslatedText
+  lastUpdated:
+    name: lastUpdated
+    description: When the resource was last updated
+    from_schema: https://cdisc.org/define-json
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: datetime
+  owner:
+    name: owner
+    description: Party responsible for this element
+    from_schema: https://cdisc.org/define-json
+    narrow_mappings:
+    - prov:wasAttributedTo
+    - prov:wasAssociatedBy
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: string
+    any_of:
+    - range: User
+    - range: Organization
+    - range: string
+  wasDerivedFrom:
+    name: wasDerivedFrom
+    description: Reference to another item that this item implements or extends, e.g.
+      a template Item definition.
+    from_schema: https://cdisc.org/define-json
+    exact_mappings:
+    - prov:wasDerivedFrom
+    rank: 1000
+    owner: CubeComponent
+    domain_of:
+    - Governed
+    range: string
+    any_of:
+    - range: Item
+    - range: ItemGroup
+    - range: MetaDataVersion
+    - range: CodeList
+    - range: ReifiedConcept
+    - range: ConceptProperty
+    - range: Condition
+    - range: Method
+    - range: NominalOccurrence
+    - range: Dataflow
+    - range: CubeComponent
+    - range: DataProduct
+    - range: ProvisionAgreement
+
+```
+</details></div>

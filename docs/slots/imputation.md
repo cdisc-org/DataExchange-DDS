@@ -1,0 +1,84 @@
+---
+search:
+  boost: 5.0
+---
+
+# Slot: imputation 
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [odm:slot/imputation](https://cdisc.org/odm2/slot/imputation)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Timing](../classes/Timing.md) | A temporal element that describes the timing of an event or occurrence, which can be absolute, relative, or nominal |  no  |
+| [CubeComponent](../classes/CubeComponent.md) | An abstract data field that represents a component in a data structure definition, referencing an Item for its definition |  no  |
+| [Measure](../classes/Measure.md) | A data cube property that describes a measurable quantity or value |  no  |
+| [Dimension](../classes/Dimension.md) | A data cube property that describes a categorical or hierarchical dimension |  no  |
+| [DataAttribute](../classes/DataAttribute.md) | A data cube property that describes additional characteristics or metadata about observations |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [Timing](../classes/Timing.md), [CubeComponent](../classes/CubeComponent.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | odm:imputation |
+| native | odm:imputation |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: imputation
+domain_of:
+- Timing
+- CubeComponent
+
+```
+</details></div>

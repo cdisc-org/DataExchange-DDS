@@ -1,0 +1,103 @@
+---
+search:
+  boost: 5.0
+---
+
+# Slot: accessService 
+
+
+_Service that provides access to this distribution_
+
+
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [odm:slot/accessService](https://cdisc.org/odm2/slot/accessService)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Distribution](../classes/Distribution.md) | A technical representation that provides a specific format or access method for a dataset |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [DataService](../classes/DataService.md) |
+| Domain Of | [Distribution](../classes/Distribution.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Distribution](../classes/Distribution.md) |
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://cdisc.org/define-json
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | odm:accessService |
+| native | odm:accessService |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: accessService
+description: Service that provides access to this distribution
+from_schema: https://cdisc.org/define-json
+rank: 1000
+owner: Distribution
+domain_of:
+- Distribution
+range: DataService
+
+```
+</details></div>

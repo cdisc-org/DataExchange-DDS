@@ -1,0 +1,113 @@
+---
+search:
+  boost: 5.0
+---
+
+# Slot: keySequence 
+
+
+_Ordered list of Items that define the dataset key structure for sorting and uniqueness. Each entry is an OID reference to an Item in the items array. Order determines sorting precedence, merge operations, and record uniqueness. These are allowed to be null, unlike stricter dataset dimensions or primary keys._
+
+
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [odm:slot/keySequence](https://cdisc.org/odm2/slot/keySequence)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [ItemGroup](../classes/ItemGroup.md) | A collection element that groups related items or subgroups within a specific context, used for tables, FHIR resource profiles, biomedical concept specializations, or form sections |  no  |
+| [DataStructureDefinition](../classes/DataStructureDefinition.md) | A structural element that defines the organization of a data cube for analysis, including dimensions, attributes, and measures |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Item](../classes/Item.md) |
+| Domain Of | [ItemGroup](../classes/ItemGroup.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ItemGroup](../classes/ItemGroup.md) |
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://cdisc.org/define-json
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | odm:keySequence |
+| native | odm:keySequence |
+| close | odm:ItemRef.KeySequence, sdmx:DimensionDescriptor |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: keySequence
+description: Ordered list of Items that define the dataset key structure for sorting
+  and uniqueness. Each entry is an OID reference to an Item in the items array. Order
+  determines sorting precedence, merge operations, and record uniqueness. These are
+  allowed to be null, unlike stricter dataset dimensions or primary keys.
+from_schema: https://cdisc.org/define-json
+close_mappings:
+- odm:ItemRef.KeySequence
+- sdmx:DimensionDescriptor
+rank: 1000
+owner: ItemGroup
+domain_of:
+- ItemGroup
+range: Item
+multivalued: true
+
+```
+</details></div>
