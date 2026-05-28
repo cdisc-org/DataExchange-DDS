@@ -1,4 +1,4 @@
-# CDISC Data Exchage Standard - Data Definition Specification (DDS)
+# CDISC Data Exchange Standard - Data Definition Specification (DDS)
 
 This repository contains the model for the CDISC Data Definition Specification (DDS).
 
