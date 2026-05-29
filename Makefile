@@ -63,7 +63,7 @@ generate-pydantic:
 docs:
 	@echo "Generating LinkML documentation..."
 	mkdir -p docs/images docs/js docs/classes docs/enums docs/slots docs/types docs/schemas;
-	cp versioning_architecture.md docs/Versioning.md;
+	cp documents/versioning_architecture.md docs/Versioning.md;
 	cp README.md docs/About.md;
 	cp images/placeholder.png docs/images/placeholder.png;
 	cp CONTRIBUTING.md docs/CONTRIBUTING.md;
