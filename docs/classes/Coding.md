@@ -122,7 +122,7 @@ Coding {
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -152,7 +152,7 @@ Coding {
 name: Coding
 description: A semantic reference that provides standardized codes and their meanings
   from controlled vocabularies
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:Coding
 - usdm:Code
@@ -168,7 +168,7 @@ attributes:
   code:
     name: code
     description: The code value
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Coding
@@ -177,7 +177,7 @@ attributes:
   decode:
     name: decode
     description: Human-readable meaning
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     domain_of:
@@ -189,7 +189,7 @@ attributes:
   codeSystem:
     name: codeSystem
     description: The code system identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Coding
@@ -198,7 +198,7 @@ attributes:
   codeSystemVersion:
     name: codeSystemVersion
     description: The code system version
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Coding
@@ -206,7 +206,7 @@ attributes:
   aliasType:
     name: aliasType
     description: How this coding is related in the context of its parent element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Coding
@@ -222,7 +222,7 @@ attributes:
 name: Coding
 description: A semantic reference that provides standardized codes and their meanings
   from controlled vocabularies
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:Coding
 - usdm:Code
@@ -238,7 +238,7 @@ attributes:
   code:
     name: code
     description: The code value
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Coding
     domain_of:
@@ -248,7 +248,7 @@ attributes:
   decode:
     name: decode
     description: Human-readable meaning
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     owner: Coding
@@ -261,7 +261,7 @@ attributes:
   codeSystem:
     name: codeSystem
     description: The code system identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Coding
     domain_of:
@@ -271,7 +271,7 @@ attributes:
   codeSystemVersion:
     name: codeSystemVersion
     description: The code system version
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Coding
     domain_of:
@@ -280,7 +280,7 @@ attributes:
   aliasType:
     name: aliasType
     description: How this coding is related in the context of its parent element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Coding
     domain_of:

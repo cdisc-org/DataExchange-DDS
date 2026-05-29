@@ -71,7 +71,7 @@ DatasetKey {
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -100,7 +100,7 @@ DatasetKey {
 name: DatasetKey
 description: An abstract identifier that comprises the cross-product of dimension
   values to identify a specific cross-section
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - sdmx:Key
 abstract: true
@@ -109,7 +109,7 @@ attributes:
     name: describedBy
     description: Associates the Dimension Descriptor defined in the Data Structure
       Definition
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Dataset
     - DatasetKey
@@ -120,14 +120,14 @@ attributes:
     name: keyValues
     description: List of Key Values that comprise each key, separated by a dot e.g.
       SUBJ001.VISIT2.BMI
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - DatasetKey
   attributeValues:
     name: attributeValues
     description: Association to the Attribute Values relating to Key
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - DatasetKey
@@ -142,7 +142,7 @@ attributes:
 name: DatasetKey
 description: An abstract identifier that comprises the cross-product of dimension
   values to identify a specific cross-section
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - sdmx:Key
 abstract: true
@@ -151,7 +151,7 @@ attributes:
     name: describedBy
     description: Associates the Dimension Descriptor defined in the Data Structure
       Definition
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: DatasetKey
     domain_of:
     - Dataset
@@ -163,7 +163,7 @@ attributes:
     name: keyValues
     description: List of Key Values that comprise each key, separated by a dot e.g.
       SUBJ001.VISIT2.BMI
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DatasetKey
     domain_of:
@@ -171,7 +171,7 @@ attributes:
   attributeValues:
     name: attributeValues
     description: Association to the Attribute Values relating to Key
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DatasetKey
     domain_of:

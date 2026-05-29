@@ -72,7 +72,7 @@ URI: [odm:slot/isReferenceData](https://cdisc.org/odm2/slot/isReferenceData)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/isReferenceData](https://cdisc.org/odm2/slot/isReferenceData)
 ```yaml
 name: isReferenceData
 description: Set to Yes if this is a reference item group.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ItemGroup
 domain_of:

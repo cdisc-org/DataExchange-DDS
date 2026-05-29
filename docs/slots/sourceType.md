@@ -71,7 +71,7 @@ URI: [odm:slot/sourceType](https://cdisc.org/odm2/slot/sourceType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/sourceType](https://cdisc.org/odm2/slot/sourceType)
 ```yaml
 name: sourceType
 description: who made the comment, such as Investigator, Sponsor.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: SiteOrSponsorComment
 domain_of:

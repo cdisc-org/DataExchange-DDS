@@ -72,7 +72,7 @@ URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
 name: reportingEnd
 description: A specific time period in a known system of time periods that identifies
   the end period of a report.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsSdmxDataset
 domain_of:

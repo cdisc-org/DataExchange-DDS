@@ -71,7 +71,7 @@ URI: [odm:slot/codeSystemVersion](https://cdisc.org/odm2/slot/codeSystemVersion)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/codeSystemVersion](https://cdisc.org/odm2/slot/codeSystemVersion)
 ```yaml
 name: codeSystemVersion
 description: The code system version
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Coding
 domain_of:

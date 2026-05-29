@@ -72,7 +72,7 @@ URI: [odm:slot/sourceSystemVersion](https://cdisc.org/odm2/slot/sourceSystemVers
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/sourceSystemVersion](https://cdisc.org/odm2/slot/sourceSystemVers
 ```yaml
 name: sourceSystemVersion
 description: Version of the source system
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ODMFileMetadata
 domain_of:

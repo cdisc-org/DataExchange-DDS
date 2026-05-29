@@ -89,7 +89,7 @@ Labelled ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -116,13 +116,13 @@ Labelled ||--}o Coding : "coding"
 ```yaml
 name: Labelled
 description: A mixin that provides slots for detailing meanings and multilingual descriptions
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Labelled
@@ -133,7 +133,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Labelled
@@ -144,7 +144,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Labelled
@@ -157,7 +157,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -169,7 +169,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000
@@ -192,13 +192,13 @@ attributes:
 ```yaml
 name: Labelled
 description: A mixin that provides slots for detailing meanings and multilingual descriptions
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Labelled
     domain_of:
@@ -210,7 +210,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Labelled
     domain_of:
@@ -222,7 +222,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Labelled
     domain_of:
@@ -236,7 +236,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -249,7 +249,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

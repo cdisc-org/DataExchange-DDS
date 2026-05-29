@@ -229,7 +229,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -258,7 +258,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 name: DataProvider
 description: An organization element that provides data to a Data Consumer, which
   can be a sponsor, site, or any other entity that supplies data
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - sdmx:DataProvider
 is_a: Organization
@@ -266,7 +266,7 @@ attributes:
   providesDataFor:
     name: providesDataFor
     description: The Dataflows that this provider supplies data for
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - DataProvider
@@ -275,7 +275,7 @@ attributes:
   provisionAgreements:
     name: provisionAgreements
     description: The ProvisionAgreements that this provider has with Data Consumers
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - DataProvider
@@ -284,7 +284,7 @@ attributes:
   source:
     name: source
     description: Association to a data source
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Origin
     - SiteOrSponsorComment
@@ -303,7 +303,7 @@ attributes:
 name: DataProvider
 description: An organization element that provides data to a Data Consumer, which
   can be a sponsor, site, or any other entity that supplies data
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - sdmx:DataProvider
 is_a: Organization
@@ -311,7 +311,7 @@ attributes:
   providesDataFor:
     name: providesDataFor
     description: The Dataflows that this provider supplies data for
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -321,7 +321,7 @@ attributes:
   provisionAgreements:
     name: provisionAgreements
     description: The ProvisionAgreements that this provider has with Data Consumers
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -331,7 +331,7 @@ attributes:
   source:
     name: source
     description: Association to a data source
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: DataProvider
     domain_of:
     - Origin
@@ -343,7 +343,7 @@ attributes:
   role:
     name: role
     description: The role of the organization in the study.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: DataProvider
     domain_of:
     - IsODMItem
@@ -353,7 +353,7 @@ attributes:
   type:
     name: type
     description: The type of organization (e.g., site, sponsor, vendor).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: DataProvider
     domain_of:
     - ItemGroup
@@ -366,7 +366,7 @@ attributes:
   location:
     name: location
     description: The physical location of the organization.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -376,7 +376,7 @@ attributes:
   address:
     name: address
     description: The address of the organization.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -386,7 +386,7 @@ attributes:
     name: partOfOrganization
     description: Reference to a parent organization if this organization is part of
       a larger entity.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -396,7 +396,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: DataProvider
@@ -407,7 +407,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -416,7 +416,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -428,7 +428,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -441,7 +441,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataProvider
     domain_of:
@@ -455,7 +455,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -469,7 +469,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

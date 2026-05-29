@@ -71,7 +71,7 @@ URI: [odm:slot/parentClass](https://cdisc.org/odm2/slot/parentClass)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/parentClass](https://cdisc.org/odm2/slot/parentClass)
 ```yaml
 name: parentClass
 description: Name of the parent Class or SubClass following CDISC Controlled Terminology.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: SubClass
 domain_of:

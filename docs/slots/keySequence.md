@@ -73,7 +73,7 @@ URI: [odm:slot/keySequence](https://cdisc.org/odm2/slot/keySequence)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -98,7 +98,7 @@ description: Ordered list of Items that define the dataset key structure for sor
   and uniqueness. Each entry is an OID reference to an Item in the items array. Order
   determines sorting precedence, merge operations, and record uniqueness. These are
   allowed to be null, unlike stricter dataset dimensions or primary keys.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - odm:ItemRef.KeySequence
 - sdmx:DimensionDescriptor

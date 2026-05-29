@@ -72,7 +72,7 @@ URI: [odm:slot/relationships](https://cdisc.org/odm2/slot/relationships)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/relationships](https://cdisc.org/odm2/slot/relationships)
 name: relationships
 description: Relationships between items, item groups, and other elements in this
   version of the metadata.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: MetaDataVersion
 domain_of:

@@ -164,7 +164,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -193,7 +193,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 name: Comment
 description: A descriptive element that contains explanatory text provided by a data
   or metadata handler
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:CommentDef
 - usdm:CommentAnnotation
@@ -204,7 +204,7 @@ attributes:
   text:
     name: text
     description: The comment text.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Comment
@@ -216,7 +216,7 @@ attributes:
   documents:
     name: documents
     description: References to documents that contain or are referenced by this comment
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Comment
@@ -237,7 +237,7 @@ attributes:
 name: Comment
 description: A descriptive element that contains explanatory text provided by a data
   or metadata handler
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:CommentDef
 - usdm:CommentAnnotation
@@ -248,7 +248,7 @@ attributes:
   text:
     name: text
     description: The comment text.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -261,7 +261,7 @@ attributes:
   documents:
     name: documents
     description: References to documents that contain or are referenced by this comment
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -276,7 +276,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Comment
@@ -287,7 +287,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -296,7 +296,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -308,7 +308,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -321,7 +321,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -335,7 +335,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -349,7 +349,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000
@@ -367,7 +367,7 @@ attributes:
   mandatory:
     name: mandatory
     description: Is this element required?
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -377,7 +377,7 @@ attributes:
     name: comments
     description: Comment on the element, such as a rationale for its inclusion or
       exclusion
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -389,7 +389,7 @@ attributes:
     name: siteOrSponsorComments
     description: Comment on the element, such as a rationale for its inclusion or
       exclusion
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -400,7 +400,7 @@ attributes:
   purpose:
     name: purpose
     description: Purpose or rationale for this data element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -412,7 +412,7 @@ attributes:
   lastUpdated:
     name: lastUpdated
     description: When the resource was last updated
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Comment
     domain_of:
@@ -421,7 +421,7 @@ attributes:
   owner:
     name: owner
     description: Party responsible for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     narrow_mappings:
     - prov:wasAttributedTo
     - prov:wasAssociatedBy
@@ -438,7 +438,7 @@ attributes:
     name: wasDerivedFrom
     description: Reference to another item that this item implements or extends, e.g.
       a template Item definition.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - prov:wasDerivedFrom
     rank: 1000

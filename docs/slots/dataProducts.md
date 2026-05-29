@@ -72,7 +72,7 @@ URI: [odm:slot/dataProducts](https://cdisc.org/odm2/slot/dataProducts)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/dataProducts](https://cdisc.org/odm2/slot/dataProducts)
 ```yaml
 name: dataProducts
 description: Indexed data flows with clear ownership
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: MetaDataVersion
 domain_of:

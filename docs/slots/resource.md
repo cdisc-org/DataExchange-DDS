@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -104,7 +104,7 @@ Value must satisfy at least one of:
 name: resource
 description: Path to a resource (e.g. File, FHIR datasource) that is the source of
   this item
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: SourceItem
 domain_of:

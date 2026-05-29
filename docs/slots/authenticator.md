@@ -85,7 +85,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -106,7 +106,7 @@ Value must satisfy at least one of:
 ```yaml
 name: authenticator
 description: Who/what authenticated the resource
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsProfile
 domain_of:

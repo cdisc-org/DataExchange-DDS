@@ -77,7 +77,7 @@ Identifiable {
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -105,14 +105,14 @@ Identifiable {
 name: Identifiable
 description: A mixin that provides slots for making an entity addressable within a
   study or context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   OID:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     domain_of:
@@ -122,7 +122,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Identifiable
@@ -138,14 +138,14 @@ attributes:
 name: Identifiable
 description: A mixin that provides slots for making an entity addressable within a
   study or context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   OID:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Identifiable
@@ -156,7 +156,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Identifiable
     domain_of:

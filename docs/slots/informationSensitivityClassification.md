@@ -71,7 +71,7 @@ URI: [odm:slot/informationSensitivityClassification](https://cdisc.org/odm2/slot
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/informationSensitivityClassification](https://cdisc.org/odm2/slot
 ```yaml
 name: informationSensitivityClassification
 description: Classification of the dataset's sensitivity or confidentiality
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Dataset
 domain_of:

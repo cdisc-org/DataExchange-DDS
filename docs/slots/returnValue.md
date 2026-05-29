@@ -71,7 +71,7 @@ URI: [odm:slot/returnValue](https://cdisc.org/odm2/slot/returnValue)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/returnValue](https://cdisc.org/odm2/slot/returnValue)
 ```yaml
 name: returnValue
 description: Return value details
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: FormalExpression
 domain_of:

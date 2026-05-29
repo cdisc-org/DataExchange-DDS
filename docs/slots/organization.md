@@ -71,7 +71,7 @@ URI: [odm:slot/organization](https://cdisc.org/odm2/slot/organization)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/organization](https://cdisc.org/odm2/slot/organization)
 ```yaml
 name: organization
 description: The organization the user belongs to.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - prov:actedOnBehalfOf
 rank: 1000

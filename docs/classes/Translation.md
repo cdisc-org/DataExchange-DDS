@@ -69,7 +69,7 @@ Translation {
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -98,7 +98,7 @@ Translation {
 name: Translation
 description: A text representation that provides content in a specific language, used
   for multilingual support
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:TranslatedText
 - sdmx:InternationalString
@@ -106,7 +106,7 @@ attributes:
   language:
     name: language
     description: The language of the translation
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Translation
@@ -115,7 +115,7 @@ attributes:
   value:
     name: value
     description: The translated text
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Translation
@@ -134,7 +134,7 @@ attributes:
 name: Translation
 description: A text representation that provides content in a specific language, used
   for multilingual support
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:TranslatedText
 - sdmx:InternationalString
@@ -142,7 +142,7 @@ attributes:
   language:
     name: language
     description: The language of the translation
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Translation
     domain_of:
@@ -152,7 +152,7 @@ attributes:
   value:
     name: value
     description: The translated text
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Translation
     domain_of:

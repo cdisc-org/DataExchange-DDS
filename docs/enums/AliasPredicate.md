@@ -52,7 +52,7 @@ URI: [odm:enum/AliasPredicate](https://cdisc.org/odm2/enum/AliasPredicate)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -66,7 +66,7 @@ URI: [odm:enum/AliasPredicate](https://cdisc.org/odm2/enum/AliasPredicate)
 name: AliasPredicate
 description: An enumeration that defines permissible values for the relationship between
   an element and its alias
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 permissible_values:
   EXACT_SYNONYM:

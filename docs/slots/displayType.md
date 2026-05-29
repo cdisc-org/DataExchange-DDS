@@ -71,7 +71,7 @@ URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
 name: displayType
 description: The type of display this result represents. e.g. table, listing, figure,
   dashboard.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Display
 domain_of:

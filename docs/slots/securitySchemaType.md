@@ -71,7 +71,7 @@ URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaTyp
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaTyp
 ```yaml
 name: securitySchemaType
 description: Security or authentication method used (e.g., OAuth2)
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DataService
 domain_of:

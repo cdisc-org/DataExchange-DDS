@@ -105,7 +105,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -127,7 +127,7 @@ Value must satisfy at least one of:
 ```yaml
 name: owner
 description: Party responsible for this element
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 narrow_mappings:
 - prov:wasAttributedTo
 - prov:wasAssociatedBy

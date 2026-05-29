@@ -94,7 +94,7 @@ URI: [odm:slot/lastUpdated](https://cdisc.org/odm2/slot/lastUpdated)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -115,7 +115,7 @@ URI: [odm:slot/lastUpdated](https://cdisc.org/odm2/slot/lastUpdated)
 ```yaml
 name: lastUpdated
 description: When the resource was last updated
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Governed
 domain_of:

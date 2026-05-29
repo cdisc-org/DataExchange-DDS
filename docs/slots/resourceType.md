@@ -72,7 +72,7 @@ URI: [odm:slot/resourceType](https://cdisc.org/odm2/slot/resourceType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/resourceType](https://cdisc.org/odm2/slot/resourceType)
 ```yaml
 name: resourceType
 description: Type of resource (e.g.,  "ODM", "HL7-FHIR", "HL7-CDA", "HL7-v2", "OpenEHR-extract")
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Resource
 domain_of:

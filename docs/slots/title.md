@@ -71,7 +71,7 @@ URI: [odm:slot/title](https://cdisc.org/odm2/slot/title)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/title](https://cdisc.org/odm2/slot/title)
 ```yaml
 name: title
 description: Document title
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DocumentReference
 domain_of:

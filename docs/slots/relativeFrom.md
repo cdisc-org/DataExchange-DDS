@@ -71,7 +71,7 @@ URI: [odm:slot/relativeFrom](https://cdisc.org/odm2/slot/relativeFrom)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/relativeFrom](https://cdisc.org/odm2/slot/relativeFrom)
 ```yaml
 name: relativeFrom
 description: Reference to the event or occurrence that this timing is relative to.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Timing
 domain_of:

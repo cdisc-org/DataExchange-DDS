@@ -72,7 +72,7 @@ URI: [odm:slot/publicationYear](https://cdisc.org/odm2/slot/publicationYear)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/publicationYear](https://cdisc.org/odm2/slot/publicationYear)
 name: publicationYear
 description: Specifies the year of publication of the data or metadata in terms of
   whatever provisioning agreements might be in force.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsSdmxDataset
 domain_of:

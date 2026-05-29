@@ -72,7 +72,7 @@ URI: [odm:slot/inputDataflow](https://cdisc.org/odm2/slot/inputDataflow)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/inputDataflow](https://cdisc.org/odm2/slot/inputDataflow)
 name: inputDataflow
 description: Description of the input interface before concrete Datasets exist. Dataflows
   referenced here represent the demand side of a ProvisionAgreement.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - dcat:distribution
 rank: 1000

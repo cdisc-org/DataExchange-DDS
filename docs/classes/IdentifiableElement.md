@@ -99,7 +99,7 @@ IdentifiableElement ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -125,7 +125,7 @@ IdentifiableElement ||--}o Coding : "coding"
 <details>
 ```yaml
 name: IdentifiableElement
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 abstract: true
 mixins:
 - Identifiable
@@ -139,7 +139,7 @@ mixins:
 <details>
 ```yaml
 name: IdentifiableElement
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 abstract: true
 mixins:
 - Identifiable
@@ -149,7 +149,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: IdentifiableElement
@@ -160,7 +160,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IdentifiableElement
     domain_of:
@@ -169,7 +169,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IdentifiableElement
     domain_of:
@@ -181,7 +181,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IdentifiableElement
     domain_of:
@@ -194,7 +194,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IdentifiableElement
     domain_of:
@@ -208,7 +208,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -222,7 +222,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

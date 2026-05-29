@@ -71,7 +71,7 @@ URI: [odm:slot/other](https://cdisc.org/odm2/slot/other)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/other](https://cdisc.org/odm2/slot/other)
 ```yaml
 name: other
 description: Flag to indicate that the term represents "other" content
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: CodeListItem
 domain_of:

@@ -78,7 +78,7 @@ Formatted {
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -106,7 +106,7 @@ Formatted {
 ```yaml
 name: Formatted
 description: A mixin that provides slots for reporting, exchange, or storage formatting
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 related_mappings:
 - sdmx:Facet
 - sdmx:Representation
@@ -115,7 +115,7 @@ attributes:
   decimalDigits:
     name: decimalDigits
     description: For decimal values, the number of digits after the decimal point
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Formatted
@@ -123,7 +123,7 @@ attributes:
   displayFormat:
     name: displayFormat
     description: A display format for the item
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Formatted
@@ -131,7 +131,7 @@ attributes:
   significantDigits:
     name: significantDigits
     description: For numeric values, the number of significant digits
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Formatted
@@ -146,7 +146,7 @@ attributes:
 ```yaml
 name: Formatted
 description: A mixin that provides slots for reporting, exchange, or storage formatting
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 related_mappings:
 - sdmx:Facet
 - sdmx:Representation
@@ -155,7 +155,7 @@ attributes:
   decimalDigits:
     name: decimalDigits
     description: For decimal values, the number of digits after the decimal point
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Formatted
     domain_of:
@@ -164,7 +164,7 @@ attributes:
   displayFormat:
     name: displayFormat
     description: A display format for the item
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Formatted
     domain_of:
@@ -173,7 +173,7 @@ attributes:
   significantDigits:
     name: significantDigits
     description: For numeric values, the number of significant digits
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Formatted
     domain_of:

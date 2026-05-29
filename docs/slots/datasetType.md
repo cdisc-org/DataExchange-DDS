@@ -71,7 +71,7 @@ URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
 ```yaml
 name: datasetType
 description: Type or classification of the dataset
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Dataset
 domain_of:

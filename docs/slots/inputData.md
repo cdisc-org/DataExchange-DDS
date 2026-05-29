@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -105,7 +105,7 @@ name: inputData
 description: Datasets or slices/subsets of datasets asked for by this analysis. If
   a Item is referenced by a Parameter e.g. Analysis Variable, make sure to include
   its parent ItemGroup here.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Analysis
 domain_of:

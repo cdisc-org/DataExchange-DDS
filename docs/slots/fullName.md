@@ -71,7 +71,7 @@ URI: [odm:slot/fullName](https://cdisc.org/odm2/slot/fullName)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/fullName](https://cdisc.org/odm2/slot/fullName)
 ```yaml
 name: fullName
 description: The full name of the user.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: User
 domain_of:

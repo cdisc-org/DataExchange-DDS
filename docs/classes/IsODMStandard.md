@@ -96,7 +96,7 @@ Standard ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -123,13 +123,13 @@ Standard ||--}o Coding : "coding"
 ```yaml
 name: IsODMStandard
 description: A mixin that provides properties to indicate standards compliance
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   standard:
     name: standard
     description: Reference to the standard being implemented
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - IsODMStandard
@@ -137,7 +137,7 @@ attributes:
   isNonStandard:
     name: isNonStandard
     description: One or more members of this set are non-standard extensions
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - IsODMStandard
@@ -152,13 +152,13 @@ attributes:
 ```yaml
 name: IsODMStandard
 description: A mixin that provides properties to indicate standards compliance
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   standard:
     name: standard
     description: Reference to the standard being implemented
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsODMStandard
     domain_of:
@@ -167,7 +167,7 @@ attributes:
   isNonStandard:
     name: isNonStandard
     description: One or more members of this set are non-standard extensions
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsODMStandard
     domain_of:

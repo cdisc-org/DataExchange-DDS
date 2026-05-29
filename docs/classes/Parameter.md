@@ -248,7 +248,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -275,13 +275,13 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ```yaml
 name: Parameter
 description: A variable element that describes an input used in a formal expression
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 is_a: IdentifiableElement
 attributes:
   dataType:
     name: dataType
     description: The data type of the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Item
     - CodeList
@@ -291,7 +291,7 @@ attributes:
   codeList:
     name: codeList
     description: A list of allowed values for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Item
     - ConceptProperty
@@ -301,7 +301,7 @@ attributes:
   value:
     name: value
     description: A specific bound value for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Translation
     - Parameter
@@ -310,7 +310,7 @@ attributes:
   defaultValue:
     name: defaultValue
     description: A default value for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Parameter
@@ -318,7 +318,7 @@ attributes:
   items:
     name: items
     description: A list of item dependencies for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - MetaDataVersion
     - ItemGroup
@@ -334,7 +334,7 @@ attributes:
     name: conceptProperty
     description: Reference to a specific concept property that this parameter represents
       or modifies.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Item
     - Parameter
@@ -351,7 +351,7 @@ attributes:
       Within each WhereClause, conditions are combined with AND logic. Example: applicableWhen:
       ["WC.ADULT", "WC.PEDIATRIC"] means the parameter is needed when (all conditions
       in WC.ADULT are true) OR (all conditions in WC.PEDIATRIC are true).'
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Item
     - ItemGroup
@@ -369,7 +369,7 @@ attributes:
 
       Example: A parameter AGE might have conditions ensuring it''s >= 0 and <= 120.
       or conditions might make up part of a componsed expression.'
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - MetaDataVersion
     - WhereClause
@@ -382,7 +382,7 @@ attributes:
     name: required
     description: Indicates whether this parameter must be provided when the containing
       expression is evaluated (technical constraint).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     ifabsent: 'False'
     domain_of:
@@ -398,13 +398,13 @@ attributes:
 ```yaml
 name: Parameter
 description: A variable element that describes an input used in a formal expression
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 is_a: IdentifiableElement
 attributes:
   dataType:
     name: dataType
     description: The data type of the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - Item
@@ -415,7 +415,7 @@ attributes:
   codeList:
     name: codeList
     description: A list of allowed values for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - Item
@@ -426,7 +426,7 @@ attributes:
   value:
     name: value
     description: A specific bound value for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - Translation
@@ -436,7 +436,7 @@ attributes:
   defaultValue:
     name: defaultValue
     description: A default value for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Parameter
     domain_of:
@@ -445,7 +445,7 @@ attributes:
   items:
     name: items
     description: A list of item dependencies for the parameter.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - MetaDataVersion
@@ -462,7 +462,7 @@ attributes:
     name: conceptProperty
     description: Reference to a specific concept property that this parameter represents
       or modifies.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - Item
@@ -480,7 +480,7 @@ attributes:
       Within each WhereClause, conditions are combined with AND logic. Example: applicableWhen:
       ["WC.ADULT", "WC.PEDIATRIC"] means the parameter is needed when (all conditions
       in WC.ADULT are true) OR (all conditions in WC.PEDIATRIC are true).'
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - Item
@@ -499,7 +499,7 @@ attributes:
 
       Example: A parameter AGE might have conditions ensuring it''s >= 0 and <= 120.
       or conditions might make up part of a componsed expression.'
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Parameter
     domain_of:
     - MetaDataVersion
@@ -513,7 +513,7 @@ attributes:
     name: required
     description: Indicates whether this parameter must be provided when the containing
       expression is evaluated (technical constraint).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     ifabsent: 'False'
     owner: Parameter
@@ -524,7 +524,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Parameter
@@ -535,7 +535,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Parameter
     domain_of:
@@ -544,7 +544,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Parameter
     domain_of:
@@ -556,7 +556,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Parameter
     domain_of:
@@ -569,7 +569,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Parameter
     domain_of:
@@ -583,7 +583,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -597,7 +597,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

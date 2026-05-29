@@ -55,7 +55,7 @@ URI: [odm:enum/ItemGroupType](https://cdisc.org/odm2/enum/ItemGroupType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -69,7 +69,7 @@ URI: [odm:enum/ItemGroupType](https://cdisc.org/odm2/enum/ItemGroupType)
 name: ItemGroupType
 description: An enumeration that defines the roles of an item group within a specific
   context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 permissible_values:
   DataCube:

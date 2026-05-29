@@ -71,7 +71,7 @@ URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
 ```yaml
 name: analysisPurpose
 description: The purpose or role of this analysis in the study.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Analysis
 domain_of:

@@ -72,7 +72,7 @@ URI: [odm:slot/defineVersion](https://cdisc.org/odm2/slot/defineVersion)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/defineVersion](https://cdisc.org/odm2/slot/defineVersion)
 ```yaml
 name: defineVersion
 description: Version of Define-XML specification used
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ODMFileMetadata
 domain_of:

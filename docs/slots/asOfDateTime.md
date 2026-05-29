@@ -72,7 +72,7 @@ URI: [odm:slot/asOfDateTime](https://cdisc.org/odm2/slot/asOfDateTime)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/asOfDateTime](https://cdisc.org/odm2/slot/asOfDateTime)
 ```yaml
 name: asOfDateTime
 description: Date and time when the data snapshot was taken
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ODMFileMetadata
 domain_of:

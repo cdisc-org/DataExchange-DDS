@@ -258,7 +258,7 @@ Timing ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -289,7 +289,7 @@ Timing ||--}o Coding : "coding"
 name: Timing
 description: A temporal element that describes the timing of an event or occurrence,
   which can be absolute, relative, or nominal
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - usdm:Timing
 narrow_mappings:
@@ -307,7 +307,7 @@ attributes:
   type:
     name: type
     description: 'The type of timing: Fixed, Before (Relative), or After (Relative).'
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - ItemGroup
     - Method
@@ -320,7 +320,7 @@ attributes:
   isNominal:
     name: isNominal
     description: Indicates whether the timing is nominal (event-based) or not.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -329,7 +329,7 @@ attributes:
     name: value
     description: The value of the timing, which can be a date/time, duration, or event
       reference.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Translation
     - Parameter
@@ -340,7 +340,7 @@ attributes:
     name: relativeTo
     description: Reference to the event or occurrence that this timing is relative
       to.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -349,7 +349,7 @@ attributes:
     name: relativeFrom
     description: Reference to the event or occurrence that this timing is relative
       to.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -357,7 +357,7 @@ attributes:
   windowLower:
     name: windowLower
     description: Start date/time of the timing
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -365,7 +365,7 @@ attributes:
   windowUpper:
     name: windowUpper
     description: End date/time of the timing
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -374,7 +374,7 @@ attributes:
     name: recalled
     description: Indicates whether the timing is recalled or not (recalled timings
       are less reliable).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -382,7 +382,7 @@ attributes:
   frequency:
     name: frequency
     description: Frequency. Use dose frequency terminology e.g. "BID" if applicable.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -390,7 +390,7 @@ attributes:
   imputation:
     name: imputation
     description: The imputation method used for the Timing.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Timing
@@ -407,7 +407,7 @@ attributes:
 name: Timing
 description: A temporal element that describes the timing of an event or occurrence,
   which can be absolute, relative, or nominal
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - usdm:Timing
 narrow_mappings:
@@ -425,7 +425,7 @@ attributes:
   type:
     name: type
     description: 'The type of timing: Fixed, Before (Relative), or After (Relative).'
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Timing
     domain_of:
     - ItemGroup
@@ -439,7 +439,7 @@ attributes:
   isNominal:
     name: isNominal
     description: Indicates whether the timing is nominal (event-based) or not.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -449,7 +449,7 @@ attributes:
     name: value
     description: The value of the timing, which can be a date/time, duration, or event
       reference.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Timing
     domain_of:
     - Translation
@@ -461,7 +461,7 @@ attributes:
     name: relativeTo
     description: Reference to the event or occurrence that this timing is relative
       to.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -471,7 +471,7 @@ attributes:
     name: relativeFrom
     description: Reference to the event or occurrence that this timing is relative
       to.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -480,7 +480,7 @@ attributes:
   windowLower:
     name: windowLower
     description: Start date/time of the timing
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -489,7 +489,7 @@ attributes:
   windowUpper:
     name: windowUpper
     description: End date/time of the timing
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -499,7 +499,7 @@ attributes:
     name: recalled
     description: Indicates whether the timing is recalled or not (recalled timings
       are less reliable).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -508,7 +508,7 @@ attributes:
   frequency:
     name: frequency
     description: Frequency. Use dose frequency terminology e.g. "BID" if applicable.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -517,7 +517,7 @@ attributes:
   imputation:
     name: imputation
     description: The imputation method used for the Timing.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -528,7 +528,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Timing
@@ -539,7 +539,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -548,7 +548,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -560,7 +560,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -573,7 +573,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Timing
     domain_of:
@@ -587,7 +587,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -601,7 +601,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

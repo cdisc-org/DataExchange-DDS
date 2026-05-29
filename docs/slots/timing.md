@@ -72,7 +72,7 @@ URI: [odm:slot/timing](https://cdisc.org/odm2/slot/timing)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/timing](https://cdisc.org/odm2/slot/timing)
 ```yaml
 name: timing
 description: A named event reference, that can nest further named timing references.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: NominalOccurrence
 domain_of:

@@ -74,7 +74,7 @@ URI: [odm:slot/isNonStandard](https://cdisc.org/odm2/slot/isNonStandard)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/isNonStandard](https://cdisc.org/odm2/slot/isNonStandard)
 ```yaml
 name: isNonStandard
 description: One or more members of this set are non-standard extensions
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsODMStandard
 domain_of:

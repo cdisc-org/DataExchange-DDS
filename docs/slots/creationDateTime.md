@@ -73,7 +73,7 @@ URI: [odm:slot/creationDateTime](https://cdisc.org/odm2/slot/creationDateTime)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/creationDateTime](https://cdisc.org/odm2/slot/creationDateTime)
 ```yaml
 name: creationDateTime
 description: Date and time when the ODM file was created
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ODMFileMetadata
 domain_of:

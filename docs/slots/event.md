@@ -71,7 +71,7 @@ URI: [odm:slot/event](https://cdisc.org/odm2/slot/event)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/event](https://cdisc.org/odm2/slot/event)
 ```yaml
 name: event
 description: The ID of the event in a Schedule.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: NominalOccurrence
 domain_of:

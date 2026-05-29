@@ -72,7 +72,7 @@ URI: [odm:slot/providesDataFor](https://cdisc.org/odm2/slot/providesDataFor)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/providesDataFor](https://cdisc.org/odm2/slot/providesDataFor)
 ```yaml
 name: providesDataFor
 description: The Dataflows that this provider supplies data for
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DataProvider
 domain_of:

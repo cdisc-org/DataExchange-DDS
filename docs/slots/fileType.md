@@ -73,7 +73,7 @@ URI: [odm:slot/fileType](https://cdisc.org/odm2/slot/fileType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/fileType](https://cdisc.org/odm2/slot/fileType)
 ```yaml
 name: fileType
 description: Type of ODM file (e.g., Snapshot, Transactional)
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ODMFileMetadata
 domain_of:

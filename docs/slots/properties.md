@@ -72,7 +72,7 @@ URI: [odm:slot/properties](https://cdisc.org/odm2/slot/properties)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/properties](https://cdisc.org/odm2/slot/properties)
 name: properties
 description: Properties of the reified object, which can be other governed elements
   or simple values
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ReifiedConcept
 domain_of:

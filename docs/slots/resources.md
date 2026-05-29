@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -104,7 +104,7 @@ Value must satisfy at least one of:
 name: resources
 description: References to resources and documents that describe this version of the
   metadata.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: MetaDataVersion
 domain_of:

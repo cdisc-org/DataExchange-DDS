@@ -101,7 +101,7 @@ Standard ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -130,7 +130,7 @@ Standard ||--}o Coding : "coding"
 name: Standard
 description: A collection element that groups related standards within a specific
   context, used for defining CDISC implementation guides and controlled terminologies
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:Standard
 is_a: IdentifiableElement
@@ -138,7 +138,7 @@ attributes:
   name:
     name: name
     description: Name of a standard
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Labelled
     - DefClass
@@ -148,7 +148,7 @@ attributes:
   type:
     name: type
     description: Type of a standard
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - ItemGroup
     - Method
@@ -160,7 +160,7 @@ attributes:
   publishingSet:
     name: publishingSet
     description: Publishing Set of a Controlled Terminology
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Standard
@@ -168,7 +168,7 @@ attributes:
   version:
     name: version
     description: Version of an Implementation Guide or of a Controlled Terminology
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Versioned
     - Standard
@@ -176,7 +176,7 @@ attributes:
   status:
     name: status
     description: Status of an Implementation Guide or of a Controlled Terminology
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Standard
@@ -192,7 +192,7 @@ attributes:
 name: Standard
 description: A collection element that groups related standards within a specific
   context, used for defining CDISC implementation guides and controlled terminologies
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:Standard
 is_a: IdentifiableElement
@@ -200,7 +200,7 @@ attributes:
   name:
     name: name
     description: Name of a standard
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Standard
     domain_of:
     - Labelled
@@ -211,7 +211,7 @@ attributes:
   type:
     name: type
     description: Type of a standard
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Standard
     domain_of:
     - ItemGroup
@@ -224,7 +224,7 @@ attributes:
   publishingSet:
     name: publishingSet
     description: Publishing Set of a Controlled Terminology
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Standard
     domain_of:
@@ -233,7 +233,7 @@ attributes:
   version:
     name: version
     description: Version of an Implementation Guide or of a Controlled Terminology
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Standard
     domain_of:
     - Versioned
@@ -242,7 +242,7 @@ attributes:
   status:
     name: status
     description: Status of an Implementation Guide or of a Controlled Terminology
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Standard
     domain_of:
@@ -252,7 +252,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Standard
@@ -263,7 +263,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Standard
     domain_of:
@@ -272,7 +272,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Standard
     domain_of:
@@ -285,7 +285,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Standard
     domain_of:
@@ -299,7 +299,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -313,7 +313,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

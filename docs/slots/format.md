@@ -71,7 +71,7 @@ URI: [odm:slot/format](https://cdisc.org/odm2/slot/format)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/format](https://cdisc.org/odm2/slot/format)
 ```yaml
 name: format
 description: File format or serialization used in the distribution
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Distribution
 domain_of:

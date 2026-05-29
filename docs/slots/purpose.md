@@ -104,7 +104,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -125,7 +125,7 @@ Value must satisfy at least one of:
 ```yaml
 name: purpose
 description: Purpose or rationale for this data element
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Governed
 domain_of:

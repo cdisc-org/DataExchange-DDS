@@ -71,7 +71,7 @@ URI: [odm:slot/isNominal](https://cdisc.org/odm2/slot/isNominal)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/isNominal](https://cdisc.org/odm2/slot/isNominal)
 ```yaml
 name: isNominal
 description: Indicates whether the timing is nominal (event-based) or not.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Timing
 domain_of:

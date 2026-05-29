@@ -110,7 +110,7 @@ URI: [odm:slot/uuid](https://cdisc.org/odm2/slot/uuid)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -131,7 +131,7 @@ URI: [odm:slot/uuid](https://cdisc.org/odm2/slot/uuid)
 ```yaml
 name: uuid
 description: Universal unique identifier
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Identifiable
 domain_of:

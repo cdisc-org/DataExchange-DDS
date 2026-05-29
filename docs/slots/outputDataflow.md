@@ -72,7 +72,7 @@ URI: [odm:slot/outputDataflow](https://cdisc.org/odm2/slot/outputDataflow)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/outputDataflow](https://cdisc.org/odm2/slot/outputDataflow)
 name: outputDataflow
 description: Description of the output interface before concrete Datasets exist. Dataflows
   referenced here represent the supply side of a ProvisionAgreement.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - dcat:distribution
 rank: 1000

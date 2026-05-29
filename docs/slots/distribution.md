@@ -72,7 +72,7 @@ URI: [odm:slot/distribution](https://cdisc.org/odm2/slot/distribution)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/distribution](https://cdisc.org/odm2/slot/distribution)
 ```yaml
 name: distribution
 description: Representations of this dataset in various formats or access methods
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - dcat:distribution
 rank: 1000

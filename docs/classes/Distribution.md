@@ -220,7 +220,7 @@ Timing ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -250,7 +250,7 @@ Timing ||--}o Coding : "coding"
 name: Distribution
 description: A technical representation that provides a specific format or access
   method for a dataset
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - dprod:Distribution
 - dcat:Distribution
@@ -262,7 +262,7 @@ attributes:
   accessService:
     name: accessService
     description: Service that provides access to this distribution
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Distribution
@@ -270,7 +270,7 @@ attributes:
   conformsTo:
     name: conformsTo
     description: The standard or specification the distribution conforms to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Dataset
     - Distribution
@@ -280,7 +280,7 @@ attributes:
   isDistributionOf:
     name: isDistributionOf
     description: Dataset this distribution represents
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Distribution
@@ -288,7 +288,7 @@ attributes:
   format:
     name: format
     description: File format or serialization used in the distribution
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Distribution
@@ -303,7 +303,7 @@ attributes:
 name: Distribution
 description: A technical representation that provides a specific format or access
   method for a dataset
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - dprod:Distribution
 - dcat:Distribution
@@ -315,7 +315,7 @@ attributes:
   accessService:
     name: accessService
     description: Service that provides access to this distribution
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Distribution
     domain_of:
@@ -324,7 +324,7 @@ attributes:
   conformsTo:
     name: conformsTo
     description: The standard or specification the distribution conforms to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Distribution
     domain_of:
     - Dataset
@@ -335,7 +335,7 @@ attributes:
   isDistributionOf:
     name: isDistributionOf
     description: Dataset this distribution represents
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Distribution
     domain_of:
@@ -344,7 +344,7 @@ attributes:
   format:
     name: format
     description: File format or serialization used in the distribution
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Distribution
     domain_of:

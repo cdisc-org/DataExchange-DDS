@@ -73,7 +73,7 @@ URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
 ```yaml
 name: keyValues
 description: List of Key Values that comprise each key, separated by a dot e.g. SUBJ001.VISIT2.BMI
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DatasetKey
 domain_of:

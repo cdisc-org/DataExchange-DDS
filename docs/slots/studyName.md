@@ -72,7 +72,7 @@ URI: [odm:slot/studyName](https://cdisc.org/odm2/slot/studyName)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/studyName](https://cdisc.org/odm2/slot/studyName)
 ```yaml
 name: studyName
 description: Name of the study
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: StudyMetadata
 domain_of:

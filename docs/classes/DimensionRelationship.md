@@ -210,7 +210,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -239,13 +239,13 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 name: DimensionRelationship
 description: A relationship element that associates a DataAttribute with a specific
   Dimension at a specific level
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - sdmx:DimensionRelationship
 attributes:
   dimensions:
     name: dimensions
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - sdmx:DimensionDescriptor
     domain_of:
@@ -256,7 +256,7 @@ attributes:
   groupKey:
     name: groupKey
     description: Set of dimensions that this definition depends on
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - sdmx:GroupDimensionDescriptor
     domain_of:
@@ -265,7 +265,7 @@ attributes:
     range: ComponentList
   attribute:
     name: attribute
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Resource
     - MeasureRelationship
@@ -285,13 +285,13 @@ attributes:
 name: DimensionRelationship
 description: A relationship element that associates a DataAttribute with a specific
   Dimension at a specific level
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - sdmx:DimensionRelationship
 attributes:
   dimensions:
     name: dimensions
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - sdmx:DimensionDescriptor
     owner: DimensionRelationship
@@ -303,7 +303,7 @@ attributes:
   groupKey:
     name: groupKey
     description: Set of dimensions that this definition depends on
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - sdmx:GroupDimensionDescriptor
     owner: DimensionRelationship
@@ -313,7 +313,7 @@ attributes:
     range: ComponentList
   attribute:
     name: attribute
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: DimensionRelationship
     domain_of:
     - Resource

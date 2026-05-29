@@ -77,7 +77,7 @@ URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -98,7 +98,7 @@ URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
 ```yaml
 name: expression
 description: The actual text of the formal expression (renamed from 'code' for disambiguation).
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 aliases:
 - code
 rank: 1000

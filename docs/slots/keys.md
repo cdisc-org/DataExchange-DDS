@@ -83,7 +83,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -105,7 +105,7 @@ Value must satisfy at least one of:
 name: keys
 description: Series and Group keys in the data that are associated with dimensions
   in this structure
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Dataset
 domain_of:

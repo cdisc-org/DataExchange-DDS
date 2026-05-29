@@ -71,7 +71,7 @@ URI: [odm:slot/windowLower](https://cdisc.org/odm2/slot/windowLower)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/windowLower](https://cdisc.org/odm2/slot/windowLower)
 ```yaml
 name: windowLower
 description: Start date/time of the timing
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Timing
 domain_of:

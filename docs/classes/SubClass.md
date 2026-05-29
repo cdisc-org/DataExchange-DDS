@@ -71,7 +71,7 @@ SubClass ||--}o SubClass : "subClasses"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -98,12 +98,12 @@ SubClass ||--}o SubClass : "subClasses"
 ```yaml
 name: SubClass
 description: A specific SubClass within a CDISC model Class.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 attributes:
   name:
     name: name
     description: Name of the SubClass following CDISC Controlled Terminology for SubClass.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Labelled
     - DefClass
@@ -114,7 +114,7 @@ attributes:
   parentClass:
     name: parentClass
     description: Name of the parent Class or SubClass following CDISC Controlled Terminology.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - SubClass
@@ -123,7 +123,7 @@ attributes:
   subClasses:
     name: subClasses
     description: Nested SubClass(es) for multi-level SubClass hierarchy.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - DefClass
     - SubClass
@@ -142,12 +142,12 @@ attributes:
 ```yaml
 name: SubClass
 description: A specific SubClass within a CDISC model Class.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 attributes:
   name:
     name: name
     description: Name of the SubClass following CDISC Controlled Terminology for SubClass.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: SubClass
     domain_of:
     - Labelled
@@ -159,7 +159,7 @@ attributes:
   parentClass:
     name: parentClass
     description: Name of the parent Class or SubClass following CDISC Controlled Terminology.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: SubClass
     domain_of:
@@ -169,7 +169,7 @@ attributes:
   subClasses:
     name: subClasses
     description: Nested SubClass(es) for multi-level SubClass hierarchy.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: SubClass
     domain_of:
     - DefClass

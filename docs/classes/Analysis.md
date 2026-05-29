@@ -316,7 +316,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -346,7 +346,7 @@ description: 'Analysis extends Method to capture analysis-specific metadata incl
   the reason for analysis, its purpose, and data traceability for the results used.
 
   Expressions and parameters from Method can be generic or implementation-specific.'
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 is_a: Method
 mixins:
 - Versioned
@@ -354,14 +354,14 @@ attributes:
   analysisReason:
     name: analysisReason
     description: The reason this analysis was performed.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Analysis
   analysisPurpose:
     name: analysisPurpose
     description: The purpose or role of this analysis in the study.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Analysis
@@ -369,7 +369,7 @@ attributes:
     name: analysisMethod
     description: "Generic method used to perform this analysis. any_of:\n  - range:\
       \ Method\n  - range: AnalysisMethod"
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Dataflow
     - Analysis
@@ -377,7 +377,7 @@ attributes:
     name: applicableWhen
     description: The conditions (e.g. population, time period etc.) that must be met
       for this analysis to be applicable.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Item
     - ItemGroup
@@ -391,7 +391,7 @@ attributes:
     description: Datasets or slices/subsets of datasets asked for by this analysis.
       If a Item is referenced by a Parameter e.g. Analysis Variable, make sure to
       include its parent ItemGroup here.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Analysis
@@ -413,7 +413,7 @@ description: 'Analysis extends Method to capture analysis-specific metadata incl
   the reason for analysis, its purpose, and data traceability for the results used.
 
   Expressions and parameters from Method can be generic or implementation-specific.'
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 is_a: Method
 mixins:
 - Versioned
@@ -421,7 +421,7 @@ attributes:
   analysisReason:
     name: analysisReason
     description: The reason this analysis was performed.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -429,7 +429,7 @@ attributes:
   analysisPurpose:
     name: analysisPurpose
     description: The purpose or role of this analysis in the study.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -438,7 +438,7 @@ attributes:
     name: analysisMethod
     description: "Generic method used to perform this analysis. any_of:\n  - range:\
       \ Method\n  - range: AnalysisMethod"
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - Dataflow
@@ -447,7 +447,7 @@ attributes:
     name: applicableWhen
     description: The conditions (e.g. population, time period etc.) that must be met
       for this analysis to be applicable.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - Item
@@ -462,7 +462,7 @@ attributes:
     description: Datasets or slices/subsets of datasets asked for by this analysis.
       If a Item is referenced by a Parameter e.g. Analysis Variable, make sure to
       include its parent ItemGroup here.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -475,7 +475,7 @@ attributes:
   version:
     name: version
     description: The version of the external resources
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -486,7 +486,7 @@ attributes:
     name: href
     description: Machine-readable instructions to obtain the resource e.g. FHIR path,
       URL
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -496,7 +496,7 @@ attributes:
   type:
     name: type
     description: The type of method e.g. Computation, Imputation, Transformation.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - ItemGroup
@@ -509,7 +509,7 @@ attributes:
   expressions:
     name: expressions
     description: Formal expressions used by this method
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - Condition
@@ -522,7 +522,7 @@ attributes:
   documents:
     name: documents
     description: Reference to a document that describes this method in detail.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - Comment
@@ -535,7 +535,7 @@ attributes:
   implementsConcept:
     name: implementsConcept
     description: Reference to a specific concept that this Method implements.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - ItemGroup
@@ -546,7 +546,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Analysis
@@ -557,7 +557,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -566,7 +566,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -578,7 +578,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -591,7 +591,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -605,7 +605,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -619,7 +619,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000
@@ -637,7 +637,7 @@ attributes:
   mandatory:
     name: mandatory
     description: Is this element required?
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -647,7 +647,7 @@ attributes:
     name: comments
     description: Comment on the element, such as a rationale for its inclusion or
       exclusion
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -659,7 +659,7 @@ attributes:
     name: siteOrSponsorComments
     description: Comment on the element, such as a rationale for its inclusion or
       exclusion
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -670,7 +670,7 @@ attributes:
   purpose:
     name: purpose
     description: Purpose or rationale for this data element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -682,7 +682,7 @@ attributes:
   lastUpdated:
     name: lastUpdated
     description: When the resource was last updated
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Analysis
     domain_of:
@@ -691,7 +691,7 @@ attributes:
   owner:
     name: owner
     description: Party responsible for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     narrow_mappings:
     - prov:wasAttributedTo
     - prov:wasAssociatedBy
@@ -708,7 +708,7 @@ attributes:
     name: wasDerivedFrom
     description: Reference to another item that this item implements or extends, e.g.
       a template Item definition.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - prov:wasDerivedFrom
     rank: 1000

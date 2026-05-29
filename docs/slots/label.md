@@ -120,7 +120,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -142,7 +142,7 @@ Value must satisfy at least one of:
 ```yaml
 name: label
 description: Human-readable label, shown in UIs
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - skos:prefLabel
 rank: 1000

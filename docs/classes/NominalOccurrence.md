@@ -253,7 +253,7 @@ Timing ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -282,7 +282,7 @@ Timing ||--}o Coding : "coding"
 name: NominalOccurrence
 description: An event element that represents occurrences such as planned or unplanned
   encounters or adverse events
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 narrow_mappings:
 - usdm:ScheduledInstance
 - usdm:Encounter
@@ -299,7 +299,7 @@ attributes:
   timing:
     name: timing
     description: A named event reference, that can nest further named timing references.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - NominalOccurrence
@@ -308,7 +308,7 @@ attributes:
   event:
     name: event
     description: The ID of the event in a Schedule.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - NominalOccurrence
@@ -317,7 +317,7 @@ attributes:
   condition:
     name: condition
     description: A condition that must be met for this occurrence to be valid.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - NominalOccurrence
@@ -334,7 +334,7 @@ attributes:
 name: NominalOccurrence
 description: An event element that represents occurrences such as planned or unplanned
   encounters or adverse events
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 narrow_mappings:
 - usdm:ScheduledInstance
 - usdm:Encounter
@@ -351,7 +351,7 @@ attributes:
   timing:
     name: timing
     description: A named event reference, that can nest further named timing references.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -361,7 +361,7 @@ attributes:
   event:
     name: event
     description: The ID of the event in a Schedule.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -371,7 +371,7 @@ attributes:
   condition:
     name: condition
     description: A condition that must be met for this occurrence to be valid.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -382,7 +382,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: NominalOccurrence
@@ -393,7 +393,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -402,7 +402,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -414,7 +414,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -427,7 +427,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -441,7 +441,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -455,7 +455,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000
@@ -473,7 +473,7 @@ attributes:
   mandatory:
     name: mandatory
     description: Is this element required?
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -483,7 +483,7 @@ attributes:
     name: comments
     description: Comment on the element, such as a rationale for its inclusion or
       exclusion
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -495,7 +495,7 @@ attributes:
     name: siteOrSponsorComments
     description: Comment on the element, such as a rationale for its inclusion or
       exclusion
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -506,7 +506,7 @@ attributes:
   purpose:
     name: purpose
     description: Purpose or rationale for this data element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -518,7 +518,7 @@ attributes:
   lastUpdated:
     name: lastUpdated
     description: When the resource was last updated
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: NominalOccurrence
     domain_of:
@@ -527,7 +527,7 @@ attributes:
   owner:
     name: owner
     description: Party responsible for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     narrow_mappings:
     - prov:wasAttributedTo
     - prov:wasAssociatedBy
@@ -544,7 +544,7 @@ attributes:
     name: wasDerivedFrom
     description: Reference to another item that this item implements or extends, e.g.
       a template Item definition.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - prov:wasDerivedFrom
     rank: 1000

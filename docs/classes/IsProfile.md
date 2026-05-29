@@ -151,7 +151,7 @@ Timing ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -179,7 +179,7 @@ Timing ||--}o Coding : "coding"
 name: IsProfile
 description: A mixin that provides additional metadata for FHIR resources and Data
   Products, including profiles, security tags, and validity periods
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 mixins:
 - Versioned
@@ -187,7 +187,7 @@ attributes:
   profile:
     name: profile
     description: Profiles this resource claims to conform to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - IsProfile
@@ -196,7 +196,7 @@ attributes:
   security:
     name: security
     description: Security tags applied to this resource
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - IsProfile
@@ -207,7 +207,7 @@ attributes:
   authenticator:
     name: authenticator
     description: Who/what authenticated the resource
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - IsProfile
@@ -219,7 +219,7 @@ attributes:
   validityPeriod:
     name: validityPeriod
     description: Time period during which the resouce is valid
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - IsProfile
@@ -236,7 +236,7 @@ attributes:
 name: IsProfile
 description: A mixin that provides additional metadata for FHIR resources and Data
   Products, including profiles, security tags, and validity periods
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 mixins:
 - Versioned
@@ -244,7 +244,7 @@ attributes:
   profile:
     name: profile
     description: Profiles this resource claims to conform to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsProfile
     domain_of:
@@ -254,7 +254,7 @@ attributes:
   security:
     name: security
     description: Security tags applied to this resource
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsProfile
     domain_of:
@@ -266,7 +266,7 @@ attributes:
   authenticator:
     name: authenticator
     description: Who/what authenticated the resource
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsProfile
     domain_of:
@@ -279,7 +279,7 @@ attributes:
   validityPeriod:
     name: validityPeriod
     description: Time period during which the resouce is valid
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsProfile
     domain_of:
@@ -289,7 +289,7 @@ attributes:
   version:
     name: version
     description: The version of the external resources
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsProfile
     domain_of:
@@ -300,7 +300,7 @@ attributes:
     name: href
     description: Machine-readable instructions to obtain the resource e.g. FHIR path,
       URL
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: IsProfile
     domain_of:

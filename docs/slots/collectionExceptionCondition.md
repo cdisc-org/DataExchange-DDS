@@ -72,7 +72,7 @@ URI: [odm:slot/collectionExceptionCondition](https://cdisc.org/odm2/slot/collect
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/collectionExceptionCondition](https://cdisc.org/odm2/slot/collect
 ```yaml
 name: collectionExceptionCondition
 description: Condition that defines when collection may be exempted
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsODMItem
 domain_of:

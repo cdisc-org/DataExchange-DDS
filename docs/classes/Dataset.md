@@ -527,7 +527,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -557,7 +557,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 name: Dataset
 description: A collection element that groups observations sharing the same dimensionality,
   expressed as a set of unique dimensions within a Data Product context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - qb:Dataset
 - sdmx:Dataset
@@ -577,7 +577,7 @@ attributes:
     name: describedBy
     description: Associates a Dataflow and thereby a Data Structure Definition to
       the data set.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Dataset
@@ -588,7 +588,7 @@ attributes:
     description: Associates the Data Structure Definition that defines the structure
       of the Data Set. Note that the Data Structure Definition is the same as that
       associated (non-mandatory) to the Dataflow.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Dataset
@@ -596,7 +596,7 @@ attributes:
   publishedBy:
     name: publishedBy
     description: Associates the Data Provider that reports/publishes the data.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Dictionary
     - Dataset
@@ -607,7 +607,7 @@ attributes:
     name: keys
     description: Series and Group keys in the data that are associated with dimensions
       in this structure
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Dataset
@@ -621,14 +621,14 @@ attributes:
   datasetType:
     name: datasetType
     description: Type or classification of the dataset
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Dataset
   distribution:
     name: distribution
     description: Representations of this dataset in various formats or access methods
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - dcat:distribution
     rank: 1000
@@ -641,7 +641,7 @@ attributes:
   conformsTo:
     name: conformsTo
     description: Specification or standard that this dataset conforms to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     close_mappings:
     - dcterms:conformsTo
     rank: 1000
@@ -651,7 +651,7 @@ attributes:
   hasPolicy:
     name: hasPolicy
     description: Access or usage policy applied to this dataset
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Dataset
@@ -662,7 +662,7 @@ attributes:
   informationSensitivityClassification:
     name: informationSensitivityClassification
     description: Classification of the dataset's sensitivity or confidentiality
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Dataset
@@ -677,7 +677,7 @@ attributes:
 name: Dataset
 description: A collection element that groups observations sharing the same dimensionality,
   expressed as a set of unique dimensions within a Data Product context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - qb:Dataset
 - sdmx:Dataset
@@ -697,7 +697,7 @@ attributes:
     name: describedBy
     description: Associates a Dataflow and thereby a Data Structure Definition to
       the data set.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -709,7 +709,7 @@ attributes:
     description: Associates the Data Structure Definition that defines the structure
       of the Data Set. Note that the Data Structure Definition is the same as that
       associated (non-mandatory) to the Dataflow.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -718,7 +718,7 @@ attributes:
   publishedBy:
     name: publishedBy
     description: Associates the Data Provider that reports/publishes the data.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: Dataset
     domain_of:
     - Dictionary
@@ -730,7 +730,7 @@ attributes:
     name: keys
     description: Series and Group keys in the data that are associated with dimensions
       in this structure
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -745,7 +745,7 @@ attributes:
   datasetType:
     name: datasetType
     description: Type or classification of the dataset
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -753,7 +753,7 @@ attributes:
   distribution:
     name: distribution
     description: Representations of this dataset in various formats or access methods
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - dcat:distribution
     rank: 1000
@@ -767,7 +767,7 @@ attributes:
   conformsTo:
     name: conformsTo
     description: Specification or standard that this dataset conforms to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     close_mappings:
     - dcterms:conformsTo
     rank: 1000
@@ -778,7 +778,7 @@ attributes:
   hasPolicy:
     name: hasPolicy
     description: Access or usage policy applied to this dataset
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -790,7 +790,7 @@ attributes:
   informationSensitivityClassification:
     name: informationSensitivityClassification
     description: Classification of the dataset's sensitivity or confidentiality
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -798,7 +798,7 @@ attributes:
   version:
     name: version
     description: The version of the external resources
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -809,7 +809,7 @@ attributes:
     name: href
     description: Machine-readable instructions to obtain the resource e.g. FHIR path,
       URL
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -819,7 +819,7 @@ attributes:
   profile:
     name: profile
     description: Profiles this resource claims to conform to
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -829,7 +829,7 @@ attributes:
   security:
     name: security
     description: Security tags applied to this resource
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -841,7 +841,7 @@ attributes:
   authenticator:
     name: authenticator
     description: Who/what authenticated the resource
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -855,7 +855,7 @@ attributes:
   validityPeriod:
     name: validityPeriod
     description: Time period during which the resouce is valid
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -866,7 +866,7 @@ attributes:
     name: action
     description: Defines the action to be taken by the recipient system (information,
       append, replace, delete)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -876,7 +876,7 @@ attributes:
     name: reportingBegin
     description: A specific time period in a known system of time periods that identifies
       the start period of a report.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -886,7 +886,7 @@ attributes:
     name: reportingEnd
     description: A specific time period in a known system of time periods that identifies
       the end period of a report.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -896,7 +896,7 @@ attributes:
     name: dataExtractionDate
     description: A specific time period that identifies the date and time that the
       data are extracted from a data source.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -906,7 +906,7 @@ attributes:
     name: validFrom
     description: Indicates the inclusive start time indicating the validity of the
       information in the data set.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -916,7 +916,7 @@ attributes:
     name: validTo
     description: Indicates the inclusive end time indicating the validity of the information
       in the data set.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -926,7 +926,7 @@ attributes:
     name: publicationYear
     description: Specifies the year of publication of the data or metadata in terms
       of whatever provisioning agreements might be in force.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -936,7 +936,7 @@ attributes:
     name: publicationPeriod
     description: Specifies the period of publication of the data or metadata in terms
       of whatever provisioning agreements might be in force.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -946,7 +946,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Dataset
@@ -957,7 +957,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -966,7 +966,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -978,7 +978,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -991,7 +991,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Dataset
     domain_of:
@@ -1005,7 +1005,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -1019,7 +1019,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

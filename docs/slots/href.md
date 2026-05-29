@@ -86,7 +86,7 @@ URI: [odm:slot/href](https://cdisc.org/odm2/slot/href)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -108,7 +108,7 @@ URI: [odm:slot/href](https://cdisc.org/odm2/slot/href)
 name: href
 description: Machine-readable instructions to obtain the resource e.g. FHIR path,
   URL
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Versioned
 domain_of:

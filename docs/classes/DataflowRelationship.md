@@ -284,7 +284,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -313,13 +313,13 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 name: DataflowRelationship
 description: A relationship element that associates a DataAttribute with a Dataflow,
   reported at the Dataset level
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - sdmx:DataflowRelationship
 attributes:
   dataFlow:
     name: dataFlow
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - DataflowRelationship
@@ -327,7 +327,7 @@ attributes:
     range: Dataflow
   attribute:
     name: attribute
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Resource
     - MeasureRelationship
@@ -347,13 +347,13 @@ attributes:
 name: DataflowRelationship
 description: A relationship element that associates a DataAttribute with a Dataflow,
   reported at the Dataset level
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - sdmx:DataflowRelationship
 attributes:
   dataFlow:
     name: dataFlow
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: DataflowRelationship
     domain_of:
@@ -362,7 +362,7 @@ attributes:
     range: Dataflow
   attribute:
     name: attribute
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: DataflowRelationship
     domain_of:
     - Resource

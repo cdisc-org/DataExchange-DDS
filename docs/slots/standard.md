@@ -74,7 +74,7 @@ URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
 ```yaml
 name: standard
 description: Reference to the standard being implemented
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsODMStandard
 domain_of:

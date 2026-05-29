@@ -72,7 +72,7 @@ URI: [odm:slot/significantDigits](https://cdisc.org/odm2/slot/significantDigits)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/significantDigits](https://cdisc.org/odm2/slot/significantDigits)
 ```yaml
 name: significantDigits
 description: For numeric values, the number of significant digits
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Formatted
 domain_of:

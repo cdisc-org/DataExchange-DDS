@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -104,7 +104,7 @@ Value must satisfy at least one of:
 ```yaml
 name: dataProductOwner
 description: The person or team accountable for this data product
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - prov:wasAttributedTo
 rank: 1000

@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -103,7 +103,7 @@ Value must satisfy at least one of:
 ```yaml
 name: consumer
 description: The Data Consumer that is part of this agreement
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ProvisionAgreement
 domain_of:

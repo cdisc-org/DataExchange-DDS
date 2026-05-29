@@ -149,7 +149,7 @@ ReturnValue ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -178,7 +178,7 @@ ReturnValue ||--}o Coding : "coding"
 name: Resource
 description: An external reference that serves as the source for a Dataset, ItemGroup,
   or Item
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - odm:Resource
 is_a: IdentifiableElement
@@ -189,7 +189,7 @@ attributes:
     name: resourceType
     description: Type of resource (e.g.,  "ODM", "HL7-FHIR", "HL7-CDA", "HL7-v2",
       "OpenEHR-extract")
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Resource
@@ -199,7 +199,7 @@ attributes:
     name: attribute
     description: Field provided by the Name attribute where the data or information
       can be obtained. Examples are "valueQuantity.value" or "valueQuantity.unit".
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Resource
@@ -212,7 +212,7 @@ attributes:
   selection:
     name: selection
     description: Machine-executable instructions for selecting data from the resource.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Resource
@@ -231,7 +231,7 @@ attributes:
 name: Resource
 description: An external reference that serves as the source for a Dataset, ItemGroup,
   or Item
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 close_mappings:
 - odm:Resource
 is_a: IdentifiableElement
@@ -242,7 +242,7 @@ attributes:
     name: resourceType
     description: Type of resource (e.g.,  "ODM", "HL7-FHIR", "HL7-CDA", "HL7-v2",
       "OpenEHR-extract")
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -253,7 +253,7 @@ attributes:
     name: attribute
     description: Field provided by the Name attribute where the data or information
       can be obtained. Examples are "valueQuantity.value" or "valueQuantity.unit".
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -267,7 +267,7 @@ attributes:
   selection:
     name: selection
     description: Machine-executable instructions for selecting data from the resource.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -279,7 +279,7 @@ attributes:
   version:
     name: version
     description: The version of the external resources
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -290,7 +290,7 @@ attributes:
     name: href
     description: Machine-readable instructions to obtain the resource e.g. FHIR path,
       URL
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -301,7 +301,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Resource
@@ -312,7 +312,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -321,7 +321,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -333,7 +333,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -346,7 +346,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Resource
     domain_of:
@@ -360,7 +360,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -374,7 +374,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

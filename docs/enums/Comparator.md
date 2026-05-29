@@ -56,7 +56,7 @@ URI: [odm:enum/Comparator](https://cdisc.org/odm2/enum/Comparator)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -70,7 +70,7 @@ URI: [odm:enum/Comparator](https://cdisc.org/odm2/enum/Comparator)
 name: Comparator
 description: An enumeration that defines the types of comparison operations available
   for a RangeCheck
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 permissible_values:
   LT:

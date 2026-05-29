@@ -72,7 +72,7 @@ URI: [odm:slot/terms](https://cdisc.org/odm2/slot/terms)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/terms](https://cdisc.org/odm2/slot/terms)
 name: terms
 description: Terms in this dictionary - leave this empty in most cases to keep the
   file small
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Dictionary
 domain_of:

@@ -71,7 +71,7 @@ URI: [odm:slot/status](https://cdisc.org/odm2/slot/status)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/status](https://cdisc.org/odm2/slot/status)
 ```yaml
 name: status
 description: Status of an Implementation Guide or of a Controlled Terminology
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Standard
 domain_of:

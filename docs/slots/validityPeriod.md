@@ -74,7 +74,7 @@ URI: [odm:slot/validityPeriod](https://cdisc.org/odm2/slot/validityPeriod)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/validityPeriod](https://cdisc.org/odm2/slot/validityPeriod)
 ```yaml
 name: validityPeriod
 description: Time period during which the resouce is valid
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsProfile
 domain_of:

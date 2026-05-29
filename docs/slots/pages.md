@@ -72,7 +72,7 @@ URI: [odm:slot/pages](https://cdisc.org/odm2/slot/pages)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/pages](https://cdisc.org/odm2/slot/pages)
 ```yaml
 name: pages
 description: Reference to specific pages in a PDF document
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DocumentReference
 domain_of:

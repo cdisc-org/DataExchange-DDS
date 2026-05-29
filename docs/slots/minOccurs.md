@@ -71,7 +71,7 @@ URI: [odm:slot/minOccurs](https://cdisc.org/odm2/slot/minOccurs)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/minOccurs](https://cdisc.org/odm2/slot/minOccurs)
 name: minOccurs
 description: Minimum number of occurrences of this property in the context. Set to
   >0 to mandate some number of occurrences
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ConceptProperty
 domain_of:

@@ -80,7 +80,7 @@ StudyMetadata {
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -108,13 +108,13 @@ StudyMetadata {
 name: StudyMetadata
 description: A mixin that provides study-level metadata attributes including study
   identification and protocol information
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   studyOID:
     name: studyOID
     description: Unique identifier for the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - StudyMetadata
@@ -123,7 +123,7 @@ attributes:
   studyName:
     name: studyName
     description: Name of the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - StudyMetadata
@@ -131,7 +131,7 @@ attributes:
   studyDescription:
     name: studyDescription
     description: Description of the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - StudyMetadata
@@ -139,7 +139,7 @@ attributes:
   protocolName:
     name: protocolName
     description: Protocol name for the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - StudyMetadata
@@ -155,13 +155,13 @@ attributes:
 name: StudyMetadata
 description: A mixin that provides study-level metadata attributes including study
   identification and protocol information
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 mixin: true
 attributes:
   studyOID:
     name: studyOID
     description: Unique identifier for the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: StudyMetadata
     domain_of:
@@ -171,7 +171,7 @@ attributes:
   studyName:
     name: studyName
     description: Name of the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: StudyMetadata
     domain_of:
@@ -180,7 +180,7 @@ attributes:
   studyDescription:
     name: studyDescription
     description: Description of the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: StudyMetadata
     domain_of:
@@ -189,7 +189,7 @@ attributes:
   protocolName:
     name: protocolName
     description: Protocol name for the study
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: StudyMetadata
     domain_of:

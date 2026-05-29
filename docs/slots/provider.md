@@ -71,7 +71,7 @@ URI: [odm:slot/provider](https://cdisc.org/odm2/slot/provider)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/provider](https://cdisc.org/odm2/slot/provider)
 ```yaml
 name: provider
 description: The Data Provider that is part of this agreement
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ProvisionAgreement
 domain_of:

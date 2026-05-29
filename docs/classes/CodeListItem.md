@@ -85,7 +85,7 @@ CodeListItem ||--|o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -116,7 +116,7 @@ CodeListItem ||--|o Coding : "coding"
 name: CodeListItem
 description: A structured member of a CodeList that extends the Coding class with
   additional context-specific properties
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:CodeListItem
 close_mappings:
@@ -131,7 +131,7 @@ attributes:
   codedValue:
     name: codedValue
     description: The value of the CodeListItem before decoding
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - CodeListItem
@@ -140,7 +140,7 @@ attributes:
   decode:
     name: decode
     description: The decoded value of the CodeListItem
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - CodeListItem
@@ -149,7 +149,7 @@ attributes:
   description:
     name: description
     description: A detailed description of the code (e.g., for documentation purposes)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Labelled
     - CodeListItem
@@ -159,7 +159,7 @@ attributes:
   coding:
     name: coding
     description: The dictionary definition of the CodeListItem
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Labelled
     - CodeListItem
@@ -169,7 +169,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative labels for the code (ODM Alias, skos:altLabel)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Labelled
     - CodeListItem
@@ -180,7 +180,7 @@ attributes:
   weight:
     name: weight
     description: Numeric significance of the code (e.g., for scoring)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - CodeListItem
@@ -188,7 +188,7 @@ attributes:
   other:
     name: other
     description: Flag to indicate that the term represents "other" content
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - CodeListItem
@@ -204,7 +204,7 @@ attributes:
 name: CodeListItem
 description: A structured member of a CodeList that extends the Coding class with
   additional context-specific properties
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:CodeListItem
 close_mappings:
@@ -219,7 +219,7 @@ attributes:
   codedValue:
     name: codedValue
     description: The value of the CodeListItem before decoding
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: CodeListItem
     domain_of:
@@ -229,7 +229,7 @@ attributes:
   decode:
     name: decode
     description: The decoded value of the CodeListItem
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: CodeListItem
     domain_of:
@@ -239,7 +239,7 @@ attributes:
   description:
     name: description
     description: A detailed description of the code (e.g., for documentation purposes)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: CodeListItem
     domain_of:
     - Labelled
@@ -250,7 +250,7 @@ attributes:
   coding:
     name: coding
     description: The dictionary definition of the CodeListItem
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: CodeListItem
     domain_of:
     - Labelled
@@ -261,7 +261,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative labels for the code (ODM Alias, skos:altLabel)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: CodeListItem
     domain_of:
     - Labelled
@@ -273,7 +273,7 @@ attributes:
   weight:
     name: weight
     description: Numeric significance of the code (e.g., for scoring)
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: CodeListItem
     domain_of:
@@ -282,7 +282,7 @@ attributes:
   other:
     name: other
     description: Flag to indicate that the term represents "other" content
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: CodeListItem
     domain_of:

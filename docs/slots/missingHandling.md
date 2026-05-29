@@ -74,7 +74,7 @@ URI: [odm:slot/missingHandling](https://cdisc.org/odm2/slot/missingHandling)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/missingHandling](https://cdisc.org/odm2/slot/missingHandling)
 ```yaml
 name: missingHandling
 description: The method for handling missing values in the measure property
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: CubeComponent
 domain_of:

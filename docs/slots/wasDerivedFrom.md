@@ -115,7 +115,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -138,7 +138,7 @@ Value must satisfy at least one of:
 name: wasDerivedFrom
 description: Reference to another item that this item implements or extends, e.g.
   a template Item definition.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - prov:wasDerivedFrom
 rank: 1000

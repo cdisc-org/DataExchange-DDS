@@ -72,7 +72,7 @@ URI: [odm:slot/codeListItems](https://cdisc.org/odm2/slot/codeListItems)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/codeListItems](https://cdisc.org/odm2/slot/codeListItems)
 name: codeListItems
 description: The individual values that make up this CodeList. The type of CodeListItem
   included determines its behaviour
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: CodeList
 domain_of:

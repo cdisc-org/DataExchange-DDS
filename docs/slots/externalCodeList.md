@@ -71,7 +71,7 @@ URI: [odm:slot/externalCodeList](https://cdisc.org/odm2/slot/externalCodeList)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/externalCodeList](https://cdisc.org/odm2/slot/externalCodeList)
 ```yaml
 name: externalCodeList
 description: Reference to a code list that is defined externally to this study
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: CodeList
 domain_of:

@@ -71,7 +71,7 @@ URI: [odm:slot/length](https://cdisc.org/odm2/slot/length)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/length](https://cdisc.org/odm2/slot/length)
 ```yaml
 name: length
 description: The maximum length of the data item in characters.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Item
 domain_of:

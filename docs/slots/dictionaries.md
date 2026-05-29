@@ -72,7 +72,7 @@ URI: [odm:slot/dictionaries](https://cdisc.org/odm2/slot/dictionaries)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/dictionaries](https://cdisc.org/odm2/slot/dictionaries)
 ```yaml
 name: dictionaries
 description: Dictionaries defined in this version of the metadata
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: MetaDataVersion
 domain_of:

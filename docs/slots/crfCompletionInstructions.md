@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -104,7 +104,7 @@ Value must satisfy at least one of:
 name: crfCompletionInstructions
 description: 'CRFCompletionInstructions reference: Instructions for the clinical site
   on how to enter collected information on the CRF'
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: IsODMItem
 domain_of:

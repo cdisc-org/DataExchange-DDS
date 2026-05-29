@@ -47,7 +47,7 @@ URI: [odm:enum/MethodType](https://cdisc.org/odm2/enum/MethodType)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -61,7 +61,7 @@ URI: [odm:enum/MethodType](https://cdisc.org/odm2/enum/MethodType)
 name: MethodType
 description: An enumeration that defines the types of computational methods available
   for data processing
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 permissible_values:
   Computation:

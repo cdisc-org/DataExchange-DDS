@@ -73,7 +73,7 @@ URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -94,7 +94,7 @@ URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
 ```yaml
 name: selection
 description: Machine-executable instructions for selecting data from the resource.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Resource
 domain_of:

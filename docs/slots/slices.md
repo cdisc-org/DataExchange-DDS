@@ -73,7 +73,7 @@ URI: [odm:slot/slices](https://cdisc.org/odm2/slot/slices)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -95,7 +95,7 @@ URI: [odm:slot/slices](https://cdisc.org/odm2/slot/slices)
 name: slices
 description: Slices are specific subset ItemGroups that belong to, or are used by
   this ItemGroup
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ItemGroup
 domain_of:

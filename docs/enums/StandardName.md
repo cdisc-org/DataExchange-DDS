@@ -52,7 +52,7 @@ URI: [odm:enum/StandardName](https://cdisc.org/odm2/enum/StandardName)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -65,7 +65,7 @@ URI: [odm:enum/StandardName](https://cdisc.org/odm2/enum/StandardName)
 ```yaml
 name: StandardName
 description: An enumeration that defines permissible values for standard names
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 permissible_values:
   ADaMIG:

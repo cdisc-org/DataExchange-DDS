@@ -230,7 +230,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -259,7 +259,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 name: FormalExpression
 description: A computational element that defines the execution of a data derivation
   within a specific context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:FormalExpression
 - odm:FormalExpressionRef
@@ -270,7 +270,7 @@ attributes:
     name: context
     description: The specific context within the containing element to which this
       formal expression applies.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - fhir:Expression/language
     domain_of:
@@ -281,7 +281,7 @@ attributes:
     name: expression
     description: The actual text of the formal expression (renamed from 'code' for
       disambiguation).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     aliases:
     - code
     rank: 1000
@@ -292,7 +292,7 @@ attributes:
   returnType:
     name: returnType
     description: Return type of the expression
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - FormalExpression
@@ -300,7 +300,7 @@ attributes:
   parameters:
     name: parameters
     description: Parameters used in the expression
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - FormalExpression
@@ -311,7 +311,7 @@ attributes:
   returnValue:
     name: returnValue
     description: Return value details
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - FormalExpression
@@ -319,7 +319,7 @@ attributes:
   externalCodeLibs:
     name: externalCodeLibs
     description: External code libraries referenced
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - FormalExpression
@@ -336,7 +336,7 @@ attributes:
 name: FormalExpression
 description: A computational element that defines the execution of a data derivation
   within a specific context
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 exact_mappings:
 - odm:FormalExpression
 - odm:FormalExpressionRef
@@ -347,7 +347,7 @@ attributes:
     name: context
     description: The specific context within the containing element to which this
       formal expression applies.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - fhir:Expression/language
     owner: FormalExpression
@@ -359,7 +359,7 @@ attributes:
     name: expression
     description: The actual text of the formal expression (renamed from 'code' for
       disambiguation).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     aliases:
     - code
     rank: 1000
@@ -371,7 +371,7 @@ attributes:
   returnType:
     name: returnType
     description: Return type of the expression
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -380,7 +380,7 @@ attributes:
   parameters:
     name: parameters
     description: Parameters used in the expression
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -392,7 +392,7 @@ attributes:
   returnValue:
     name: returnValue
     description: Return value details
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -401,7 +401,7 @@ attributes:
   externalCodeLibs:
     name: externalCodeLibs
     description: External code libraries referenced
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -412,7 +412,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: FormalExpression
@@ -423,7 +423,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -432,7 +432,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -444,7 +444,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -457,7 +457,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: FormalExpression
     domain_of:
@@ -471,7 +471,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -485,7 +485,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

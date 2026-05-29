@@ -71,7 +71,7 @@ URI: [odm:slot/method](https://cdisc.org/odm2/slot/method)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/method](https://cdisc.org/odm2/slot/method)
 name: method
 description: Reference to the Method element that describes how to derive this item's
   value.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Item
 domain_of:

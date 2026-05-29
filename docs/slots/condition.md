@@ -72,7 +72,7 @@ URI: [odm:slot/condition](https://cdisc.org/odm2/slot/condition)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/condition](https://cdisc.org/odm2/slot/condition)
 ```yaml
 name: condition
 description: A condition that must be met for this occurrence to be valid.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: NominalOccurrence
 domain_of:

@@ -2,6 +2,8 @@
 
 This repository contains the model for the CDISC Data Definition Specification (DDS).
 
+The model is based on the work by Jeremy Teoh ([https://github.com/TeMeta/define-json](https://github.com/TeMeta/define-json)).
+
 ![under development](https://img.shields.io/badge/under-development-blue)
 
 ## Description

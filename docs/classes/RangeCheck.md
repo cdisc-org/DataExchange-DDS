@@ -142,7 +142,7 @@ ReturnValue ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -171,7 +171,7 @@ ReturnValue ||--}o Coding : "coding"
 name: RangeCheck
 description: A validation element that performs a simple comparison check between
   a referenced item's value and specified values, resolving to a boolean result
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 related_mappings:
 - qb:SliceKey
 - sdmx:DataKey
@@ -179,7 +179,7 @@ attributes:
   comparator:
     name: comparator
     description: The type of comparison to be performed
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - RangeCheck
@@ -187,7 +187,7 @@ attributes:
   checkValues:
     name: checkValues
     description: Values to compare against
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - RangeCheck
@@ -199,7 +199,7 @@ attributes:
     name: item
     description: Reference to the Item element whose value is being checked. If not
       specified, check applies to the enclosing context
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - RangeCheck
@@ -215,7 +215,7 @@ attributes:
     name: softHard
     description: Indicates whether a validation check is an error ("Hard") or a warning
       ("Soft")
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - RangeCheck
@@ -223,7 +223,7 @@ attributes:
   expressions:
     name: expressions
     description: A formal expression for complex checks
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Condition
     - RangeCheck
@@ -236,7 +236,7 @@ attributes:
     name: operator
     description: Logical operator for combining child conditions or range checks.
       Defaults to ALL if not specified.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     domain_of:
     - Condition
     - RangeCheck
@@ -253,7 +253,7 @@ attributes:
 name: RangeCheck
 description: A validation element that performs a simple comparison check between
   a referenced item's value and specified values, resolving to a boolean result
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 related_mappings:
 - qb:SliceKey
 - sdmx:DataKey
@@ -261,7 +261,7 @@ attributes:
   comparator:
     name: comparator
     description: The type of comparison to be performed
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: RangeCheck
     domain_of:
@@ -270,7 +270,7 @@ attributes:
   checkValues:
     name: checkValues
     description: Values to compare against
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: RangeCheck
     domain_of:
@@ -283,7 +283,7 @@ attributes:
     name: item
     description: Reference to the Item element whose value is being checked. If not
       specified, check applies to the enclosing context
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: RangeCheck
     domain_of:
@@ -300,7 +300,7 @@ attributes:
     name: softHard
     description: Indicates whether a validation check is an error ("Hard") or a warning
       ("Soft")
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: RangeCheck
     domain_of:
@@ -309,7 +309,7 @@ attributes:
   expressions:
     name: expressions
     description: A formal expression for complex checks
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: RangeCheck
     domain_of:
     - Condition
@@ -323,7 +323,7 @@ attributes:
     name: operator
     description: Logical operator for combining child conditions or range checks.
       Defaults to ALL if not specified.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     owner: RangeCheck
     domain_of:
     - Condition

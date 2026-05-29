@@ -72,7 +72,7 @@ URI: [odm:slot/observationClass](https://cdisc.org/odm2/slot/observationClass)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/observationClass](https://cdisc.org/odm2/slot/observationClass)
 ```yaml
 name: observationClass
 description: Identifies the predefined CDISC model Class.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: ItemGroup
 domain_of:

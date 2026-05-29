@@ -72,7 +72,7 @@ URI: [odm:slot/inputPort](https://cdisc.org/odm2/slot/inputPort)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/inputPort](https://cdisc.org/odm2/slot/inputPort)
 ```yaml
 name: inputPort
 description: Services that provide input into this data product
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DataProduct
 domain_of:

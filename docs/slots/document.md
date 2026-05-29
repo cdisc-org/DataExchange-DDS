@@ -72,7 +72,7 @@ URI: [odm:slot/document](https://cdisc.org/odm2/slot/document)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/document](https://cdisc.org/odm2/slot/document)
 ```yaml
 name: document
 description: Reference to an external document
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: SourceItem
 domain_of:

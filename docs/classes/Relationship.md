@@ -105,7 +105,7 @@ Relationship ||--}o Coding : "coding"
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -135,7 +135,7 @@ name: Relationship
 description: A semantic link that defines connections between elements such as Items
   or ItemGroups, capturing relationships like "is the unit for" or "assesses seriousness
   of"
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 related_mappings:
 - sdmx:ConceptSchemeMap
 is_a: IdentifiableElement
@@ -143,7 +143,7 @@ attributes:
   subject:
     name: subject
     description: The starting element of the relationship (e.g., an Item or ItemGroup).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Relationship
@@ -152,7 +152,7 @@ attributes:
   object:
     name: object
     description: The ending element of the relationship.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Relationship
@@ -161,7 +161,7 @@ attributes:
   predicateTerm:
     name: predicateTerm
     description: Short variable relationship linking phrase for programming purposes.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Relationship
@@ -170,7 +170,7 @@ attributes:
   linkingPhrase:
     name: linkingPhrase
     description: Variable relationship descriptive linking phrase.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     domain_of:
     - Relationship
@@ -188,7 +188,7 @@ name: Relationship
 description: A semantic link that defines connections between elements such as Items
   or ItemGroups, capturing relationships like "is the unit for" or "assesses seriousness
   of"
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 related_mappings:
 - sdmx:ConceptSchemeMap
 is_a: IdentifiableElement
@@ -196,7 +196,7 @@ attributes:
   subject:
     name: subject
     description: The starting element of the relationship (e.g., an Item or ItemGroup).
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -206,7 +206,7 @@ attributes:
   object:
     name: object
     description: The ending element of the relationship.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -216,7 +216,7 @@ attributes:
   predicateTerm:
     name: predicateTerm
     description: Short variable relationship linking phrase for programming purposes.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -226,7 +226,7 @@ attributes:
   linkingPhrase:
     name: linkingPhrase
     description: Variable relationship descriptive linking phrase.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -237,7 +237,7 @@ attributes:
     name: OID
     description: Local identifier within this study/context. Use CDISC OID format
       for regulatory submissions, or simple strings for internal use.
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
     owner: Relationship
@@ -248,7 +248,7 @@ attributes:
   uuid:
     name: uuid
     description: Universal unique identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -257,7 +257,7 @@ attributes:
   name:
     name: name
     description: Short name or identifier, used for field names
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -269,7 +269,7 @@ attributes:
   description:
     name: description
     description: Detailed description, shown in tooltips
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -282,7 +282,7 @@ attributes:
   coding:
     name: coding
     description: Semantic tags for this element
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     rank: 1000
     owner: Relationship
     domain_of:
@@ -296,7 +296,7 @@ attributes:
   label:
     name: label
     description: Human-readable label, shown in UIs
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
     rank: 1000
@@ -310,7 +310,7 @@ attributes:
   aliases:
     name: aliases
     description: Alternative name or identifier
-    from_schema: https://cdisc.org/define-json
+    from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:altLabel
     rank: 1000

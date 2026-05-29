@@ -71,7 +71,7 @@ URI: [odm:slot/leafID](https://cdisc.org/odm2/slot/leafID)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -92,7 +92,7 @@ URI: [odm:slot/leafID](https://cdisc.org/odm2/slot/leafID)
 ```yaml
 name: leafID
 description: Leaf identifier for document reference in Define-XML
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: DocumentReference
 domain_of:

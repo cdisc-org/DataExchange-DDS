@@ -72,7 +72,7 @@ URI: [odm:slot/externalCodeLibs](https://cdisc.org/odm2/slot/externalCodeLibs)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/externalCodeLibs](https://cdisc.org/odm2/slot/externalCodeLibs)
 ```yaml
 name: externalCodeLibs
 description: External code libraries referenced
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: FormalExpression
 domain_of:

@@ -72,7 +72,7 @@ URI: [odm:slot/object](https://cdisc.org/odm2/slot/object)
 ### Schema Source
 
 
-* from schema: https://cdisc.org/define-json
+* from schema: https://cdisc.org/dds
 
 
 
@@ -93,7 +93,7 @@ URI: [odm:slot/object](https://cdisc.org/odm2/slot/object)
 ```yaml
 name: object
 description: The ending element of the relationship.
-from_schema: https://cdisc.org/define-json
+from_schema: https://cdisc.org/dds
 rank: 1000
 owner: Relationship
 domain_of:
