@@ -1,7 +1,4 @@
----
-search:
-  boost: 1.0
----# Type: Sparqlpath 
+# Type: Sparqlpath 
 
 
 
@@ -10,30 +7,22 @@ _A string encoding a SPARQL Property Path. The value of the string MUST conform 
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
-## Type Properties
+* [base](https://w3id.org/linkml/base): str
 
-| Property | Value |
-| --- | --- |
-| Base | `str` |
-| Type URI | [xsd:string](http://www.w3.org/2001/XMLSchema#string) |
-| Representation | `str` |
+* [uri](https://w3id.org/linkml/uri): xsd:string
+
+* [repr](https://w3id.org/linkml/repr): str
 
 
 
 
-
-
-## Notes
-
-* If you are authoring schemas in LinkML YAML, the type is referenced with the lower case "sparqlpath".
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -55,6 +44,3 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 | native | odm:sparqlpath |
 
 
-
-
-</div>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: comparator 
 
@@ -10,11 +7,11 @@ _The type of comparison to be performed_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/comparator](https://cdisc.org/odm2/slot/comparator)
+Alias: comparator
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/comparator](https://cdisc.org/odm2/slot/comparator)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Comparator](../enums/Comparator.md) |
-| Domain Of | [RangeCheck](../classes/RangeCheck.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RangeCheck](../classes/RangeCheck.md) |
-
-
-
-
-
-
-
-
+* Range: [Comparator](../enums/Comparator.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: comparator
 description: The type of comparison to be performed
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: comparator
 owner: RangeCheck
 domain_of:
 - RangeCheck
 range: Comparator
 
 ```
-</details></div>
+</details>

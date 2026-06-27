@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: DocumentReference 
 
@@ -10,8 +7,6 @@ _A comprehensive reference element that points to an external document, combinin
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/DocumentReference](https://cdisc.org/odm2/class/DocumentReference)
@@ -19,26 +14,26 @@ URI: [odm:class/DocumentReference](https://cdisc.org/odm2/class/DocumentReferenc
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
-}
 DocumentReference {
+    string title  
     string leafID  
     integerList pages  
     string relationship  
-    string title  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    string uuid  
-    string version  
+    stringList aliases  
+}
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
 
 DocumentReference ||--}o Coding : "coding"
@@ -51,6 +46,7 @@ DocumentReference ||--}o Coding : "coding"
 ## Inheritance
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * **DocumentReference** [ [Versioned](../classes/Versioned.md)]
+
 
 
 ## Slots
@@ -66,10 +62,10 @@ DocumentReference ||--}o Coding : "coding"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -94,12 +90,8 @@ DocumentReference ||--}o Coding : "coding"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -197,6 +189,7 @@ attributes:
     description: Document title
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: title
     owner: DocumentReference
     domain_of:
     - DocumentReference
@@ -206,6 +199,7 @@ attributes:
     description: Leaf identifier for document reference in Define-XML
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: leafID
     owner: DocumentReference
     domain_of:
     - DocumentReference
@@ -215,6 +209,7 @@ attributes:
     description: Reference to specific pages in a PDF document
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: pages
     owner: DocumentReference
     domain_of:
     - DocumentReference
@@ -226,6 +221,7 @@ attributes:
     description: Relationship to the referencing entity
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: relationship
     owner: DocumentReference
     domain_of:
     - DocumentReference
@@ -236,6 +232,7 @@ attributes:
     description: The version of the external resources
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: version
     owner: DocumentReference
     domain_of:
     - Versioned
@@ -247,6 +244,7 @@ attributes:
       URL
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: href
     owner: DocumentReference
     domain_of:
     - Versioned
@@ -259,6 +257,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: DocumentReference
     domain_of:
     - Identifiable
@@ -269,6 +268,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: DocumentReference
     domain_of:
     - Identifiable
@@ -278,6 +278,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: DocumentReference
     domain_of:
     - Labelled
@@ -290,6 +291,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: DocumentReference
     domain_of:
     - Labelled
@@ -303,6 +305,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: DocumentReference
     domain_of:
     - Labelled
@@ -319,6 +322,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: DocumentReference
     domain_of:
     - Labelled
@@ -333,6 +337,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: DocumentReference
     domain_of:
     - Labelled
@@ -346,4 +351,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

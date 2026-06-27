@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: SubClass 
 
@@ -9,8 +6,6 @@ search:
 _A specific SubClass within a CDISC model Class._
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -31,6 +26,7 @@ SubClass ||--}o SubClass : "subClasses"
 
 
 <!-- no inheritance hierarchy -->
+
 
 ## Slots
 
@@ -57,12 +53,8 @@ SubClass ||--}o SubClass : "subClasses"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -148,6 +140,7 @@ attributes:
     name: name
     description: Name of the SubClass following CDISC Controlled Terminology for SubClass.
     from_schema: https://cdisc.org/dds
+    alias: name
     owner: SubClass
     domain_of:
     - Labelled
@@ -161,6 +154,7 @@ attributes:
     description: Name of the parent Class or SubClass following CDISC Controlled Terminology.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: parentClass
     owner: SubClass
     domain_of:
     - SubClass
@@ -170,6 +164,7 @@ attributes:
     name: subClasses
     description: Nested SubClass(es) for multi-level SubClass hierarchy.
     from_schema: https://cdisc.org/dds
+    alias: subClasses
     owner: SubClass
     domain_of:
     - DefClass
@@ -181,4 +176,4 @@ attributes:
     inlined_as_list: true
 
 ```
-</details></div>
+</details>

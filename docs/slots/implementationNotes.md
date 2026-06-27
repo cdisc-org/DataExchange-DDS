@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: implementationNotes 
 
@@ -10,11 +7,11 @@ _ImplementationNotes reference: Further information, such as rationale and imple
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/implementationNotes](https://cdisc.org/odm2/slot/implementationNotes)
+Alias: implementationNotes
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,45 +32,13 @@ URI: [odm:slot/implementationNotes](https://cdisc.org/odm2/slot/implementationNo
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
-| Domain Of | [IsODMItem](../classes/IsODMItem.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsODMItem](../classes/IsODMItem.md) |
-
-
-<details>
-<summary>Expressions & Logic</summary>
-#### Any Of
-
-Value must satisfy at least one of:
-- AnonymousSlotExpression({'range': 'string'})
-- AnonymousSlotExpression({'range': 'TranslatedText'})
-
-</details>
-
-
-
-
-
-
-
+* Range: NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -106,6 +71,7 @@ description: 'ImplementationNotes reference: Further information, such as ration
   and implementation instructions, on how to implement the CRF data collection fields'
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: implementationNotes
 owner: IsODMItem
 domain_of:
 - IsODMItem
@@ -114,4 +80,4 @@ any_of:
 - range: TranslatedText
 
 ```
-</details></div>
+</details>

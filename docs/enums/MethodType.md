@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: MethodType 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines the types of computational methods available for da
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/MethodType](https://cdisc.org/odm2/enum/MethodType)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | Computation | None | Mathematical computation using values of other items. |
@@ -33,12 +26,8 @@ URI: [odm:enum/MethodType](https://cdisc.org/odm2/enum/MethodType)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -83,5 +72,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

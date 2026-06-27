@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: analysisReason 
 
@@ -10,11 +7,11 @@ _The reason this analysis was performed._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/analysisReason](https://cdisc.org/odm2/slot/analysisReason)
+Alias: analysisReason
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/analysisReason](https://cdisc.org/odm2/slot/analysisReason)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Analysis](../classes/Analysis.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Analysis](../classes/Analysis.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,9 +69,10 @@ name: analysisReason
 description: The reason this analysis was performed.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: analysisReason
 owner: Analysis
 domain_of:
 - Analysis
 
 ```
-</details></div>
+</details>

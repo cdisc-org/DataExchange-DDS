@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: outputDataflow 
 
@@ -10,11 +7,11 @@ _Description of the output interface before concrete Datasets exist. Dataflows r
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/outputDataflow](https://cdisc.org/odm2/slot/outputDataflow)
+Alias: outputDataflow
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/outputDataflow](https://cdisc.org/odm2/slot/outputDataflow)
 
 ## Properties
 
-### Type and Range
+* Range: [Dataflow](../classes/Dataflow.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Dataflow](../classes/Dataflow.md) |
-| Domain Of | [DataProduct](../classes/DataProduct.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DataProduct](../classes/DataProduct.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -99,6 +75,7 @@ from_schema: https://cdisc.org/dds
 close_mappings:
 - dcat:distribution
 rank: 1000
+alias: outputDataflow
 owner: DataProduct
 domain_of:
 - DataProduct
@@ -108,4 +85,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Origin 
 
@@ -10,8 +7,6 @@ _A provenance element that describes the source of data for an item_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/Origin](https://cdisc.org/odm2/class/Origin)
@@ -19,81 +14,83 @@ URI: [odm:class/Origin](https://cdisc.org/odm2/class/Origin)
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
+Origin {
+    OriginType type  
+    OriginSource source  
 }
 DocumentReference {
+    string title  
     string leafID  
     integerList pages  
     string relationship  
-    string title  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
     string version  
-}
-Item {
-    DataType dataType  
-    integer length  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string cdiscNotes  
-    string crfCompletionInstructions  
-    integer decimalDigits  
-    string displayFormat  
-    boolean hasNoData  
-    string implementationNotes  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string preSpecifiedValue  
-    string purpose  
-    string role  
-    integer significantDigits  
-    string uuid  
-    string wasDerivedFrom  
+    stringList aliases  
 }
-Origin {
-    OriginSource source  
-    OriginType type  
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
 SourceItem {
     stringList resource  
 }
+Item {
+    DataType dataType  
+    integer length  
+    string role  
+    boolean hasNoData  
+    string crfCompletionInstructions  
+    string cdiscNotes  
+    string implementationNotes  
+    string preSpecifiedValue  
+    integer decimalDigits  
+    string displayFormat  
+    integer significantDigits  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
 
+Origin ||--}o SourceItem : "sourceItems"
+Origin ||--}o DocumentReference : "documents"
 DocumentReference ||--}o Coding : "coding"
-Item ||--|o CodeList : "codeList, roleCodeList"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o Condition : "collectionExceptionCondition"
+SourceItem ||--|o Item : "item"
+SourceItem ||--}o DocumentReference : "document"
+SourceItem ||--}o Coding : "coding"
+Item ||--|o CodeList : "codeList"
 Item ||--|o Method : "method"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o WhereClause : "applicableWhen"
 Item ||--|o Origin : "origin"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o CodeList : "roleCodeList"
+Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
-Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--}o WhereClause : "applicableWhen"
-Origin ||--}o DocumentReference : "documents"
-Origin ||--}o SourceItem : "sourceItems"
-SourceItem ||--|o Item : "item"
-SourceItem ||--}o Coding : "coding"
-SourceItem ||--}o DocumentReference : "document"
 
 ```
 
 
 
 <!-- no inheritance hierarchy -->
+
 
 ## Slots
 
@@ -120,12 +117,8 @@ SourceItem ||--}o DocumentReference : "document"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -228,6 +221,7 @@ attributes:
     description: 'The type of origin: Assigned, Collected, Derived, Protocol, Predecessor,
       Not Available, or Other.'
     from_schema: https://cdisc.org/dds
+    alias: type
     owner: Origin
     domain_of:
     - ItemGroup
@@ -243,6 +237,7 @@ attributes:
       Vendor.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: source
     owner: Origin
     domain_of:
     - Origin
@@ -255,6 +250,7 @@ attributes:
     description: Source items for this origin
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: sourceItems
     owner: Origin
     domain_of:
     - Origin
@@ -266,6 +262,7 @@ attributes:
     name: documents
     description: Reference to a document that describes this origin in detail.
     from_schema: https://cdisc.org/dds
+    alias: documents
     owner: Origin
     domain_of:
     - Comment
@@ -277,4 +274,4 @@ attributes:
     inlined_as_list: true
 
 ```
-</details></div>
+</details>

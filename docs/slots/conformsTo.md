@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: conformsTo 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/conformsTo](https://cdisc.org/odm2/slot/conformsTo)
+Alias: conformsTo
+
 <!-- no inheritance hierarchy -->
 
 
@@ -30,28 +27,13 @@ URI: [odm:slot/conformsTo](https://cdisc.org/odm2/slot/conformsTo)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Dataset](../classes/Dataset.md), [Distribution](../classes/Distribution.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -73,9 +55,10 @@ URI: [odm:slot/conformsTo](https://cdisc.org/odm2/slot/conformsTo)
 <details>
 ```yaml
 name: conformsTo
+alias: conformsTo
 domain_of:
 - Dataset
 - Distribution
 
 ```
-</details></div>
+</details>

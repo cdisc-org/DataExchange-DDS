@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: document 
 
@@ -10,11 +7,11 @@ _Reference to an external document_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/document](https://cdisc.org/odm2/slot/document)
+Alias: document
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/document](https://cdisc.org/odm2/slot/document)
 
 ## Properties
 
-### Type and Range
+* Range: [DocumentReference](../classes/DocumentReference.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [DocumentReference](../classes/DocumentReference.md) |
-| Domain Of | [SourceItem](../classes/SourceItem.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [SourceItem](../classes/SourceItem.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: document
 description: Reference to an external document
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: document
 owner: SourceItem
 domain_of:
 - SourceItem
@@ -104,4 +81,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

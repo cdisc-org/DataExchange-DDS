@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: leafID 
 
@@ -10,11 +7,11 @@ _Leaf identifier for document reference in Define-XML_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/leafID](https://cdisc.org/odm2/slot/leafID)
+Alias: leafID
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/leafID](https://cdisc.org/odm2/slot/leafID)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [DocumentReference](../classes/DocumentReference.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DocumentReference](../classes/DocumentReference.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: leafID
 description: Leaf identifier for document reference in Define-XML
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: leafID
 owner: DocumentReference
 domain_of:
 - DocumentReference
 range: string
 
 ```
-</details></div>
+</details>

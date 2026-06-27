@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: decimalDigits 
 
@@ -10,11 +7,11 @@ _For decimal values, the number of digits after the decimal point_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/decimalDigits](https://cdisc.org/odm2/slot/decimalDigits)
+Alias: decimalDigits
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/decimalDigits](https://cdisc.org/odm2/slot/decimalDigits)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Integer](../types/Integer.md) |
-| Domain Of | [Formatted](../classes/Formatted.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Formatted](../classes/Formatted.md) |
-
-
-
-
-
-
-
-
+* Range: [Integer](../types/Integer.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: decimalDigits
 description: For decimal values, the number of digits after the decimal point
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: decimalDigits
 owner: Formatted
 domain_of:
 - Formatted
 range: integer
 
 ```
-</details></div>
+</details>

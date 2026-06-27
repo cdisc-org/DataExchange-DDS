@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: accessService 
 
@@ -10,11 +7,11 @@ _Service that provides access to this distribution_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/accessService](https://cdisc.org/odm2/slot/accessService)
+Alias: accessService
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/accessService](https://cdisc.org/odm2/slot/accessService)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [DataService](../classes/DataService.md) |
-| Domain Of | [Distribution](../classes/Distribution.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Distribution](../classes/Distribution.md) |
-
-
-
-
-
-
-
-
+* Range: [DataService](../classes/DataService.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: accessService
 description: Service that provides access to this distribution
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: accessService
 owner: Distribution
 domain_of:
 - Distribution
 range: DataService
 
 ```
-</details></div>
+</details>

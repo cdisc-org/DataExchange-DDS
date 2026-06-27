@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: fileOID 
 
@@ -10,11 +7,11 @@ _Unique identifier for the ODM file_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/fileOID](https://cdisc.org/odm2/slot/fileOID)
+Alias: fileOID
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,36 +32,15 @@ URI: [odm:slot/fileOID](https://cdisc.org/odm2/slot/fileOID)
 
 ## Properties
 
-### Type and Range
+* Range: [String](../types/String.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
-
-
-
-
-
-
-
-
+* Required: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,6 +72,7 @@ name: fileOID
 description: Unique identifier for the ODM file
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: fileOID
 owner: ODMFileMetadata
 domain_of:
 - ODMFileMetadata
@@ -103,4 +80,4 @@ range: string
 required: true
 
 ```
-</details></div>
+</details>

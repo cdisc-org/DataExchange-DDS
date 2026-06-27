@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: StandardName 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines permissible values for standard names_
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/StandardName](https://cdisc.org/odm2/enum/StandardName)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | ADaMIG | None | Analysis Data Model Implementation Guide |
@@ -38,12 +31,8 @@ URI: [odm:enum/StandardName](https://cdisc.org/odm2/enum/StandardName)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -101,5 +90,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

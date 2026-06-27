@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: pages 
 
@@ -10,11 +7,11 @@ _Reference to specific pages in a PDF document_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/pages](https://cdisc.org/odm2/slot/pages)
+Alias: pages
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/pages](https://cdisc.org/odm2/slot/pages)
 
 ## Properties
 
-### Type and Range
+* Range: [Integer](../types/Integer.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Integer](../types/Integer.md) |
-| Domain Of | [DocumentReference](../classes/DocumentReference.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DocumentReference](../classes/DocumentReference.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: pages
 description: Reference to specific pages in a PDF document
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: pages
 owner: DocumentReference
 domain_of:
 - DocumentReference
@@ -103,4 +80,4 @@ required: false
 multivalued: true
 
 ```
-</details></div>
+</details>

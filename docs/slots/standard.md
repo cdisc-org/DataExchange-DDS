@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: standard 
 
@@ -10,11 +7,11 @@ _Reference to the standard being implemented_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
+Alias: standard
+
 <!-- no inheritance hierarchy -->
 
 
@@ -25,10 +22,10 @@ URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [IsODMStandard](../classes/IsODMStandard.md) | A mixin that provides properties to indicate standards compliance |  no  |
-| [ItemGroup](../classes/ItemGroup.md) | A collection element that groups related items or subgroups within a specific context, used for tables, FHIR resource profiles, biomedical concept specializations, or form sections |  no  |
-| [CodeList](../classes/CodeList.md) | A value set that defines a discrete collection of permissible values for an item, corresponding to the ODM CodeList construct |  no  |
 | [DataStructureDefinition](../classes/DataStructureDefinition.md) | A structural element that defines the organization of a data cube for analysis, including dimensions, attributes, and measures |  no  |
+| [ItemGroup](../classes/ItemGroup.md) | A collection element that groups related items or subgroups within a specific context, used for tables, FHIR resource profiles, biomedical concept specializations, or form sections |  no  |
+| [IsODMStandard](../classes/IsODMStandard.md) | A mixin that provides properties to indicate standards compliance |  no  |
+| [CodeList](../classes/CodeList.md) | A value set that defines a discrete collection of permissible values for an item, corresponding to the ODM CodeList construct |  no  |
 
 
 
@@ -37,35 +34,13 @@ URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Standard](../classes/Standard.md) |
-| Domain Of | [IsODMStandard](../classes/IsODMStandard.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsODMStandard](../classes/IsODMStandard.md) |
-
-
-
-
-
-
-
-
+* Range: [Standard](../classes/Standard.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -97,10 +72,11 @@ name: standard
 description: Reference to the standard being implemented
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: standard
 owner: IsODMStandard
 domain_of:
 - IsODMStandard
 range: Standard
 
 ```
-</details></div>
+</details>

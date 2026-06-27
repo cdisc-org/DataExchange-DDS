@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Translation 
 
@@ -9,8 +6,6 @@ search:
 _A text representation that provides content in a specific language, used for multilingual support_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -31,6 +26,7 @@ Translation {
 
 
 <!-- no inheritance hierarchy -->
+
 
 ## Slots
 
@@ -55,12 +51,8 @@ Translation {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -144,6 +136,7 @@ attributes:
     description: The language of the translation
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: language
     owner: Translation
     domain_of:
     - Translation
@@ -154,6 +147,7 @@ attributes:
     description: The translated text
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: value
     owner: Translation
     domain_of:
     - Translation
@@ -163,4 +157,4 @@ attributes:
     required: true
 
 ```
-</details></div>
+</details>

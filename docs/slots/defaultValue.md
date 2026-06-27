@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: defaultValue 
 
@@ -10,11 +7,11 @@ _A default value for the parameter._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/defaultValue](https://cdisc.org/odm2/slot/defaultValue)
+Alias: defaultValue
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/defaultValue](https://cdisc.org/odm2/slot/defaultValue)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [Parameter](../classes/Parameter.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Parameter](../classes/Parameter.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: defaultValue
 description: A default value for the parameter.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: defaultValue
 owner: Parameter
 domain_of:
 - Parameter
 range: string
 
 ```
-</details></div>
+</details>

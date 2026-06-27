@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: describedBy 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/describedBy](https://cdisc.org/odm2/slot/describedBy)
+Alias: describedBy
+
 <!-- no inheritance hierarchy -->
 
 
@@ -32,28 +29,13 @@ URI: [odm:slot/describedBy](https://cdisc.org/odm2/slot/describedBy)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Dataset](../classes/Dataset.md), [DatasetKey](../classes/DatasetKey.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -75,9 +57,10 @@ URI: [odm:slot/describedBy](https://cdisc.org/odm2/slot/describedBy)
 <details>
 ```yaml
 name: describedBy
+alias: describedBy
 domain_of:
 - Dataset
 - DatasetKey
 
 ```
-</details></div>
+</details>

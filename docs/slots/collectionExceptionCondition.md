@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: collectionExceptionCondition 
 
@@ -10,11 +7,11 @@ _Condition that defines when collection may be exempted_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/collectionExceptionCondition](https://cdisc.org/odm2/slot/collectionExceptionCondition)
+Alias: collectionExceptionCondition
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/collectionExceptionCondition](https://cdisc.org/odm2/slot/collect
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Condition](../classes/Condition.md) |
-| Domain Of | [IsODMItem](../classes/IsODMItem.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsODMItem](../classes/IsODMItem.md) |
-
-
-
-
-
-
-
-
+* Range: [Condition](../classes/Condition.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: collectionExceptionCondition
 description: Condition that defines when collection may be exempted
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: collectionExceptionCondition
 owner: IsODMItem
 domain_of:
 - IsODMItem
 range: Condition
 
 ```
-</details></div>
+</details>

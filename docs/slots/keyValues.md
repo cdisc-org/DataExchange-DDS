@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: keyValues 
 
@@ -10,11 +7,11 @@ _List of Key Values that comprise each key, separated by a dot e.g. SUBJ001.VISI
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
+Alias: keyValues
+
 <!-- no inheritance hierarchy -->
 
 
@@ -36,35 +33,13 @@ URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [DatasetKey](../classes/DatasetKey.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DatasetKey](../classes/DatasetKey.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,9 +71,10 @@ name: keyValues
 description: List of Key Values that comprise each key, separated by a dot e.g. SUBJ001.VISIT2.BMI
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: keyValues
 owner: DatasetKey
 domain_of:
 - DatasetKey
 
 ```
-</details></div>
+</details>

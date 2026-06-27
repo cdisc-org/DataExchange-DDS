@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: translations 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/translations](https://cdisc.org/odm2/slot/translations)
+Alias: translations
+
 <!-- no inheritance hierarchy -->
 
 
@@ -29,36 +26,15 @@ URI: [odm:slot/translations](https://cdisc.org/odm2/slot/translations)
 
 ## Properties
 
-### Type and Range
+* Range: [Translation](../classes/Translation.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Translation](../classes/Translation.md) |
-| Domain Of | [TranslatedText](../classes/TranslatedText.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [TranslatedText](../classes/TranslatedText.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -89,6 +65,7 @@ URI: [odm:slot/translations](https://cdisc.org/odm2/slot/translations)
 name: translations
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: translations
 owner: TranslatedText
 domain_of:
 - TranslatedText
@@ -98,4 +75,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

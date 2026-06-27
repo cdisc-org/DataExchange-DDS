@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: linkingPhrase 
 
@@ -10,11 +7,11 @@ _Variable relationship descriptive linking phrase._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/linkingPhrase](https://cdisc.org/odm2/slot/linkingPhrase)
+Alias: linkingPhrase
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/linkingPhrase](https://cdisc.org/odm2/slot/linkingPhrase)
 
 ## Properties
 
-### Type and Range
+* Range: [LinkingPhraseEnum](../enums/LinkingPhraseEnum.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [LinkingPhraseEnum](../enums/LinkingPhraseEnum.md) |
-| Domain Of | [Relationship](../classes/Relationship.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Relationship](../classes/Relationship.md) |
-
-
-
-
-
-
-
-
+* Required: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: linkingPhrase
 description: Variable relationship descriptive linking phrase.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: linkingPhrase
 owner: Relationship
 domain_of:
 - Relationship
@@ -102,4 +79,4 @@ range: LinkingPhraseEnum
 required: true
 
 ```
-</details></div>
+</details>

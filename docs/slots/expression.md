@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: expression 
 
@@ -10,11 +7,11 @@ _The actual text of the formal expression (renamed from 'code' for disambiguatio
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
+Alias: expression
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,29 +31,9 @@ URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
 
 ## Properties
 
-### Type and Range
+* Range: [String](../types/String.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [FormalExpression](../classes/FormalExpression.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [FormalExpression](../classes/FormalExpression.md) |
-
-
-
-
-
-
+* Required: True
 
 
 
@@ -66,9 +43,8 @@ URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
 * code
 
 
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -102,6 +78,7 @@ from_schema: https://cdisc.org/dds
 aliases:
 - code
 rank: 1000
+alias: expression
 owner: FormalExpression
 domain_of:
 - FormalExpression
@@ -109,4 +86,4 @@ range: string
 required: true
 
 ```
-</details></div>
+</details>

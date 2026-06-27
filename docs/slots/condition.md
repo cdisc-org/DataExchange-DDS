@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: condition 
 
@@ -10,11 +7,11 @@ _A condition that must be met for this occurrence to be valid._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/condition](https://cdisc.org/odm2/slot/condition)
+Alias: condition
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/condition](https://cdisc.org/odm2/slot/condition)
 
 ## Properties
 
-### Type and Range
+* Range: [Condition](../classes/Condition.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Condition](../classes/Condition.md) |
-| Domain Of | [NominalOccurrence](../classes/NominalOccurrence.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [NominalOccurrence](../classes/NominalOccurrence.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: condition
 description: A condition that must be met for this occurrence to be valid.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: condition
 owner: NominalOccurrence
 domain_of:
 - NominalOccurrence
@@ -102,4 +79,4 @@ range: Condition
 multivalued: true
 
 ```
-</details></div>
+</details>

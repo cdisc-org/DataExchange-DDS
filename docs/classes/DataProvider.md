@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: DataProvider 
 
@@ -10,8 +7,6 @@ _An organization element that provides data to a Data Consumer, which can be a s
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/DataProvider](https://cdisc.org/odm2/class/DataProvider)
@@ -19,154 +14,154 @@ URI: [odm:class/DataProvider](https://cdisc.org/odm2/class/DataProvider)
 
 ```mermaid
 erDiagram
+DataProvider {
+    string role  
+    OrganizationType type  
+    string location  
+    string address  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
 Coding {
-    AliasPredicate aliasType  
     string code  
+    string decode  
     string codeSystem  
     string codeSystemVersion  
-    string decode  
-}
-Comment {
-    string text  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string wasDerivedFrom  
-}
-DataProvider {
-    string name  
-    string description  
-    string OID  
-    string address  
-    stringList aliases  
-    string label  
-    string location  
-    string uuid  
-    string role  
-    OrganizationType type  
-}
-Dataflow {
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string version  
-    string wasDerivedFrom  
-}
-FormalExpression {
-    string expression  
-    string returnType  
-    string context  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    string uuid  
+    AliasPredicate aliasType  
 }
 Organization {
-    string address  
-    string location  
     string role  
     OrganizationType type  
+    string location  
+    string address  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
+    stringList aliases  
+}
+Resource {
+    string resourceType  
+    string attribute  
+    string version  
+    string href  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
+FormalExpression {
+    string context  
+    string expression  
+    string returnType  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
 }
 ProvisionAgreement {
     string consumer  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
-    string version  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-Resource {
-    string attribute  
-    string resourceType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
-    string version  
-}
 SiteOrSponsorComment {
+    string text  
     OriginSource sourceType  
     string source  
-    string text  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+Comment {
+    string text  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+Dataflow {
+    string version  
+    string href  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
 
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DataProvider ||--|o Organization : "partOfOrganization"
-DataProvider ||--}o Coding : "coding"
 DataProvider ||--}o Dataflow : "providesDataFor"
 DataProvider ||--}o ProvisionAgreement : "provisionAgreements"
 DataProvider ||--}o Resource : "source"
-Dataflow ||--|o Analysis : "analysisMethod"
-Dataflow ||--|| DataStructureDefinition : "structure"
-Dataflow ||--}o Coding : "coding"
-Dataflow ||--}o Comment : "comments"
-Dataflow ||--}o Dimension : "dimensionConstraint"
-Dataflow ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Coding : "coding"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--}o Resource : "externalCodeLibs"
+DataProvider ||--|o Organization : "partOfOrganization"
+DataProvider ||--}o Coding : "coding"
 Organization ||--|o Organization : "partOfOrganization"
 Organization ||--}o Coding : "coding"
+Resource ||--}o FormalExpression : "selection"
+Resource ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+FormalExpression ||--}o Coding : "coding"
 ProvisionAgreement ||--|o DataProvider : "provider"
 ProvisionAgreement ||--|o Dataflow : "dataFlow"
 ProvisionAgreement ||--|o Resource : "source"
 ProvisionAgreement ||--}o Coding : "coding"
 ProvisionAgreement ||--}o Comment : "comments"
 ProvisionAgreement ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Resource ||--}o Coding : "coding"
-Resource ||--}o FormalExpression : "selection"
 SiteOrSponsorComment ||--}o Coding : "coding"
 SiteOrSponsorComment ||--}o Comment : "comments"
 SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Dataflow ||--|| DataStructureDefinition : "structure"
+Dataflow ||--}o Dimension : "dimensionConstraint"
+Dataflow ||--|o Analysis : "analysisMethod"
+Dataflow ||--}o Coding : "coding"
+Dataflow ||--}o Comment : "comments"
+Dataflow ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
@@ -177,6 +172,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * [Organization](../classes/Organization.md)
         * **DataProvider**
+
 
 
 ## Slots
@@ -194,10 +190,10 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -215,12 +211,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -313,6 +305,7 @@ attributes:
     description: The Dataflows that this provider supplies data for
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: providesDataFor
     owner: DataProvider
     domain_of:
     - DataProvider
@@ -323,6 +316,7 @@ attributes:
     description: The ProvisionAgreements that this provider has with Data Consumers
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: provisionAgreements
     owner: DataProvider
     domain_of:
     - DataProvider
@@ -332,6 +326,7 @@ attributes:
     name: source
     description: Association to a data source
     from_schema: https://cdisc.org/dds
+    alias: source
     owner: DataProvider
     domain_of:
     - Origin
@@ -344,6 +339,7 @@ attributes:
     name: role
     description: The role of the organization in the study.
     from_schema: https://cdisc.org/dds
+    alias: role
     owner: DataProvider
     domain_of:
     - IsODMItem
@@ -354,6 +350,7 @@ attributes:
     name: type
     description: The type of organization (e.g., site, sponsor, vendor).
     from_schema: https://cdisc.org/dds
+    alias: type
     owner: DataProvider
     domain_of:
     - ItemGroup
@@ -368,6 +365,7 @@ attributes:
     description: The physical location of the organization.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: location
     owner: DataProvider
     domain_of:
     - Organization
@@ -378,6 +376,7 @@ attributes:
     description: The address of the organization.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: address
     owner: DataProvider
     domain_of:
     - Organization
@@ -388,6 +387,7 @@ attributes:
       a larger entity.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: partOfOrganization
     owner: DataProvider
     domain_of:
     - Organization
@@ -399,6 +399,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: DataProvider
     domain_of:
     - Identifiable
@@ -409,6 +410,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: DataProvider
     domain_of:
     - Identifiable
@@ -418,6 +420,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: DataProvider
     domain_of:
     - Labelled
@@ -430,6 +433,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: DataProvider
     domain_of:
     - Labelled
@@ -443,6 +447,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: DataProvider
     domain_of:
     - Labelled
@@ -459,6 +464,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: DataProvider
     domain_of:
     - Labelled
@@ -473,6 +479,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: DataProvider
     domain_of:
     - Labelled
@@ -486,4 +493,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

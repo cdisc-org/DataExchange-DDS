@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: length 
 
@@ -10,11 +7,11 @@ _The maximum length of the data item in characters._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/length](https://cdisc.org/odm2/slot/length)
+Alias: length
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/length](https://cdisc.org/odm2/slot/length)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Integer](../types/Integer.md) |
-| Domain Of | [Item](../classes/Item.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Item](../classes/Item.md) |
-
-
-
-
-
-
-
-
+* Range: [Integer](../types/Integer.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: length
 description: The maximum length of the data item in characters.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: length
 owner: Item
 domain_of:
 - Item
 range: integer
 
 ```
-</details></div>
+</details>

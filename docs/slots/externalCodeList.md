@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: externalCodeList 
 
@@ -10,11 +7,11 @@ _Reference to a code list that is defined externally to this study_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/externalCodeList](https://cdisc.org/odm2/slot/externalCodeList)
+Alias: externalCodeList
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/externalCodeList](https://cdisc.org/odm2/slot/externalCodeList)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Resource](../classes/Resource.md) |
-| Domain Of | [CodeList](../classes/CodeList.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [CodeList](../classes/CodeList.md) |
-
-
-
-
-
-
-
-
+* Range: [Resource](../classes/Resource.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: externalCodeList
 description: Reference to a code list that is defined externally to this study
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: externalCodeList
 owner: CodeList
 domain_of:
 - CodeList
 range: Resource
 
 ```
-</details></div>
+</details>

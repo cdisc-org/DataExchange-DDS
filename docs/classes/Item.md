@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Item 
 
@@ -10,8 +7,6 @@ _A data element that represents a specific piece of information within a defined
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/Item](https://cdisc.org/odm2/class/Item)
@@ -19,291 +14,292 @@ URI: [odm:class/Item](https://cdisc.org/odm2/class/Item)
 
 ```mermaid
 erDiagram
-CodeList {
-    string formatName  
+Item {
     DataType dataType  
+    integer length  
+    string role  
+    boolean hasNoData  
+    string crfCompletionInstructions  
+    string cdiscNotes  
+    string implementationNotes  
+    string preSpecifiedValue  
+    integer decimalDigits  
+    string displayFormat  
+    integer significantDigits  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
-    boolean isNonStandard  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
-    string version  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-CodeListItem {
+SiteOrSponsorComment {
+    string text  
+    OriginSource sourceType  
+    string source  
+    string OID  
+    string uuid  
+    string name  
     string description  
-    string codedValue  
-    string decode  
-    boolean other  
-    decimal weight  
+    string label  
     stringList aliases  
-}
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
 }
 Comment {
     string text  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-ConceptProperty {
-    integer maxOccurs  
-    integer minOccurs  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string wasDerivedFrom  
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
 Condition {
     string implementsCondition  
     LogicalOperator operator  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
-}
-DocumentReference {
-    string leafID  
-    integerList pages  
-    string relationship  
-    string title  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
-    string version  
 }
 FormalExpression {
+    string context  
     string expression  
     string returnType  
-    string context  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
-}
-Item {
-    DataType dataType  
-    integer length  
-    string name  
-    string description  
-    string OID  
     stringList aliases  
-    string cdiscNotes  
-    string crfCompletionInstructions  
-    integer decimalDigits  
-    string displayFormat  
-    boolean hasNoData  
-    string implementationNotes  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string preSpecifiedValue  
-    string purpose  
-    string role  
-    integer significantDigits  
-    string uuid  
-    string wasDerivedFrom  
-}
-Method {
-    MethodType type  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string wasDerivedFrom  
-}
-Origin {
-    OriginSource source  
-    OriginType type  
 }
 RangeCheck {
-    stringList checkValues  
     Comparator comparator  
+    stringList checkValues  
     string item  
     SoftHard softHard  
     LogicalOperator operator  
 }
-ReifiedConcept {
+CodeList {
+    DataType dataType  
+    string formatName  
+    string version  
+    string href  
+    boolean isNonStandard  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
-    string version  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
+}
+Standard {
+    StandardName name  
+    StandardType type  
+    PublishingSet publishingSet  
+    string version  
+    StandardStatus status  
+    string OID  
+    string uuid  
+    string description  
+    string label  
+    stringList aliases  
 }
 Resource {
-    string attribute  
     string resourceType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
+    string attribute  
     string version  
-}
-SiteOrSponsorComment {
-    OriginSource sourceType  
-    string source  
-    string text  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
+    stringList aliases  
+}
+CodeListItem {
+    string codedValue  
+    string decode  
+    string description  
+    stringList aliases  
+    decimal weight  
+    boolean other  
+}
+ConceptProperty {
+    integer minOccurs  
+    integer maxOccurs  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
+}
+Origin {
+    OriginType type  
+    OriginSource source  
+}
+DocumentReference {
+    string title  
+    string leafID  
+    integerList pages  
+    string relationship  
+    string version  
+    string href  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
 }
 SourceItem {
     stringList resource  
 }
-Standard {
-    PublishingSet publishingSet  
-    StandardStatus status  
-    StandardType type  
-    string version  
-    StandardName name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    string uuid  
-}
 WhereClause {
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+Method {
+    MethodType type  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+ReifiedConcept {
+    string version  
+    string href  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
 
+Item ||--|o CodeList : "codeList"
+Item ||--|o Method : "method"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o WhereClause : "applicableWhen"
+Item ||--|o Origin : "origin"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o CodeList : "roleCodeList"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+FormalExpression ||--}o Coding : "coding"
+RangeCheck ||--}o FormalExpression : "expressions"
+CodeList ||--}o CodeListItem : "codeListItems"
 CodeList ||--|o Resource : "externalCodeList"
 CodeList ||--|o Standard : "standard"
-CodeList ||--}o CodeListItem : "codeListItems"
 CodeList ||--}o Coding : "coding"
 CodeList ||--}o Comment : "comments"
 CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Standard ||--}o Coding : "coding"
+Resource ||--}o FormalExpression : "selection"
+Resource ||--}o Coding : "coding"
 CodeListItem ||--|o Coding : "coding"
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ConceptProperty ||--|o CodeList : "codeList"
 ConceptProperty ||--}o Coding : "coding"
 ConceptProperty ||--}o Comment : "comments"
 ConceptProperty ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Origin ||--}o SourceItem : "sourceItems"
+Origin ||--}o DocumentReference : "documents"
 DocumentReference ||--}o Coding : "coding"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Coding : "coding"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-Item ||--|o CodeList : "codeList, roleCodeList"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--}o WhereClause : "applicableWhen"
+SourceItem ||--|o Item : "item"
+SourceItem ||--}o DocumentReference : "document"
+SourceItem ||--}o Coding : "coding"
+WhereClause ||--}o Condition : "conditions"
+WhereClause ||--}o Coding : "coding"
+WhereClause ||--}o Comment : "comments"
+WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o DocumentReference : "documents"
 Method ||--|o ReifiedConcept : "implementsConcept"
 Method ||--}o Coding : "coding"
 Method ||--}o Comment : "comments"
-Method ||--}o DocumentReference : "documents"
-Method ||--}o FormalExpression : "expressions"
 Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Origin ||--}o DocumentReference : "documents"
-Origin ||--}o SourceItem : "sourceItems"
-RangeCheck ||--}o FormalExpression : "expressions"
+ReifiedConcept ||--}o ConceptProperty : "properties"
 ReifiedConcept ||--}o Coding : "coding"
 ReifiedConcept ||--}o Comment : "comments"
-ReifiedConcept ||--}o ConceptProperty : "properties"
 ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Resource ||--}o Coding : "coding"
-Resource ||--}o FormalExpression : "selection"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-SourceItem ||--|o Item : "item"
-SourceItem ||--}o Coding : "coding"
-SourceItem ||--}o DocumentReference : "document"
-Standard ||--}o Coding : "coding"
-WhereClause ||--}o Coding : "coding"
-WhereClause ||--}o Comment : "comments"
-WhereClause ||--}o Condition : "conditions"
-WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
@@ -313,6 +309,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ## Inheritance
 * [GovernedElement](../classes/GovernedElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md) [Governed](../classes/Governed.md)]
     * **Item** [ [IsODMItem](../classes/IsODMItem.md) [Formatted](../classes/Formatted.md)]
+
 
 
 ## Slots
@@ -327,30 +324,30 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [applicableWhen](../slots/applicableWhen.md) | * <br/> [WhereClause](../classes/WhereClause.md) | References to different situations that define when this item applies.<br>Multiple whereClauses are combined with OR logic: the item applies if ANY referenced WhereClause matches.<br>Within each WhereClause, conditions are combined with AND logic: all conditions must be true.<br><br>Example: whereClause: ["WC.SYSBP", "WC.DIABP"] means the item applies when<br>(all conditions in WC.SYSBP are true) OR (all conditions in WC.DIABP are true). | direct |
 | [origin](../slots/origin.md) | 0..1 <br/> [Origin](../classes/Origin.md) | The origin of the data | direct |
 | [conceptProperty](../slots/conceptProperty.md) | 0..1 <br/> [ConceptProperty](../classes/ConceptProperty.md) | Reference to a abstract concept property that this item is a specialization / instance of. | direct |
-| [role](../slots/role.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Identifies the role of the item within the containing context, taken from the roleCodeList | [IsODMItem](../classes/IsODMItem.md) |
+| [role](../slots/role.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Identifies the role of the item within the containing context, taken from the roleCodeList | [IsODMItem](../classes/IsODMItem.md) |
 | [roleCodeList](../slots/roleCodeList.md) | 0..1 <br/> [CodeList](../classes/CodeList.md) | Reference to the CodeList that defines the roles for this item | [IsODMItem](../classes/IsODMItem.md) |
 | [hasNoData](../slots/hasNoData.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | True if this is a manifest and there is no data for this item | [IsODMItem](../classes/IsODMItem.md) |
-| [crfCompletionInstructions](../slots/crfCompletionInstructions.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CRFCompletionInstructions reference: Instructions for the clinical site on how to enter collected information on the CRF | [IsODMItem](../classes/IsODMItem.md) |
-| [cdiscNotes](../slots/cdiscNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CDISCNotes reference: Explanatory text for the variable | [IsODMItem](../classes/IsODMItem.md) |
-| [implementationNotes](../slots/implementationNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | ImplementationNotes reference: Further information, such as rationale and implementation instructions, on how to implement the CRF data collection fields | [IsODMItem](../classes/IsODMItem.md) |
+| [crfCompletionInstructions](../slots/crfCompletionInstructions.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CRFCompletionInstructions reference: Instructions for the clinical site on how to enter collected information on the CRF | [IsODMItem](../classes/IsODMItem.md) |
+| [cdiscNotes](../slots/cdiscNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CDISCNotes reference: Explanatory text for the variable | [IsODMItem](../classes/IsODMItem.md) |
+| [implementationNotes](../slots/implementationNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | ImplementationNotes reference: Further information, such as rationale and implementation instructions, on how to implement the CRF data collection fields | [IsODMItem](../classes/IsODMItem.md) |
 | [collectionExceptionCondition](../slots/collectionExceptionCondition.md) | 0..1 <br/> [Condition](../classes/Condition.md) | Condition that defines when collection may be exempted | [IsODMItem](../classes/IsODMItem.md) |
-| [preSpecifiedValue](../slots/preSpecifiedValue.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Prefill value or a default value for a field that is automatically populated. | [IsODMItem](../classes/IsODMItem.md) |
+| [preSpecifiedValue](../slots/preSpecifiedValue.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Prefill value or a default value for a field that is automatically populated. | [IsODMItem](../classes/IsODMItem.md) |
 | [decimalDigits](../slots/decimalDigits.md) | 0..1 <br/> [Integer](../types/Integer.md) | For decimal values, the number of digits after the decimal point | [Formatted](../classes/Formatted.md) |
 | [displayFormat](../slots/displayFormat.md) | 0..1 <br/> [String](../types/String.md) | A display format for the item | [Formatted](../classes/Formatted.md) |
 | [significantDigits](../slots/significantDigits.md) | 0..1 <br/> [Integer](../types/Integer.md) | For numeric values, the number of significant digits | [Formatted](../classes/Formatted.md) |
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 | [mandatory](../slots/mandatory.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | Is this element required? | [Governed](../classes/Governed.md) |
 | [comments](../slots/comments.md) | * <br/> [Comment](../classes/Comment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
 | [siteOrSponsorComments](../slots/siteOrSponsorComments.md) | * <br/> [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
-| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
+| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
 | [lastUpdated](../slots/lastUpdated.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | When the resource was last updated | [Governed](../classes/Governed.md) |
-| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
+| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
 | [wasDerivedFrom](../slots/wasDerivedFrom.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Item](../classes/Item.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[MetaDataVersion](../classes/MetaDataVersion.md)&nbsp;or&nbsp;<br />[CodeList](../classes/CodeList.md)&nbsp;or&nbsp;<br />[ReifiedConcept](../classes/ReifiedConcept.md)&nbsp;or&nbsp;<br />[ConceptProperty](../classes/ConceptProperty.md)&nbsp;or&nbsp;<br />[Condition](../classes/Condition.md)&nbsp;or&nbsp;<br />[Method](../classes/Method.md)&nbsp;or&nbsp;<br />[NominalOccurrence](../classes/NominalOccurrence.md)&nbsp;or&nbsp;<br />[Dataflow](../classes/Dataflow.md)&nbsp;or&nbsp;<br />[CubeComponent](../classes/CubeComponent.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[ProvisionAgreement](../classes/ProvisionAgreement.md) | Reference to another item that this item implements or extends, e.g. a template Item definition. | [Governed](../classes/Governed.md) |
 
 
@@ -405,12 +402,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -628,6 +621,7 @@ attributes:
     description: The data type of the item.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: dataType
     owner: Item
     domain_of:
     - Item
@@ -641,6 +635,7 @@ attributes:
     description: The maximum length of the data item in characters.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: length
     owner: Item
     domain_of:
     - Item
@@ -650,6 +645,7 @@ attributes:
     description: Reference to the CodeList that constrains the item values.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: codeList
     owner: Item
     domain_of:
     - Item
@@ -662,6 +658,7 @@ attributes:
       item's value.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: method
     owner: Item
     domain_of:
     - Item
@@ -671,6 +668,7 @@ attributes:
     description: Range checks applied to this item (e.g. edit checks, CORE rules)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: rangeChecks
     owner: Item
     domain_of:
     - Item
@@ -699,6 +697,7 @@ attributes:
     close_mappings:
     - fhir:StructureDefinition/context
     rank: 1000
+    alias: applicableWhen
     owner: Item
     domain_of:
     - Item
@@ -713,6 +712,7 @@ attributes:
     description: The origin of the data
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: origin
     owner: Item
     domain_of:
     - Item
@@ -724,6 +724,7 @@ attributes:
       / instance of.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: conceptProperty
     owner: Item
     domain_of:
     - Item
@@ -735,6 +736,7 @@ attributes:
       from the roleCodeList
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: role
     owner: Item
     domain_of:
     - IsODMItem
@@ -749,6 +751,7 @@ attributes:
     description: Reference to the CodeList that defines the roles for this item
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: roleCodeList
     owner: Item
     domain_of:
     - IsODMItem
@@ -758,6 +761,7 @@ attributes:
     description: True if this is a manifest and there is no data for this item
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: hasNoData
     owner: Item
     domain_of:
     - IsODMItem
@@ -769,6 +773,7 @@ attributes:
       site on how to enter collected information on the CRF'
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: crfCompletionInstructions
     owner: Item
     domain_of:
     - IsODMItem
@@ -781,6 +786,7 @@ attributes:
     description: 'CDISCNotes reference: Explanatory text for the variable'
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: cdiscNotes
     owner: Item
     domain_of:
     - IsODMItem
@@ -795,6 +801,7 @@ attributes:
       fields'
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: implementationNotes
     owner: Item
     domain_of:
     - IsODMItem
@@ -807,6 +814,7 @@ attributes:
     description: Condition that defines when collection may be exempted
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: collectionExceptionCondition
     owner: Item
     domain_of:
     - IsODMItem
@@ -817,6 +825,7 @@ attributes:
       populated.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: preSpecifiedValue
     owner: Item
     domain_of:
     - IsODMItem
@@ -829,6 +838,7 @@ attributes:
     description: For decimal values, the number of digits after the decimal point
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: decimalDigits
     owner: Item
     domain_of:
     - Formatted
@@ -838,6 +848,7 @@ attributes:
     description: A display format for the item
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: displayFormat
     owner: Item
     domain_of:
     - Formatted
@@ -847,6 +858,7 @@ attributes:
     description: For numeric values, the number of significant digits
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: significantDigits
     owner: Item
     domain_of:
     - Formatted
@@ -858,6 +870,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: Item
     domain_of:
     - Identifiable
@@ -868,6 +881,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: Item
     domain_of:
     - Identifiable
@@ -877,6 +891,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: Item
     domain_of:
     - Labelled
@@ -889,6 +904,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: Item
     domain_of:
     - Labelled
@@ -902,6 +918,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: Item
     domain_of:
     - Labelled
@@ -918,6 +935,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: Item
     domain_of:
     - Labelled
@@ -932,6 +950,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: Item
     domain_of:
     - Labelled
@@ -948,6 +967,7 @@ attributes:
     description: Is this element required?
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: mandatory
     owner: Item
     domain_of:
     - Governed
@@ -958,6 +978,7 @@ attributes:
       exclusion
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: comments
     owner: Item
     domain_of:
     - Governed
@@ -970,6 +991,7 @@ attributes:
       exclusion
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: siteOrSponsorComments
     owner: Item
     domain_of:
     - Governed
@@ -981,6 +1003,7 @@ attributes:
     description: Purpose or rationale for this data element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: purpose
     owner: Item
     domain_of:
     - Governed
@@ -993,6 +1016,7 @@ attributes:
     description: When the resource was last updated
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: lastUpdated
     owner: Item
     domain_of:
     - Governed
@@ -1005,6 +1029,7 @@ attributes:
     - prov:wasAttributedTo
     - prov:wasAssociatedBy
     rank: 1000
+    alias: owner
     owner: Item
     domain_of:
     - Governed
@@ -1021,6 +1046,7 @@ attributes:
     exact_mappings:
     - prov:wasDerivedFrom
     rank: 1000
+    alias: wasDerivedFrom
     owner: Item
     domain_of:
     - Governed
@@ -1041,4 +1067,4 @@ attributes:
     - range: ProvisionAgreement
 
 ```
-</details></div>
+</details>

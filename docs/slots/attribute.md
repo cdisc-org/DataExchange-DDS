@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: attribute 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
+Alias: attribute
+
 <!-- no inheritance hierarchy -->
 
 
@@ -20,12 +17,12 @@ URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Resource](../classes/Resource.md) | An external reference that serves as the source for a Dataset, ItemGroup, or Item |  no  |
 | [MeasureRelationship](../classes/MeasureRelationship.md) | A relationship element that associates a DataAttribute with a Measure |  no  |
-| [DataflowRelationship](../classes/DataflowRelationship.md) | A relationship element that associates a DataAttribute with a Dataflow, reported at the Dataset level |  no  |
-| [GroupRelationship](../classes/GroupRelationship.md) | A relationship element that associates a DataAttribute with a set of Dimensions, used when attribute values vary based on all group dimension values |  no  |
 | [DimensionRelationship](../classes/DimensionRelationship.md) | A relationship element that associates a DataAttribute with a specific Dimension at a specific level |  no  |
 | [ObservationRelationship](../classes/ObservationRelationship.md) | A relationship element that associates a DataAttribute with an Observation, allowing value-level Items to be reused across multiple different Views |  no  |
+| [DataflowRelationship](../classes/DataflowRelationship.md) | A relationship element that associates a DataAttribute with a Dataflow, reported at the Dataset level |  no  |
+| [GroupRelationship](../classes/GroupRelationship.md) | A relationship element that associates a DataAttribute with a set of Dimensions, used when attribute values vary based on all group dimension values |  no  |
+| [Resource](../classes/Resource.md) | An external reference that serves as the source for a Dataset, ItemGroup, or Item |  no  |
 | [DataService](../classes/DataService.md) | A service element that provides an API or endpoint for serving or receiving data |  no  |
 
 
@@ -35,28 +32,13 @@ URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Resource](../classes/Resource.md), [MeasureRelationship](../classes/MeasureRelationship.md), [DataflowRelationship](../classes/DataflowRelationship.md), [GroupRelationship](../classes/GroupRelationship.md), [DimensionRelationship](../classes/DimensionRelationship.md), [ObservationRelationship](../classes/ObservationRelationship.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -78,6 +60,7 @@ URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
 <details>
 ```yaml
 name: attribute
+alias: attribute
 domain_of:
 - Resource
 - MeasureRelationship
@@ -87,4 +70,4 @@ domain_of:
 - ObservationRelationship
 
 ```
-</details></div>
+</details>

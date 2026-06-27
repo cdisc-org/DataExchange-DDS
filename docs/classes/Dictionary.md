@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Dictionary 
 
@@ -10,8 +7,6 @@ _A dictionary that defines a set of codes and their meanings_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/Dictionary](https://cdisc.org/odm2/class/Dictionary)
@@ -19,26 +14,27 @@ URI: [odm:class/Dictionary](https://cdisc.org/odm2/class/Dictionary)
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
-}
 Dictionary {
     string publishedBy  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    string uuid  
-    string version  
+    stringList aliases  
+}
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
 
-Dictionary ||--}o Coding : "coding, terms"
+Dictionary ||--}o Coding : "terms"
+Dictionary ||--}o Coding : "coding"
 
 ```
 
@@ -50,21 +46,22 @@ Dictionary ||--}o Coding : "coding, terms"
     * **Dictionary** [ [Versioned](../classes/Versioned.md)]
 
 
+
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [terms](../slots/terms.md) | * <br/> [Coding](../classes/Coding.md) | Terms in this dictionary - leave this empty in most cases to keep the file small | direct |
-| [publishedBy](../slots/publishedBy.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) | Associates the Data Provider that reports/publishes the data. | direct |
+| [publishedBy](../slots/publishedBy.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) | Associates the Data Provider that reports/publishes the data. | direct |
 | [version](../slots/version.md) | 0..1 <br/> [String](../types/String.md) | The version of the external resources | [Versioned](../classes/Versioned.md) |
 | [href](../slots/href.md) | 0..1 <br/> [String](../types/String.md) | Machine-readable instructions to obtain the resource e.g. FHIR path, URL | [Versioned](../classes/Versioned.md) |
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -82,12 +79,8 @@ Dictionary ||--}o Coding : "coding, terms"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -172,6 +165,7 @@ attributes:
       the file small
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: terms
     owner: Dictionary
     domain_of:
     - Dictionary
@@ -184,6 +178,7 @@ attributes:
     description: Associates the Data Provider that reports/publishes the data.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: publishedBy
     owner: Dictionary
     domain_of:
     - Dictionary
@@ -196,6 +191,7 @@ attributes:
     description: The version of the external resources
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: version
     owner: Dictionary
     domain_of:
     - Versioned
@@ -207,6 +203,7 @@ attributes:
       URL
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: href
     owner: Dictionary
     domain_of:
     - Versioned
@@ -219,6 +216,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: Dictionary
     domain_of:
     - Identifiable
@@ -229,6 +227,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: Dictionary
     domain_of:
     - Identifiable
@@ -238,6 +237,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: Dictionary
     domain_of:
     - Labelled
@@ -250,6 +250,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: Dictionary
     domain_of:
     - Labelled
@@ -263,6 +264,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: Dictionary
     domain_of:
     - Labelled
@@ -279,6 +281,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: Dictionary
     domain_of:
     - Labelled
@@ -293,6 +296,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: Dictionary
     domain_of:
     - Labelled
@@ -306,4 +310,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

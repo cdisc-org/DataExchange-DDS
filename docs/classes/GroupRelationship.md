@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: GroupRelationship 
 
@@ -10,8 +7,6 @@ _A relationship element that associates a DataAttribute with a set of Dimensions
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/GroupRelationship](https://cdisc.org/odm2/class/GroupRelationship)
@@ -19,145 +14,148 @@ URI: [odm:class/GroupRelationship](https://cdisc.org/odm2/class/GroupRelationshi
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
+GroupRelationship {
+
+}
+DataAttribute {
+    string role  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+SiteOrSponsorComment {
+    string text  
+    OriginSource sourceType  
+    string source  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
 }
 Comment {
     string text  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-ComponentList {
-    stringList components  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    string uuid  
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
-DataAttribute {
+Method {
+    MethodType type  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
-    string role  
-}
-GroupRelationship {
-
 }
 Item {
     DataType dataType  
     integer length  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string cdiscNotes  
+    string role  
+    boolean hasNoData  
     string crfCompletionInstructions  
+    string cdiscNotes  
+    string implementationNotes  
+    string preSpecifiedValue  
     integer decimalDigits  
     string displayFormat  
-    boolean hasNoData  
-    string implementationNotes  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string preSpecifiedValue  
-    string purpose  
-    string role  
     integer significantDigits  
+    string OID  
     string uuid  
-    string wasDerivedFrom  
-}
-Method {
-    MethodType type  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-SiteOrSponsorComment {
-    OriginSource sourceType  
-    string source  
-    string text  
+ComponentList {
+    stringList components  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string wasDerivedFrom  
+    stringList aliases  
 }
 
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ComponentList ||--}o Coding : "coding"
-DataAttribute ||--|o Method : "imputation, missingHandling"
+GroupRelationship ||--|o ComponentList : "groupKey"
+GroupRelationship ||--|o DataAttribute : "attribute"
 DataAttribute ||--|| Item : "item"
+DataAttribute ||--|o Method : "missingHandling"
+DataAttribute ||--|o Method : "imputation"
 DataAttribute ||--}o Coding : "coding"
 DataAttribute ||--}o Comment : "comments"
 DataAttribute ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-GroupRelationship ||--|o ComponentList : "groupKey"
-GroupRelationship ||--|o DataAttribute : "attribute"
-Item ||--|o CodeList : "codeList, roleCodeList"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--}o WhereClause : "applicableWhen"
-Method ||--|o ReifiedConcept : "implementsConcept"
-Method ||--}o Coding : "coding"
-Method ||--}o Comment : "comments"
-Method ||--}o DocumentReference : "documents"
-Method ||--}o FormalExpression : "expressions"
-Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 SiteOrSponsorComment ||--}o Coding : "coding"
 SiteOrSponsorComment ||--}o Comment : "comments"
 SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o DocumentReference : "documents"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--|o CodeList : "codeList"
+Item ||--|o Method : "method"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o WhereClause : "applicableWhen"
+Item ||--|o Origin : "origin"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o CodeList : "roleCodeList"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ComponentList ||--}o Coding : "coding"
 
 ```
 
 
 
 <!-- no inheritance hierarchy -->
+
 
 ## Slots
 
@@ -175,12 +173,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -266,6 +260,7 @@ attributes:
     exact_mappings:
     - sdmx:GroupDimensionDescriptor
     rank: 1000
+    alias: groupKey
     owner: GroupRelationship
     domain_of:
     - GroupRelationship
@@ -274,6 +269,7 @@ attributes:
   attribute:
     name: attribute
     from_schema: https://cdisc.org/dds
+    alias: attribute
     owner: GroupRelationship
     domain_of:
     - Resource
@@ -285,4 +281,4 @@ attributes:
     range: DataAttribute
 
 ```
-</details></div>
+</details>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: studyOID 
 
@@ -10,11 +7,11 @@ _Unique identifier for the study_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/studyOID](https://cdisc.org/odm2/slot/studyOID)
+Alias: studyOID
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,36 +32,15 @@ URI: [odm:slot/studyOID](https://cdisc.org/odm2/slot/studyOID)
 
 ## Properties
 
-### Type and Range
+* Range: [String](../types/String.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [StudyMetadata](../classes/StudyMetadata.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [StudyMetadata](../classes/StudyMetadata.md) |
-
-
-
-
-
-
-
-
+* Required: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,6 +72,7 @@ name: studyOID
 description: Unique identifier for the study
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: studyOID
 owner: StudyMetadata
 domain_of:
 - StudyMetadata
@@ -103,4 +80,4 @@ range: string
 required: true
 
 ```
-</details></div>
+</details>

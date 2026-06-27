@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: codeSystemVersion 
 
@@ -10,11 +7,11 @@ _The code system version_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/codeSystemVersion](https://cdisc.org/odm2/slot/codeSystemVersion)
+Alias: codeSystemVersion
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/codeSystemVersion](https://cdisc.org/odm2/slot/codeSystemVersion)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [Coding](../classes/Coding.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Coding](../classes/Coding.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: codeSystemVersion
 description: The code system version
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: codeSystemVersion
 owner: Coding
 domain_of:
 - Coding
 range: string
 
 ```
-</details></div>
+</details>

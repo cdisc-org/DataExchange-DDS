@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: properties 
 
@@ -10,11 +7,11 @@ _Properties of the reified object, which can be other governed elements or simpl
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/properties](https://cdisc.org/odm2/slot/properties)
+Alias: properties
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/properties](https://cdisc.org/odm2/slot/properties)
 
 ## Properties
 
-### Type and Range
+* Range: [ConceptProperty](../classes/ConceptProperty.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [ConceptProperty](../classes/ConceptProperty.md) |
-| Domain Of | [ReifiedConcept](../classes/ReifiedConcept.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ReifiedConcept](../classes/ReifiedConcept.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,6 +72,7 @@ description: Properties of the reified object, which can be other governed eleme
   or simple values
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: properties
 owner: ReifiedConcept
 domain_of:
 - ReifiedConcept
@@ -105,4 +82,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

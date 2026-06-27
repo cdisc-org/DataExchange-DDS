@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: keySequence 
 
@@ -10,11 +7,11 @@ _Ordered list of Items that define the dataset key structure for sorting and uni
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/keySequence](https://cdisc.org/odm2/slot/keySequence)
+Alias: keySequence
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,36 +32,15 @@ URI: [odm:slot/keySequence](https://cdisc.org/odm2/slot/keySequence)
 
 ## Properties
 
-### Type and Range
+* Range: [Item](../classes/Item.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Item](../classes/Item.md) |
-| Domain Of | [ItemGroup](../classes/ItemGroup.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ItemGroup](../classes/ItemGroup.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -103,6 +79,7 @@ close_mappings:
 - odm:ItemRef.KeySequence
 - sdmx:DimensionDescriptor
 rank: 1000
+alias: keySequence
 owner: ItemGroup
 domain_of:
 - ItemGroup
@@ -110,4 +87,4 @@ range: Item
 multivalued: true
 
 ```
-</details></div>
+</details>

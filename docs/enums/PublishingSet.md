@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: PublishingSet 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines permissible values for publishing sets_
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/PublishingSet](https://cdisc.org/odm2/enum/PublishingSet)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | ADaM | None | Analysis Data Model |
@@ -39,12 +32,8 @@ URI: [odm:enum/PublishingSet](https://cdisc.org/odm2/enum/PublishingSet)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -87,5 +76,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

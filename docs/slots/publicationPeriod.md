@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: publicationPeriod 
 
@@ -10,11 +7,11 @@ _Specifies the period of publication of the data or metadata in terms of whateve
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/publicationPeriod](https://cdisc.org/odm2/slot/publicationPeriod)
+Alias: publicationPeriod
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/publicationPeriod](https://cdisc.org/odm2/slot/publicationPeriod)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,9 +71,10 @@ description: Specifies the period of publication of the data or metadata in term
   of whatever provisioning agreements might be in force.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: publicationPeriod
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details></div>
+</details>

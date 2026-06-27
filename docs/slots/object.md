@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: object 
 
@@ -10,11 +7,11 @@ _The ending element of the relationship._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/object](https://cdisc.org/odm2/slot/object)
+Alias: object
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/object](https://cdisc.org/odm2/slot/object)
 
 ## Properties
 
-### Type and Range
+* Range: [IdentifiableElement](../classes/IdentifiableElement.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [IdentifiableElement](../classes/IdentifiableElement.md) |
-| Domain Of | [Relationship](../classes/Relationship.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Relationship](../classes/Relationship.md) |
-
-
-
-
-
-
-
-
+* Required: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: object
 description: The ending element of the relationship.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: object
 owner: Relationship
 domain_of:
 - Relationship
@@ -102,4 +79,4 @@ range: IdentifiableElement
 required: true
 
 ```
-</details></div>
+</details>

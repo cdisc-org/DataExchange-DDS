@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: UserType 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines the types of users in a clinical data collection or
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/UserType](https://cdisc.org/odm2/enum/UserType)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | Sponsor | None |  |
@@ -43,12 +36,8 @@ URI: [odm:enum/UserType](https://cdisc.org/odm2/enum/UserType)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,5 +84,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

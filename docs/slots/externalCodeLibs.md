@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: externalCodeLibs 
 
@@ -10,11 +7,11 @@ _External code libraries referenced_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/externalCodeLibs](https://cdisc.org/odm2/slot/externalCodeLibs)
+Alias: externalCodeLibs
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/externalCodeLibs](https://cdisc.org/odm2/slot/externalCodeLibs)
 
 ## Properties
 
-### Type and Range
+* Range: [Resource](../classes/Resource.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Resource](../classes/Resource.md) |
-| Domain Of | [FormalExpression](../classes/FormalExpression.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [FormalExpression](../classes/FormalExpression.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: externalCodeLibs
 description: External code libraries referenced
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: externalCodeLibs
 owner: FormalExpression
 domain_of:
 - FormalExpression
@@ -102,4 +79,4 @@ range: Resource
 multivalued: true
 
 ```
-</details></div>
+</details>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: codings 
 
@@ -10,11 +7,11 @@ _Codings defined in this version of the metadata_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/codings](https://cdisc.org/odm2/slot/codings)
+Alias: codings
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/codings](https://cdisc.org/odm2/slot/codings)
 
 ## Properties
 
-### Type and Range
+* Range: [Coding](../classes/Coding.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Coding](../classes/Coding.md) |
-| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: codings
 description: Codings defined in this version of the metadata
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: codings
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -104,4 +81,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

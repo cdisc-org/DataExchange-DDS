@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: DimensionRelationship 
 
@@ -10,8 +7,6 @@ _A relationship element that associates a DataAttribute with a specific Dimensio
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/DimensionRelationship](https://cdisc.org/odm2/class/DimensionRelationship)
@@ -19,165 +14,169 @@ URI: [odm:class/DimensionRelationship](https://cdisc.org/odm2/class/DimensionRel
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
+DimensionRelationship {
+
+}
+DataAttribute {
+    string role  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+SiteOrSponsorComment {
+    string text  
+    OriginSource sourceType  
+    string source  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
 }
 Comment {
     string text  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-ComponentList {
-    stringList components  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    string uuid  
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
-DataAttribute {
+Method {
+    MethodType type  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
-    string wasDerivedFrom  
-    string role  
-}
-Dimension {
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
     datetime lastUpdated  
-    boolean mandatory  
     string owner  
-    string purpose  
-    string uuid  
     string wasDerivedFrom  
-    string role  
-}
-DimensionRelationship {
-
 }
 Item {
     DataType dataType  
     integer length  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string cdiscNotes  
+    string role  
+    boolean hasNoData  
     string crfCompletionInstructions  
+    string cdiscNotes  
+    string implementationNotes  
+    string preSpecifiedValue  
     integer decimalDigits  
     string displayFormat  
-    boolean hasNoData  
-    string implementationNotes  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string preSpecifiedValue  
-    string purpose  
-    string role  
     integer significantDigits  
+    string OID  
     string uuid  
-    string wasDerivedFrom  
-}
-Method {
-    MethodType type  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-SiteOrSponsorComment {
-    OriginSource sourceType  
-    string source  
-    string text  
+ComponentList {
+    stringList components  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
+    stringList aliases  
+}
+Dimension {
+    string role  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
 
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ComponentList ||--}o Coding : "coding"
-DataAttribute ||--|o Method : "imputation, missingHandling"
+DimensionRelationship ||--}o Dimension : "dimensions"
+DimensionRelationship ||--|o ComponentList : "groupKey"
+DimensionRelationship ||--|o DataAttribute : "attribute"
 DataAttribute ||--|| Item : "item"
+DataAttribute ||--|o Method : "missingHandling"
+DataAttribute ||--|o Method : "imputation"
 DataAttribute ||--}o Coding : "coding"
 DataAttribute ||--}o Comment : "comments"
 DataAttribute ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Dimension ||--|o Method : "imputation, missingHandling"
-Dimension ||--|| Item : "item"
-Dimension ||--}o Coding : "coding"
-Dimension ||--}o Comment : "comments"
-Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DimensionRelationship ||--|o ComponentList : "groupKey"
-DimensionRelationship ||--|o DataAttribute : "attribute"
-DimensionRelationship ||--}o Dimension : "dimensions"
-Item ||--|o CodeList : "codeList, roleCodeList"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--}o WhereClause : "applicableWhen"
-Method ||--|o ReifiedConcept : "implementsConcept"
-Method ||--}o Coding : "coding"
-Method ||--}o Comment : "comments"
-Method ||--}o DocumentReference : "documents"
-Method ||--}o FormalExpression : "expressions"
-Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 SiteOrSponsorComment ||--}o Coding : "coding"
 SiteOrSponsorComment ||--}o Comment : "comments"
 SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o DocumentReference : "documents"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--|o CodeList : "codeList"
+Item ||--|o Method : "method"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o WhereClause : "applicableWhen"
+Item ||--|o Origin : "origin"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o CodeList : "roleCodeList"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ComponentList ||--}o Coding : "coding"
+Dimension ||--|| Item : "item"
+Dimension ||--|o Method : "missingHandling"
+Dimension ||--|o Method : "imputation"
+Dimension ||--}o Coding : "coding"
+Dimension ||--}o Comment : "comments"
+Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
 
 
 <!-- no inheritance hierarchy -->
+
 
 ## Slots
 
@@ -196,12 +195,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -294,6 +289,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     exact_mappings:
     - sdmx:DimensionDescriptor
+    alias: dimensions
     owner: DimensionRelationship
     domain_of:
     - DataStructureDefinition
@@ -306,6 +302,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     exact_mappings:
     - sdmx:GroupDimensionDescriptor
+    alias: groupKey
     owner: DimensionRelationship
     domain_of:
     - GroupRelationship
@@ -314,6 +311,7 @@ attributes:
   attribute:
     name: attribute
     from_schema: https://cdisc.org/dds
+    alias: attribute
     owner: DimensionRelationship
     domain_of:
     - Resource
@@ -325,4 +323,4 @@ attributes:
     range: DataAttribute
 
 ```
-</details></div>
+</details>

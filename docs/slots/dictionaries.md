@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: dictionaries 
 
@@ -10,11 +7,11 @@ _Dictionaries defined in this version of the metadata_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/dictionaries](https://cdisc.org/odm2/slot/dictionaries)
+Alias: dictionaries
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/dictionaries](https://cdisc.org/odm2/slot/dictionaries)
 
 ## Properties
 
-### Type and Range
+* Range: [Dictionary](../classes/Dictionary.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Dictionary](../classes/Dictionary.md) |
-| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: dictionaries
 description: Dictionaries defined in this version of the metadata
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: dictionaries
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -104,4 +81,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: displayType 
 
@@ -10,11 +7,11 @@ _The type of display this result represents. e.g. table, listing, figure, dashbo
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
+Alias: displayType
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Display](../classes/Display.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Display](../classes/Display.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,9 +70,10 @@ description: The type of display this result represents. e.g. table, listing, fi
   dashboard.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: displayType
 owner: Display
 domain_of:
 - Display
 
 ```
-</details></div>
+</details>

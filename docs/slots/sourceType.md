@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: sourceType 
 
@@ -10,11 +7,11 @@ _who made the comment, such as Investigator, Sponsor._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/sourceType](https://cdisc.org/odm2/slot/sourceType)
+Alias: sourceType
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/sourceType](https://cdisc.org/odm2/slot/sourceType)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [OriginSource](../enums/OriginSource.md) |
-| Domain Of | [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) |
-
-
-
-
-
-
-
-
+* Range: [OriginSource](../enums/OriginSource.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: sourceType
 description: who made the comment, such as Investigator, Sponsor.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: sourceType
 owner: SiteOrSponsorComment
 domain_of:
 - SiteOrSponsorComment
 range: OriginSource
 
 ```
-</details></div>
+</details>
