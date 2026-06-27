@@ -8,7 +8,7 @@ The model is based on the work by Jeremy Teoh ([https://github.com/TeMeta/define
 
 ## Description
 
-The main purpose of *Project Name* is to ....
+The main purpose of *Data Definition Specification (DDS)* is to ....
 
 If possible use images as well.
 
