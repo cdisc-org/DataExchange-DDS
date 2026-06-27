@@ -23,7 +23,6 @@ help:
 	@echo "  docs                       - Generate LinkML documentation"
 	@echo "  docs-serve                 - Serve documentation with MkDocs"
 	@echo "  docs-build                 - Build static documentation site"
-	@echo "  docs-deploy                - Deploy docs to GitHub Pages"
 
 install:
 	@echo "Installing dependencies ..."
@@ -83,10 +82,6 @@ docs-serve:
 docs-build:
 	@echo "Building static documentation site with MkDocs..."
 	mkdocs build
-
-docs-deploy:
-	@echo "Deploying documentation to GitHub Pages..."
-	mkdocs gh-deploy
 
 clean:
 	@echo "Cleaning up generated files..."
