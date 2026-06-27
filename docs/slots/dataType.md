@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: dataType 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
+Alias: dataType
+
 <!-- no inheritance hierarchy -->
 
 
@@ -20,10 +17,10 @@ URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Item](../classes/Item.md) | A data element that represents a specific piece of information within a defined context, with data type, constraints, and derivation methods |  no  |
-| [CodeList](../classes/CodeList.md) | A value set that defines a discrete collection of permissible values for an item, corresponding to the ODM CodeList construct |  no  |
-| [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
 | [ReturnValue](../classes/ReturnValue.md) | An output specification that defines the details of what a formal expression returns |  no  |
+| [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
+| [CodeList](../classes/CodeList.md) | A value set that defines a discrete collection of permissible values for an item, corresponding to the ODM CodeList construct |  no  |
+| [Item](../classes/Item.md) | A data element that represents a specific piece of information within a defined context, with data type, constraints, and derivation methods |  no  |
 
 
 
@@ -32,28 +29,13 @@ URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Item](../classes/Item.md), [CodeList](../classes/CodeList.md), [Parameter](../classes/Parameter.md), [ReturnValue](../classes/ReturnValue.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -75,6 +57,7 @@ URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
 <details>
 ```yaml
 name: dataType
+alias: dataType
 domain_of:
 - Item
 - CodeList
@@ -82,4 +65,4 @@ domain_of:
 - ReturnValue
 
 ```
-</details></div>
+</details>

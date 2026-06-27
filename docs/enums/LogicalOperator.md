@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: LogicalOperator 
 
 
@@ -13,11 +7,10 @@ _Logical operators for combining conditions in Boolean expressions. For complex 
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/LogicalOperator](https://cdisc.org/odm2/enum/LogicalOperator)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | EXPRESSION | None | Evaluate condition using expression. Default if expression is present. |
@@ -38,12 +31,8 @@ URI: [odm:enum/LogicalOperator](https://cdisc.org/odm2/enum/LogicalOperator)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -85,5 +74,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

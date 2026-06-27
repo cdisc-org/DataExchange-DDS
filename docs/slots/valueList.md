@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: valueList 
 
@@ -10,11 +7,11 @@ _A list of possible return values._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/valueList](https://cdisc.org/odm2/slot/valueList)
+Alias: valueList
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/valueList](https://cdisc.org/odm2/slot/valueList)
 
 ## Properties
 
-### Type and Range
+* Range: [String](../types/String.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [ReturnValue](../classes/ReturnValue.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ReturnValue](../classes/ReturnValue.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: valueList
 description: A list of possible return values.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: valueList
 owner: ReturnValue
 domain_of:
 - ReturnValue
@@ -102,4 +79,4 @@ range: string
 multivalued: true
 
 ```
-</details></div>
+</details>

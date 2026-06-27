@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: StudyMetadata 
 
@@ -9,8 +6,6 @@ search:
 _A mixin that provides study-level metadata attributes including study identification and protocol information_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -20,10 +15,10 @@ URI: [odm:class/StudyMetadata](https://cdisc.org/odm2/class/StudyMetadata)
 ```mermaid
 erDiagram
 StudyMetadata {
-    string protocolName  
-    string studyDescription  
-    string studyName  
     string studyOID  
+    string studyName  
+    string studyDescription  
+    string protocolName  
 }
 
 
@@ -33,12 +28,6 @@ StudyMetadata {
 
 
 <!-- no inheritance hierarchy -->
-
-## Class Properties
-
-| Property | Value |
-| --- | --- |
-| Mixin | Yes |
 
 
 ## Slots
@@ -66,12 +55,8 @@ StudyMetadata {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -163,6 +148,7 @@ attributes:
     description: Unique identifier for the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: studyOID
     owner: StudyMetadata
     domain_of:
     - StudyMetadata
@@ -173,6 +159,7 @@ attributes:
     description: Name of the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: studyName
     owner: StudyMetadata
     domain_of:
     - StudyMetadata
@@ -182,6 +169,7 @@ attributes:
     description: Description of the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: studyDescription
     owner: StudyMetadata
     domain_of:
     - StudyMetadata
@@ -191,10 +179,11 @@ attributes:
     description: Protocol name for the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: protocolName
     owner: StudyMetadata
     domain_of:
     - StudyMetadata
     range: string
 
 ```
-</details></div>
+</details>

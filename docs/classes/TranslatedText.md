@@ -1,11 +1,6 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: TranslatedText 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -29,6 +24,7 @@ TranslatedText ||--}o Translation : "translations"
 
 
 <!-- no inheritance hierarchy -->
+
 
 ## Slots
 
@@ -212,12 +208,8 @@ TranslatedText ||--}o Translation : "translations"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -279,6 +271,7 @@ attributes:
     name: translations
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: translations
     owner: TranslatedText
     domain_of:
     - TranslatedText
@@ -288,4 +281,4 @@ attributes:
     inlined_as_list: true
 
 ```
-</details></div>
+</details>

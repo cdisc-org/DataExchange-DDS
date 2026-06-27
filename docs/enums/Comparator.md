@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: Comparator 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines the types of comparison operations available for a 
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/Comparator](https://cdisc.org/odm2/enum/Comparator)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | LT | None | Less than |
@@ -42,12 +35,8 @@ URI: [odm:enum/Comparator](https://cdisc.org/odm2/enum/Comparator)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -100,5 +89,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

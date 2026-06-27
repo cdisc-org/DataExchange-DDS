@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: studyName 
 
@@ -10,11 +7,11 @@ _Name of the study_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/studyName](https://cdisc.org/odm2/slot/studyName)
+Alias: studyName
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/studyName](https://cdisc.org/odm2/slot/studyName)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [StudyMetadata](../classes/StudyMetadata.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [StudyMetadata](../classes/StudyMetadata.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: studyName
 description: Name of the study
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: studyName
 owner: StudyMetadata
 domain_of:
 - StudyMetadata
 range: string
 
 ```
-</details></div>
+</details>

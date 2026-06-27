@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: displayFormat 
 
@@ -10,11 +7,11 @@ _A display format for the item_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/displayFormat](https://cdisc.org/odm2/slot/displayFormat)
+Alias: displayFormat
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/displayFormat](https://cdisc.org/odm2/slot/displayFormat)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [Formatted](../classes/Formatted.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Formatted](../classes/Formatted.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: displayFormat
 description: A display format for the item
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: displayFormat
 owner: Formatted
 domain_of:
 - Formatted
 range: string
 
 ```
-</details></div>
+</details>

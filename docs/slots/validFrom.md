@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: validFrom 
 
@@ -10,11 +7,11 @@ _Indicates the inclusive start time indicating the validity of the information i
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/validFrom](https://cdisc.org/odm2/slot/validFrom)
+Alias: validFrom
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/validFrom](https://cdisc.org/odm2/slot/validFrom)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,9 +71,10 @@ description: Indicates the inclusive start time indicating the validity of the i
   in the data set.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: validFrom
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details></div>
+</details>

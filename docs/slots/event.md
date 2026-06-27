@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: event 
 
@@ -10,11 +7,11 @@ _The ID of the event in a Schedule._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/event](https://cdisc.org/odm2/slot/event)
+Alias: event
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/event](https://cdisc.org/odm2/slot/event)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [NominalOccurrence](../classes/NominalOccurrence.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [NominalOccurrence](../classes/NominalOccurrence.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,6 +69,7 @@ name: event
 description: The ID of the event in a Schedule.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: event
 owner: NominalOccurrence
 domain_of:
 - NominalOccurrence
@@ -101,4 +77,4 @@ range: string
 required: false
 
 ```
-</details></div>
+</details>

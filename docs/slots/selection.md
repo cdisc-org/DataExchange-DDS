@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: selection 
 
@@ -10,11 +7,11 @@ _Machine-executable instructions for selecting data from the resource._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
+Alias: selection
+
 <!-- no inheritance hierarchy -->
 
 
@@ -25,8 +22,8 @@ URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Resource](../classes/Resource.md) | An external reference that serves as the source for a Dataset, ItemGroup, or Item |  no  |
 | [DataService](../classes/DataService.md) | A service element that provides an API or endpoint for serving or receiving data |  no  |
+| [Resource](../classes/Resource.md) | An external reference that serves as the source for a Dataset, ItemGroup, or Item |  no  |
 
 
 
@@ -35,36 +32,15 @@ URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
 
 ## Properties
 
-### Type and Range
+* Range: [FormalExpression](../classes/FormalExpression.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [FormalExpression](../classes/FormalExpression.md) |
-| Domain Of | [Resource](../classes/Resource.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Resource](../classes/Resource.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,6 +72,7 @@ name: selection
 description: Machine-executable instructions for selecting data from the resource.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: selection
 owner: Resource
 domain_of:
 - Resource
@@ -105,4 +82,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Formatted 
 
@@ -9,8 +6,6 @@ search:
 _A mixin that provides slots for reporting, exchange, or storage formatting_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -32,12 +27,6 @@ Formatted {
 
 
 <!-- no inheritance hierarchy -->
-
-## Class Properties
-
-| Property | Value |
-| --- | --- |
-| Mixin | Yes |
 
 
 ## Slots
@@ -64,12 +53,8 @@ Formatted {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -157,6 +142,7 @@ attributes:
     description: For decimal values, the number of digits after the decimal point
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: decimalDigits
     owner: Formatted
     domain_of:
     - Formatted
@@ -166,6 +152,7 @@ attributes:
     description: A display format for the item
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: displayFormat
     owner: Formatted
     domain_of:
     - Formatted
@@ -175,10 +162,11 @@ attributes:
     description: For numeric values, the number of significant digits
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: significantDigits
     owner: Formatted
     domain_of:
     - Formatted
     range: integer
 
 ```
-</details></div>
+</details>

@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: method 
 
@@ -10,11 +7,11 @@ _Reference to the Method element that describes how to derive this item's value.
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/method](https://cdisc.org/odm2/slot/method)
+Alias: method
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/method](https://cdisc.org/odm2/slot/method)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Method](../classes/Method.md) |
-| Domain Of | [Item](../classes/Item.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Item](../classes/Item.md) |
-
-
-
-
-
-
-
-
+* Range: [Method](../classes/Method.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ description: Reference to the Method element that describes how to derive this i
   value.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: method
 owner: Item
 domain_of:
 - Item
 range: Method
 
 ```
-</details></div>
+</details>

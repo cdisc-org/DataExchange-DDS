@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: text 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/text](https://cdisc.org/odm2/slot/text)
+Alias: text
+
 <!-- no inheritance hierarchy -->
 
 
@@ -30,28 +27,13 @@ URI: [odm:slot/text](https://cdisc.org/odm2/slot/text)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Comment](../classes/Comment.md), [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -73,9 +55,10 @@ URI: [odm:slot/text](https://cdisc.org/odm2/slot/text)
 <details>
 ```yaml
 name: text
+alias: text
 domain_of:
 - Comment
 - SiteOrSponsorComment
 
 ```
-</details></div>
+</details>

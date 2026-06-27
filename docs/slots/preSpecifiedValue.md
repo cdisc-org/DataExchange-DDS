@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: preSpecifiedValue 
 
@@ -10,11 +7,11 @@ _Prefill value or a default value for a field that is automatically populated._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/preSpecifiedValue](https://cdisc.org/odm2/slot/preSpecifiedValue)
+Alias: preSpecifiedValue
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,45 +32,13 @@ URI: [odm:slot/preSpecifiedValue](https://cdisc.org/odm2/slot/preSpecifiedValue)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
-| Domain Of | [IsODMItem](../classes/IsODMItem.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsODMItem](../classes/IsODMItem.md) |
-
-
-<details>
-<summary>Expressions & Logic</summary>
-#### Any Of
-
-Value must satisfy at least one of:
-- AnonymousSlotExpression({'range': 'string'})
-- AnonymousSlotExpression({'range': 'TranslatedText'})
-
-</details>
-
-
-
-
-
-
-
+* Range: NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -105,6 +70,7 @@ name: preSpecifiedValue
 description: Prefill value or a default value for a field that is automatically populated.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: preSpecifiedValue
 owner: IsODMItem
 domain_of:
 - IsODMItem
@@ -113,4 +79,4 @@ any_of:
 - range: TranslatedText
 
 ```
-</details></div>
+</details>

@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: hasPolicy 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/hasPolicy](https://cdisc.org/odm2/slot/hasPolicy)
+Alias: hasPolicy
+
 <!-- no inheritance hierarchy -->
 
 
@@ -30,28 +27,13 @@ URI: [odm:slot/hasPolicy](https://cdisc.org/odm2/slot/hasPolicy)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Dataset](../classes/Dataset.md), [DataProduct](../classes/DataProduct.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -73,9 +55,10 @@ URI: [odm:slot/hasPolicy](https://cdisc.org/odm2/slot/hasPolicy)
 <details>
 ```yaml
 name: hasPolicy
+alias: hasPolicy
 domain_of:
 - Dataset
 - DataProduct
 
 ```
-</details></div>
+</details>

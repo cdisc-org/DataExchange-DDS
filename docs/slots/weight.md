@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: weight 
 
@@ -10,11 +7,11 @@ _Numeric significance of the code (e.g., for scoring)_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/weight](https://cdisc.org/odm2/slot/weight)
+Alias: weight
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/weight](https://cdisc.org/odm2/slot/weight)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Decimal](../types/Decimal.md) |
-| Domain Of | [CodeListItem](../classes/CodeListItem.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [CodeListItem](../classes/CodeListItem.md) |
-
-
-
-
-
-
-
-
+* Range: [Decimal](../types/Decimal.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: weight
 description: Numeric significance of the code (e.g., for scoring)
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: weight
 owner: CodeListItem
 domain_of:
 - CodeListItem
 range: decimal
 
 ```
-</details></div>
+</details>

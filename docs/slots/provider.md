@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: provider 
 
@@ -10,11 +7,11 @@ _The Data Provider that is part of this agreement_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/provider](https://cdisc.org/odm2/slot/provider)
+Alias: provider
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/provider](https://cdisc.org/odm2/slot/provider)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [DataProvider](../classes/DataProvider.md) |
-| Domain Of | [ProvisionAgreement](../classes/ProvisionAgreement.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ProvisionAgreement](../classes/ProvisionAgreement.md) |
-
-
-
-
-
-
-
-
+* Range: [DataProvider](../classes/DataProvider.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: provider
 description: The Data Provider that is part of this agreement
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: provider
 owner: ProvisionAgreement
 domain_of:
 - ProvisionAgreement
 range: DataProvider
 
 ```
-</details></div>
+</details>

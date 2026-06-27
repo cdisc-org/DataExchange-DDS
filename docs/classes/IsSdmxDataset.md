@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: IsSdmxDataset 
 
@@ -9,8 +6,6 @@ search:
 _A mixin that provides additional metadata specific to SDMX Datasets_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -21,13 +16,13 @@ URI: [odm:class/IsSdmxDataset](https://cdisc.org/odm2/class/IsSdmxDataset)
 erDiagram
 IsSdmxDataset {
     string action  
-    string dataExtractionDate  
-    string publicationPeriod  
-    string publicationYear  
     string reportingBegin  
     string reportingEnd  
+    string dataExtractionDate  
     string validFrom  
     string validTo  
+    string publicationYear  
+    string publicationPeriod  
 }
 
 
@@ -37,12 +32,6 @@ IsSdmxDataset {
 
 
 <!-- no inheritance hierarchy -->
-
-## Class Properties
-
-| Property | Value |
-| --- | --- |
-| Mixin | Yes |
 
 
 ## Slots
@@ -74,12 +63,8 @@ IsSdmxDataset {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -201,6 +186,7 @@ attributes:
       append, replace, delete)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: action
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -210,6 +196,7 @@ attributes:
       the start period of a report.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: reportingBegin
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -219,6 +206,7 @@ attributes:
       the end period of a report.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: reportingEnd
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -228,6 +216,7 @@ attributes:
       data are extracted from a data source.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: dataExtractionDate
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -237,6 +226,7 @@ attributes:
       information in the data set.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: validFrom
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -246,6 +236,7 @@ attributes:
       in the data set.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: validTo
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -255,6 +246,7 @@ attributes:
       of whatever provisioning agreements might be in force.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: publicationYear
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
@@ -264,9 +256,10 @@ attributes:
       of whatever provisioning agreements might be in force.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: publicationPeriod
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
 
 ```
-</details></div>
+</details>

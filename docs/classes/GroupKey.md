@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: GroupKey 
 
@@ -9,8 +6,6 @@ search:
 _A dimension subset that represents collections of dimensions that are subsets of the full dimension set, distinct from SeriesKey which includes Time dimensions_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -20,9 +15,9 @@ URI: [odm:class/GroupKey](https://cdisc.org/odm2/class/GroupKey)
 ```mermaid
 erDiagram
 GroupKey {
-    string attributeValues  
-    string keyValues  
     string describedBy  
+    string keyValues  
+    string attributeValues  
 }
 
 
@@ -35,6 +30,7 @@ GroupKey {
 ## Inheritance
 * [DatasetKey](../classes/DatasetKey.md)
     * **GroupKey**
+
 
 
 ## Slots
@@ -61,12 +57,8 @@ GroupKey {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -129,6 +121,7 @@ attributes:
     description: Associates the Dimension Descriptor defined in the Data Structure
       Definition
     from_schema: https://cdisc.org/dds
+    alias: describedBy
     owner: GroupKey
     domain_of:
     - Dataset
@@ -143,6 +136,7 @@ attributes:
       SUBJ001.VISIT2.BMI
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: keyValues
     owner: GroupKey
     domain_of:
     - DatasetKey
@@ -152,10 +146,11 @@ attributes:
     description: Association to the Attribute Values relating to Key
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: attributeValues
     owner: GroupKey
     domain_of:
     - DatasetKey
     range: string
 
 ```
-</details></div>
+</details>

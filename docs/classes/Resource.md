@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Resource 
 
@@ -10,8 +7,6 @@ _An external reference that serves as the source for a Dataset, ItemGroup, or It
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/Resource](https://cdisc.org/odm2/class/Resource)
@@ -19,72 +14,72 @@ URI: [odm:class/Resource](https://cdisc.org/odm2/class/Resource)
 
 ```mermaid
 erDiagram
+Resource {
+    string resourceType  
+    string attribute  
+    string version  
+    string href  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
 Coding {
-    AliasPredicate aliasType  
     string code  
+    string decode  
     string codeSystem  
     string codeSystemVersion  
-    string decode  
+    AliasPredicate aliasType  
 }
 FormalExpression {
+    string context  
     string expression  
     string returnType  
-    string context  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
-}
-Parameter {
-    string defaultValue  
-    boolean required  
-    DataType dataType  
-    stringList items  
-    string value  
-    string name  
-    string description  
-    string OID  
     stringList aliases  
-    string label  
-    string uuid  
-}
-Resource {
-    string attribute  
-    string resourceType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
-    string version  
 }
 ReturnValue {
-    stringList valueList  
     DataType dataType  
+    stringList valueList  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
+    stringList aliases  
+}
+Parameter {
+    DataType dataType  
+    string value  
+    string defaultValue  
+    stringList items  
+    boolean required  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
 }
 
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Coding : "coding"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-Parameter ||--}o CodeList : "codeList"
-Parameter ||--}o Coding : "coding"
-Parameter ||--}o ConceptProperty : "conceptProperty"
-Parameter ||--}o Condition : "conditions"
-Parameter ||--}o WhereClause : "applicableWhen"
-Resource ||--}o Coding : "coding"
 Resource ||--}o FormalExpression : "selection"
+Resource ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+FormalExpression ||--}o Coding : "coding"
 ReturnValue ||--}o Coding : "coding"
+Parameter ||--}o CodeList : "codeList"
+Parameter ||--}o ConceptProperty : "conceptProperty"
+Parameter ||--}o WhereClause : "applicableWhen"
+Parameter ||--}o Condition : "conditions"
+Parameter ||--}o Coding : "coding"
 
 ```
 
@@ -95,6 +90,7 @@ ReturnValue ||--}o Coding : "coding"
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * **Resource** [ [Versioned](../classes/Versioned.md)]
         * [DataService](../classes/DataService.md)
+
 
 
 ## Slots
@@ -109,10 +105,10 @@ ReturnValue ||--}o Coding : "coding"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -135,12 +131,8 @@ ReturnValue ||--}o Coding : "coding"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -244,6 +236,7 @@ attributes:
       "OpenEHR-extract")
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: resourceType
     owner: Resource
     domain_of:
     - Resource
@@ -255,6 +248,7 @@ attributes:
       can be obtained. Examples are "valueQuantity.value" or "valueQuantity.unit".
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: attribute
     owner: Resource
     domain_of:
     - Resource
@@ -269,6 +263,7 @@ attributes:
     description: Machine-executable instructions for selecting data from the resource.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: selection
     owner: Resource
     domain_of:
     - Resource
@@ -281,6 +276,7 @@ attributes:
     description: The version of the external resources
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: version
     owner: Resource
     domain_of:
     - Versioned
@@ -292,6 +288,7 @@ attributes:
       URL
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: href
     owner: Resource
     domain_of:
     - Versioned
@@ -304,6 +301,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: Resource
     domain_of:
     - Identifiable
@@ -314,6 +312,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: Resource
     domain_of:
     - Identifiable
@@ -323,6 +322,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: Resource
     domain_of:
     - Labelled
@@ -335,6 +335,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: Resource
     domain_of:
     - Labelled
@@ -348,6 +349,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: Resource
     domain_of:
     - Labelled
@@ -364,6 +366,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: Resource
     domain_of:
     - Labelled
@@ -378,6 +381,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: Resource
     domain_of:
     - Labelled
@@ -391,4 +395,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

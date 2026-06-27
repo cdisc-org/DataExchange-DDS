@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: sourceItems 
 
@@ -10,11 +7,11 @@ _Source items for this origin_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/sourceItems](https://cdisc.org/odm2/slot/sourceItems)
+Alias: sourceItems
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/sourceItems](https://cdisc.org/odm2/slot/sourceItems)
 
 ## Properties
 
-### Type and Range
+* Range: [SourceItem](../classes/SourceItem.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [SourceItem](../classes/SourceItem.md) |
-| Domain Of | [Origin](../classes/Origin.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Origin](../classes/Origin.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: sourceItems
 description: Source items for this origin
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: sourceItems
 owner: Origin
 domain_of:
 - Origin
@@ -104,4 +81,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

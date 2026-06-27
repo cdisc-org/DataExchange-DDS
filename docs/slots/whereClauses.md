@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: whereClauses 
 
@@ -10,11 +7,11 @@ _Data contexts that apply to this version of the metadata._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/whereClauses](https://cdisc.org/odm2/slot/whereClauses)
+Alias: whereClauses
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/whereClauses](https://cdisc.org/odm2/slot/whereClauses)
 
 ## Properties
 
-### Type and Range
+* Range: [WhereClause](../classes/WhereClause.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [WhereClause](../classes/WhereClause.md) |
-| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: whereClauses
 description: Data contexts that apply to this version of the metadata.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: whereClauses
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -104,4 +81,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

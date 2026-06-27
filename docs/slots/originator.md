@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: originator 
 
@@ -10,11 +7,11 @@ _Organization or system that created the ODM file_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/originator](https://cdisc.org/odm2/slot/originator)
+Alias: originator
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/originator](https://cdisc.org/odm2/slot/originator)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: originator
 description: Organization or system that created the ODM file
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: originator
 owner: ODMFileMetadata
 domain_of:
 - ODMFileMetadata
 range: string
 
 ```
-</details></div>
+</details>

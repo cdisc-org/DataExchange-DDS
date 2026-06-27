@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: terms 
 
@@ -10,11 +7,11 @@ _Terms in this dictionary - leave this empty in most cases to keep the file smal
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/terms](https://cdisc.org/odm2/slot/terms)
+Alias: terms
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/terms](https://cdisc.org/odm2/slot/terms)
 
 ## Properties
 
-### Type and Range
+* Range: [Coding](../classes/Coding.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Coding](../classes/Coding.md) |
-| Domain Of | [Dictionary](../classes/Dictionary.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dictionary](../classes/Dictionary.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,6 +72,7 @@ description: Terms in this dictionary - leave this empty in most cases to keep t
   file small
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: terms
 owner: Dictionary
 domain_of:
 - Dictionary
@@ -105,4 +82,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

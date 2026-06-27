@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: publishingSet 
 
@@ -10,11 +7,11 @@ _Publishing Set of a Controlled Terminology_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/publishingSet](https://cdisc.org/odm2/slot/publishingSet)
+Alias: publishingSet
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/publishingSet](https://cdisc.org/odm2/slot/publishingSet)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [PublishingSet](../enums/PublishingSet.md) |
-| Domain Of | [Standard](../classes/Standard.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Standard](../classes/Standard.md) |
-
-
-
-
-
-
-
-
+* Range: [PublishingSet](../enums/PublishingSet.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: publishingSet
 description: Publishing Set of a Controlled Terminology
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: publishingSet
 owner: Standard
 domain_of:
 - Standard
 range: PublishingSet
 
 ```
-</details></div>
+</details>

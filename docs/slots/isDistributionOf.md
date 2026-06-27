@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: isDistributionOf 
 
@@ -10,11 +7,11 @@ _Dataset this distribution represents_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/isDistributionOf](https://cdisc.org/odm2/slot/isDistributionOf)
+Alias: isDistributionOf
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/isDistributionOf](https://cdisc.org/odm2/slot/isDistributionOf)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Dataset](../classes/Dataset.md) |
-| Domain Of | [Distribution](../classes/Distribution.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Distribution](../classes/Distribution.md) |
-
-
-
-
-
-
-
-
+* Range: [Dataset](../classes/Dataset.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: isDistributionOf
 description: Dataset this distribution represents
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: isDistributionOf
 owner: Distribution
 domain_of:
 - Distribution
 range: Dataset
 
 ```
-</details></div>
+</details>

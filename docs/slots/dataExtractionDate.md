@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: dataExtractionDate 
 
@@ -10,11 +7,11 @@ _A specific time period that identifies the date and time that the data are extr
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/dataExtractionDate](https://cdisc.org/odm2/slot/dataExtractionDate)
+Alias: dataExtractionDate
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/dataExtractionDate](https://cdisc.org/odm2/slot/dataExtractionDat
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,9 +71,10 @@ description: A specific time period that identifies the date and time that the d
   are extracted from a data source.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: dataExtractionDate
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details></div>
+</details>

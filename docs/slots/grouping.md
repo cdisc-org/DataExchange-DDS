@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: grouping 
 
@@ -10,11 +7,11 @@ _An association to a set of metadata concepts that have an identified structural
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/grouping](https://cdisc.org/odm2/slot/grouping)
+Alias: grouping
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/grouping](https://cdisc.org/odm2/slot/grouping)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [ComponentList](../classes/ComponentList.md) |
-| Domain Of | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
-
-
-
-
-
-
-
-
+* Range: [ComponentList](../classes/ComponentList.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ description: An association to a set of metadata concepts that have an identifie
   structural role in a Data Structure Definition.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: grouping
 owner: DataStructureDefinition
 domain_of:
 - DataStructureDefinition
 range: ComponentList
 
 ```
-</details></div>
+</details>

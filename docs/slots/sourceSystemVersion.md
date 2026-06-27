@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: sourceSystemVersion 
 
@@ -10,11 +7,11 @@ _Version of the source system_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/sourceSystemVersion](https://cdisc.org/odm2/slot/sourceSystemVersion)
+Alias: sourceSystemVersion
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/sourceSystemVersion](https://cdisc.org/odm2/slot/sourceSystemVers
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
-
-
-
-
-
-
-
-
+* Range: [String](../types/String.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: sourceSystemVersion
 description: Version of the source system
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: sourceSystemVersion
 owner: ODMFileMetadata
 domain_of:
 - ODMFileMetadata
 range: string
 
 ```
-</details></div>
+</details>

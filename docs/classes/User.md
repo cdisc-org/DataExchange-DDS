@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: User 
 
@@ -10,8 +7,6 @@ _An entity that represents information about a specific user of a clinical data 
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/User](https://cdisc.org/odm2/class/User)
@@ -19,41 +14,41 @@ URI: [odm:class/User](https://cdisc.org/odm2/class/User)
 
 ```mermaid
 erDiagram
+User {
+    UserType userType  
+    string userName  
+    string fullName  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
 Coding {
-    AliasPredicate aliasType  
     string code  
+    string decode  
     string codeSystem  
     string codeSystemVersion  
-    string decode  
+    AliasPredicate aliasType  
 }
 Organization {
-    string address  
-    string location  
     string role  
     OrganizationType type  
+    string location  
+    string address  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
-}
-User {
-    string fullName  
-    string userName  
-    UserType userType  
-    string name  
-    string description  
-    string OID  
     stringList aliases  
-    string label  
-    string uuid  
 }
 
-Organization ||--|o Organization : "partOfOrganization"
-Organization ||--}o Coding : "coding"
 User ||--|o Organization : "organization"
 User ||--}o Coding : "coding"
+Organization ||--|o Organization : "partOfOrganization"
+Organization ||--}o Coding : "coding"
 
 ```
 
@@ -63,6 +58,7 @@ User ||--}o Coding : "coding"
 ## Inheritance
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * **User**
+
 
 
 ## Slots
@@ -76,10 +72,10 @@ User ||--}o Coding : "coding"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -126,12 +122,8 @@ User ||--}o Coding : "coding"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -234,6 +226,7 @@ attributes:
     description: User's role in the study.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: userType
     owner: User
     domain_of:
     - User
@@ -243,6 +236,7 @@ attributes:
     description: The username of the user.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: userName
     owner: User
     domain_of:
     - User
@@ -252,6 +246,7 @@ attributes:
     description: The full name of the user.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: fullName
     owner: User
     domain_of:
     - User
@@ -263,6 +258,7 @@ attributes:
     close_mappings:
     - prov:actedOnBehalfOf
     rank: 1000
+    alias: organization
     owner: User
     domain_of:
     - User
@@ -274,6 +270,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: User
     domain_of:
     - Identifiable
@@ -284,6 +281,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: User
     domain_of:
     - Identifiable
@@ -293,6 +291,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: User
     domain_of:
     - Labelled
@@ -305,6 +304,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: User
     domain_of:
     - Labelled
@@ -318,6 +318,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: User
     domain_of:
     - Labelled
@@ -334,6 +335,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: User
     domain_of:
     - Labelled
@@ -348,6 +350,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: User
     domain_of:
     - Labelled
@@ -361,4 +364,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

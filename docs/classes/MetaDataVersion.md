@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: MetaDataVersion 
 
@@ -10,8 +7,6 @@ _A container element that represents a given version of a specification, linking
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/MetaDataVersion](https://cdisc.org/odm2/class/MetaDataVersion)
@@ -19,560 +14,571 @@ URI: [odm:class/MetaDataVersion](https://cdisc.org/odm2/class/MetaDataVersion)
 
 ```mermaid
 erDiagram
-Analysis {
-    string analysisPurpose  
-    string analysisReason  
-    stringList inputData  
-    string analysisMethod  
+MetaDataVersion {
+    stringList resources  
+    string fileOID  
+    datetime asOfDateTime  
+    datetime creationDateTime  
+    string odmVersion  
+    string fileType  
+    string originator  
+    string sourceSystem  
+    string sourceSystemVersion  
+    string context  
+    string defineVersion  
+    string studyOID  
+    string studyName  
+    string studyDescription  
+    string protocolName  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
-    string version  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
-    MethodType type  
 }
-CodeList {
-    string formatName  
-    DataType dataType  
+SiteOrSponsorComment {
+    string text  
+    OriginSource sourceType  
+    string source  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
-    boolean isNonStandard  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string version  
-    string wasDerivedFrom  
-}
-CodeListItem {
-    string description  
-    string codedValue  
-    string decode  
-    boolean other  
-    decimal weight  
     stringList aliases  
-}
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
 }
 Comment {
     string text  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-ConceptProperty {
-    integer maxOccurs  
-    integer minOccurs  
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
+}
+Display {
+    string displayType  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
-Condition {
-    string implementsCondition  
-    LogicalOperator operator  
+DocumentReference {
+    string title  
+    string leafID  
+    integerList pages  
+    string relationship  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
+    stringList aliases  
+}
+Analysis {
+    string analysisReason  
+    string analysisPurpose  
+    string analysisMethod  
+    stringList inputData  
+    string version  
+    string href  
+    MethodType type  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
 DataProduct {
     string dataProductOwner  
-    DataProductLifecycleStatus lifecycleStatus  
     string domain  
+    DataProductLifecycleStatus lifecycleStatus  
     stringList hasPolicy  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+Dataset {
+    string publishedBy  
+    stringList keys  
+    string datasetType  
+    string conformsTo  
+    stringList hasPolicy  
+    string informationSensitivityClassification  
     string version  
+    string href  
+    stringList profile  
+    string authenticator  
+    string action  
+    string reportingBegin  
+    string reportingEnd  
+    string dataExtractionDate  
+    string validFrom  
+    string validTo  
+    string publicationYear  
+    string publicationPeriod  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
+Dataflow {
+    string version  
+    string href  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
     string wasDerivedFrom  
 }
 DataService {
     string protocol  
     string securitySchemaType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string attribute  
-    string href  
-    string label  
     string resourceType  
-    string uuid  
+    string attribute  
     string version  
-}
-Dataflow {
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string version  
-    string wasDerivedFrom  
+    stringList aliases  
 }
-Dataset {
-    string conformsTo  
-    string datasetType  
-    stringList hasPolicy  
-    string informationSensitivityClassification  
-    stringList keys  
-    string publishedBy  
-    string name  
+Standard {
+    StandardName name  
+    StandardType type  
+    PublishingSet publishingSet  
+    string version  
+    StandardStatus status  
+    string OID  
+    string uuid  
     string description  
-    string OID  
-    string action  
-    stringList aliases  
-    string authenticator  
-    string dataExtractionDate  
-    string href  
     string label  
-    stringList profile  
-    string publicationPeriod  
-    string publicationYear  
-    string reportingBegin  
-    string reportingEnd  
-    string uuid  
-    string validFrom  
-    string validTo  
-    string version  
-}
-DefClass {
-    string name  
+    stringList aliases  
 }
 Dictionary {
     string publishedBy  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
     string version  
-}
-Display {
-    string displayType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
     string href  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
+    string OID  
     string uuid  
-    string version  
-    string wasDerivedFrom  
-}
-DocumentReference {
-    string leafID  
-    integerList pages  
-    string relationship  
-    string title  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    string uuid  
-    string version  
+    stringList aliases  
 }
-FormalExpression {
-    string expression  
-    string returnType  
-    string context  
+Relationship {
+    PredicateTermEnum predicateTerm  
+    LinkingPhraseEnum linkingPhrase  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
+    stringList aliases  
 }
 IdentifiableElement {
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
+    stringList aliases  
+}
+ReifiedConcept {
+    string version  
+    string href  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+ConceptProperty {
+    integer minOccurs  
+    integer maxOccurs  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+CodeList {
+    DataType dataType  
+    string formatName  
+    string version  
+    string href  
+    boolean isNonStandard  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+Resource {
+    string resourceType  
+    string attribute  
+    string version  
+    string href  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
+CodeListItem {
+    string codedValue  
+    string decode  
+    string description  
+    stringList aliases  
+    decimal weight  
+    boolean other  
+}
+Method {
+    MethodType type  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+FormalExpression {
+    string context  
+    string expression  
+    string returnType  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
+WhereClause {
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
+}
+Condition {
+    string implementsCondition  
+    LogicalOperator operator  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+    boolean mandatory  
+    string purpose  
+    datetime lastUpdated  
+    string owner  
+    string wasDerivedFrom  
 }
 Item {
     DataType dataType  
     integer length  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string cdiscNotes  
+    string role  
+    boolean hasNoData  
     string crfCompletionInstructions  
+    string cdiscNotes  
+    string implementationNotes  
+    string preSpecifiedValue  
     integer decimalDigits  
     string displayFormat  
-    boolean hasNoData  
-    string implementationNotes  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string preSpecifiedValue  
-    string purpose  
-    string role  
     integer significantDigits  
+    string OID  
     string uuid  
-    string wasDerivedFrom  
-}
-ItemGroup {
-    string domain  
-    boolean isReferenceData  
-    string structure  
-    ItemGroupType type  
-    boolean hasNoData  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string authenticator  
-    string href  
-    boolean isNonStandard  
     string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    stringList profile  
-    string purpose  
-    string uuid  
-    string version  
-    string wasDerivedFrom  
-}
-MetaDataVersion {
-    stringList resources  
-    string name  
-    string description  
-    string OID  
     stringList aliases  
-    datetime asOfDateTime  
-    string context  
-    datetime creationDateTime  
-    string defineVersion  
-    string fileOID  
-    string fileType  
-    string label  
-    datetime lastUpdated  
     boolean mandatory  
-    string odmVersion  
-    string originator  
-    string owner  
-    string protocolName  
     string purpose  
-    string sourceSystem  
-    string sourceSystemVersion  
-    string studyDescription  
-    string studyName  
-    string studyOID  
-    string uuid  
-    string wasDerivedFrom  
-}
-Method {
-    MethodType type  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
     datetime lastUpdated  
-    boolean mandatory  
     string owner  
-    string purpose  
-    string uuid  
     string wasDerivedFrom  
 }
 Origin {
-    OriginSource source  
     OriginType type  
+    OriginSource source  
 }
 RangeCheck {
-    stringList checkValues  
     Comparator comparator  
+    stringList checkValues  
     string item  
     SoftHard softHard  
     LogicalOperator operator  
 }
-ReifiedConcept {
+ItemGroup {
+    string domain  
+    string structure  
+    boolean isReferenceData  
+    ItemGroupType type  
+    boolean hasNoData  
+    stringList profile  
+    string authenticator  
+    boolean isNonStandard  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    datetime lastUpdated  
+    stringList aliases  
     boolean mandatory  
-    string owner  
     string purpose  
-    string uuid  
-    string version  
-    string wasDerivedFrom  
-}
-Relationship {
-    LinkingPhraseEnum linkingPhrase  
-    PredicateTermEnum predicateTerm  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    string uuid  
-}
-Resource {
-    string attribute  
-    string resourceType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string href  
-    string label  
-    string uuid  
-    string version  
-}
-SiteOrSponsorComment {
-    OriginSource sourceType  
-    string source  
-    string text  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
     datetime lastUpdated  
-    boolean mandatory  
     string owner  
-    string purpose  
-    string uuid  
     string wasDerivedFrom  
-}
-Standard {
-    PublishingSet publishingSet  
-    StandardStatus status  
-    StandardType type  
     string version  
-    StandardName name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    string uuid  
+    string href  
 }
 Timing {
-    string frequency  
+    TimingType type  
     boolean isNominal  
-    boolean recalled  
+    string value  
     datetime windowLower  
     datetime windowUpper  
-    TimingType type  
-    string value  
+    boolean recalled  
+    string frequency  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
+    stringList aliases  
 }
-WhereClause {
+DefClass {
     string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string label  
-    datetime lastUpdated  
-    boolean mandatory  
-    string owner  
-    string purpose  
-    string uuid  
-    string wasDerivedFrom  
 }
 
+MetaDataVersion ||--}o ItemGroup : "itemGroups"
+MetaDataVersion ||--}o Item : "items"
+MetaDataVersion ||--}o Condition : "conditions"
+MetaDataVersion ||--}o WhereClause : "whereClauses"
+MetaDataVersion ||--}o Method : "methods"
+MetaDataVersion ||--}o Analysis : "analyses"
+MetaDataVersion ||--}o CodeList : "codeLists"
+MetaDataVersion ||--}o Coding : "codings"
+MetaDataVersion ||--}o ReifiedConcept : "concepts"
+MetaDataVersion ||--}o Relationship : "relationships"
+MetaDataVersion ||--}o Dictionary : "dictionaries"
+MetaDataVersion ||--}o Standard : "standards"
+MetaDataVersion ||--}o DocumentReference : "annotatedCRFs"
+MetaDataVersion ||--}o DataProduct : "dataProducts"
+MetaDataVersion ||--}o Display : "displays"
+MetaDataVersion ||--}o Coding : "coding"
+MetaDataVersion ||--}o Comment : "comments"
+MetaDataVersion ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Display ||--|o Analysis : "analysis"
+Display ||--}o DocumentReference : "location"
+Display ||--}o Coding : "coding"
+Display ||--}o Comment : "comments"
+Display ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DocumentReference ||--}o Coding : "coding"
+Analysis ||--}o WhereClause : "applicableWhen"
+Analysis ||--}o FormalExpression : "expressions"
+Analysis ||--}o DocumentReference : "documents"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
-Analysis ||--}o DocumentReference : "documents"
-Analysis ||--}o FormalExpression : "expressions"
 Analysis ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Analysis ||--}o WhereClause : "applicableWhen"
-CodeList ||--|o Resource : "externalCodeList"
-CodeList ||--|o Standard : "standard"
-CodeList ||--}o CodeListItem : "codeListItems"
-CodeList ||--}o Coding : "coding"
-CodeList ||--}o Comment : "comments"
-CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-CodeListItem ||--|o Coding : "coding"
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataProduct ||--}o DataService : "inputPort"
+DataProduct ||--}o DataService : "outputPort"
+DataProduct ||--}o Dataflow : "inputDataflow"
+DataProduct ||--}o Dataflow : "outputDataflow"
+DataProduct ||--}o Dataset : "inputDataset"
+DataProduct ||--}o Dataset : "outputDataset"
+DataProduct ||--}o Coding : "coding"
+DataProduct ||--}o Comment : "comments"
+DataProduct ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Dataset ||--|o Dataflow : "describedBy"
+Dataset ||--|o DataStructureDefinition : "structuredBy"
+Dataset ||--}o Distribution : "distribution"
+Dataset ||--}o Coding : "security"
+Dataset ||--|o Timing : "validityPeriod"
+Dataset ||--}o Coding : "coding"
+Dataflow ||--|| DataStructureDefinition : "structure"
+Dataflow ||--}o Dimension : "dimensionConstraint"
+Dataflow ||--|o Analysis : "analysisMethod"
+Dataflow ||--}o Coding : "coding"
+Dataflow ||--}o Comment : "comments"
+Dataflow ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataService ||--|o Distribution : "isAccessServiceOf"
+DataService ||--}o FormalExpression : "selection"
+DataService ||--}o Coding : "coding"
+Standard ||--}o Coding : "coding"
+Dictionary ||--}o Coding : "terms"
+Dictionary ||--}o Coding : "coding"
+Relationship ||--|| IdentifiableElement : "subject"
+Relationship ||--|| IdentifiableElement : "object"
+Relationship ||--}o Coding : "coding"
+IdentifiableElement ||--}o Coding : "coding"
+ReifiedConcept ||--}o ConceptProperty : "properties"
+ReifiedConcept ||--}o Coding : "coding"
+ReifiedConcept ||--}o Comment : "comments"
+ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ConceptProperty ||--|o CodeList : "codeList"
 ConceptProperty ||--}o Coding : "coding"
 ConceptProperty ||--}o Comment : "comments"
 ConceptProperty ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DataProduct ||--}o Coding : "coding"
-DataProduct ||--}o Comment : "comments"
-DataProduct ||--}o DataService : "inputPort, outputPort"
-DataProduct ||--}o Dataflow : "inputDataflow, outputDataflow"
-DataProduct ||--}o Dataset : "inputDataset, outputDataset"
-DataProduct ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DataService ||--|o Distribution : "isAccessServiceOf"
-DataService ||--}o Coding : "coding"
-DataService ||--}o FormalExpression : "selection"
-Dataflow ||--|o Analysis : "analysisMethod"
-Dataflow ||--|| DataStructureDefinition : "structure"
-Dataflow ||--}o Coding : "coding"
-Dataflow ||--}o Comment : "comments"
-Dataflow ||--}o Dimension : "dimensionConstraint"
-Dataflow ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Dataset ||--|o DataStructureDefinition : "structuredBy"
-Dataset ||--|o Dataflow : "describedBy"
-Dataset ||--|o Timing : "validityPeriod"
-Dataset ||--}o Coding : "coding, security"
-Dataset ||--}o Distribution : "distribution"
-DefClass ||--}o SubClass : "subClasses"
-Dictionary ||--}o Coding : "coding, terms"
-Display ||--|o Analysis : "analysis"
-Display ||--}o Coding : "coding"
-Display ||--}o Comment : "comments"
-Display ||--}o DocumentReference : "location"
-Display ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DocumentReference ||--}o Coding : "coding"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Coding : "coding"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-IdentifiableElement ||--}o Coding : "coding"
-Item ||--|o CodeList : "codeList, roleCodeList"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--}o WhereClause : "applicableWhen"
-ItemGroup ||--|o DefClass : "observationClass"
-ItemGroup ||--|o ReifiedConcept : "implementsConcept"
-ItemGroup ||--|o Standard : "standard"
-ItemGroup ||--|o Timing : "validityPeriod"
-ItemGroup ||--}o Coding : "coding, security"
-ItemGroup ||--}o Comment : "comments"
-ItemGroup ||--}o Item : "items, keySequence"
-ItemGroup ||--}o ItemGroup : "slices"
-ItemGroup ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ItemGroup ||--}o WhereClause : "applicableWhen"
-MetaDataVersion ||--}o Analysis : "analyses"
-MetaDataVersion ||--}o CodeList : "codeLists"
-MetaDataVersion ||--}o Coding : "coding, codings"
-MetaDataVersion ||--}o Comment : "comments"
-MetaDataVersion ||--}o Condition : "conditions"
-MetaDataVersion ||--}o DataProduct : "dataProducts"
-MetaDataVersion ||--}o Dictionary : "dictionaries"
-MetaDataVersion ||--}o Display : "displays"
-MetaDataVersion ||--}o DocumentReference : "annotatedCRFs"
-MetaDataVersion ||--}o Item : "items"
-MetaDataVersion ||--}o ItemGroup : "itemGroups"
-MetaDataVersion ||--}o Method : "methods"
-MetaDataVersion ||--}o ReifiedConcept : "concepts"
-MetaDataVersion ||--}o Relationship : "relationships"
-MetaDataVersion ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-MetaDataVersion ||--}o Standard : "standards"
-MetaDataVersion ||--}o WhereClause : "whereClauses"
+CodeList ||--}o CodeListItem : "codeListItems"
+CodeList ||--|o Resource : "externalCodeList"
+CodeList ||--|o Standard : "standard"
+CodeList ||--}o Coding : "coding"
+CodeList ||--}o Comment : "comments"
+CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Resource ||--}o FormalExpression : "selection"
+Resource ||--}o Coding : "coding"
+CodeListItem ||--|o Coding : "coding"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o DocumentReference : "documents"
 Method ||--|o ReifiedConcept : "implementsConcept"
 Method ||--}o Coding : "coding"
 Method ||--}o Comment : "comments"
-Method ||--}o DocumentReference : "documents"
-Method ||--}o FormalExpression : "expressions"
 Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Origin ||--}o DocumentReference : "documents"
-Origin ||--}o SourceItem : "sourceItems"
-RangeCheck ||--}o FormalExpression : "expressions"
-ReifiedConcept ||--}o Coding : "coding"
-ReifiedConcept ||--}o Comment : "comments"
-ReifiedConcept ||--}o ConceptProperty : "properties"
-ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Relationship ||--|| IdentifiableElement : "object, subject"
-Relationship ||--}o Coding : "coding"
-Resource ||--}o Coding : "coding"
-Resource ||--}o FormalExpression : "selection"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Standard ||--}o Coding : "coding"
-Timing ||--|o Method : "imputation"
-Timing ||--|o NominalOccurrence : "relativeFrom, relativeTo"
-Timing ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+FormalExpression ||--}o Coding : "coding"
+WhereClause ||--}o Condition : "conditions"
 WhereClause ||--}o Coding : "coding"
 WhereClause ||--}o Comment : "comments"
-WhereClause ||--}o Condition : "conditions"
 WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--|o CodeList : "codeList"
+Item ||--|o Method : "method"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o WhereClause : "applicableWhen"
+Item ||--|o Origin : "origin"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o CodeList : "roleCodeList"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Origin ||--}o SourceItem : "sourceItems"
+Origin ||--}o DocumentReference : "documents"
+RangeCheck ||--}o FormalExpression : "expressions"
+ItemGroup ||--}o Item : "items"
+ItemGroup ||--}o Item : "keySequence"
+ItemGroup ||--}o ItemGroup : "slices"
+ItemGroup ||--|o ReifiedConcept : "implementsConcept"
+ItemGroup ||--}o WhereClause : "applicableWhen"
+ItemGroup ||--|o DefClass : "observationClass"
+ItemGroup ||--}o Coding : "security"
+ItemGroup ||--|o Timing : "validityPeriod"
+ItemGroup ||--|o Standard : "standard"
+ItemGroup ||--}o Coding : "coding"
+ItemGroup ||--}o Comment : "comments"
+ItemGroup ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Timing ||--|o NominalOccurrence : "relativeTo"
+Timing ||--|o NominalOccurrence : "relativeFrom"
+Timing ||--|o Method : "imputation"
+Timing ||--}o Coding : "coding"
+DefClass ||--}o SubClass : "subClasses"
 
 ```
 
@@ -583,12 +589,6 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 * [GovernedElement](../classes/GovernedElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md) [Governed](../classes/Governed.md)]
     * **MetaDataVersion** [ [ODMFileMetadata](../classes/ODMFileMetadata.md) [StudyMetadata](../classes/StudyMetadata.md)]
 
-
-## Class Properties
-
-| Property | Value |
-| --- | --- |
-| Tree Root | Yes |
 
 
 ## Slots
@@ -628,16 +628,16 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 | [mandatory](../slots/mandatory.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | Is this element required? | [Governed](../classes/Governed.md) |
 | [comments](../slots/comments.md) | * <br/> [Comment](../classes/Comment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
 | [siteOrSponsorComments](../slots/siteOrSponsorComments.md) | * <br/> [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
-| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
+| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
 | [lastUpdated](../slots/lastUpdated.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | When the resource was last updated | [Governed](../classes/Governed.md) |
-| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
+| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
 | [wasDerivedFrom](../slots/wasDerivedFrom.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Item](../classes/Item.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[MetaDataVersion](../classes/MetaDataVersion.md)&nbsp;or&nbsp;<br />[CodeList](../classes/CodeList.md)&nbsp;or&nbsp;<br />[ReifiedConcept](../classes/ReifiedConcept.md)&nbsp;or&nbsp;<br />[ConceptProperty](../classes/ConceptProperty.md)&nbsp;or&nbsp;<br />[Condition](../classes/Condition.md)&nbsp;or&nbsp;<br />[Method](../classes/Method.md)&nbsp;or&nbsp;<br />[NominalOccurrence](../classes/NominalOccurrence.md)&nbsp;or&nbsp;<br />[Dataflow](../classes/Dataflow.md)&nbsp;or&nbsp;<br />[CubeComponent](../classes/CubeComponent.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[ProvisionAgreement](../classes/ProvisionAgreement.md) | Reference to another item that this item implements or extends, e.g. a template Item definition. | [Governed](../classes/Governed.md) |
 
 
@@ -679,12 +679,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -941,6 +937,7 @@ attributes:
     description: Item groups, containing items, defined in this version of the metadata
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: itemGroups
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -954,6 +951,7 @@ attributes:
       in this version of the metadata
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: items
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -968,6 +966,7 @@ attributes:
     description: Logical conditions that apply to this version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: conditions
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -983,6 +982,7 @@ attributes:
     description: Data contexts that apply to this version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: whereClauses
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -995,6 +995,7 @@ attributes:
     description: Methods defined in this version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: methods
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1007,6 +1008,7 @@ attributes:
     description: Analyses defined in this version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: analyses
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1019,6 +1021,7 @@ attributes:
     description: Code lists defined in this version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: codeLists
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1031,6 +1034,7 @@ attributes:
     description: Codings defined in this version of the metadata
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: codings
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1043,6 +1047,7 @@ attributes:
     description: Structured Concepts defined in this version of the metadata
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: concepts
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1054,6 +1059,7 @@ attributes:
       version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: relationships
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1066,6 +1072,7 @@ attributes:
     description: Dictionaries defined in this version of the metadata
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: dictionaries
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1078,6 +1085,7 @@ attributes:
     description: Standards defined in this version of the metadata
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: standards
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1090,6 +1098,7 @@ attributes:
     description: Reference to annotated case report forms
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: annotatedCRFs
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1103,6 +1112,7 @@ attributes:
       of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: resources
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1117,6 +1127,7 @@ attributes:
     description: Indexed data flows with clear ownership
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: dataProducts
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1129,6 +1140,7 @@ attributes:
     description: Displays defined in this version of the metadata.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: displays
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
@@ -1141,6 +1153,7 @@ attributes:
     description: Unique identifier for the ODM file
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: fileOID
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1151,6 +1164,7 @@ attributes:
     description: Date and time when the data snapshot was taken
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: asOfDateTime
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1160,6 +1174,7 @@ attributes:
     description: Date and time when the ODM file was created
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: creationDateTime
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1170,6 +1185,7 @@ attributes:
     description: Version of the ODM standard used
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: odmVersion
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1180,6 +1196,7 @@ attributes:
     description: Type of ODM file (e.g., Snapshot, Transactional)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: fileType
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1190,6 +1207,7 @@ attributes:
     description: Organization or system that created the ODM file
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: originator
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1199,6 +1217,7 @@ attributes:
     description: Source system that generated the data
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: sourceSystem
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1208,6 +1227,7 @@ attributes:
     description: Version of the source system
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: sourceSystemVersion
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1217,6 +1237,7 @@ attributes:
     description: Define-XML context (usually "Other" for Define-XML)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: context
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1227,6 +1248,7 @@ attributes:
     description: Version of Define-XML specification used
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: defineVersion
     owner: MetaDataVersion
     domain_of:
     - ODMFileMetadata
@@ -1236,6 +1258,7 @@ attributes:
     description: Unique identifier for the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: studyOID
     owner: MetaDataVersion
     domain_of:
     - StudyMetadata
@@ -1246,6 +1269,7 @@ attributes:
     description: Name of the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: studyName
     owner: MetaDataVersion
     domain_of:
     - StudyMetadata
@@ -1255,6 +1279,7 @@ attributes:
     description: Description of the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: studyDescription
     owner: MetaDataVersion
     domain_of:
     - StudyMetadata
@@ -1264,6 +1289,7 @@ attributes:
     description: Protocol name for the study
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: protocolName
     owner: MetaDataVersion
     domain_of:
     - StudyMetadata
@@ -1275,6 +1301,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: MetaDataVersion
     domain_of:
     - Identifiable
@@ -1285,6 +1312,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: MetaDataVersion
     domain_of:
     - Identifiable
@@ -1294,6 +1322,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: MetaDataVersion
     domain_of:
     - Labelled
@@ -1306,6 +1335,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: MetaDataVersion
     domain_of:
     - Labelled
@@ -1319,6 +1349,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: MetaDataVersion
     domain_of:
     - Labelled
@@ -1335,6 +1366,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: MetaDataVersion
     domain_of:
     - Labelled
@@ -1349,6 +1381,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: MetaDataVersion
     domain_of:
     - Labelled
@@ -1365,6 +1398,7 @@ attributes:
     description: Is this element required?
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: mandatory
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1375,6 +1409,7 @@ attributes:
       exclusion
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: comments
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1387,6 +1422,7 @@ attributes:
       exclusion
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: siteOrSponsorComments
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1398,6 +1434,7 @@ attributes:
     description: Purpose or rationale for this data element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: purpose
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1410,6 +1447,7 @@ attributes:
     description: When the resource was last updated
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: lastUpdated
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1422,6 +1460,7 @@ attributes:
     - prov:wasAttributedTo
     - prov:wasAssociatedBy
     rank: 1000
+    alias: owner
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1438,6 +1477,7 @@ attributes:
     exact_mappings:
     - prov:wasDerivedFrom
     rank: 1000
+    alias: wasDerivedFrom
     owner: MetaDataVersion
     domain_of:
     - Governed
@@ -1459,4 +1499,4 @@ attributes:
 tree_root: true
 
 ```
-</details></div>
+</details>

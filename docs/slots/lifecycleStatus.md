@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: lifecycleStatus 
 
@@ -10,11 +7,11 @@ _Current lifecycle status of the data product_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/lifecycleStatus](https://cdisc.org/odm2/slot/lifecycleStatus)
+Alias: lifecycleStatus
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/lifecycleStatus](https://cdisc.org/odm2/slot/lifecycleStatus)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [DataProductLifecycleStatus](../enums/DataProductLifecycleStatus.md) |
-| Domain Of | [DataProduct](../classes/DataProduct.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DataProduct](../classes/DataProduct.md) |
-
-
-
-
-
-
-
-
+* Range: [DataProductLifecycleStatus](../enums/DataProductLifecycleStatus.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: lifecycleStatus
 description: Current lifecycle status of the data product
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: lifecycleStatus
 owner: DataProduct
 domain_of:
 - DataProduct
 range: DataProductLifecycleStatus
 
 ```
-</details></div>
+</details>

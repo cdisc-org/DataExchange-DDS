@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: OriginSource 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines the sources of data origin_
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/OriginSource](https://cdisc.org/odm2/enum/OriginSource)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | Investigator | ncit:C25936 |  |
@@ -39,12 +32,8 @@ URI: [odm:enum/OriginSource](https://cdisc.org/odm2/enum/OriginSource)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -84,5 +73,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

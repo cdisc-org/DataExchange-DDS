@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: displays 
 
@@ -10,11 +7,11 @@ _Displays defined in this version of the metadata._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/displays](https://cdisc.org/odm2/slot/displays)
+Alias: displays
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/displays](https://cdisc.org/odm2/slot/displays)
 
 ## Properties
 
-### Type and Range
+* Range: [Display](../classes/Display.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Display](../classes/Display.md) |
-| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
-
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: displays
 description: Displays defined in this version of the metadata.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: displays
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -104,4 +81,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details></div>
+</details>

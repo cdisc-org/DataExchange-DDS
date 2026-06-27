@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: codeSystem 
 
@@ -10,11 +7,11 @@ _The code system identifier_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/codeSystem](https://cdisc.org/odm2/slot/codeSystem)
+Alias: codeSystem
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/codeSystem](https://cdisc.org/odm2/slot/codeSystem)
 
 ## Properties
 
-### Type and Range
+* Range: [String](../types/String.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [String](../types/String.md) |
-| Domain Of | [Coding](../classes/Coding.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Coding](../classes/Coding.md) |
-
-
-
-
-
-
-
-
+* Required: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: codeSystem
 description: The code system identifier
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: codeSystem
 owner: Coding
 domain_of:
 - Coding
@@ -102,4 +79,4 @@ range: string
 required: true
 
 ```
-</details></div>
+</details>

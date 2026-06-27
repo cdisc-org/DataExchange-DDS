@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: SoftHard 
 
 
@@ -13,11 +7,10 @@ _An enumeration that indicates whether a validation check should be treated as a
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/SoftHard](https://cdisc.org/odm2/enum/SoftHard)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | Soft | None | Warning |
@@ -36,12 +29,8 @@ URI: [odm:enum/SoftHard](https://cdisc.org/odm2/enum/SoftHard)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -76,5 +65,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

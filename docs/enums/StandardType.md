@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: StandardType 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines permissible values for standard types_
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/StandardType](https://cdisc.org/odm2/enum/StandardType)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | CT | None | Controlled Terminology |
@@ -30,12 +23,8 @@ URI: [odm:enum/StandardType](https://cdisc.org/odm2/enum/StandardType)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -69,5 +58,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

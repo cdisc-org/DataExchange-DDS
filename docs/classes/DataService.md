@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: DataService 
 
@@ -10,8 +7,6 @@ _A service element that provides an API or endpoint for serving or receiving dat
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/DataService](https://cdisc.org/odm2/class/DataService)
@@ -19,126 +14,127 @@ URI: [odm:class/DataService](https://cdisc.org/odm2/class/DataService)
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
-}
 DataService {
     string protocol  
     string securitySchemaType  
-    string name  
-    string description  
-    string OID  
-    stringList aliases  
-    string attribute  
-    string href  
-    string label  
     string resourceType  
-    string uuid  
+    string attribute  
     string version  
-}
-Dataset {
-    string conformsTo  
-    string datasetType  
-    stringList hasPolicy  
-    string informationSensitivityClassification  
-    stringList keys  
-    string publishedBy  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    string action  
-    stringList aliases  
-    string authenticator  
-    string dataExtractionDate  
-    string href  
     string label  
-    stringList profile  
-    string publicationPeriod  
-    string publicationYear  
-    string reportingBegin  
-    string reportingEnd  
-    string uuid  
-    string validFrom  
-    string validTo  
-    string version  
+    stringList aliases  
 }
-Distribution {
-    string format  
-    string conformsTo  
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
 FormalExpression {
+    string context  
     string expression  
     string returnType  
-    string context  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
-}
-Parameter {
-    string defaultValue  
-    boolean required  
-    DataType dataType  
-    stringList items  
-    string value  
-    string name  
-    string description  
-    string OID  
     stringList aliases  
-    string label  
-    string uuid  
 }
 Resource {
-    string attribute  
     string resourceType  
+    string attribute  
+    string version  
+    string href  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
-    string href  
     string label  
-    string uuid  
-    string version  
+    stringList aliases  
 }
 ReturnValue {
-    stringList valueList  
     DataType dataType  
+    stringList valueList  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
+    stringList aliases  
+}
+Parameter {
+    DataType dataType  
+    string value  
+    string defaultValue  
+    stringList items  
+    boolean required  
+    string OID  
     string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
+}
+Distribution {
+    string conformsTo  
+    string format  
+}
+Dataset {
+    string publishedBy  
+    stringList keys  
+    string datasetType  
+    string conformsTo  
+    stringList hasPolicy  
+    string informationSensitivityClassification  
+    string version  
+    string href  
+    stringList profile  
+    string authenticator  
+    string action  
+    string reportingBegin  
+    string reportingEnd  
+    string dataExtractionDate  
+    string validFrom  
+    string validTo  
+    string publicationYear  
+    string publicationPeriod  
+    string OID  
+    string uuid  
+    string name  
+    string description  
+    string label  
+    stringList aliases  
 }
 
 DataService ||--|o Distribution : "isAccessServiceOf"
-DataService ||--}o Coding : "coding"
 DataService ||--}o FormalExpression : "selection"
-Dataset ||--|o DataStructureDefinition : "structuredBy"
-Dataset ||--|o Dataflow : "describedBy"
-Dataset ||--|o Timing : "validityPeriod"
-Dataset ||--}o Coding : "coding, security"
-Dataset ||--}o Distribution : "distribution"
+DataService ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+FormalExpression ||--}o Coding : "coding"
+Resource ||--}o FormalExpression : "selection"
+Resource ||--}o Coding : "coding"
+ReturnValue ||--}o Coding : "coding"
+Parameter ||--}o CodeList : "codeList"
+Parameter ||--}o ConceptProperty : "conceptProperty"
+Parameter ||--}o WhereClause : "applicableWhen"
+Parameter ||--}o Condition : "conditions"
+Parameter ||--}o Coding : "coding"
 Distribution ||--|o DataService : "accessService"
 Distribution ||--|o Dataset : "isDistributionOf"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Coding : "coding"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-Parameter ||--}o CodeList : "codeList"
-Parameter ||--}o Coding : "coding"
-Parameter ||--}o ConceptProperty : "conceptProperty"
-Parameter ||--}o Condition : "conditions"
-Parameter ||--}o WhereClause : "applicableWhen"
-Resource ||--}o Coding : "coding"
-Resource ||--}o FormalExpression : "selection"
-ReturnValue ||--}o Coding : "coding"
+Dataset ||--|o Dataflow : "describedBy"
+Dataset ||--|o DataStructureDefinition : "structuredBy"
+Dataset ||--}o Distribution : "distribution"
+Dataset ||--}o Coding : "security"
+Dataset ||--|o Timing : "validityPeriod"
+Dataset ||--}o Coding : "coding"
 
 ```
 
@@ -149,6 +145,7 @@ ReturnValue ||--}o Coding : "coding"
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * [Resource](../classes/Resource.md) [ [Versioned](../classes/Versioned.md)]
         * **DataService**
+
 
 
 ## Slots
@@ -166,10 +163,10 @@ ReturnValue ||--}o Coding : "coding"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -189,12 +186,8 @@ ReturnValue ||--}o Coding : "coding"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -282,6 +275,7 @@ attributes:
     description: Distribution(s) for which this service provides access
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: isAccessServiceOf
     owner: DataService
     domain_of:
     - DataService
@@ -291,6 +285,7 @@ attributes:
     description: Protocol used by the service (e.g., HTTPS, FTP)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: protocol
     owner: DataService
     domain_of:
     - DataService
@@ -299,6 +294,7 @@ attributes:
     description: Security or authentication method used (e.g., OAuth2)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: securitySchemaType
     owner: DataService
     domain_of:
     - DataService
@@ -308,6 +304,7 @@ attributes:
       "OpenEHR-extract")
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: resourceType
     owner: DataService
     domain_of:
     - Resource
@@ -319,6 +316,7 @@ attributes:
       can be obtained. Examples are "valueQuantity.value" or "valueQuantity.unit".
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: attribute
     owner: DataService
     domain_of:
     - Resource
@@ -333,6 +331,7 @@ attributes:
     description: Machine-executable instructions for selecting data from the resource.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: selection
     owner: DataService
     domain_of:
     - Resource
@@ -345,6 +344,7 @@ attributes:
     description: The version of the external resources
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: version
     owner: DataService
     domain_of:
     - Versioned
@@ -356,6 +356,7 @@ attributes:
       URL
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: href
     owner: DataService
     domain_of:
     - Versioned
@@ -368,6 +369,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: DataService
     domain_of:
     - Identifiable
@@ -378,6 +380,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: DataService
     domain_of:
     - Identifiable
@@ -387,6 +390,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: DataService
     domain_of:
     - Labelled
@@ -399,6 +403,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: DataService
     domain_of:
     - Labelled
@@ -412,6 +417,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: DataService
     domain_of:
     - Labelled
@@ -428,6 +434,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: DataService
     domain_of:
     - Labelled
@@ -442,6 +449,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: DataService
     domain_of:
     - Labelled
@@ -455,4 +463,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

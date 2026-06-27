@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: attributeValues 
 
@@ -10,11 +7,11 @@ _Association to the Attribute Values relating to Key_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/attributeValues](https://cdisc.org/odm2/slot/attributeValues)
+Alias: attributeValues
+
 <!-- no inheritance hierarchy -->
 
 
@@ -36,35 +33,13 @@ URI: [odm:slot/attributeValues](https://cdisc.org/odm2/slot/attributeValues)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [DatasetKey](../classes/DatasetKey.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DatasetKey](../classes/DatasetKey.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,9 +71,10 @@ name: attributeValues
 description: Association to the Attribute Values relating to Key
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: attributeValues
 owner: DatasetKey
 domain_of:
 - DatasetKey
 
 ```
-</details></div>
+</details>

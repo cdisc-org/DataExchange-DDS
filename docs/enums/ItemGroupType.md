@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: ItemGroupType 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines the roles of an item group within a specific contex
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/ItemGroupType](https://cdisc.org/odm2/enum/ItemGroupType)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | DataCube | None | A Data Structure Definition for an Analysis Data Cube of dimensions, measures, and attributes. |
@@ -41,12 +34,8 @@ URI: [odm:enum/ItemGroupType](https://cdisc.org/odm2/enum/ItemGroupType)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -97,5 +86,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

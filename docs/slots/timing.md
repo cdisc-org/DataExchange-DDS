@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: timing 
 
@@ -10,11 +7,11 @@ _A named event reference, that can nest further named timing references._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/timing](https://cdisc.org/odm2/slot/timing)
+Alias: timing
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,36 +31,15 @@ URI: [odm:slot/timing](https://cdisc.org/odm2/slot/timing)
 
 ## Properties
 
-### Type and Range
+* Range: [Timing](../classes/Timing.md)
 
-| Property | Value |
-| --- | --- |
-| Range | [Timing](../classes/Timing.md) |
-| Domain Of | [NominalOccurrence](../classes/NominalOccurrence.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [NominalOccurrence](../classes/NominalOccurrence.md) |
-
-
-
-
-
-
-
-
+* Required: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,6 +71,7 @@ name: timing
 description: A named event reference, that can nest further named timing references.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: timing
 owner: NominalOccurrence
 domain_of:
 - NominalOccurrence
@@ -102,4 +79,4 @@ range: Timing
 required: true
 
 ```
-</details></div>
+</details>

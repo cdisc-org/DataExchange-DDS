@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: significantDigits 
 
@@ -10,11 +7,11 @@ _For numeric values, the number of significant digits_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/significantDigits](https://cdisc.org/odm2/slot/significantDigits)
+Alias: significantDigits
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/significantDigits](https://cdisc.org/odm2/slot/significantDigits)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Integer](../types/Integer.md) |
-| Domain Of | [Formatted](../classes/Formatted.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Formatted](../classes/Formatted.md) |
-
-
-
-
-
-
-
-
+* Range: [Integer](../types/Integer.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -95,10 +70,11 @@ name: significantDigits
 description: For numeric values, the number of significant digits
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: significantDigits
 owner: Formatted
 domain_of:
 - Formatted
 range: integer
 
 ```
-</details></div>
+</details>

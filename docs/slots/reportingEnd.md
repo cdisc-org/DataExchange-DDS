@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: reportingEnd 
 
@@ -10,11 +7,11 @@ _A specific time period in a known system of time periods that identifies the en
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
+Alias: reportingEnd
+
 <!-- no inheritance hierarchy -->
 
 
@@ -35,35 +32,13 @@ URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -96,9 +71,10 @@ description: A specific time period in a known system of time periods that ident
   the end period of a report.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: reportingEnd
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details></div>
+</details>

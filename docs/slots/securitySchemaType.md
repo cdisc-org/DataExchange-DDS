@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: securitySchemaType 
 
@@ -10,11 +7,11 @@ _Security or authentication method used (e.g., OAuth2)_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaType)
+Alias: securitySchemaType
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaTyp
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [DataService](../classes/DataService.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DataService](../classes/DataService.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,9 +69,10 @@ name: securitySchemaType
 description: Security or authentication method used (e.g., OAuth2)
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: securitySchemaType
 owner: DataService
 domain_of:
 - DataService
 
 ```
-</details></div>
+</details>

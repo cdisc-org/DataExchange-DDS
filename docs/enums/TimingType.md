@@ -1,9 +1,3 @@
----
-search:
-  boost: 2.0
----
-
-
 # Enum: TimingType 
 
 
@@ -13,11 +7,10 @@ _An enumeration that defines CDISC timing type values indicating the temporal re
 
 
 
-<div data-search-exclude markdown="1">
-
 URI: [odm:enum/TimingType](https://cdisc.org/odm2/enum/TimingType)
 
 ## Permissible Values
+
 | Value | Meaning | Description |
 | --- | --- | --- |
 | After | ncit:C201356 |  |
@@ -31,12 +24,8 @@ URI: [odm:enum/TimingType](https://cdisc.org/odm2/enum/TimingType)
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -74,5 +63,3 @@ permissible_values:
 
 ```
 </details>
-
-</div>

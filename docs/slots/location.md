@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: location 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
+Alias: location
+
 <!-- no inheritance hierarchy -->
 
 
@@ -20,8 +17,8 @@ URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Organization](../classes/Organization.md) | An entity that represents organizational information, such as a site or sponsor |  no  |
 | [DataProvider](../classes/DataProvider.md) | An organization element that provides data to a Data Consumer, which can be a sponsor, site, or any other entity that supplies data |  no  |
+| [Organization](../classes/Organization.md) | An entity that represents organizational information, such as a site or sponsor |  no  |
 | [Display](../classes/Display.md) | A rendered output of an analysis result. |  no  |
 
 
@@ -31,28 +28,13 @@ URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Organization](../classes/Organization.md), [Display](../classes/Display.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -74,9 +56,10 @@ URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
 <details>
 ```yaml
 name: location
+alias: location
 domain_of:
 - Organization
 - Display
 
 ```
-</details></div>
+</details>

@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: measure 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/measure](https://cdisc.org/odm2/slot/measure)
+Alias: measure
+
 <!-- no inheritance hierarchy -->
 
 
@@ -29,35 +26,13 @@ URI: [odm:slot/measure](https://cdisc.org/odm2/slot/measure)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Measure](../classes/Measure.md) |
-| Domain Of | [MeasureRelationship](../classes/MeasureRelationship.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [MeasureRelationship](../classes/MeasureRelationship.md) |
-
-
-
-
-
-
-
-
+* Range: [Measure](../classes/Measure.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -88,10 +63,11 @@ URI: [odm:slot/measure](https://cdisc.org/odm2/slot/measure)
 name: measure
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: measure
 owner: MeasureRelationship
 domain_of:
 - MeasureRelationship
 range: Measure
 
 ```
-</details></div>
+</details>

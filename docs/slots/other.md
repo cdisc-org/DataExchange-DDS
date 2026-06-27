@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: other 
 
@@ -10,11 +7,11 @@ _Flag to indicate that the term represents "other" content_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/other](https://cdisc.org/odm2/slot/other)
+Alias: other
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/other](https://cdisc.org/odm2/slot/other)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Boolean](../types/Boolean.md) |
-| Domain Of | [CodeListItem](../classes/CodeListItem.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [CodeListItem](../classes/CodeListItem.md) |
-
-
-
-
-
-
-
-
+* Range: [Boolean](../types/Boolean.md)
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,10 +69,11 @@ name: other
 description: Flag to indicate that the term represents "other" content
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: other
 owner: CodeListItem
 domain_of:
 - CodeListItem
 range: boolean
 
 ```
-</details></div>
+</details>

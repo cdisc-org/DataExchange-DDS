@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: CodeListItem 
 
@@ -9,8 +6,6 @@ search:
 _A structured member of a CodeList that extends the Coding class with additional context-specific properties_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -20,19 +15,19 @@ URI: [odm:class/CodeListItem](https://cdisc.org/odm2/class/CodeListItem)
 ```mermaid
 erDiagram
 CodeListItem {
-    string description  
     string codedValue  
     string decode  
-    boolean other  
-    decimal weight  
+    string description  
     stringList aliases  
+    decimal weight  
+    boolean other  
 }
 Coding {
-    AliasPredicate aliasType  
     string code  
+    string decode  
     string codeSystem  
     string codeSystemVersion  
-    string decode  
+    AliasPredicate aliasType  
 }
 
 CodeListItem ||--|o Coding : "coding"
@@ -43,15 +38,16 @@ CodeListItem ||--|o Coding : "coding"
 
 <!-- no inheritance hierarchy -->
 
+
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [codedValue](../slots/codedValue.md) | 1 <br/> [String](../types/String.md) | The value of the CodeListItem before decoding | direct |
 | [decode](../slots/decode.md) | 0..1 <br/> [String](../types/String.md) | The decoded value of the CodeListItem | direct |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | A detailed description of the code (e.g., for documentation purposes) | direct |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | A detailed description of the code (e.g., for documentation purposes) | direct |
 | [coding](../slots/coding.md) | 0..1 <br/> [Coding](../classes/Coding.md) | The dictionary definition of the CodeListItem | direct |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative labels for the code (ODM Alias, skos:altLabel) | direct |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative labels for the code (ODM Alias, skos:altLabel) | direct |
 | [weight](../slots/weight.md) | 0..1 <br/> [Decimal](../types/Decimal.md) | Numeric significance of the code (e.g., for scoring) | direct |
 | [other](../slots/other.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | Flag to indicate that the term represents "other" content | direct |
 
@@ -71,12 +67,8 @@ CodeListItem ||--|o Coding : "coding"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -221,6 +213,7 @@ attributes:
     description: The value of the CodeListItem before decoding
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: codedValue
     owner: CodeListItem
     domain_of:
     - CodeListItem
@@ -231,6 +224,7 @@ attributes:
     description: The decoded value of the CodeListItem
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: decode
     owner: CodeListItem
     domain_of:
     - CodeListItem
@@ -240,6 +234,7 @@ attributes:
     name: description
     description: A detailed description of the code (e.g., for documentation purposes)
     from_schema: https://cdisc.org/dds
+    alias: description
     owner: CodeListItem
     domain_of:
     - Labelled
@@ -251,6 +246,7 @@ attributes:
     name: coding
     description: The dictionary definition of the CodeListItem
     from_schema: https://cdisc.org/dds
+    alias: coding
     owner: CodeListItem
     domain_of:
     - Labelled
@@ -262,6 +258,7 @@ attributes:
     name: aliases
     description: Alternative labels for the code (ODM Alias, skos:altLabel)
     from_schema: https://cdisc.org/dds
+    alias: aliases
     owner: CodeListItem
     domain_of:
     - Labelled
@@ -275,6 +272,7 @@ attributes:
     description: Numeric significance of the code (e.g., for scoring)
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: weight
     owner: CodeListItem
     domain_of:
     - CodeListItem
@@ -284,10 +282,11 @@ attributes:
     description: Flag to indicate that the term represents "other" content
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: other
     owner: CodeListItem
     domain_of:
     - CodeListItem
     range: boolean
 
 ```
-</details></div>
+</details>

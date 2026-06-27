@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: components 
 
@@ -10,11 +7,11 @@ _The components that make up this component list_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/components](https://cdisc.org/odm2/slot/components)
+Alias: components
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,47 +31,15 @@ URI: [odm:slot/components](https://cdisc.org/odm2/slot/components)
 
 ## Properties
 
-### Type and Range
+* Range: NONE&nbsp;or&nbsp;<br />[Measure](../classes/Measure.md)&nbsp;or&nbsp;<br />[Dimension](../classes/Dimension.md)&nbsp;or&nbsp;<br />[DataAttribute](../classes/DataAttribute.md)
 
-| Property | Value |
-| --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[Measure](../classes/Measure.md)&nbsp;or&nbsp;<br />[Dimension](../classes/Dimension.md)&nbsp;or&nbsp;<br />[DataAttribute](../classes/DataAttribute.md) |
-| Domain Of | [ComponentList](../classes/ComponentList.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ComponentList](../classes/ComponentList.md) |
-
-
-<details>
-<summary>Expressions & Logic</summary>
-#### Any Of
-
-Value must satisfy at least one of:
-- AnonymousSlotExpression({'range': 'Measure'})
-- AnonymousSlotExpression({'range': 'Dimension'})
-- AnonymousSlotExpression({'range': 'DataAttribute'})
-
-</details>
-
-
-
-
-
-
-
+* Multivalued: True
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -106,6 +71,7 @@ name: components
 description: The components that make up this component list
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: components
 owner: ComponentList
 domain_of:
 - ComponentList
@@ -118,4 +84,4 @@ any_of:
 - range: DataAttribute
 
 ```
-</details></div>
+</details>

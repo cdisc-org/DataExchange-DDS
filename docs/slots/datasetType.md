@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: datasetType 
 
@@ -10,11 +7,11 @@ _Type or classification of the dataset_
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
+Alias: datasetType
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Dataset](../classes/Dataset.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dataset](../classes/Dataset.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,9 +69,10 @@ name: datasetType
 description: Type or classification of the dataset
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: datasetType
 owner: Dataset
 domain_of:
 - Dataset
 
 ```
-</details></div>
+</details>

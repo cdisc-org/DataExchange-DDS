@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Identifiable 
 
@@ -9,8 +6,6 @@ search:
 _A mixin that provides slots for making an entity addressable within a study or context_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 
@@ -31,12 +26,6 @@ Identifiable {
 
 
 <!-- no inheritance hierarchy -->
-
-## Class Properties
-
-| Property | Value |
-| --- | --- |
-| Mixin | Yes |
 
 
 ## Slots
@@ -63,12 +52,8 @@ Identifiable {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -118,7 +103,7 @@ attributes:
     domain_of:
     - Identifiable
     range: string
-    required: false
+    required: true
   uuid:
     name: uuid
     description: Universal unique identifier
@@ -148,6 +133,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: Identifiable
     domain_of:
     - Identifiable
@@ -158,10 +144,11 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: Identifiable
     domain_of:
     - Identifiable
     range: string
 
 ```
-</details></div>
+</details>

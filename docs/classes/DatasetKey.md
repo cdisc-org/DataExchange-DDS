@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: DatasetKey 
 
@@ -9,8 +6,6 @@ search:
 _An abstract identifier that comprises the cross-product of dimension values to identify a specific cross-section_
 
 
-
-<div data-search-exclude markdown="1">
 
 
 * __NOTE__: this is an abstract class and should not be instantiated directly
@@ -22,9 +17,9 @@ URI: [odm:class/DatasetKey](https://cdisc.org/odm2/class/DatasetKey)
 ```mermaid
 erDiagram
 DatasetKey {
-    string attributeValues  
-    string keyValues  
     string describedBy  
+    string keyValues  
+    string attributeValues  
 }
 
 
@@ -38,6 +33,7 @@ DatasetKey {
 * **DatasetKey**
     * [GroupKey](../classes/GroupKey.md)
     * [SeriesKey](../classes/SeriesKey.md)
+
 
 
 ## Slots
@@ -57,12 +53,8 @@ DatasetKey {
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -152,6 +144,7 @@ attributes:
     description: Associates the Dimension Descriptor defined in the Data Structure
       Definition
     from_schema: https://cdisc.org/dds
+    alias: describedBy
     owner: DatasetKey
     domain_of:
     - Dataset
@@ -165,6 +158,7 @@ attributes:
       SUBJ001.VISIT2.BMI
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: keyValues
     owner: DatasetKey
     domain_of:
     - DatasetKey
@@ -173,9 +167,10 @@ attributes:
     description: Association to the Attribute Values relating to Key
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: attributeValues
     owner: DatasetKey
     domain_of:
     - DatasetKey
 
 ```
-</details></div>
+</details>

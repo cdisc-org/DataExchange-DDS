@@ -1,7 +1,4 @@
----
-search:
-  boost: 10.0
----
+
 
 # Class: Organization 
 
@@ -10,8 +7,6 @@ _An entity that represents organizational information, such as a site or sponsor
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:class/Organization](https://cdisc.org/odm2/class/Organization)
@@ -19,24 +14,24 @@ URI: [odm:class/Organization](https://cdisc.org/odm2/class/Organization)
 
 ```mermaid
 erDiagram
-Coding {
-    AliasPredicate aliasType  
-    string code  
-    string codeSystem  
-    string codeSystemVersion  
-    string decode  
-}
 Organization {
-    string address  
-    string location  
     string role  
     OrganizationType type  
+    string location  
+    string address  
+    string OID  
+    string uuid  
     string name  
     string description  
-    string OID  
-    stringList aliases  
     string label  
-    string uuid  
+    stringList aliases  
+}
+Coding {
+    string code  
+    string decode  
+    string codeSystem  
+    string codeSystemVersion  
+    AliasPredicate aliasType  
 }
 
 Organization ||--|o Organization : "partOfOrganization"
@@ -53,6 +48,7 @@ Organization ||--}o Coding : "coding"
         * [DataProvider](../classes/DataProvider.md)
 
 
+
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
@@ -65,10 +61,10 @@ Organization ||--}o Coding : "coding"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -121,12 +117,8 @@ Organization ||--}o Coding : "coding"
 
 
 
-
-
-
-
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -245,6 +237,7 @@ attributes:
     name: role
     description: The role of the organization in the study.
     from_schema: https://cdisc.org/dds
+    alias: role
     owner: Organization
     domain_of:
     - IsODMItem
@@ -255,6 +248,7 @@ attributes:
     name: type
     description: The type of organization (e.g., site, sponsor, vendor).
     from_schema: https://cdisc.org/dds
+    alias: type
     owner: Organization
     domain_of:
     - ItemGroup
@@ -269,6 +263,7 @@ attributes:
     description: The physical location of the organization.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: location
     owner: Organization
     domain_of:
     - Organization
@@ -279,6 +274,7 @@ attributes:
     description: The address of the organization.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: address
     owner: Organization
     domain_of:
     - Organization
@@ -289,6 +285,7 @@ attributes:
       a larger entity.
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: partOfOrganization
     owner: Organization
     domain_of:
     - Organization
@@ -300,6 +297,7 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
+    alias: OID
     owner: Organization
     domain_of:
     - Identifiable
@@ -310,6 +308,7 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: uuid
     owner: Organization
     domain_of:
     - Identifiable
@@ -319,6 +318,7 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: name
     owner: Organization
     domain_of:
     - Labelled
@@ -331,6 +331,7 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: description
     owner: Organization
     domain_of:
     - Labelled
@@ -344,6 +345,7 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
+    alias: coding
     owner: Organization
     domain_of:
     - Labelled
@@ -360,6 +362,7 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
+    alias: label
     owner: Organization
     domain_of:
     - Labelled
@@ -374,6 +377,7 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
+    alias: aliases
     owner: Organization
     domain_of:
     - Labelled
@@ -387,4 +391,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details></div>
+</details>

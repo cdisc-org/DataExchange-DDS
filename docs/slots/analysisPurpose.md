@@ -1,7 +1,4 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: analysisPurpose 
 
@@ -10,11 +7,11 @@ _The purpose or role of this analysis in the study._
 
 
 
-<div data-search-exclude markdown="1">
-
 
 
 URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
+Alias: analysisPurpose
+
 <!-- no inheritance hierarchy -->
 
 
@@ -34,35 +31,13 @@ URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [Analysis](../classes/Analysis.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Analysis](../classes/Analysis.md) |
-
-
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -94,9 +69,10 @@ name: analysisPurpose
 description: The purpose or role of this analysis in the study.
 from_schema: https://cdisc.org/dds
 rank: 1000
+alias: analysisPurpose
 owner: Analysis
 domain_of:
 - Analysis
 
 ```
-</details></div>
+</details>

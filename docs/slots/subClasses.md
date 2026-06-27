@@ -1,15 +1,12 @@
----
-search:
-  boost: 5.0
----
+
 
 # Slot: subClasses 
-
-<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/subClasses](https://cdisc.org/odm2/slot/subClasses)
+Alias: subClasses
+
 <!-- no inheritance hierarchy -->
 
 
@@ -30,28 +27,13 @@ URI: [odm:slot/subClasses](https://cdisc.org/odm2/slot/subClasses)
 
 ## Properties
 
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | NONE |
-| Domain Of | [DefClass](../classes/DefClass.md), [SubClass](../classes/SubClass.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
-
-
-
-
-
-
+* Range: NONE
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -73,9 +55,10 @@ URI: [odm:slot/subClasses](https://cdisc.org/odm2/slot/subClasses)
 <details>
 ```yaml
 name: subClasses
+alias: subClasses
 domain_of:
 - DefClass
 - SubClass
 
 ```
-</details></div>
+</details>
