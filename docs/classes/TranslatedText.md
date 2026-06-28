@@ -5,11 +5,16 @@ search:
 
 # Class: TranslatedText 
 
+
+_A container of the language-specific translations of a single piece of text (a set of localised strings), as opposed to one Translation._
+
+
+
 <div data-search-exclude markdown="1">
 
 
 
-URI: [odm:class/TranslatedText](https://cdisc.org/odm2/class/TranslatedText)
+URI: [dds:class/TranslatedText](https://cdisc.org/ddsclass/TranslatedText)
 
 
 ```mermaid
@@ -235,8 +240,8 @@ TranslatedText ||--}o Translation : "translations"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:TranslatedText |
-| native | odm:TranslatedText |
+| self | dds:TranslatedText |
+| native | dds:TranslatedText |
 
 
 
@@ -252,6 +257,8 @@ TranslatedText ||--}o Translation : "translations"
 <details>
 ```yaml
 name: TranslatedText
+description: A container of the language-specific translations of a single piece of
+  text (a set of localised strings), as opposed to one Translation.
 from_schema: https://cdisc.org/dds
 attributes:
   translations:
@@ -273,6 +280,8 @@ attributes:
 <details>
 ```yaml
 name: TranslatedText
+description: A container of the language-specific translations of a single piece of
+  text (a set of localised strings), as opposed to one Translation.
 from_schema: https://cdisc.org/dds
 attributes:
   translations:

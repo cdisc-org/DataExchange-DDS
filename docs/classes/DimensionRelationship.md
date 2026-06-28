@@ -14,7 +14,7 @@ _A relationship element that associates a DataAttribute with a specific Dimensio
 
 
 
-URI: [odm:class/DimensionRelationship](https://cdisc.org/odm2/class/DimensionRelationship)
+URI: [dds:class/DimensionRelationship](https://cdisc.org/ddsclass/DimensionRelationship)
 
 
 ```mermaid
@@ -157,9 +157,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -219,8 +219,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DimensionRelationship |
-| native | odm:DimensionRelationship |
+| self | dds:DimensionRelationship |
+| native | dds:DimensionRelationship |
 | exact | sdmx:DimensionRelationship |
 
 

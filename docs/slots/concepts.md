@@ -14,7 +14,7 @@ _Structured Concepts defined in this version of the metadata_
 
 
 
-URI: [odm:slot/concepts](https://cdisc.org/odm2/slot/concepts)
+URI: [dds:slot/concepts](https://cdisc.org/ddsslot/concepts)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/concepts](https://cdisc.org/odm2/slot/concepts)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:concepts |
-| native | odm:concepts |
+| self | dds:concepts |
+| native | dds:concepts |
 
 
 

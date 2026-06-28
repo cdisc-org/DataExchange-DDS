@@ -14,7 +14,7 @@ _Flag to indicate that the term represents "other" content_
 
 
 
-URI: [odm:slot/other](https://cdisc.org/odm2/slot/other)
+URI: [dds:slot/other](https://cdisc.org/ddsslot/other)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/other](https://cdisc.org/odm2/slot/other)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:other |
-| native | odm:other |
+| self | dds:other |
+| native | dds:other |
 
 
 

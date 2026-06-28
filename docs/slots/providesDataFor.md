@@ -14,7 +14,7 @@ _The Dataflows that this provider supplies data for_
 
 
 
-URI: [odm:slot/providesDataFor](https://cdisc.org/odm2/slot/providesDataFor)
+URI: [dds:slot/providesDataFor](https://cdisc.org/ddsslot/providesDataFor)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/providesDataFor](https://cdisc.org/odm2/slot/providesDataFor)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:providesDataFor |
-| native | odm:providesDataFor |
+| self | dds:providesDataFor |
+| native | dds:providesDataFor |
 
 
 

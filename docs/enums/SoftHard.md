@@ -15,7 +15,7 @@ _An enumeration that indicates whether a validation check should be treated as a
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/SoftHard](https://cdisc.org/odm2/enum/SoftHard)
+URI: [dds:enum/SoftHard](https://cdisc.org/ddsenum/SoftHard)
 
 ## Permissible Values
 | Value | Meaning | Description |

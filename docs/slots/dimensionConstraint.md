@@ -14,7 +14,7 @@ _Subset of dimensions that are agreed upon by the dataflow and must be included.
 
 
 
-URI: [odm:slot/dimensionConstraint](https://cdisc.org/odm2/slot/dimensionConstraint)
+URI: [dds:slot/dimensionConstraint](https://cdisc.org/ddsslot/dimensionConstraint)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/dimensionConstraint](https://cdisc.org/odm2/slot/dimensionConstra
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dimensionConstraint |
-| native | odm:dimensionConstraint |
+| self | dds:dimensionConstraint |
+| native | dds:dimensionConstraint |
 
 
 

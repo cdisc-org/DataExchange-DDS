@@ -14,7 +14,7 @@ _ImplementationNotes reference: Further information, such as rationale and imple
 
 
 
-URI: [odm:slot/implementationNotes](https://cdisc.org/odm2/slot/implementationNotes)
+URI: [dds:slot/implementationNotes](https://cdisc.org/ddsslot/implementationNotes)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/implementationNotes](https://cdisc.org/odm2/slot/implementationNo
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
 | Domain Of | [IsODMItem](../classes/IsODMItem.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:implementationNotes |
-| native | odm:implementationNotes |
+| self | dds:implementationNotes |
+| native | dds:implementationNotes |
 
 
 
@@ -109,6 +109,7 @@ rank: 1000
 owner: IsODMItem
 domain_of:
 - IsODMItem
+range: string
 any_of:
 - range: string
 - range: TranslatedText

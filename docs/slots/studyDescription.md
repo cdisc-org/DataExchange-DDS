@@ -14,7 +14,7 @@ _Description of the study_
 
 
 
-URI: [odm:slot/studyDescription](https://cdisc.org/odm2/slot/studyDescription)
+URI: [dds:slot/studyDescription](https://cdisc.org/ddsslot/studyDescription)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/studyDescription](https://cdisc.org/odm2/slot/studyDescription)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:studyDescription |
-| native | odm:studyDescription |
+| self | dds:studyDescription |
+| native | dds:studyDescription |
 
 
 

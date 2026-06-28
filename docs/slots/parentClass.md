@@ -14,7 +14,7 @@ _Name of the parent Class or SubClass following CDISC Controlled Terminology._
 
 
 
-URI: [odm:slot/parentClass](https://cdisc.org/odm2/slot/parentClass)
+URI: [dds:slot/parentClass](https://cdisc.org/ddsslot/parentClass)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/parentClass](https://cdisc.org/odm2/slot/parentClass)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:parentClass |
-| native | odm:parentClass |
+| self | dds:parentClass |
+| native | dds:parentClass |
 
 
 

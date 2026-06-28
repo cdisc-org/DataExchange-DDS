@@ -14,7 +14,7 @@ _A container element that represents a given version of a specification, linking
 
 
 
-URI: [odm:class/MetaDataVersion](https://cdisc.org/odm2/class/MetaDataVersion)
+URI: [dds:class/MetaDataVersion](https://cdisc.org/ddsclass/MetaDataVersion)
 
 
 ```mermaid
@@ -23,7 +23,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -447,6 +446,7 @@ WhereClause {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -512,9 +512,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -702,8 +702,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:MetaDataVersion |
-| native | odm:MetaDataVersion |
+| self | dds:MetaDataVersion |
+| native | dds:MetaDataVersion |
 | close | usdm:StudyDesign |
 
 
@@ -1106,6 +1106,7 @@ attributes:
     owner: MetaDataVersion
     domain_of:
     - MetaDataVersion
+    range: string
     multivalued: true
     inlined: true
     inlined_as_list: true

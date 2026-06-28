@@ -14,7 +14,7 @@ _A data cube property that describes additional characteristics or metadata abou
 
 
 
-URI: [odm:class/DataAttribute](https://cdisc.org/odm2/class/DataAttribute)
+URI: [dds:class/DataAttribute](https://cdisc.org/ddsclass/DataAttribute)
 
 
 ```mermaid
@@ -255,9 +255,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -363,8 +363,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DataAttribute |
-| native | odm:DataAttribute |
+| self | dds:DataAttribute |
+| native | dds:DataAttribute |
 | exact | qb:AttributeProperty, sdmx:DataAttribute |
 
 

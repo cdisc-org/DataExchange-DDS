@@ -14,7 +14,7 @@ _Protocol used by the service (e.g., HTTPS, FTP)_
 
 
 
-URI: [odm:slot/protocol](https://cdisc.org/odm2/slot/protocol)
+URI: [dds:slot/protocol](https://cdisc.org/ddsslot/protocol)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/protocol](https://cdisc.org/odm2/slot/protocol)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DataService](../classes/DataService.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/protocol](https://cdisc.org/odm2/slot/protocol)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:protocol |
-| native | odm:protocol |
+| self | dds:protocol |
+| native | dds:protocol |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: DataService
 domain_of:
 - DataService
+range: string
 
 ```
 </details></div>

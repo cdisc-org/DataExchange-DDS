@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/publishedBy](https://cdisc.org/odm2/slot/publishedBy)
+URI: [dds:slot/publishedBy](https://cdisc.org/ddsslot/publishedBy)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/publishedBy](https://cdisc.org/odm2/slot/publishedBy)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dictionary](../classes/Dictionary.md), [Dataset](../classes/Dataset.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/publishedBy](https://cdisc.org/odm2/slot/publishedBy)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:publishedBy |
-| native | odm:publishedBy |
+| self | dds:publishedBy |
+| native | dds:publishedBy |
 
 
 
@@ -76,6 +76,7 @@ name: publishedBy
 domain_of:
 - Dictionary
 - Dataset
+range: string
 
 ```
 </details></div>

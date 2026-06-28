@@ -14,7 +14,7 @@ _Reference to specific pages in a PDF document_
 
 
 
-URI: [odm:slot/pages](https://cdisc.org/odm2/slot/pages)
+URI: [dds:slot/pages](https://cdisc.org/ddsslot/pages)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/pages](https://cdisc.org/odm2/slot/pages)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:pages |
-| native | odm:pages |
+| self | dds:pages |
+| native | dds:pages |
 
 
 

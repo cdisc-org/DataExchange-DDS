@@ -14,7 +14,7 @@ _Purpose or rationale for this data element_
 
 
 
-URI: [odm:slot/purpose](https://cdisc.org/odm2/slot/purpose)
+URI: [dds:slot/purpose](https://cdisc.org/ddsslot/purpose)
 <!-- no inheritance hierarchy -->
 
 
@@ -61,7 +61,7 @@ URI: [odm:slot/purpose](https://cdisc.org/odm2/slot/purpose)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
 | Domain Of | [Governed](../classes/Governed.md) |
 
 ### Cardinality and Requirements
@@ -113,8 +113,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:purpose |
-| native | odm:purpose |
+| self | dds:purpose |
+| native | dds:purpose |
 
 
 
@@ -130,6 +130,7 @@ rank: 1000
 owner: Governed
 domain_of:
 - Governed
+range: string
 any_of:
 - range: string
 - range: TranslatedText

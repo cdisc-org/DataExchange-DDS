@@ -14,7 +14,7 @@ _A display format for the item_
 
 
 
-URI: [odm:slot/displayFormat](https://cdisc.org/odm2/slot/displayFormat)
+URI: [dds:slot/displayFormat](https://cdisc.org/ddsslot/displayFormat)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/displayFormat](https://cdisc.org/odm2/slot/displayFormat)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:displayFormat |
-| native | odm:displayFormat |
+| self | dds:displayFormat |
+| native | dds:displayFormat |
 
 
 

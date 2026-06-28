@@ -15,7 +15,7 @@ _An enumeration that defines variable relationship descriptive linking phrases f
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/LinkingPhraseEnum](https://cdisc.org/odm2/enum/LinkingPhraseEnum)
+URI: [dds:enum/LinkingPhraseEnum](https://cdisc.org/ddsenum/LinkingPhraseEnum)
 
 ## Permissible Values
 | Value | Meaning | Description |

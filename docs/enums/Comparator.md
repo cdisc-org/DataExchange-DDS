@@ -15,7 +15,7 @@ _An enumeration that defines the types of comparison operations available for a 
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/Comparator](https://cdisc.org/odm2/enum/Comparator)
+URI: [dds:enum/Comparator](https://cdisc.org/ddsenum/Comparator)
 
 ## Permissible Values
 | Value | Meaning | Description |

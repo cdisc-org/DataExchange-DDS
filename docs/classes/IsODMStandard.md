@@ -14,7 +14,7 @@ _A mixin that provides properties to indicate standards compliance_
 
 
 
-URI: [odm:class/IsODMStandard](https://cdisc.org/odm2/class/IsODMStandard)
+URI: [dds:class/IsODMStandard](https://cdisc.org/ddsclass/IsODMStandard)
 
 
 ```mermaid
@@ -105,8 +105,8 @@ Standard ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:IsODMStandard |
-| native | odm:IsODMStandard |
+| self | dds:IsODMStandard |
+| native | dds:IsODMStandard |
 
 
 

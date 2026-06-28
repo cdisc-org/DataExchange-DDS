@@ -14,7 +14,7 @@ _A data cube property that describes a categorical or hierarchical dimension_
 
 
 
-URI: [odm:class/Dimension](https://cdisc.org/odm2/class/Dimension)
+URI: [dds:class/Dimension](https://cdisc.org/ddsclass/Dimension)
 
 
 ```mermaid
@@ -255,9 +255,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -363,8 +363,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Dimension |
-| native | odm:Dimension |
+| self | dds:Dimension |
+| native | dds:Dimension |
 | exact | qb:DimensionProperty, sdmx:Dimension |
 | narrow | sdmx:MeasureDimension, sdmx:TimeDimension |
 | broad | sdmx:DataAttribute |

@@ -14,7 +14,7 @@ _Properties of the reified object, which can be other governed elements or simpl
 
 
 
-URI: [odm:slot/properties](https://cdisc.org/odm2/slot/properties)
+URI: [dds:slot/properties](https://cdisc.org/ddsslot/properties)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/properties](https://cdisc.org/odm2/slot/properties)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:properties |
-| native | odm:properties |
+| self | dds:properties |
+| native | dds:properties |
 
 
 

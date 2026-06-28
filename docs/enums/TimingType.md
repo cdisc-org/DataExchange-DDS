@@ -15,14 +15,14 @@ _An enumeration that defines CDISC timing type values indicating the temporal re
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/TimingType](https://cdisc.org/odm2/enum/TimingType)
+URI: [dds:enum/TimingType](https://cdisc.org/ddsenum/TimingType)
 
 ## Permissible Values
 | Value | Meaning | Description |
 | --- | --- | --- |
-| After | ncit:C201356 |  |
-| Before | ncit:C201357 |  |
-| Fixed | ncit:C201358 |  |
+| After | NCIT:C201356 |  |
+| Before | NCIT:C201357 |  |
+| Fixed | NCIT:C201358 |  |
 
 
 
@@ -64,13 +64,13 @@ rank: 1000
 permissible_values:
   After:
     text: After
-    meaning: ncit:C201356
+    meaning: NCIT:C201356
   Before:
     text: Before
-    meaning: ncit:C201357
+    meaning: NCIT:C201357
   Fixed:
     text: Fixed
-    meaning: ncit:C201358
+    meaning: NCIT:C201358
 
 ```
 </details>

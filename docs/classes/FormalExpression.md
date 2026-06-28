@@ -14,7 +14,7 @@ _A computational element that defines the execution of a data derivation within 
 
 
 
-URI: [odm:class/FormalExpression](https://cdisc.org/odm2/class/FormalExpression)
+URI: [dds:class/FormalExpression](https://cdisc.org/ddsclass/FormalExpression)
 
 
 ```mermaid
@@ -239,8 +239,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:FormalExpression |
-| native | odm:FormalExpression |
+| self | dds:FormalExpression |
+| native | dds:FormalExpression |
 | exact | odm:FormalExpression, odm:FormalExpressionRef, fhir:Expression |
 
 

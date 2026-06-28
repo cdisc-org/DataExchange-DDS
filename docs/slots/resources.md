@@ -14,7 +14,7 @@ _References to resources and documents that describe this version of the metadat
 
 
 
-URI: [odm:slot/resources](https://cdisc.org/odm2/slot/resources)
+URI: [dds:slot/resources](https://cdisc.org/ddsslot/resources)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/resources](https://cdisc.org/odm2/slot/resources)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[DocumentReference](../classes/DocumentReference.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[DocumentReference](../classes/DocumentReference.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md) |
 | Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:resources |
-| native | odm:resources |
+| self | dds:resources |
+| native | dds:resources |
 
 
 
@@ -109,6 +109,7 @@ rank: 1000
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
+range: string
 multivalued: true
 inlined: true
 inlined_as_list: true

@@ -14,7 +14,7 @@ _Unique identifier for the study_
 
 
 
-URI: [odm:slot/studyOID](https://cdisc.org/odm2/slot/studyOID)
+URI: [dds:slot/studyOID](https://cdisc.org/ddsslot/studyOID)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/studyOID](https://cdisc.org/odm2/slot/studyOID)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:studyOID |
-| native | odm:studyOID |
+| self | dds:studyOID |
+| native | dds:studyOID |
 
 
 

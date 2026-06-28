@@ -14,7 +14,7 @@ _Security tags applied to this resource_
 
 
 
-URI: [odm:slot/security](https://cdisc.org/odm2/slot/security)
+URI: [dds:slot/security](https://cdisc.org/ddsslot/security)
 <!-- no inheritance hierarchy -->
 
 
@@ -84,8 +84,8 @@ URI: [odm:slot/security](https://cdisc.org/odm2/slot/security)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:security |
-| native | odm:security |
+| self | dds:security |
+| native | dds:security |
 
 
 

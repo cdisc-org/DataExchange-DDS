@@ -14,7 +14,7 @@ _Codings defined in this version of the metadata_
 
 
 
-URI: [odm:slot/codings](https://cdisc.org/odm2/slot/codings)
+URI: [dds:slot/codings](https://cdisc.org/ddsslot/codings)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/codings](https://cdisc.org/odm2/slot/codings)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:codings |
-| native | odm:codings |
+| self | dds:codings |
+| native | dds:codings |
 
 
 

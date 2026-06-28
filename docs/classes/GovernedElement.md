@@ -11,7 +11,7 @@ search:
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [odm:class/GovernedElement](https://cdisc.org/odm2/class/GovernedElement)
+URI: [dds:class/GovernedElement](https://cdisc.org/ddsclass/GovernedElement)
 
 
 ```mermaid
@@ -155,8 +155,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:GovernedElement |
-| native | odm:GovernedElement |
+| self | dds:GovernedElement |
+| native | dds:GovernedElement |
 
 
 

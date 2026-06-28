@@ -14,7 +14,7 @@ _The predefined CDISC model Class that applies to an ItemGroupDef._
 
 
 
-URI: [odm:class/DefClass](https://cdisc.org/odm2/class/DefClass)
+URI: [dds:class/DefClass](https://cdisc.org/ddsclass/DefClass)
 
 
 ```mermaid
@@ -83,8 +83,8 @@ SubClass ||--}o SubClass : "subClasses"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DefClass |
-| native | odm:DefClass |
+| self | dds:DefClass |
+| native | dds:DefClass |
 
 
 

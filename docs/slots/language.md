@@ -14,7 +14,7 @@ _The language of the translation_
 
 
 
-URI: [odm:slot/language](https://cdisc.org/odm2/slot/language)
+URI: [dds:slot/language](https://cdisc.org/ddsslot/language)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/language](https://cdisc.org/odm2/slot/language)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:language |
-| native | odm:language |
+| self | dds:language |
+| native | dds:language |
 
 
 

@@ -14,7 +14,7 @@ _A structural element that defines the organization of a data cube for analysis,
 
 
 
-URI: [odm:class/DataStructureDefinition](https://cdisc.org/odm2/class/DataStructureDefinition)
+URI: [dds:class/DataStructureDefinition](https://cdisc.org/ddsclass/DataStructureDefinition)
 
 
 ```mermaid
@@ -343,9 +343,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -487,8 +487,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DataStructureDefinition |
-| native | odm:DataStructureDefinition |
+| self | dds:DataStructureDefinition |
+| native | dds:DataStructureDefinition |
 | close | sdmx:DataStructureDefinition, qb:DataStructureDefinition |
 
 

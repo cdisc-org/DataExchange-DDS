@@ -14,7 +14,7 @@ _For decimal values, the number of digits after the decimal point_
 
 
 
-URI: [odm:slot/decimalDigits](https://cdisc.org/odm2/slot/decimalDigits)
+URI: [dds:slot/decimalDigits](https://cdisc.org/ddsslot/decimalDigits)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/decimalDigits](https://cdisc.org/odm2/slot/decimalDigits)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:decimalDigits |
-| native | odm:decimalDigits |
+| self | dds:decimalDigits |
+| native | dds:decimalDigits |
 
 
 

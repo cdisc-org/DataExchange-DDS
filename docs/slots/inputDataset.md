@@ -14,7 +14,7 @@ _Source datasets used by the data product_
 
 
 
-URI: [odm:slot/inputDataset](https://cdisc.org/odm2/slot/inputDataset)
+URI: [dds:slot/inputDataset](https://cdisc.org/ddsslot/inputDataset)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/inputDataset](https://cdisc.org/odm2/slot/inputDataset)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:inputDataset |
-| native | odm:inputDataset |
+| self | dds:inputDataset |
+| native | dds:inputDataset |
 
 
 

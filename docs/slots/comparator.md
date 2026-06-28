@@ -14,7 +14,7 @@ _The type of comparison to be performed_
 
 
 
-URI: [odm:slot/comparator](https://cdisc.org/odm2/slot/comparator)
+URI: [dds:slot/comparator](https://cdisc.org/ddsslot/comparator)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/comparator](https://cdisc.org/odm2/slot/comparator)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:comparator |
-| native | odm:comparator |
+| self | dds:comparator |
+| native | dds:comparator |
 
 
 

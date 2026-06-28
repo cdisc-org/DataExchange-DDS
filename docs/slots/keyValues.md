@@ -14,7 +14,7 @@ _List of Key Values that comprise each key, separated by a dot e.g. SUBJ001.VISI
 
 
 
-URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
+URI: [dds:slot/keyValues](https://cdisc.org/ddsslot/keyValues)
 <!-- no inheritance hierarchy -->
 
 
@@ -40,7 +40,7 @@ URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DatasetKey](../classes/DatasetKey.md) |
 
 ### Cardinality and Requirements
@@ -82,8 +82,8 @@ URI: [odm:slot/keyValues](https://cdisc.org/odm2/slot/keyValues)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:keyValues |
-| native | odm:keyValues |
+| self | dds:keyValues |
+| native | dds:keyValues |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: DatasetKey
 domain_of:
 - DatasetKey
+range: string
 
 ```
 </details></div>

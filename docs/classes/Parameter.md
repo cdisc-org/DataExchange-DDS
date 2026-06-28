@@ -14,7 +14,7 @@ _A variable element that describes an input used in a formal expression_
 
 
 
-URI: [odm:class/Parameter](https://cdisc.org/odm2/class/Parameter)
+URI: [dds:class/Parameter](https://cdisc.org/ddsclass/Parameter)
 
 
 ```mermaid
@@ -257,8 +257,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Parameter |
-| native | odm:Parameter |
+| self | dds:Parameter |
+| native | dds:Parameter |
 
 
 
@@ -451,6 +451,7 @@ attributes:
     - MetaDataVersion
     - ItemGroup
     - Parameter
+    range: string
     multivalued: true
     inlined: false
     any_of:

@@ -14,7 +14,7 @@ _Party responsible for this element_
 
 
 
-URI: [odm:slot/owner](https://cdisc.org/odm2/slot/owner)
+URI: [dds:slot/owner](https://cdisc.org/ddsslot/owner)
 <!-- no inheritance hierarchy -->
 
 
@@ -61,7 +61,7 @@ URI: [odm:slot/owner](https://cdisc.org/odm2/slot/owner)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) |
 | Domain Of | [Governed](../classes/Governed.md) |
 
 ### Cardinality and Requirements
@@ -114,8 +114,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:owner |
-| native | odm:owner |
+| self | dds:owner |
+| native | dds:owner |
 | narrow | prov:wasAttributedTo, prov:wasAssociatedBy |
 
 
@@ -135,6 +135,7 @@ rank: 1000
 owner: Governed
 domain_of:
 - Governed
+range: string
 any_of:
 - range: User
 - range: Organization

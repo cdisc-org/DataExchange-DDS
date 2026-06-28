@@ -14,7 +14,7 @@ _Association to the Attribute Values relating to Key_
 
 
 
-URI: [odm:slot/attributeValues](https://cdisc.org/odm2/slot/attributeValues)
+URI: [dds:slot/attributeValues](https://cdisc.org/ddsslot/attributeValues)
 <!-- no inheritance hierarchy -->
 
 
@@ -40,7 +40,7 @@ URI: [odm:slot/attributeValues](https://cdisc.org/odm2/slot/attributeValues)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DatasetKey](../classes/DatasetKey.md) |
 
 ### Cardinality and Requirements
@@ -82,8 +82,8 @@ URI: [odm:slot/attributeValues](https://cdisc.org/odm2/slot/attributeValues)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:attributeValues |
-| native | odm:attributeValues |
+| self | dds:attributeValues |
+| native | dds:attributeValues |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: DatasetKey
 domain_of:
 - DatasetKey
+range: string
 
 ```
 </details></div>

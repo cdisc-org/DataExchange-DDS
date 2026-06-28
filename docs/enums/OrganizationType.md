@@ -15,7 +15,7 @@ _An enumeration that defines the types of organizations involved in clinical res
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/OrganizationType](https://cdisc.org/odm2/enum/OrganizationType)
+URI: [dds:enum/OrganizationType](https://cdisc.org/ddsenum/OrganizationType)
 
 ## Permissible Values
 | Value | Meaning | Description |

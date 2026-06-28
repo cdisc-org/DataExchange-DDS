@@ -14,7 +14,7 @@ _Services that provide input into this data product_
 
 
 
-URI: [odm:slot/inputPort](https://cdisc.org/odm2/slot/inputPort)
+URI: [dds:slot/inputPort](https://cdisc.org/ddsslot/inputPort)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/inputPort](https://cdisc.org/odm2/slot/inputPort)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:inputPort |
-| native | odm:inputPort |
+| self | dds:inputPort |
+| native | dds:inputPort |
 
 
 

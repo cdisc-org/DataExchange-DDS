@@ -14,7 +14,7 @@ _Universal unique identifier_
 
 
 
-URI: [odm:slot/uuid](https://cdisc.org/odm2/slot/uuid)
+URI: [dds:slot/uuid](https://cdisc.org/ddsslot/uuid)
 <!-- no inheritance hierarchy -->
 
 
@@ -119,8 +119,8 @@ URI: [odm:slot/uuid](https://cdisc.org/odm2/slot/uuid)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:uuid |
-| native | odm:uuid |
+| self | dds:uuid |
+| native | dds:uuid |
 
 
 

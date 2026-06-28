@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/value](https://cdisc.org/odm2/slot/value)
+URI: [dds:slot/value](https://cdisc.org/ddsslot/value)
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +35,7 @@ URI: [odm:slot/value](https://cdisc.org/odm2/slot/value)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Translation](../classes/Translation.md), [Parameter](../classes/Parameter.md), [Timing](../classes/Timing.md) |
 
 ### Cardinality and Requirements
@@ -63,8 +63,8 @@ URI: [odm:slot/value](https://cdisc.org/odm2/slot/value)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:value |
-| native | odm:value |
+| self | dds:value |
+| native | dds:value |
 
 
 
@@ -78,6 +78,7 @@ domain_of:
 - Translation
 - Parameter
 - Timing
+range: string
 
 ```
 </details></div>

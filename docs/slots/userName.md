@@ -14,7 +14,7 @@ _The username of the user._
 
 
 
-URI: [odm:slot/userName](https://cdisc.org/odm2/slot/userName)
+URI: [dds:slot/userName](https://cdisc.org/ddsslot/userName)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/userName](https://cdisc.org/odm2/slot/userName)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:userName |
-| native | odm:userName |
+| self | dds:userName |
+| native | dds:userName |
 
 
 

@@ -14,7 +14,7 @@ _Time period during which the resouce is valid_
 
 
 
-URI: [odm:slot/validityPeriod](https://cdisc.org/odm2/slot/validityPeriod)
+URI: [dds:slot/validityPeriod](https://cdisc.org/ddsslot/validityPeriod)
 <!-- no inheritance hierarchy -->
 
 
@@ -83,8 +83,8 @@ URI: [odm:slot/validityPeriod](https://cdisc.org/odm2/slot/validityPeriod)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:validityPeriod |
-| native | odm:validityPeriod |
+| self | dds:validityPeriod |
+| native | dds:validityPeriod |
 
 
 

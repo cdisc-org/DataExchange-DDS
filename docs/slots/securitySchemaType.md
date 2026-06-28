@@ -14,7 +14,7 @@ _Security or authentication method used (e.g., OAuth2)_
 
 
 
-URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaType)
+URI: [dds:slot/securitySchemaType](https://cdisc.org/ddsslot/securitySchemaType)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaTyp
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DataService](../classes/DataService.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/securitySchemaType](https://cdisc.org/odm2/slot/securitySchemaTyp
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:securitySchemaType |
-| native | odm:securitySchemaType |
+| self | dds:securitySchemaType |
+| native | dds:securitySchemaType |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: DataService
 domain_of:
 - DataService
+range: string
 
 ```
 </details></div>

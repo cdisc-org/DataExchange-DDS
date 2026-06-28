@@ -15,7 +15,7 @@ _An enumeration that defines permissible values for standard names_
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/StandardName](https://cdisc.org/odm2/enum/StandardName)
+URI: [dds:enum/StandardName](https://cdisc.org/ddsenum/StandardName)
 
 ## Permissible Values
 | Value | Meaning | Description |

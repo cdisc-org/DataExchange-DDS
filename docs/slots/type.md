@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/type](https://cdisc.org/odm2/slot/type)
+URI: [dds:slot/type](https://cdisc.org/ddsslot/type)
 <!-- no inheritance hierarchy -->
 
 
@@ -41,7 +41,7 @@ URI: [odm:slot/type](https://cdisc.org/odm2/slot/type)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [ItemGroup](../classes/ItemGroup.md), [Method](../classes/Method.md), [Origin](../classes/Origin.md), [Organization](../classes/Organization.md), [Standard](../classes/Standard.md), [Timing](../classes/Timing.md) |
 
 ### Cardinality and Requirements
@@ -69,8 +69,8 @@ URI: [odm:slot/type](https://cdisc.org/odm2/slot/type)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:type |
-| native | odm:type |
+| self | dds:type |
+| native | dds:type |
 
 
 
@@ -87,6 +87,7 @@ domain_of:
 - Organization
 - Standard
 - Timing
+range: string
 
 ```
 </details></div>

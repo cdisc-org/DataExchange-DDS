@@ -14,7 +14,7 @@ _Series and Group keys in the data that are associated with dimensions in this s
 
 
 
-URI: [odm:slot/keys](https://cdisc.org/odm2/slot/keys)
+URI: [dds:slot/keys](https://cdisc.org/ddsslot/keys)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/keys](https://cdisc.org/odm2/slot/keys)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[SeriesKey](../classes/SeriesKey.md)&nbsp;or&nbsp;<br />[GroupKey](../classes/GroupKey.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[SeriesKey](../classes/SeriesKey.md)&nbsp;or&nbsp;<br />[GroupKey](../classes/GroupKey.md) |
 | Domain Of | [Dataset](../classes/Dataset.md) |
 
 ### Cardinality and Requirements
@@ -92,8 +92,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:keys |
-| native | odm:keys |
+| self | dds:keys |
+| native | dds:keys |
 
 
 
@@ -110,6 +110,7 @@ rank: 1000
 owner: Dataset
 domain_of:
 - Dataset
+range: string
 required: true
 multivalued: true
 inlined: true

@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/hasNoData](https://cdisc.org/odm2/slot/hasNoData)
+URI: [dds:slot/hasNoData](https://cdisc.org/ddsslot/hasNoData)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/hasNoData](https://cdisc.org/odm2/slot/hasNoData)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsODMItem](../classes/IsODMItem.md), [ItemGroup](../classes/ItemGroup.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/hasNoData](https://cdisc.org/odm2/slot/hasNoData)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:hasNoData |
-| native | odm:hasNoData |
+| self | dds:hasNoData |
+| native | dds:hasNoData |
 
 
 
@@ -78,6 +78,7 @@ name: hasNoData
 domain_of:
 - IsODMItem
 - ItemGroup
+range: string
 
 ```
 </details></div>

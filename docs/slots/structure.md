@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/structure](https://cdisc.org/odm2/slot/structure)
+URI: [dds:slot/structure](https://cdisc.org/ddsslot/structure)
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +35,7 @@ URI: [odm:slot/structure](https://cdisc.org/odm2/slot/structure)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [ItemGroup](../classes/ItemGroup.md), [Dataflow](../classes/Dataflow.md) |
 
 ### Cardinality and Requirements
@@ -63,8 +63,8 @@ URI: [odm:slot/structure](https://cdisc.org/odm2/slot/structure)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:structure |
-| native | odm:structure |
+| self | dds:structure |
+| native | dds:structure |
 
 
 
@@ -77,6 +77,7 @@ name: structure
 domain_of:
 - ItemGroup
 - Dataflow
+range: string
 
 ```
 </details></div>

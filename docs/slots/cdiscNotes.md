@@ -14,7 +14,7 @@ _CDISCNotes reference: Explanatory text for the variable_
 
 
 
-URI: [odm:slot/cdiscNotes](https://cdisc.org/odm2/slot/cdiscNotes)
+URI: [dds:slot/cdiscNotes](https://cdisc.org/ddsslot/cdiscNotes)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/cdiscNotes](https://cdisc.org/odm2/slot/cdiscNotes)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
 | Domain Of | [IsODMItem](../classes/IsODMItem.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:cdiscNotes |
-| native | odm:cdiscNotes |
+| self | dds:cdiscNotes |
+| native | dds:cdiscNotes |
 
 
 
@@ -108,6 +108,7 @@ rank: 1000
 owner: IsODMItem
 domain_of:
 - IsODMItem
+range: string
 any_of:
 - range: string
 - range: TranslatedText

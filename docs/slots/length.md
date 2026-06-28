@@ -14,7 +14,7 @@ _The maximum length of the data item in characters._
 
 
 
-URI: [odm:slot/length](https://cdisc.org/odm2/slot/length)
+URI: [dds:slot/length](https://cdisc.org/ddsslot/length)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/length](https://cdisc.org/odm2/slot/length)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:length |
-| native | odm:length |
+| self | dds:length |
+| native | dds:length |
 
 
 

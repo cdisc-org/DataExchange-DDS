@@ -14,7 +14,7 @@ _The individual values that make up this CodeList. The type of CodeListItem incl
 
 
 
-URI: [odm:slot/codeListItems](https://cdisc.org/odm2/slot/codeListItems)
+URI: [dds:slot/codeListItems](https://cdisc.org/ddsslot/codeListItems)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/codeListItems](https://cdisc.org/odm2/slot/codeListItems)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:codeListItems |
-| native | odm:codeListItems |
+| self | dds:codeListItems |
+| native | dds:codeListItems |
 
 
 

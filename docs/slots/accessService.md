@@ -14,7 +14,7 @@ _Service that provides access to this distribution_
 
 
 
-URI: [odm:slot/accessService](https://cdisc.org/odm2/slot/accessService)
+URI: [dds:slot/accessService](https://cdisc.org/ddsslot/accessService)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/accessService](https://cdisc.org/odm2/slot/accessService)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:accessService |
-| native | odm:accessService |
+| self | dds:accessService |
+| native | dds:accessService |
 
 
 

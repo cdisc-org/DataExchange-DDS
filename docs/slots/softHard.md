@@ -14,7 +14,7 @@ _Indicates whether a validation check is an error ("Hard") or a warning ("Soft")
 
 
 
-URI: [odm:slot/softHard](https://cdisc.org/odm2/slot/softHard)
+URI: [dds:slot/softHard](https://cdisc.org/ddsslot/softHard)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/softHard](https://cdisc.org/odm2/slot/softHard)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:softHard |
-| native | odm:softHard |
+| self | dds:softHard |
+| native | dds:softHard |
 
 
 

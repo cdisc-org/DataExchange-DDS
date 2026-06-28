@@ -15,7 +15,7 @@ _An enumeration that defines the lifecycle stages for a DataProduct_
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/DataProductLifecycleStatus](https://cdisc.org/odm2/enum/DataProductLifecycleStatus)
+URI: [dds:enum/DataProductLifecycleStatus](https://cdisc.org/ddsenum/DataProductLifecycleStatus)
 
 ## Permissible Values
 | Value | Meaning | Description |

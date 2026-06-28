@@ -14,7 +14,7 @@ _Data contexts that apply to this version of the metadata._
 
 
 
-URI: [odm:slot/whereClauses](https://cdisc.org/odm2/slot/whereClauses)
+URI: [dds:slot/whereClauses](https://cdisc.org/ddsslot/whereClauses)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/whereClauses](https://cdisc.org/odm2/slot/whereClauses)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:whereClauses |
-| native | odm:whereClauses |
+| self | dds:whereClauses |
+| native | dds:whereClauses |
 
 
 

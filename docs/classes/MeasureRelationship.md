@@ -14,7 +14,7 @@ _A relationship element that associates a DataAttribute with a Measure_
 
 
 
-URI: [odm:class/MeasureRelationship](https://cdisc.org/odm2/class/MeasureRelationship)
+URI: [dds:class/MeasureRelationship](https://cdisc.org/ddsclass/MeasureRelationship)
 
 
 ```mermaid
@@ -139,9 +139,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -207,8 +207,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:MeasureRelationship |
-| native | odm:MeasureRelationship |
+| self | dds:MeasureRelationship |
+| native | dds:MeasureRelationship |
 | exact | sdmx:MeasureRelationship |
 
 

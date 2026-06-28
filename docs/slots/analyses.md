@@ -14,7 +14,7 @@ _Analyses defined in this version of the metadata._
 
 
 
-URI: [odm:slot/analyses](https://cdisc.org/odm2/slot/analyses)
+URI: [dds:slot/analyses](https://cdisc.org/ddsslot/analyses)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/analyses](https://cdisc.org/odm2/slot/analyses)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:analyses |
-| native | odm:analyses |
+| self | dds:analyses |
+| native | dds:analyses |
 
 
 

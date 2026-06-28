@@ -14,7 +14,7 @@ _Name of a standard format definition_
 
 
 
-URI: [odm:slot/formatName](https://cdisc.org/odm2/slot/formatName)
+URI: [dds:slot/formatName](https://cdisc.org/ddsslot/formatName)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/formatName](https://cdisc.org/odm2/slot/formatName)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:formatName |
-| native | odm:formatName |
+| self | dds:formatName |
+| native | dds:formatName |
 
 
 

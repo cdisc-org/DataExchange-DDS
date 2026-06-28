@@ -14,7 +14,7 @@ _Version of Define-XML specification used_
 
 
 
-URI: [odm:slot/defineVersion](https://cdisc.org/odm2/slot/defineVersion)
+URI: [dds:slot/defineVersion](https://cdisc.org/ddsslot/defineVersion)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/defineVersion](https://cdisc.org/odm2/slot/defineVersion)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:defineVersion |
-| native | odm:defineVersion |
+| self | dds:defineVersion |
+| native | dds:defineVersion |
 
 
 

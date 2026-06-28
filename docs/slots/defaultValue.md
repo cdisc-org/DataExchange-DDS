@@ -14,7 +14,7 @@ _A default value for the parameter._
 
 
 
-URI: [odm:slot/defaultValue](https://cdisc.org/odm2/slot/defaultValue)
+URI: [dds:slot/defaultValue](https://cdisc.org/ddsslot/defaultValue)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/defaultValue](https://cdisc.org/odm2/slot/defaultValue)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:defaultValue |
-| native | odm:defaultValue |
+| self | dds:defaultValue |
+| native | dds:defaultValue |
 
 
 

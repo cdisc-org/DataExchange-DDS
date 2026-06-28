@@ -14,7 +14,7 @@ _Relationship to the referencing entity_
 
 
 
-URI: [odm:slot/relationship](https://cdisc.org/odm2/slot/relationship)
+URI: [dds:slot/relationship](https://cdisc.org/ddsslot/relationship)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/relationship](https://cdisc.org/odm2/slot/relationship)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:relationship |
-| native | odm:relationship |
+| self | dds:relationship |
+| native | dds:relationship |
 
 
 

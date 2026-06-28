@@ -14,7 +14,7 @@ _An entity that represents information about a specific user of a clinical data 
 
 
 
-URI: [odm:class/User](https://cdisc.org/odm2/class/User)
+URI: [dds:class/User](https://cdisc.org/ddsclass/User)
 
 
 ```mermaid
@@ -149,8 +149,8 @@ User ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:User |
-| native | odm:User |
+| self | dds:User |
+| native | dds:User |
 | exact | odm:User |
 | broad | prov:Agent |
 

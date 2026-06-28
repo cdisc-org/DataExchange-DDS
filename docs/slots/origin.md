@@ -14,7 +14,7 @@ _The origin of the data_
 
 
 
-URI: [odm:slot/origin](https://cdisc.org/odm2/slot/origin)
+URI: [dds:slot/origin](https://cdisc.org/ddsslot/origin)
 <!-- no inheritance hierarchy -->
 
 
@@ -45,6 +45,7 @@ URI: [odm:slot/origin](https://cdisc.org/odm2/slot/origin)
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 ### Slot Characteristics
 
 | Property | Value |
@@ -80,8 +81,8 @@ URI: [odm:slot/origin](https://cdisc.org/odm2/slot/origin)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:origin |
-| native | odm:origin |
+| self | dds:origin |
+| native | dds:origin |
 
 
 
@@ -98,7 +99,9 @@ owner: Item
 domain_of:
 - Item
 range: Origin
+multivalued: true
 inlined: true
+inlined_as_list: true
 
 ```
 </details></div>

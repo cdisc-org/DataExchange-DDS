@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/documents](https://cdisc.org/odm2/slot/documents)
+URI: [dds:slot/documents](https://cdisc.org/ddsslot/documents)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/documents](https://cdisc.org/odm2/slot/documents)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Comment](../classes/Comment.md), [Method](../classes/Method.md), [Origin](../classes/Origin.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/documents](https://cdisc.org/odm2/slot/documents)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:documents |
-| native | odm:documents |
+| self | dds:documents |
+| native | dds:documents |
 
 
 
@@ -79,6 +79,7 @@ domain_of:
 - Comment
 - Method
 - Origin
+range: string
 
 ```
 </details></div>

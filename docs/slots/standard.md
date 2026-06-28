@@ -14,7 +14,7 @@ _Reference to the standard being implemented_
 
 
 
-URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
+URI: [dds:slot/standard](https://cdisc.org/ddsslot/standard)
 <!-- no inheritance hierarchy -->
 
 
@@ -83,8 +83,8 @@ URI: [odm:slot/standard](https://cdisc.org/odm2/slot/standard)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:standard |
-| native | odm:standard |
+| self | dds:standard |
+| native | dds:standard |
 
 
 

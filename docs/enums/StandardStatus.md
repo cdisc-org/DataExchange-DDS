@@ -15,7 +15,7 @@ _An enumeration that defines permissible values for standard status_
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/StandardStatus](https://cdisc.org/odm2/enum/StandardStatus)
+URI: [dds:enum/StandardStatus](https://cdisc.org/ddsenum/StandardStatus)
 
 ## Permissible Values
 | Value | Meaning | Description |

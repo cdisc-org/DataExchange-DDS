@@ -14,7 +14,7 @@ _For numeric values, the number of significant digits_
 
 
 
-URI: [odm:slot/significantDigits](https://cdisc.org/odm2/slot/significantDigits)
+URI: [dds:slot/significantDigits](https://cdisc.org/ddsslot/significantDigits)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/significantDigits](https://cdisc.org/odm2/slot/significantDigits)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:significantDigits |
-| native | odm:significantDigits |
+| self | dds:significantDigits |
+| native | dds:significantDigits |
 
 
 

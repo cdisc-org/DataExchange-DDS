@@ -16,7 +16,7 @@ _Expressions and parameters from Method can be generic or implementation-specifi
 
 
 
-URI: [odm:class/Analysis](https://cdisc.org/odm2/class/Analysis)
+URI: [dds:class/Analysis](https://cdisc.org/ddsclass/Analysis)
 
 
 ```mermaid
@@ -25,7 +25,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -117,6 +116,20 @@ FormalExpression {
     string label  
     string uuid  
 }
+Method {
+    MethodType type  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
 Parameter {
     string defaultValue  
     boolean required  
@@ -197,6 +210,7 @@ WhereClause {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -223,6 +237,12 @@ FormalExpression ||--|o ReturnValue : "returnValue"
 FormalExpression ||--}o Coding : "coding"
 FormalExpression ||--}o Parameter : "parameters"
 FormalExpression ||--}o Resource : "externalCodeLibs"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Parameter ||--}o CodeList : "codeList"
 Parameter ||--}o Coding : "coding"
 Parameter ||--}o ConceptProperty : "conceptProperty"
@@ -260,7 +280,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | ---  | --- | --- | --- |
 | [analysisReason](../slots/analysisReason.md) | 0..1 <br/> [String](../types/String.md) | The reason this analysis was performed. | direct |
 | [analysisPurpose](../slots/analysisPurpose.md) | 0..1 <br/> [String](../types/String.md) | The purpose or role of this analysis in the study. | direct |
-| [analysisMethod](../slots/analysisMethod.md) | 0..1 <br/> [String](../types/String.md) | Generic method used to perform this analysis. any_of:<br>  - range: Method<br>  - range: AnalysisMethod | direct |
+| [analysisMethod](../slots/analysisMethod.md) | 0..1 <br/> [Method](../classes/Method.md) | Generic method used to perform this analysis. | direct |
 | [applicableWhen](../slots/applicableWhen.md) | * <br/> [WhereClause](../classes/WhereClause.md) | The conditions (e.g. population, time period etc.) that must be met for this analysis to be applicable. | direct |
 | [inputData](../slots/inputData.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[Dataset](../classes/Dataset.md) | Datasets or slices/subsets of datasets asked for by this analysis. If a Item is referenced by a Parameter e.g. Analysis Variable, make sure to include its parent ItemGroup here. | direct |
 | [version](../slots/version.md) | 0..1 <br/> [String](../types/String.md) | The version of the external resources | [Versioned](../classes/Versioned.md) |
@@ -325,8 +345,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Analysis |
-| native | odm:Analysis |
+| self | dds:Analysis |
+| native | dds:Analysis |
 
 
 
@@ -367,12 +387,12 @@ attributes:
     - Analysis
   analysisMethod:
     name: analysisMethod
-    description: "Generic method used to perform this analysis. any_of:\n  - range:\
-      \ Method\n  - range: AnalysisMethod"
+    description: Generic method used to perform this analysis.
     from_schema: https://cdisc.org/dds
     domain_of:
     - Dataflow
     - Analysis
+    range: Method
   applicableWhen:
     name: applicableWhen
     description: The conditions (e.g. population, time period etc.) that must be met
@@ -426,6 +446,7 @@ attributes:
     owner: Analysis
     domain_of:
     - Analysis
+    range: string
   analysisPurpose:
     name: analysisPurpose
     description: The purpose or role of this analysis in the study.
@@ -434,15 +455,16 @@ attributes:
     owner: Analysis
     domain_of:
     - Analysis
+    range: string
   analysisMethod:
     name: analysisMethod
-    description: "Generic method used to perform this analysis. any_of:\n  - range:\
-      \ Method\n  - range: AnalysisMethod"
+    description: Generic method used to perform this analysis.
     from_schema: https://cdisc.org/dds
     owner: Analysis
     domain_of:
     - Dataflow
     - Analysis
+    range: Method
   applicableWhen:
     name: applicableWhen
     description: The conditions (e.g. population, time period etc.) that must be met
@@ -467,6 +489,7 @@ attributes:
     owner: Analysis
     domain_of:
     - Analysis
+    range: string
     multivalued: true
     inlined: false
     any_of:

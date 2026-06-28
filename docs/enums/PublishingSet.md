@@ -15,7 +15,7 @@ _An enumeration that defines permissible values for publishing sets_
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/PublishingSet](https://cdisc.org/odm2/enum/PublishingSet)
+URI: [dds:enum/PublishingSet](https://cdisc.org/ddsenum/PublishingSet)
 
 ## Permissible Values
 | Value | Meaning | Description |

@@ -14,7 +14,7 @@ _The value of the CodeListItem before decoding_
 
 
 
-URI: [odm:slot/codedValue](https://cdisc.org/odm2/slot/codedValue)
+URI: [dds:slot/codedValue](https://cdisc.org/ddsslot/codedValue)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/codedValue](https://cdisc.org/odm2/slot/codedValue)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:codedValue |
-| native | odm:codedValue |
+| self | dds:codedValue |
+| native | dds:codedValue |
 
 
 

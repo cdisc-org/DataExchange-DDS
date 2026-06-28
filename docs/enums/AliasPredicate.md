@@ -15,7 +15,7 @@ _An enumeration that defines permissible values for the relationship between an 
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/AliasPredicate](https://cdisc.org/odm2/enum/AliasPredicate)
+URI: [dds:enum/AliasPredicate](https://cdisc.org/ddsenum/AliasPredicate)
 
 ## Permissible Values
 | Value | Meaning | Description |

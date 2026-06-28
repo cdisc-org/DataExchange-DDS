@@ -14,7 +14,7 @@ _A data source that provides the origin of information for an item_
 
 
 
-URI: [odm:class/SourceItem](https://cdisc.org/odm2/class/SourceItem)
+URI: [dds:class/SourceItem](https://cdisc.org/ddsclass/SourceItem)
 
 
 ```mermaid
@@ -209,9 +209,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -289,8 +289,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:SourceItem |
-| native | odm:SourceItem |
+| self | dds:SourceItem |
+| native | dds:SourceItem |
 
 
 
@@ -401,6 +401,7 @@ attributes:
     owner: SourceItem
     domain_of:
     - SourceItem
+    range: string
     multivalued: true
     inlined: false
     any_of:

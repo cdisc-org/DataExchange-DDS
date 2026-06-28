@@ -14,7 +14,7 @@ _Variable relationship descriptive linking phrase._
 
 
 
-URI: [odm:slot/linkingPhrase](https://cdisc.org/odm2/slot/linkingPhrase)
+URI: [dds:slot/linkingPhrase](https://cdisc.org/ddsslot/linkingPhrase)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/linkingPhrase](https://cdisc.org/odm2/slot/linkingPhrase)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:linkingPhrase |
-| native | odm:linkingPhrase |
+| self | dds:linkingPhrase |
+| native | dds:linkingPhrase |
 
 
 

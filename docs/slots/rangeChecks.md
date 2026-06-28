@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/rangeChecks](https://cdisc.org/odm2/slot/rangeChecks)
+URI: [dds:slot/rangeChecks](https://cdisc.org/ddsslot/rangeChecks)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/rangeChecks](https://cdisc.org/odm2/slot/rangeChecks)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Item](../classes/Item.md), [Condition](../classes/Condition.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/rangeChecks](https://cdisc.org/odm2/slot/rangeChecks)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:rangeChecks |
-| native | odm:rangeChecks |
+| self | dds:rangeChecks |
+| native | dds:rangeChecks |
 
 
 
@@ -76,6 +76,7 @@ name: rangeChecks
 domain_of:
 - Item
 - Condition
+range: string
 
 ```
 </details></div>

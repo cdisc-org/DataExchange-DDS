@@ -14,7 +14,7 @@ _The Data Provider that is part of this agreement_
 
 
 
-URI: [odm:slot/provider](https://cdisc.org/odm2/slot/provider)
+URI: [dds:slot/provider](https://cdisc.org/ddsslot/provider)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/provider](https://cdisc.org/odm2/slot/provider)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:provider |
-| native | odm:provider |
+| self | dds:provider |
+| native | dds:provider |
 
 
 

@@ -14,7 +14,7 @@ _Short variable relationship linking phrase for programming purposes._
 
 
 
-URI: [odm:slot/predicateTerm](https://cdisc.org/odm2/slot/predicateTerm)
+URI: [dds:slot/predicateTerm](https://cdisc.org/ddsslot/predicateTerm)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/predicateTerm](https://cdisc.org/odm2/slot/predicateTerm)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:predicateTerm |
-| native | odm:predicateTerm |
+| self | dds:predicateTerm |
+| native | dds:predicateTerm |
 
 
 

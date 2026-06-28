@@ -14,7 +14,7 @@ _A collection element that groups observations sharing the same dimensionality, 
 
 
 
-URI: [odm:class/Dataset](https://cdisc.org/odm2/class/Dataset)
+URI: [dds:class/Dataset](https://cdisc.org/ddsclass/Dataset)
 
 
 ```mermaid
@@ -23,7 +23,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -344,6 +343,7 @@ WhereClause {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -401,9 +401,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -536,8 +536,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Dataset |
-| native | odm:Dataset |
+| self | dds:Dataset |
+| native | dds:Dataset |
 | narrow | sdmx:JsonDataset, sdmx:CsvDataset, sdmx:StructureSpecificDataset |
 | close | qb:Dataset, sdmx:Dataset, dprod:Dataset, dcat:Dataset |
 
@@ -723,6 +723,7 @@ attributes:
     domain_of:
     - Dictionary
     - Dataset
+    range: string
     any_of:
     - range: Organization
     - range: string
@@ -735,6 +736,7 @@ attributes:
     owner: Dataset
     domain_of:
     - Dataset
+    range: string
     required: true
     multivalued: true
     inlined: true
@@ -750,6 +752,7 @@ attributes:
     owner: Dataset
     domain_of:
     - Dataset
+    range: string
   distribution:
     name: distribution
     description: Representations of this dataset in various formats or access methods
@@ -775,6 +778,7 @@ attributes:
     domain_of:
     - Dataset
     - Distribution
+    range: string
   hasPolicy:
     name: hasPolicy
     description: Access or usage policy applied to this dataset
@@ -784,6 +788,7 @@ attributes:
     domain_of:
     - Dataset
     - DataProduct
+    range: string
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -795,6 +800,7 @@ attributes:
     owner: Dataset
     domain_of:
     - Dataset
+    range: string
   version:
     name: version
     description: The version of the external resources

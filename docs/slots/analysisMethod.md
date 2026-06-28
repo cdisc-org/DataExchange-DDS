@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/analysisMethod](https://cdisc.org/odm2/slot/analysisMethod)
+URI: [dds:slot/analysisMethod](https://cdisc.org/ddsslot/analysisMethod)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/analysisMethod](https://cdisc.org/odm2/slot/analysisMethod)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dataflow](../classes/Dataflow.md), [Analysis](../classes/Analysis.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/analysisMethod](https://cdisc.org/odm2/slot/analysisMethod)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:analysisMethod |
-| native | odm:analysisMethod |
+| self | dds:analysisMethod |
+| native | dds:analysisMethod |
 
 
 
@@ -76,6 +76,7 @@ name: analysisMethod
 domain_of:
 - Dataflow
 - Analysis
+range: string
 
 ```
 </details></div>

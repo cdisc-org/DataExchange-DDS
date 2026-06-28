@@ -14,7 +14,7 @@ _Distribution(s) for which this service provides access_
 
 
 
-URI: [odm:slot/isAccessServiceOf](https://cdisc.org/odm2/slot/isAccessServiceOf)
+URI: [dds:slot/isAccessServiceOf](https://cdisc.org/ddsslot/isAccessServiceOf)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/isAccessServiceOf](https://cdisc.org/odm2/slot/isAccessServiceOf)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:isAccessServiceOf |
-| native | odm:isAccessServiceOf |
+| self | dds:isAccessServiceOf |
+| native | dds:isAccessServiceOf |
 
 
 

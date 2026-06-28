@@ -14,7 +14,7 @@ _Condition that defines when collection may be exempted_
 
 
 
-URI: [odm:slot/collectionExceptionCondition](https://cdisc.org/odm2/slot/collectionExceptionCondition)
+URI: [dds:slot/collectionExceptionCondition](https://cdisc.org/ddsslot/collectionExceptionCondition)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/collectionExceptionCondition](https://cdisc.org/odm2/slot/collect
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:collectionExceptionCondition |
-| native | odm:collectionExceptionCondition |
+| self | dds:collectionExceptionCondition |
+| native | dds:collectionExceptionCondition |
 
 
 

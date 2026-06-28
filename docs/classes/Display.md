@@ -14,7 +14,7 @@ _A rendered output of an analysis result._
 
 
 
-URI: [odm:class/Display](https://cdisc.org/odm2/class/Display)
+URI: [dds:class/Display](https://cdisc.org/ddsclass/Display)
 
 
 ```mermaid
@@ -23,7 +23,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -101,6 +100,20 @@ FormalExpression {
     string label  
     string uuid  
 }
+Method {
+    MethodType type  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
 ReifiedConcept {
     string name  
     string description  
@@ -146,6 +159,7 @@ WhereClause {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -167,6 +181,12 @@ FormalExpression ||--|o ReturnValue : "returnValue"
 FormalExpression ||--}o Coding : "coding"
 FormalExpression ||--}o Parameter : "parameters"
 FormalExpression ||--}o Resource : "externalCodeLibs"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ReifiedConcept ||--}o Coding : "coding"
 ReifiedConcept ||--}o Comment : "comments"
 ReifiedConcept ||--}o ConceptProperty : "properties"
@@ -252,8 +272,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Display |
-| native | odm:Display |
+| self | dds:Display |
+| native | dds:Display |
 
 
 
@@ -335,6 +355,7 @@ attributes:
     owner: Display
     domain_of:
     - Display
+    range: string
   location:
     name: location
     description: Reference to documents / location containing the display.

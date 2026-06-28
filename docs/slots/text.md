@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/text](https://cdisc.org/odm2/slot/text)
+URI: [dds:slot/text](https://cdisc.org/ddsslot/text)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/text](https://cdisc.org/odm2/slot/text)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Comment](../classes/Comment.md), [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/text](https://cdisc.org/odm2/slot/text)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:text |
-| native | odm:text |
+| self | dds:text |
+| native | dds:text |
 
 
 
@@ -76,6 +76,7 @@ name: text
 domain_of:
 - Comment
 - SiteOrSponsorComment
+range: string
 
 ```
 </details></div>

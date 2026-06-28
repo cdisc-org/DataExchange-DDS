@@ -14,7 +14,7 @@ _A service element that provides an API or endpoint for serving or receiving dat
 
 
 
-URI: [odm:class/DataService](https://cdisc.org/odm2/class/DataService)
+URI: [dds:class/DataService](https://cdisc.org/ddsclass/DataService)
 
 
 ```mermaid
@@ -212,8 +212,8 @@ ReturnValue ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DataService |
-| native | odm:DataService |
+| self | dds:DataService |
+| native | dds:DataService |
 | exact | dprod:DataService, dcat:DataService |
 
 
@@ -294,6 +294,7 @@ attributes:
     owner: DataService
     domain_of:
     - DataService
+    range: string
   securitySchemaType:
     name: securitySchemaType
     description: Security or authentication method used (e.g., OAuth2)
@@ -302,6 +303,7 @@ attributes:
     owner: DataService
     domain_of:
     - DataService
+    range: string
   resourceType:
     name: resourceType
     description: Type of resource (e.g.,  "ODM", "HL7-FHIR", "HL7-CDA", "HL7-v2",

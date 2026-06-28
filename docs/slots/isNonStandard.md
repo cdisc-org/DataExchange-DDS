@@ -14,7 +14,7 @@ _One or more members of this set are non-standard extensions_
 
 
 
-URI: [odm:slot/isNonStandard](https://cdisc.org/odm2/slot/isNonStandard)
+URI: [dds:slot/isNonStandard](https://cdisc.org/ddsslot/isNonStandard)
 <!-- no inheritance hierarchy -->
 
 
@@ -83,8 +83,8 @@ URI: [odm:slot/isNonStandard](https://cdisc.org/odm2/slot/isNonStandard)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:isNonStandard |
-| native | odm:isNonStandard |
+| self | dds:isNonStandard |
+| native | dds:isNonStandard |
 
 
 

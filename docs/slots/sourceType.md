@@ -14,7 +14,7 @@ _who made the comment, such as Investigator, Sponsor._
 
 
 
-URI: [odm:slot/sourceType](https://cdisc.org/odm2/slot/sourceType)
+URI: [dds:slot/sourceType](https://cdisc.org/ddsslot/sourceType)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/sourceType](https://cdisc.org/odm2/slot/sourceType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:sourceType |
-| native | odm:sourceType |
+| self | dds:sourceType |
+| native | dds:sourceType |
 
 
 

@@ -14,7 +14,7 @@ _An event element that represents occurrences such as planned or unplanned encou
 
 
 
-URI: [odm:class/NominalOccurrence](https://cdisc.org/odm2/class/NominalOccurrence)
+URI: [dds:class/NominalOccurrence](https://cdisc.org/ddsclass/NominalOccurrence)
 
 
 ```mermaid
@@ -262,8 +262,8 @@ Timing ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:NominalOccurrence |
-| native | odm:NominalOccurrence |
+| self | dds:NominalOccurrence |
+| native | dds:NominalOccurrence |
 | narrow | usdm:ScheduledInstance, usdm:Encounter, usdm:InterCurrentEvent, fhir:PlanDefinition/action, fhir:ActivityDefinition, fhir:Encounter, fhir:AdverseEvent, omop:Visit_occurrence, omop:Condition_occurrence, omop:Procedure_occurrence |
 
 

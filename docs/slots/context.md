@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/context](https://cdisc.org/odm2/slot/context)
+URI: [dds:slot/context](https://cdisc.org/ddsslot/context)
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +35,7 @@ URI: [odm:slot/context](https://cdisc.org/odm2/slot/context)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md), [FormalExpression](../classes/FormalExpression.md) |
 
 ### Cardinality and Requirements
@@ -63,8 +63,8 @@ URI: [odm:slot/context](https://cdisc.org/odm2/slot/context)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:context |
-| native | odm:context |
+| self | dds:context |
+| native | dds:context |
 
 
 
@@ -77,6 +77,7 @@ name: context
 domain_of:
 - ODMFileMetadata
 - FormalExpression
+range: string
 
 ```
 </details></div>

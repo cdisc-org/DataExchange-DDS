@@ -14,7 +14,7 @@ _A data element that represents a specific piece of information within a defined
 
 
 
-URI: [odm:class/Item](https://cdisc.org/odm2/class/Item)
+URI: [dds:class/Item](https://cdisc.org/ddsclass/Item)
 
 
 ```mermaid
@@ -272,9 +272,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -325,7 +325,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [method](../slots/method.md) | 0..1 <br/> [Method](../classes/Method.md) | Reference to the Method element that describes how to derive this item's value. | direct |
 | [rangeChecks](../slots/rangeChecks.md) | * <br/> [RangeCheck](../classes/RangeCheck.md) | Range checks applied to this item (e.g. edit checks, CORE rules) | direct |
 | [applicableWhen](../slots/applicableWhen.md) | * <br/> [WhereClause](../classes/WhereClause.md) | References to different situations that define when this item applies.<br>Multiple whereClauses are combined with OR logic: the item applies if ANY referenced WhereClause matches.<br>Within each WhereClause, conditions are combined with AND logic: all conditions must be true.<br><br>Example: whereClause: ["WC.SYSBP", "WC.DIABP"] means the item applies when<br>(all conditions in WC.SYSBP are true) OR (all conditions in WC.DIABP are true). | direct |
-| [origin](../slots/origin.md) | 0..1 <br/> [Origin](../classes/Origin.md) | The origin of the data | direct |
+| [origin](../slots/origin.md) | * <br/> [Origin](../classes/Origin.md) | The origin of the data | direct |
 | [conceptProperty](../slots/conceptProperty.md) | 0..1 <br/> [ConceptProperty](../classes/ConceptProperty.md) | Reference to a abstract concept property that this item is a specialization / instance of. | direct |
 | [role](../slots/role.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Identifies the role of the item within the containing context, taken from the roleCodeList | [IsODMItem](../classes/IsODMItem.md) |
 | [roleCodeList](../slots/roleCodeList.md) | 0..1 <br/> [CodeList](../classes/CodeList.md) | Reference to the CodeList that defines the roles for this item | [IsODMItem](../classes/IsODMItem.md) |
@@ -428,8 +428,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Item |
-| native | odm:Item |
+| self | dds:Item |
+| native | dds:Item |
 | narrow | fhir:StructureDefinition/variable, fhir:Questionnaire/item, qb:ComponentProperty, omop:Field, omop:DerivedColumn |
 | related | usdm:BiomedicalConceptProperty, usdm:DerivationConceptProperty, usdm:AnalysisConceptProperty, fhir:ElementDefinition, qb:Measure, qb:Attribute, sdmx:Concept, sdmx:Component, sdmx:Representation, osb:sdtm_variable, osb:specimen, osb:unit_dimension, osb:std_unit |
 | close | odm:ItemRef, odm:ItemDef, qb:ComponentSpecification, sdmx:DataAttribute, sdmx:MetadataAttribute |
@@ -569,7 +569,9 @@ attributes:
     domain_of:
     - Item
     range: Origin
+    multivalued: true
     inlined: true
+    inlined_as_list: true
   conceptProperty:
     name: conceptProperty
     description: Reference to a abstract concept property that this item is a specialization
@@ -717,7 +719,9 @@ attributes:
     domain_of:
     - Item
     range: Origin
+    multivalued: true
     inlined: true
+    inlined_as_list: true
   conceptProperty:
     name: conceptProperty
     description: Reference to a abstract concept property that this item is a specialization

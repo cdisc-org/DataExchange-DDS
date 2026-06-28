@@ -14,7 +14,7 @@ _Type or classification of the dataset_
 
 
 
-URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
+URI: [dds:slot/datasetType](https://cdisc.org/ddsslot/datasetType)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dataset](../classes/Dataset.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/datasetType](https://cdisc.org/odm2/slot/datasetType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:datasetType |
-| native | odm:datasetType |
+| self | dds:datasetType |
+| native | dds:datasetType |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: Dataset
 domain_of:
 - Dataset
+range: string
 
 ```
 </details></div>

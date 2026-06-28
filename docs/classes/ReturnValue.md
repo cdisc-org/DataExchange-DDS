@@ -14,7 +14,7 @@ _An output specification that defines the details of what a formal expression re
 
 
 
-URI: [odm:class/ReturnValue](https://cdisc.org/odm2/class/ReturnValue)
+URI: [dds:class/ReturnValue](https://cdisc.org/ddsclass/ReturnValue)
 
 
 ```mermaid
@@ -102,8 +102,8 @@ ReturnValue ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ReturnValue |
-| native | odm:ReturnValue |
+| self | dds:ReturnValue |
+| native | dds:ReturnValue |
 
 
 

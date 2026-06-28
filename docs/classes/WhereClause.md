@@ -14,7 +14,7 @@ _A conditional element that describes the circumstances under which a containing
 
 
 
-URI: [odm:class/WhereClause](https://cdisc.org/odm2/class/WhereClause)
+URI: [dds:class/WhereClause](https://cdisc.org/ddsclass/WhereClause)
 
 
 ```mermaid
@@ -200,8 +200,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:WhereClause |
-| native | odm:WhereClause |
+| self | dds:WhereClause |
+| native | dds:WhereClause |
 | related | fhir:StructureDefinition/context, qb:ObservationGroup, qb:Slice, sdmx:CubeRegion, sdmx:MetadataTargetRegion |
 | close | sdmx:AttachmentConstraint |
 

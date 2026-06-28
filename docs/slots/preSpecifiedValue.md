@@ -14,7 +14,7 @@ _Prefill value or a default value for a field that is automatically populated._
 
 
 
-URI: [odm:slot/preSpecifiedValue](https://cdisc.org/odm2/slot/preSpecifiedValue)
+URI: [dds:slot/preSpecifiedValue](https://cdisc.org/ddsslot/preSpecifiedValue)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/preSpecifiedValue](https://cdisc.org/odm2/slot/preSpecifiedValue)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
 | Domain Of | [IsODMItem](../classes/IsODMItem.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:preSpecifiedValue |
-| native | odm:preSpecifiedValue |
+| self | dds:preSpecifiedValue |
+| native | dds:preSpecifiedValue |
 
 
 
@@ -108,6 +108,7 @@ rank: 1000
 owner: IsODMItem
 domain_of:
 - IsODMItem
+range: string
 any_of:
 - range: string
 - range: TranslatedText

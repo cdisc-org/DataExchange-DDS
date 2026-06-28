@@ -14,7 +14,7 @@ _Indicates whether this parameter must be provided when the containing expressio
 
 
 
-URI: [odm:slot/required](https://cdisc.org/odm2/slot/required)
+URI: [dds:slot/required](https://cdisc.org/ddsslot/required)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/required](https://cdisc.org/odm2/slot/required)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:required |
-| native | odm:required |
+| self | dds:required |
+| native | dds:required |
 
 
 

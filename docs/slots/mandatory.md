@@ -14,7 +14,7 @@ _Is this element required?_
 
 
 
-URI: [odm:slot/mandatory](https://cdisc.org/odm2/slot/mandatory)
+URI: [dds:slot/mandatory](https://cdisc.org/ddsslot/mandatory)
 <!-- no inheritance hierarchy -->
 
 
@@ -103,8 +103,8 @@ URI: [odm:slot/mandatory](https://cdisc.org/odm2/slot/mandatory)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:mandatory |
-| native | odm:mandatory |
+| self | dds:mandatory |
+| native | dds:mandatory |
 
 
 

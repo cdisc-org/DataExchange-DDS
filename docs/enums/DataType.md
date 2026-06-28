@@ -15,7 +15,7 @@ _An enumeration that defines the fundamental data types available for items_
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/DataType](https://cdisc.org/odm2/enum/DataType)
+URI: [dds:enum/DataType](https://cdisc.org/ddsenum/DataType)
 
 ## Permissible Values
 | Value | Meaning | Description |

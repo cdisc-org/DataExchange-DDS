@@ -14,7 +14,7 @@ _Ordered list of Items that define the dataset key structure for sorting and uni
 
 
 
-URI: [odm:slot/keySequence](https://cdisc.org/odm2/slot/keySequence)
+URI: [dds:slot/keySequence](https://cdisc.org/ddsslot/keySequence)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/keySequence](https://cdisc.org/odm2/slot/keySequence)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:keySequence |
-| native | odm:keySequence |
+| self | dds:keySequence |
+| native | dds:keySequence |
 | close | odm:ItemRef.KeySequence, sdmx:DimensionDescriptor |
 
 

@@ -14,7 +14,7 @@ _Values to compare against_
 
 
 
-URI: [odm:slot/checkValues](https://cdisc.org/odm2/slot/checkValues)
+URI: [dds:slot/checkValues](https://cdisc.org/ddsslot/checkValues)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/checkValues](https://cdisc.org/odm2/slot/checkValues)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:checkValues |
-| native | odm:checkValues |
+| self | dds:checkValues |
+| native | dds:checkValues |
 
 
 

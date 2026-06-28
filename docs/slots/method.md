@@ -14,7 +14,7 @@ _Reference to the Method element that describes how to derive this item's value.
 
 
 
-URI: [odm:slot/method](https://cdisc.org/odm2/slot/method)
+URI: [dds:slot/method](https://cdisc.org/ddsslot/method)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/method](https://cdisc.org/odm2/slot/method)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:method |
-| native | odm:method |
+| self | dds:method |
+| native | dds:method |
 
 
 

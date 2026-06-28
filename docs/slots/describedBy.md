@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/describedBy](https://cdisc.org/odm2/slot/describedBy)
+URI: [dds:slot/describedBy](https://cdisc.org/ddsslot/describedBy)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/describedBy](https://cdisc.org/odm2/slot/describedBy)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dataset](../classes/Dataset.md), [DatasetKey](../classes/DatasetKey.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/describedBy](https://cdisc.org/odm2/slot/describedBy)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:describedBy |
-| native | odm:describedBy |
+| self | dds:describedBy |
+| native | dds:describedBy |
 
 
 
@@ -78,6 +78,7 @@ name: describedBy
 domain_of:
 - Dataset
 - DatasetKey
+range: string
 
 ```
 </details></div>

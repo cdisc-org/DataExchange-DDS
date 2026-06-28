@@ -16,7 +16,7 @@ _An abstract data field that represents a component in a data structure definiti
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [odm:class/CubeComponent](https://cdisc.org/odm2/class/CubeComponent)
+URI: [dds:class/CubeComponent](https://cdisc.org/ddsclass/CubeComponent)
 
 
 ```mermaid
@@ -257,9 +257,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -382,8 +382,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:CubeComponent |
-| native | odm:CubeComponent |
+| self | dds:CubeComponent |
+| native | dds:CubeComponent |
 | exact | sdmx:Component |
 
 
@@ -483,6 +483,7 @@ attributes:
     - IsODMItem
     - Organization
     - CubeComponent
+    range: string
   missingHandling:
     name: missingHandling
     description: The method for handling missing values in the measure property

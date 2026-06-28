@@ -1,4 +1,4 @@
-# Data-Definition-Specification
+# Data Definition Specification (DDS)
 
 Data model for supply and demand data contracts to complement CDISC USDM, ODM, and Dataset-JSON. This LinkML version includes semantics to act as Rosetta Stone for SDMX, FHIR, OMOP, RDF, and CDISC.
 
@@ -13,7 +13,6 @@ Name: Data-Definition-Specification
 ```mermaid
 erDiagram
 Analysis {
-    string analysisMethod  
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
@@ -563,6 +562,7 @@ WhereClause {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -655,9 +655,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -809,7 +809,7 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [SourceItem](classes/SourceItem.md) | A data source that provides the origin of information for an item |
 | [StudyMetadata](classes/StudyMetadata.md) | A mixin that provides study-level metadata attributes including study identification and protocol information |
 | [SubClass](classes/SubClass.md) | A specific SubClass within a CDISC model Class. |
-| [TranslatedText](classes/TranslatedText.md) |  |
+| [TranslatedText](classes/TranslatedText.md) | A container of the language-specific translations of a single piece of text (a set of localised strings), as opposed to one Translation. |
 | [Translation](classes/Translation.md) | A text representation that provides content in a specific language, used for multilingual support |
 | [Versioned](classes/Versioned.md) | A mixin that provides version and connectivity information, including version numbers and resource references |
 
@@ -1038,8 +1038,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [SoftHard](enums/SoftHard.md) | An enumeration that indicates whether a validation check should be treated as an error or a warning |
 | [MethodType](enums/MethodType.md) | An enumeration that defines the types of computational methods available for data processing |
 | [DataType](enums/DataType.md) | An enumeration that defines the fundamental data types available for items |
-| [OriginType](enums/OriginType.md) | An enumeration that defines the types of origins for data items. |
-| [OriginSource](enums/OriginSource.md) | An enumeration that defines the sources of data origin |
+| [OriginType](enums/OriginType.md) | An enumeration that defines the types of origins for data items. Values sourced from NCI Thesaurus subset C170449. |
+| [OriginSource](enums/OriginSource.md) | An enumeration that defines the sources of data origin Values sourced from NCI Thesaurus subset C170450. |
 | [ItemGroupType](enums/ItemGroupType.md) | An enumeration that defines the roles of an item group within a specific context |
 | [TimingType](enums/TimingType.md) | An enumeration that defines CDISC timing type values indicating the temporal relationship of an observation to a reference point |
 | [LinkingPhraseEnum](enums/LinkingPhraseEnum.md) | An enumeration that defines variable relationship descriptive linking phrases from the COSMoS SDTM BC model |

@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/measure](https://cdisc.org/odm2/slot/measure)
+URI: [dds:slot/measure](https://cdisc.org/ddsslot/measure)
 <!-- no inheritance hierarchy -->
 
 
@@ -75,8 +75,8 @@ URI: [odm:slot/measure](https://cdisc.org/odm2/slot/measure)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:measure |
-| native | odm:measure |
+| self | dds:measure |
+| native | dds:measure |
 
 
 

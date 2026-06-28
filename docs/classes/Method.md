@@ -16,7 +16,7 @@ _Analysis and Derivation concepts can be implemented by a Method. Properties can
 
 
 
-URI: [odm:class/Method](https://cdisc.org/odm2/class/Method)
+URI: [dds:class/Method](https://cdisc.org/ddsclass/Method)
 
 
 ```mermaid
@@ -273,6 +273,7 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [DataAttribute](../classes/DataAttribute.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [Method](../classes/Method.md) |
 | [DataProduct](../classes/DataProduct.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [Method](../classes/Method.md) |
 | [ProvisionAgreement](../classes/ProvisionAgreement.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [Method](../classes/Method.md) |
+| [Analysis](../classes/Analysis.md) | [analysisMethod](../slots/analysisMethod.md) | range | [Method](../classes/Method.md) |
 | [Analysis](../classes/Analysis.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [Method](../classes/Method.md) |
 | [Display](../classes/Display.md) | [wasDerivedFrom](../slots/wasDerivedFrom.md) | any_of[range] | [Method](../classes/Method.md) |
 
@@ -305,8 +306,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Method |
-| native | odm:Method |
+| self | dds:Method |
+| native | dds:Method |
 | exact | odm:MethodRef, odm:MethodDef |
 | close | fhir:Expression, omop:Transformation |
 

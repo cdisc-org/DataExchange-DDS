@@ -14,7 +14,7 @@ _Relationships between items, item groups, and other elements in this version of
 
 
 
-URI: [odm:slot/relationships](https://cdisc.org/odm2/slot/relationships)
+URI: [dds:slot/relationships](https://cdisc.org/ddsslot/relationships)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/relationships](https://cdisc.org/odm2/slot/relationships)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:relationships |
-| native | odm:relationships |
+| self | dds:relationships |
+| native | dds:relationships |
 
 
 

@@ -14,7 +14,7 @@ _Organization or system that created the ODM file_
 
 
 
-URI: [odm:slot/originator](https://cdisc.org/odm2/slot/originator)
+URI: [dds:slot/originator](https://cdisc.org/ddsslot/originator)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/originator](https://cdisc.org/odm2/slot/originator)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:originator |
-| native | odm:originator |
+| self | dds:originator |
+| native | dds:originator |
 
 
 

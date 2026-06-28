@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/evolvingStructure](https://cdisc.org/odm2/slot/evolvingStructure)
+URI: [dds:slot/evolvingStructure](https://cdisc.org/ddsslot/evolvingStructure)
 <!-- no inheritance hierarchy -->
 
 
@@ -76,8 +76,8 @@ URI: [odm:slot/evolvingStructure](https://cdisc.org/odm2/slot/evolvingStructure)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:evolvingStructure |
-| native | odm:evolvingStructure |
+| self | dds:evolvingStructure |
+| native | dds:evolvingStructure |
 
 
 

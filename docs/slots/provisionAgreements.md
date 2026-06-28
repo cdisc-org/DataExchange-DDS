@@ -14,7 +14,7 @@ _The ProvisionAgreements that this provider has with Data Consumers_
 
 
 
-URI: [odm:slot/provisionAgreements](https://cdisc.org/odm2/slot/provisionAgreements)
+URI: [dds:slot/provisionAgreements](https://cdisc.org/ddsslot/provisionAgreements)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/provisionAgreements](https://cdisc.org/odm2/slot/provisionAgreeme
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:provisionAgreements |
-| native | odm:provisionAgreements |
+| self | dds:provisionAgreements |
+| native | dds:provisionAgreements |
 
 
 

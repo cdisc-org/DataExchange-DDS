@@ -14,7 +14,7 @@ _The code system identifier_
 
 
 
-URI: [odm:slot/codeSystem](https://cdisc.org/odm2/slot/codeSystem)
+URI: [dds:slot/codeSystem](https://cdisc.org/ddsslot/codeSystem)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/codeSystem](https://cdisc.org/odm2/slot/codeSystem)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:codeSystem |
-| native | odm:codeSystem |
+| self | dds:codeSystem |
+| native | dds:codeSystem |
 
 
 

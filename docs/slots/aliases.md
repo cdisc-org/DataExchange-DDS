@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/aliases](https://cdisc.org/odm2/slot/aliases)
+URI: [dds:slot/aliases](https://cdisc.org/ddsslot/aliases)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [odm:slot/aliases](https://cdisc.org/odm2/slot/aliases)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Labelled](../classes/Labelled.md), [CodeListItem](../classes/CodeListItem.md) |
 
 ### Cardinality and Requirements
@@ -101,8 +101,8 @@ URI: [odm:slot/aliases](https://cdisc.org/odm2/slot/aliases)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:aliases |
-| native | odm:aliases |
+| self | dds:aliases |
+| native | dds:aliases |
 
 
 
@@ -115,6 +115,7 @@ name: aliases
 domain_of:
 - Labelled
 - CodeListItem
+range: string
 
 ```
 </details></div>

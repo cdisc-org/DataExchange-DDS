@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/coding](https://cdisc.org/odm2/slot/coding)
+URI: [dds:slot/coding](https://cdisc.org/ddsslot/coding)
 <!-- no inheritance hierarchy -->
 
 
@@ -74,7 +74,7 @@ URI: [odm:slot/coding](https://cdisc.org/odm2/slot/coding)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Labelled](../classes/Labelled.md), [CodeListItem](../classes/CodeListItem.md), [SourceItem](../classes/SourceItem.md) |
 
 ### Cardinality and Requirements
@@ -102,8 +102,8 @@ URI: [odm:slot/coding](https://cdisc.org/odm2/slot/coding)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:coding |
-| native | odm:coding |
+| self | dds:coding |
+| native | dds:coding |
 
 
 
@@ -117,6 +117,7 @@ domain_of:
 - Labelled
 - CodeListItem
 - SourceItem
+range: string
 
 ```
 </details></div>

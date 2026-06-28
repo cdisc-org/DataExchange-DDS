@@ -14,7 +14,7 @@ _When the resource was last updated_
 
 
 
-URI: [odm:slot/lastUpdated](https://cdisc.org/odm2/slot/lastUpdated)
+URI: [dds:slot/lastUpdated](https://cdisc.org/ddsslot/lastUpdated)
 <!-- no inheritance hierarchy -->
 
 
@@ -103,8 +103,8 @@ URI: [odm:slot/lastUpdated](https://cdisc.org/odm2/slot/lastUpdated)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:lastUpdated |
-| native | odm:lastUpdated |
+| self | dds:lastUpdated |
+| native | dds:lastUpdated |
 
 
 

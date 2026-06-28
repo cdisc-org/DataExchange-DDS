@@ -14,7 +14,7 @@ _Analysis result this display represents._
 
 
 
-URI: [odm:slot/analysis](https://cdisc.org/odm2/slot/analysis)
+URI: [dds:slot/analysis](https://cdisc.org/ddsslot/analysis)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/analysis](https://cdisc.org/odm2/slot/analysis)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:analysis |
-| native | odm:analysis |
+| self | dds:analysis |
+| native | dds:analysis |
 
 
 

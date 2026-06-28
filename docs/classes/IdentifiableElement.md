@@ -11,7 +11,7 @@ search:
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [odm:class/IdentifiableElement](https://cdisc.org/odm2/class/IdentifiableElement)
+URI: [dds:class/IdentifiableElement](https://cdisc.org/ddsclass/IdentifiableElement)
 
 
 ```mermaid
@@ -108,8 +108,8 @@ IdentifiableElement ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:IdentifiableElement |
-| native | odm:IdentifiableElement |
+| self | dds:IdentifiableElement |
+| native | dds:IdentifiableElement |
 
 
 

@@ -14,7 +14,7 @@ _Type of ODM file (e.g., Snapshot, Transactional)_
 
 
 
-URI: [odm:slot/fileType](https://cdisc.org/odm2/slot/fileType)
+URI: [dds:slot/fileType](https://cdisc.org/ddsslot/fileType)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/fileType](https://cdisc.org/odm2/slot/fileType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:fileType |
-| native | odm:fileType |
+| self | dds:fileType |
+| native | dds:fileType |
 
 
 

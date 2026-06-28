@@ -14,7 +14,7 @@ _Specifies the year of publication of the data or metadata in terms of whatever 
 
 
 
-URI: [odm:slot/publicationYear](https://cdisc.org/odm2/slot/publicationYear)
+URI: [dds:slot/publicationYear](https://cdisc.org/ddsslot/publicationYear)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/publicationYear](https://cdisc.org/odm2/slot/publicationYear)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
 
 ### Cardinality and Requirements
@@ -81,8 +81,8 @@ URI: [odm:slot/publicationYear](https://cdisc.org/odm2/slot/publicationYear)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:publicationYear |
-| native | odm:publicationYear |
+| self | dds:publicationYear |
+| native | dds:publicationYear |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
+range: string
 
 ```
 </details></div>

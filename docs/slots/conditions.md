@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/conditions](https://cdisc.org/odm2/slot/conditions)
+URI: [dds:slot/conditions](https://cdisc.org/ddsslot/conditions)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/conditions](https://cdisc.org/odm2/slot/conditions)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md), [WhereClause](../classes/WhereClause.md), [Condition](../classes/Condition.md), [Parameter](../classes/Parameter.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/conditions](https://cdisc.org/odm2/slot/conditions)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:conditions |
-| native | odm:conditions |
+| self | dds:conditions |
+| native | dds:conditions |
 
 
 
@@ -80,6 +80,7 @@ domain_of:
 - WhereClause
 - Condition
 - Parameter
+range: string
 
 ```
 </details></div>

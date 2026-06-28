@@ -14,7 +14,7 @@ _A dictionary that defines a set of codes and their meanings_
 
 
 
-URI: [odm:class/Dictionary](https://cdisc.org/odm2/class/Dictionary)
+URI: [dds:class/Dictionary](https://cdisc.org/ddsclass/Dictionary)
 
 
 ```mermaid
@@ -105,8 +105,8 @@ Dictionary ||--}o Coding : "coding, terms"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Dictionary |
-| native | odm:Dictionary |
+| self | dds:Dictionary |
+| native | dds:Dictionary |
 
 
 
@@ -188,6 +188,7 @@ attributes:
     domain_of:
     - Dictionary
     - Dataset
+    range: string
     any_of:
     - range: Organization
     - range: string

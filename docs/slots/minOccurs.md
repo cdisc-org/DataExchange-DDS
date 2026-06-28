@@ -14,7 +14,7 @@ _Minimum number of occurrences of this property in the context. Set to >0 to man
 
 
 
-URI: [odm:slot/minOccurs](https://cdisc.org/odm2/slot/minOccurs)
+URI: [dds:slot/minOccurs](https://cdisc.org/ddsslot/minOccurs)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/minOccurs](https://cdisc.org/odm2/slot/minOccurs)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:minOccurs |
-| native | odm:minOccurs |
+| self | dds:minOccurs |
+| native | dds:minOccurs |
 
 
 

@@ -14,7 +14,7 @@ _Path to a resource (e.g. File, FHIR datasource) that is the source of this item
 
 
 
-URI: [odm:slot/resource](https://cdisc.org/odm2/slot/resource)
+URI: [dds:slot/resource](https://cdisc.org/ddsslot/resource)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/resource](https://cdisc.org/odm2/slot/resource)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md) |
 | Domain Of | [SourceItem](../classes/SourceItem.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:resource |
-| native | odm:resource |
+| self | dds:resource |
+| native | dds:resource |
 
 
 
@@ -109,6 +109,7 @@ rank: 1000
 owner: SourceItem
 domain_of:
 - SourceItem
+range: string
 multivalued: true
 inlined: false
 any_of:

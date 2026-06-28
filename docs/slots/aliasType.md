@@ -14,7 +14,7 @@ _How this coding is related in the context of its parent element_
 
 
 
-URI: [odm:slot/aliasType](https://cdisc.org/odm2/slot/aliasType)
+URI: [dds:slot/aliasType](https://cdisc.org/ddsslot/aliasType)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/aliasType](https://cdisc.org/odm2/slot/aliasType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:aliasType |
-| native | odm:aliasType |
+| self | dds:aliasType |
+| native | dds:aliasType |
 
 
 

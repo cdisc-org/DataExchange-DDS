@@ -14,7 +14,7 @@ _A comprehensive reference element that points to an external document, combinin
 
 
 
-URI: [odm:class/DocumentReference](https://cdisc.org/odm2/class/DocumentReference)
+URI: [dds:class/DocumentReference](https://cdisc.org/ddsclass/DocumentReference)
 
 
 ```mermaid
@@ -117,8 +117,8 @@ DocumentReference ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DocumentReference |
-| native | odm:DocumentReference |
+| self | dds:DocumentReference |
+| native | dds:DocumentReference |
 
 
 

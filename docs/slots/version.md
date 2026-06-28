@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/version](https://cdisc.org/odm2/slot/version)
+URI: [dds:slot/version](https://cdisc.org/ddsslot/version)
 <!-- no inheritance hierarchy -->
 
 
@@ -49,7 +49,7 @@ URI: [odm:slot/version](https://cdisc.org/odm2/slot/version)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Versioned](../classes/Versioned.md), [Standard](../classes/Standard.md) |
 
 ### Cardinality and Requirements
@@ -77,8 +77,8 @@ URI: [odm:slot/version](https://cdisc.org/odm2/slot/version)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:version |
-| native | odm:version |
+| self | dds:version |
+| native | dds:version |
 
 
 
@@ -91,6 +91,7 @@ name: version
 domain_of:
 - Versioned
 - Standard
+range: string
 
 ```
 </details></div>

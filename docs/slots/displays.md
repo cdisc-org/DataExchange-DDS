@@ -14,7 +14,7 @@ _Displays defined in this version of the metadata._
 
 
 
-URI: [odm:slot/displays](https://cdisc.org/odm2/slot/displays)
+URI: [dds:slot/displays](https://cdisc.org/ddsslot/displays)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/displays](https://cdisc.org/odm2/slot/displays)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:displays |
-| native | odm:displays |
+| self | dds:displays |
+| native | dds:displays |
 
 
 

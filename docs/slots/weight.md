@@ -14,7 +14,7 @@ _Numeric significance of the code (e.g., for scoring)_
 
 
 
-URI: [odm:slot/weight](https://cdisc.org/odm2/slot/weight)
+URI: [dds:slot/weight](https://cdisc.org/ddsslot/weight)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/weight](https://cdisc.org/odm2/slot/weight)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:weight |
-| native | odm:weight |
+| self | dds:weight |
+| native | dds:weight |
 
 
 

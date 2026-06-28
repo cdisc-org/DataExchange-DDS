@@ -14,7 +14,7 @@ _Comment on the element, such as a rationale for its inclusion or exclusion_
 
 
 
-URI: [odm:slot/siteOrSponsorComments](https://cdisc.org/odm2/slot/siteOrSponsorComments)
+URI: [dds:slot/siteOrSponsorComments](https://cdisc.org/ddsslot/siteOrSponsorComments)
 <!-- no inheritance hierarchy -->
 
 
@@ -104,8 +104,8 @@ URI: [odm:slot/siteOrSponsorComments](https://cdisc.org/odm2/slot/siteOrSponsorC
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:siteOrSponsorComments |
-| native | odm:siteOrSponsorComments |
+| self | dds:siteOrSponsorComments |
+| native | dds:siteOrSponsorComments |
 
 
 

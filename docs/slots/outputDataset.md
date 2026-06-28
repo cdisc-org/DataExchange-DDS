@@ -14,7 +14,7 @@ _Output datasets produced by the data product_
 
 
 
-URI: [odm:slot/outputDataset](https://cdisc.org/odm2/slot/outputDataset)
+URI: [dds:slot/outputDataset](https://cdisc.org/ddsslot/outputDataset)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/outputDataset](https://cdisc.org/odm2/slot/outputDataset)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:outputDataset |
-| native | odm:outputDataset |
+| self | dds:outputDataset |
+| native | dds:outputDataset |
 
 
 

@@ -14,7 +14,7 @@ _External code libraries referenced_
 
 
 
-URI: [odm:slot/externalCodeLibs](https://cdisc.org/odm2/slot/externalCodeLibs)
+URI: [dds:slot/externalCodeLibs](https://cdisc.org/ddsslot/externalCodeLibs)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/externalCodeLibs](https://cdisc.org/odm2/slot/externalCodeLibs)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:externalCodeLibs |
-| native | odm:externalCodeLibs |
+| self | dds:externalCodeLibs |
+| native | dds:externalCodeLibs |
 
 
 

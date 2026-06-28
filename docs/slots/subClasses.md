@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/subClasses](https://cdisc.org/odm2/slot/subClasses)
+URI: [dds:slot/subClasses](https://cdisc.org/ddsslot/subClasses)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/subClasses](https://cdisc.org/odm2/slot/subClasses)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DefClass](../classes/DefClass.md), [SubClass](../classes/SubClass.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/subClasses](https://cdisc.org/odm2/slot/subClasses)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:subClasses |
-| native | odm:subClasses |
+| self | dds:subClasses |
+| native | dds:subClasses |
 
 
 
@@ -76,6 +76,7 @@ name: subClasses
 domain_of:
 - DefClass
 - SubClass
+range: string
 
 ```
 </details></div>

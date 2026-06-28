@@ -14,7 +14,7 @@ _A provenance element that describes the source of data for an item_
 
 
 
-URI: [odm:class/Origin](https://cdisc.org/odm2/class/Origin)
+URI: [dds:class/Origin](https://cdisc.org/ddsclass/Origin)
 
 
 ```mermaid
@@ -77,9 +77,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -143,8 +143,8 @@ SourceItem ||--}o DocumentReference : "document"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Origin |
-| native | odm:Origin |
+| self | dds:Origin |
+| native | dds:Origin |
 
 
 

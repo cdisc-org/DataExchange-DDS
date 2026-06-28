@@ -14,7 +14,7 @@ _CRFCompletionInstructions reference: Instructions for the clinical site on how 
 
 
 
-URI: [odm:slot/crfCompletionInstructions](https://cdisc.org/odm2/slot/crfCompletionInstructions)
+URI: [dds:slot/crfCompletionInstructions](https://cdisc.org/ddsslot/crfCompletionInstructions)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/crfCompletionInstructions](https://cdisc.org/odm2/slot/crfComplet
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
 | Domain Of | [IsODMItem](../classes/IsODMItem.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:crfCompletionInstructions |
-| native | odm:crfCompletionInstructions |
+| self | dds:crfCompletionInstructions |
+| native | dds:crfCompletionInstructions |
 
 
 
@@ -109,6 +109,7 @@ rank: 1000
 owner: IsODMItem
 domain_of:
 - IsODMItem
+range: string
 any_of:
 - range: string
 - range: TranslatedText

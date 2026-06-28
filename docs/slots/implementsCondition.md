@@ -14,7 +14,7 @@ _Reference to a external (e.g. USDM) condition definition that this implements_
 
 
 
-URI: [odm:slot/implementsCondition](https://cdisc.org/odm2/slot/implementsCondition)
+URI: [dds:slot/implementsCondition](https://cdisc.org/ddsslot/implementsCondition)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/implementsCondition](https://cdisc.org/odm2/slot/implementsCondit
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Condition](../classes/Condition.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/implementsCondition](https://cdisc.org/odm2/slot/implementsCondit
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:implementsCondition |
-| native | odm:implementsCondition |
+| self | dds:implementsCondition |
+| native | dds:implementsCondition |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: Condition
 domain_of:
 - Condition
+range: string
 
 ```
 </details></div>

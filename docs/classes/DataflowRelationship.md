@@ -14,7 +14,7 @@ _A relationship element that associates a DataAttribute with a Dataflow, reporte
 
 
 
-URI: [odm:class/DataflowRelationship](https://cdisc.org/odm2/class/DataflowRelationship)
+URI: [dds:class/DataflowRelationship](https://cdisc.org/ddsclass/DataflowRelationship)
 
 
 ```mermaid
@@ -23,7 +23,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -185,6 +184,7 @@ SiteOrSponsorComment {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -232,9 +232,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -293,8 +293,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DataflowRelationship |
-| native | odm:DataflowRelationship |
+| self | dds:DataflowRelationship |
+| native | dds:DataflowRelationship |
 | exact | sdmx:DataflowRelationship |
 
 

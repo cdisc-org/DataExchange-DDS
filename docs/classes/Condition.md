@@ -14,7 +14,7 @@ _A reusable, composable, and nestable logical construct allowing for complex exp
 
 
 
-URI: [odm:class/Condition](https://cdisc.org/odm2/class/Condition)
+URI: [dds:class/Condition](https://cdisc.org/ddsclass/Condition)
 
 
 ```mermaid
@@ -255,8 +255,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Condition |
-| native | odm:Condition |
+| self | dds:Condition |
+| native | dds:Condition |
 | related | fhir:Expression, qb:SliceKey, sdmx:DataConstraint, sdmx:MetaDataConstraint, sdmx:DataKeySet |
 | close | odm:ConditionDef, usdm:Condition |
 
@@ -394,6 +394,7 @@ attributes:
     owner: Condition
     domain_of:
     - Condition
+    range: string
   expressions:
     name: expressions
     description: Logical expression, resolving to a boolean, that implements this

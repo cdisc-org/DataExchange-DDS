@@ -14,7 +14,7 @@ _Methods defined in this version of the metadata._
 
 
 
-URI: [odm:slot/methods](https://cdisc.org/odm2/slot/methods)
+URI: [dds:slot/methods](https://cdisc.org/ddsslot/methods)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/methods](https://cdisc.org/odm2/slot/methods)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:methods |
-| native | odm:methods |
+| self | dds:methods |
+| native | dds:methods |
 
 
 

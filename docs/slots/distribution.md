@@ -14,7 +14,7 @@ _Representations of this dataset in various formats or access methods_
 
 
 
-URI: [odm:slot/distribution](https://cdisc.org/odm2/slot/distribution)
+URI: [dds:slot/distribution](https://cdisc.org/ddsslot/distribution)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/distribution](https://cdisc.org/odm2/slot/distribution)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:distribution |
-| native | odm:distribution |
+| self | dds:distribution |
+| native | dds:distribution |
 | exact | dcat:distribution |
 
 

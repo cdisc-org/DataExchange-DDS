@@ -14,7 +14,7 @@ _Reference to the CodeList that defines the roles for this item_
 
 
 
-URI: [odm:slot/roleCodeList](https://cdisc.org/odm2/slot/roleCodeList)
+URI: [dds:slot/roleCodeList](https://cdisc.org/ddsslot/roleCodeList)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/roleCodeList](https://cdisc.org/odm2/slot/roleCodeList)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:roleCodeList |
-| native | odm:roleCodeList |
+| self | dds:roleCodeList |
+| native | dds:roleCodeList |
 
 
 

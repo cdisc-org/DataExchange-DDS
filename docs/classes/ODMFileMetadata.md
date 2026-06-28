@@ -14,7 +14,7 @@ _A mixin that provides ODM file-level metadata attributes including file identif
 
 
 
-URI: [odm:class/ODMFileMetadata](https://cdisc.org/odm2/class/ODMFileMetadata)
+URI: [dds:class/ODMFileMetadata](https://cdisc.org/ddsclass/ODMFileMetadata)
 
 
 ```mermaid
@@ -101,8 +101,8 @@ ODMFileMetadata {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ODMFileMetadata |
-| native | odm:ODMFileMetadata |
+| self | dds:ODMFileMetadata |
+| native | dds:ODMFileMetadata |
 
 
 

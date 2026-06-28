@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/dimensions](https://cdisc.org/odm2/slot/dimensions)
+URI: [dds:slot/dimensions](https://cdisc.org/ddsslot/dimensions)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/dimensions](https://cdisc.org/odm2/slot/dimensions)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DataStructureDefinition](../classes/DataStructureDefinition.md), [DimensionRelationship](../classes/DimensionRelationship.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/dimensions](https://cdisc.org/odm2/slot/dimensions)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dimensions |
-| native | odm:dimensions |
+| self | dds:dimensions |
+| native | dds:dimensions |
 
 
 
@@ -76,6 +76,7 @@ name: dimensions
 domain_of:
 - DataStructureDefinition
 - DimensionRelationship
+range: string
 
 ```
 </details></div>

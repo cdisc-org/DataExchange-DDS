@@ -14,7 +14,7 @@ _A semantic reference that provides standardized codes and their meanings from c
 
 
 
-URI: [odm:class/Coding](https://cdisc.org/odm2/class/Coding)
+URI: [dds:class/Coding](https://cdisc.org/ddsclass/Coding)
 
 
 ```mermaid
@@ -131,8 +131,8 @@ Coding {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Coding |
-| native | odm:Coding |
+| self | dds:Coding |
+| native | dds:Coding |
 | exact | odm:Coding, usdm:Code, fhir:Coding |
 | close | omop:Concept, skos:Concept, skos:Label, sdmx:Code, sdmx:Concept, sdmx:ISOConceptReference |
 
@@ -255,6 +255,7 @@ attributes:
     domain_of:
     - CodeListItem
     - Coding
+    range: string
     any_of:
     - range: string
     - range: TranslatedText

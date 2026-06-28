@@ -14,7 +14,7 @@ _Leaf identifier for document reference in Define-XML_
 
 
 
-URI: [odm:slot/leafID](https://cdisc.org/odm2/slot/leafID)
+URI: [dds:slot/leafID](https://cdisc.org/ddsslot/leafID)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/leafID](https://cdisc.org/odm2/slot/leafID)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:leafID |
-| native | odm:leafID |
+| self | dds:leafID |
+| native | dds:leafID |
 
 
 

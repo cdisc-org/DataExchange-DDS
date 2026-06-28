@@ -14,7 +14,7 @@ _Terms in this dictionary - leave this empty in most cases to keep the file smal
 
 
 
-URI: [odm:slot/terms](https://cdisc.org/odm2/slot/terms)
+URI: [dds:slot/terms](https://cdisc.org/ddsslot/terms)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/terms](https://cdisc.org/odm2/slot/terms)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:terms |
-| native | odm:terms |
+| self | dds:terms |
+| native | dds:terms |
 
 
 

@@ -14,7 +14,7 @@ _Indicates the inclusive start time indicating the validity of the information i
 
 
 
-URI: [odm:slot/validFrom](https://cdisc.org/odm2/slot/validFrom)
+URI: [dds:slot/validFrom](https://cdisc.org/ddsslot/validFrom)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/validFrom](https://cdisc.org/odm2/slot/validFrom)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
 
 ### Cardinality and Requirements
@@ -81,8 +81,8 @@ URI: [odm:slot/validFrom](https://cdisc.org/odm2/slot/validFrom)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:validFrom |
-| native | odm:validFrom |
+| self | dds:validFrom |
+| native | dds:validFrom |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
+range: string
 
 ```
 </details></div>

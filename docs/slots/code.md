@@ -14,7 +14,7 @@ _The code value_
 
 
 
-URI: [odm:slot/code](https://cdisc.org/odm2/slot/code)
+URI: [dds:slot/code](https://cdisc.org/ddsslot/code)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/code](https://cdisc.org/odm2/slot/code)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:code |
-| native | odm:code |
+| self | dds:code |
+| native | dds:code |
 
 
 

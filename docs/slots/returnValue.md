@@ -14,7 +14,7 @@ _Return value details_
 
 
 
-URI: [odm:slot/returnValue](https://cdisc.org/odm2/slot/returnValue)
+URI: [dds:slot/returnValue](https://cdisc.org/ddsslot/returnValue)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/returnValue](https://cdisc.org/odm2/slot/returnValue)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:returnValue |
-| native | odm:returnValue |
+| self | dds:returnValue |
+| native | dds:returnValue |
 
 
 

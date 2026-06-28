@@ -14,7 +14,7 @@ _A relationship element that associates a DataAttribute with a set of Dimensions
 
 
 
-URI: [odm:class/GroupRelationship](https://cdisc.org/odm2/class/GroupRelationship)
+URI: [dds:class/GroupRelationship](https://cdisc.org/ddsclass/GroupRelationship)
 
 
 ```mermaid
@@ -137,9 +137,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -198,8 +198,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:GroupRelationship |
-| native | odm:GroupRelationship |
+| self | dds:GroupRelationship |
+| native | dds:GroupRelationship |
 | exact | sdmx:GroupRelationship |
 
 

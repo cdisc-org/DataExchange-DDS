@@ -14,7 +14,7 @@ _Reference to annotated case report forms_
 
 
 
-URI: [odm:slot/annotatedCRFs](https://cdisc.org/odm2/slot/annotatedCRFs)
+URI: [dds:slot/annotatedCRFs](https://cdisc.org/ddsslot/annotatedCRFs)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/annotatedCRFs](https://cdisc.org/odm2/slot/annotatedCRFs)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:annotatedCRFs |
-| native | odm:annotatedCRFs |
+| self | dds:annotatedCRFs |
+| native | dds:annotatedCRFs |
 
 
 

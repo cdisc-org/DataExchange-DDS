@@ -14,7 +14,7 @@ _Classification of the dataset's sensitivity or confidentiality_
 
 
 
-URI: [odm:slot/informationSensitivityClassification](https://cdisc.org/odm2/slot/informationSensitivityClassification)
+URI: [dds:slot/informationSensitivityClassification](https://cdisc.org/ddsslot/informationSensitivityClassification)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/informationSensitivityClassification](https://cdisc.org/odm2/slot
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dataset](../classes/Dataset.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/informationSensitivityClassification](https://cdisc.org/odm2/slot
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:informationSensitivityClassification |
-| native | odm:informationSensitivityClassification |
+| self | dds:informationSensitivityClassification |
+| native | dds:informationSensitivityClassification |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: Dataset
 domain_of:
 - Dataset
+range: string
 
 ```
 </details></div>

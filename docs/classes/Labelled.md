@@ -14,7 +14,7 @@ _A mixin that provides slots for detailing meanings and multilingual description
 
 
 
-URI: [odm:class/Labelled](https://cdisc.org/odm2/class/Labelled)
+URI: [dds:class/Labelled](https://cdisc.org/ddsclass/Labelled)
 
 
 ```mermaid
@@ -98,8 +98,8 @@ Labelled ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Labelled |
-| native | odm:Labelled |
+| self | dds:Labelled |
+| native | dds:Labelled |
 
 
 
@@ -216,6 +216,7 @@ attributes:
     domain_of:
     - Labelled
     - CodeListItem
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -243,6 +244,7 @@ attributes:
     owner: Labelled
     domain_of:
     - Labelled
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -257,6 +259,7 @@ attributes:
     domain_of:
     - Labelled
     - CodeListItem
+    range: string
     multivalued: true
     inlined: true
     inlined_as_list: true
