@@ -12,7 +12,7 @@ prefixes:
   usdm: https://cdisc.org/usdm/
   sdtm: https://cdisc.org/cosmos/sdtm_v1.0#
   fhir: http://hl7.org/fhir/
-  ncit: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
   omop: https://omop.org/omop-cdm/
   qb: http://purl.org/linked-data/cube#
   sdmx: http://purl.org/linked-data/sdmx#
@@ -726,6 +726,9 @@ classes:
         required: true
 
   TranslatedText:
+    description: >-
+      A container of the language-specific translations of a single piece of text
+      (a set of localised strings), as opposed to one Translation.
     attributes:
       translations:
         range: Translation
@@ -2260,30 +2263,30 @@ enums:
       Assigned:
         description: >-
           A value that is derived through designation, such as values from a look up table or a label on a CRF.
-        meaning: ncit:C170547
+        meaning: NCIT:C170547
       Collected:
         description: >-
           A value that is actually observed and recorded by a person or obtained by an instrument.
-        meaning: ncit:C170548
+        meaning: NCIT:C170548
       Derived:
         description: >-
           A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.
-        meaning: ncit:C170549
+        meaning: NCIT:C170549
       Not Available:
         description: >-
           A value that is not discoverable or accessible.
-        meaning: ncit:C126101
+        meaning: NCIT:C126101
       Other:
         description: >-
           Different than the one(s) previously specified or mentioned. (NCI)
       Predecessor:
         description: >-
           A value that is copied from another variable.
-        meaning: ncit:C170550
+        meaning: NCIT:C170550
       Protocol:
         description: >-
           A value that is included as part of the study protocol.
-        meaning: ncit:C170551
+        meaning: NCIT:C170551
 
   OriginSource:
     description: >-
@@ -2292,16 +2295,16 @@ enums:
     permissible_values:
       Investigator:
         text: Investigator
-        meaning: ncit:C25936
+        meaning: NCIT:C25936
       Sponsor:
         text: Sponsor
-        meaning: ncit:C70793
+        meaning: NCIT:C70793
       Subject:
         text: Subject
-        meaning: ncit:C41189
+        meaning: NCIT:C41189
       Vendor:
         text: Vendor
-        meaning: ncit:C68608
+        meaning: NCIT:C68608
 
   ItemGroupType:
     description: >-
@@ -2335,13 +2338,13 @@ enums:
     permissible_values:
       After:
         text: After
-        meaning: ncit:C201356
+        meaning: NCIT:C201356
       Before:
         text: Before
-        meaning: ncit:C201357
+        meaning: NCIT:C201357
       Fixed:
         text: Fixed
-        meaning: ncit:C201358
+        meaning: NCIT:C201358
 
   # TODO: Add Enumerated terms for STATO / NCIT analysis concept relationships
 
