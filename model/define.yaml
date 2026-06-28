@@ -1,5 +1,6 @@
 id: https://cdisc.org/dds
 name: Data-Definition-Specification
+title: Data Definition Specification (DDS)
 description: >-
   Data model for supply and demand data contracts to complement CDISC USDM, ODM, and Dataset-JSON.
   This LinkML version includes semantics to act as Rosetta Stone for SDMX, FHIR, OMOP, RDF, and CDISC.
@@ -11,6 +12,7 @@ prefixes:
   usdm: https://cdisc.org/usdm/
   sdtm: https://cdisc.org/cosmos/sdtm_v1.0#
   fhir: http://hl7.org/fhir/
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
   omop: https://omop.org/omop-cdm/
   qb: http://purl.org/linked-data/cube#
   sdmx: http://purl.org/linked-data/sdmx#
@@ -19,7 +21,9 @@ prefixes:
   dcat: http://www.w3.org/ns/dcat#
   osb: https://openstudybuilder.com/
   dcterms: http://purl.org/dc/terms/
-default_prefix: odm
+  dds: https://cdisc.org/dds
+default_prefix: dds
+default_range: string
 
 imports:
   - linkml:types
@@ -59,9 +63,6 @@ classes:
     description: >-
       A mixin that provides slots for audit trail and standards governance, including mandatory status, comments, and attribution
     mixin: true
-    slot_usage:
-      OID:
-        required: true
     attributes:
       mandatory:
         description: >-
@@ -532,7 +533,9 @@ classes:
         description: >-
           The origin of the data
         range: Origin
+        multivalued: true
         inlined: true
+        inlined_as_list: true
       conceptProperty:
         description: >-
           Reference to a abstract concept property that this item is a specialization / instance of.
@@ -682,7 +685,6 @@ classes:
   Relationship:
     description: >-
       A semantic link that defines connections between elements such as Items or ItemGroups, capturing relationships like "is the unit for" or "assesses seriousness of"
-    from_schema: sdtm
     related_mappings:
       - sdmx:ConceptSchemeMap
     is_a: IdentifiableElement
@@ -725,6 +727,9 @@ classes:
         required: true
 
   TranslatedText:
+    description: >-
+      A container of the language-specific translations of a single piece of text
+      (a set of localised strings), as opposed to one Translation.
     attributes:
       translations:
         range: Translation
@@ -1254,7 +1259,7 @@ classes:
           Indicates whether this parameter must be provided when the
           containing expression is evaluated (technical constraint).
         range: boolean
-        ifabsent: false
+        ifabsent: 'False'
 
   ReturnValue:
     description: >-
@@ -1576,7 +1581,7 @@ classes:
         range: ComponentList
       evolvingStructure:
         range: boolean
-        ifabsent: false
+        ifabsent: 'False'
 
   Dataflow:
     description: >-
@@ -2077,9 +2082,7 @@ classes:
       analysisMethod:
         description: >-
           Generic method used to perform this analysis.
-          any_of:
-            - range: Method
-            - range: AnalysisMethod
+        range: Method
       applicableWhen:
         description: >-
           The conditions (e.g. population, time period etc.) that must be met for this analysis to be applicable.
@@ -2256,53 +2259,53 @@ enums:
   OriginType:
     description: >-
       An enumeration that defines the types of origins for data items.
-    from_schema: ncit:C170449
+      Values sourced from NCI Thesaurus subset C170449.
     permissible_values:
       Assigned:
         description: >-
           A value that is derived through designation, such as values from a look up table or a label on a CRF.
-        meaning: ncit:C170547
+        meaning: NCIT:C170547
       Collected:
         description: >-
           A value that is actually observed and recorded by a person or obtained by an instrument.
-        meaning: ncit:C170548
+        meaning: NCIT:C170548
       Derived:
         description: >-
           A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.
-        meaning: ncit:C170549
+        meaning: NCIT:C170549
       Not Available:
         description: >-
           A value that is not discoverable or accessible.
-        meaning: ncit:C126101
+        meaning: NCIT:C126101
       Other:
         description: >-
           Different than the one(s) previously specified or mentioned. (NCI)
       Predecessor:
         description: >-
           A value that is copied from another variable.
-        meaning: ncit:C170550
+        meaning: NCIT:C170550
       Protocol:
         description: >-
           A value that is included as part of the study protocol.
-        meaning: ncit:C170551
+        meaning: NCIT:C170551
 
   OriginSource:
     description: >-
       An enumeration that defines the sources of data origin
-    from_schema: ncit:C170450
+      Values sourced from NCI Thesaurus subset C170450.
     permissible_values:
       Investigator:
         text: Investigator
-        meaning: ncit:C25936
+        meaning: NCIT:C25936
       Sponsor:
         text: Sponsor
-        meaning: ncit:C70793
+        meaning: NCIT:C70793
       Subject:
         text: Subject
-        meaning: ncit:C41189
+        meaning: NCIT:C41189
       Vendor:
         text: Vendor
-        meaning: ncit:C68608
+        meaning: NCIT:C68608
 
   ItemGroupType:
     description: >-
@@ -2336,18 +2339,17 @@ enums:
     permissible_values:
       After:
         text: After
-        meaning: ncit:C201356
+        meaning: NCIT:C201356
       Before:
         text: Before
-        meaning: ncit:C201357
+        meaning: NCIT:C201357
       Fixed:
         text: Fixed
-        meaning: ncit:C201358
+        meaning: NCIT:C201358
 
   # TODO: Add Enumerated terms for STATO / NCIT analysis concept relationships
 
   LinkingPhraseEnum:
-    from_schema: sdtm
     description: >-
       An enumeration that defines variable relationship descriptive linking phrases from the COSMoS SDTM BC model
     permissible_values:
@@ -2438,7 +2440,6 @@ enums:
       is the version of the reference terminology in:
 
   PredicateTermEnum:
-    from_schema: sdtm
     description: >-
       An enumeration that defines short variable relationship linking phrases for programming purposes from the COSMoS SDTM BC model
     permissible_values:
