@@ -21,6 +21,7 @@ prefixes:
   dcat: http://www.w3.org/ns/dcat#
   osb: https://openstudybuilder.com/
   dcterms: http://purl.org/dc/terms/
+  dds: https://cdisc.org/dds
 default_prefix: dds
 default_range: string
 
