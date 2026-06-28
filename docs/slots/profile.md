@@ -14,7 +14,7 @@ _Profiles this resource claims to conform to_
 
 
 
-URI: [odm:slot/profile](https://cdisc.org/odm2/slot/profile)
+URI: [dds:slot/profile](https://cdisc.org/ddsslot/profile)
 <!-- no inheritance hierarchy -->
 
 
@@ -84,8 +84,8 @@ URI: [odm:slot/profile](https://cdisc.org/odm2/slot/profile)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:profile |
-| native | odm:profile |
+| self | dds:profile |
+| native | dds:profile |
 
 
 

@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/expressions](https://cdisc.org/odm2/slot/expressions)
+URI: [dds:slot/expressions](https://cdisc.org/ddsslot/expressions)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/expressions](https://cdisc.org/odm2/slot/expressions)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Condition](../classes/Condition.md), [RangeCheck](../classes/RangeCheck.md), [Method](../classes/Method.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/expressions](https://cdisc.org/odm2/slot/expressions)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:expressions |
-| native | odm:expressions |
+| self | dds:expressions |
+| native | dds:expressions |
 
 
 
@@ -79,6 +79,7 @@ domain_of:
 - Condition
 - RangeCheck
 - Method
+range: string
 
 ```
 </details></div>

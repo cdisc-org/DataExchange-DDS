@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/operator](https://cdisc.org/odm2/slot/operator)
+URI: [dds:slot/operator](https://cdisc.org/ddsslot/operator)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/operator](https://cdisc.org/odm2/slot/operator)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Condition](../classes/Condition.md), [RangeCheck](../classes/RangeCheck.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/operator](https://cdisc.org/odm2/slot/operator)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:operator |
-| native | odm:operator |
+| self | dds:operator |
+| native | dds:operator |
 
 
 
@@ -76,6 +76,7 @@ name: operator
 domain_of:
 - Condition
 - RangeCheck
+range: string
 
 ```
 </details></div>

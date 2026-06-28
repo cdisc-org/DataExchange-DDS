@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/groupKey](https://cdisc.org/odm2/slot/groupKey)
+URI: [dds:slot/groupKey](https://cdisc.org/ddsslot/groupKey)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/groupKey](https://cdisc.org/odm2/slot/groupKey)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [GroupRelationship](../classes/GroupRelationship.md), [DimensionRelationship](../classes/DimensionRelationship.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/groupKey](https://cdisc.org/odm2/slot/groupKey)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:groupKey |
-| native | odm:groupKey |
+| self | dds:groupKey |
+| native | dds:groupKey |
 
 
 
@@ -76,6 +76,7 @@ name: groupKey
 domain_of:
 - GroupRelationship
 - DimensionRelationship
+range: string
 
 ```
 </details></div>

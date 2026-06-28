@@ -14,7 +14,7 @@ _Local identifier within this study/context. Use CDISC OID format for regulatory
 
 
 
-URI: [odm:slot/OID](https://cdisc.org/odm2/slot/OID)
+URI: [dds:slot/OID](https://cdisc.org/ddsslot/OID)
 <!-- no inheritance hierarchy -->
 
 
@@ -121,8 +121,8 @@ URI: [odm:slot/OID](https://cdisc.org/odm2/slot/OID)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:OID |
-| native | odm:OID |
+| self | dds:OID |
+| native | dds:OID |
 
 
 

@@ -14,7 +14,7 @@ _File format or serialization used in the distribution_
 
 
 
-URI: [odm:slot/format](https://cdisc.org/odm2/slot/format)
+URI: [dds:slot/format](https://cdisc.org/ddsslot/format)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/format](https://cdisc.org/odm2/slot/format)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Distribution](../classes/Distribution.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/format](https://cdisc.org/odm2/slot/format)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:format |
-| native | odm:format |
+| self | dds:format |
+| native | dds:format |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: Distribution
 domain_of:
 - Distribution
+range: string
 
 ```
 </details></div>

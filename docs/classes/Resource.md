@@ -14,7 +14,7 @@ _An external reference that serves as the source for a Dataset, ItemGroup, or It
 
 
 
-URI: [odm:class/Resource](https://cdisc.org/odm2/class/Resource)
+URI: [dds:class/Resource](https://cdisc.org/ddsclass/Resource)
 
 
 ```mermaid
@@ -158,8 +158,8 @@ ReturnValue ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Resource |
-| native | odm:Resource |
+| self | dds:Resource |
+| native | dds:Resource |
 | close | odm:Resource |
 
 

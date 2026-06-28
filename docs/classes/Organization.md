@@ -14,7 +14,7 @@ _An entity that represents organizational information, such as a site or sponsor
 
 
 
-URI: [odm:class/Organization](https://cdisc.org/odm2/class/Organization)
+URI: [dds:class/Organization](https://cdisc.org/ddsclass/Organization)
 
 
 ```mermaid
@@ -144,8 +144,8 @@ Organization ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Organization |
-| native | odm:Organization |
+| self | dds:Organization |
+| native | dds:Organization |
 | exact | odm:Organization, usdm:Organization, sdmx:Organisation |
 | broad | prov:Agent |
 

@@ -14,7 +14,7 @@ _A value set that defines a discrete collection of permissible values for an ite
 
 
 
-URI: [odm:class/CodeList](https://cdisc.org/odm2/class/CodeList)
+URI: [dds:class/CodeList](https://cdisc.org/ddsclass/CodeList)
 
 
 ```mermaid
@@ -245,8 +245,8 @@ Standard ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:CodeList |
-| native | odm:CodeList |
+| self | dds:CodeList |
+| native | dds:CodeList |
 | exact | odm:CodeList, omop:Vocabulary, fhir:ValueSet |
 | narrow | sdmx:Codelist, sdmx:ValueList, sdmx:ConceptScheme |
 | related | usdm:BiomedicalConceptProperty/responseCodes |

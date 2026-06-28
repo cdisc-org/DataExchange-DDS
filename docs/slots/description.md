@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/description](https://cdisc.org/odm2/slot/description)
+URI: [dds:slot/description](https://cdisc.org/ddsslot/description)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [odm:slot/description](https://cdisc.org/odm2/slot/description)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Labelled](../classes/Labelled.md), [CodeListItem](../classes/CodeListItem.md) |
 
 ### Cardinality and Requirements
@@ -101,8 +101,8 @@ URI: [odm:slot/description](https://cdisc.org/odm2/slot/description)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:description |
-| native | odm:description |
+| self | dds:description |
+| native | dds:description |
 
 
 
@@ -115,6 +115,7 @@ name: description
 domain_of:
 - Labelled
 - CodeListItem
+range: string
 
 ```
 </details></div>

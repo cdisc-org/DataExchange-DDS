@@ -14,7 +14,7 @@ _An association to a set of metadata concepts that have an identified structural
 
 
 
-URI: [odm:slot/grouping](https://cdisc.org/odm2/slot/grouping)
+URI: [dds:slot/grouping](https://cdisc.org/ddsslot/grouping)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/grouping](https://cdisc.org/odm2/slot/grouping)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:grouping |
-| native | odm:grouping |
+| self | dds:grouping |
+| native | dds:grouping |
 
 
 

@@ -14,7 +14,7 @@ _A descriptive element that contains explanatory text provided by a data or meta
 
 
 
-URI: [odm:class/Comment](https://cdisc.org/odm2/class/Comment)
+URI: [dds:class/Comment](https://cdisc.org/ddsclass/Comment)
 
 
 ```mermaid
@@ -173,8 +173,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Comment |
-| native | odm:Comment |
+| self | dds:Comment |
+| native | dds:Comment |
 | exact | odm:CommentDef, usdm:CommentAnnotation, fhir:Annotation, sdmx:Annotation |
 
 
@@ -254,6 +254,7 @@ attributes:
     domain_of:
     - Comment
     - SiteOrSponsorComment
+    range: string
     required: true
     any_of:
     - range: string

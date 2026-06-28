@@ -14,7 +14,7 @@ _Current lifecycle status of the data product_
 
 
 
-URI: [odm:slot/lifecycleStatus](https://cdisc.org/odm2/slot/lifecycleStatus)
+URI: [dds:slot/lifecycleStatus](https://cdisc.org/ddsslot/lifecycleStatus)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/lifecycleStatus](https://cdisc.org/odm2/slot/lifecycleStatus)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:lifecycleStatus |
-| native | odm:lifecycleStatus |
+| self | dds:lifecycleStatus |
+| native | dds:lifecycleStatus |
 
 
 

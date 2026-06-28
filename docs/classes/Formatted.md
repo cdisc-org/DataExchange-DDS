@@ -14,7 +14,7 @@ _A mixin that provides slots for reporting, exchange, or storage formatting_
 
 
 
-URI: [odm:class/Formatted](https://cdisc.org/odm2/class/Formatted)
+URI: [dds:class/Formatted](https://cdisc.org/ddsclass/Formatted)
 
 
 ```mermaid
@@ -87,8 +87,8 @@ Formatted {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Formatted |
-| native | odm:Formatted |
+| self | dds:Formatted |
+| native | dds:Formatted |
 | related | sdmx:Facet, sdmx:Representation |
 
 

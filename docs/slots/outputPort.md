@@ -14,7 +14,7 @@ _Services that expose output from this data product_
 
 
 
-URI: [odm:slot/outputPort](https://cdisc.org/odm2/slot/outputPort)
+URI: [dds:slot/outputPort](https://cdisc.org/ddsslot/outputPort)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/outputPort](https://cdisc.org/odm2/slot/outputPort)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:outputPort |
-| native | odm:outputPort |
+| self | dds:outputPort |
+| native | dds:outputPort |
 
 
 

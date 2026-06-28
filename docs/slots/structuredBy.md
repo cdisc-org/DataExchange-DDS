@@ -14,7 +14,7 @@ _Associates the Data Structure Definition that defines the structure of the Data
 
 
 
-URI: [odm:slot/structuredBy](https://cdisc.org/odm2/slot/structuredBy)
+URI: [dds:slot/structuredBy](https://cdisc.org/ddsslot/structuredBy)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/structuredBy](https://cdisc.org/odm2/slot/structuredBy)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:structuredBy |
-| native | odm:structuredBy |
+| self | dds:structuredBy |
+| native | dds:structuredBy |
 
 
 

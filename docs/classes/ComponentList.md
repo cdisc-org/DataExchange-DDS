@@ -14,7 +14,7 @@ _An abstract definition that specifies a list of components within a data struct
 
 
 
-URI: [odm:class/ComponentList](https://cdisc.org/odm2/class/ComponentList)
+URI: [dds:class/ComponentList](https://cdisc.org/ddsclass/ComponentList)
 
 
 ```mermaid
@@ -105,8 +105,8 @@ ComponentList ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ComponentList |
-| native | odm:ComponentList |
+| self | dds:ComponentList |
+| native | dds:ComponentList |
 | exact | sdmx:ComponentList |
 
 
@@ -168,6 +168,7 @@ attributes:
     owner: ComponentList
     domain_of:
     - ComponentList
+    range: string
     multivalued: true
     inlined: true
     inlined_as_list: true

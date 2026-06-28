@@ -14,7 +14,7 @@ _Maximum number of occurrences of this property in the context. Leave empty for 
 
 
 
-URI: [odm:slot/maxOccurs](https://cdisc.org/odm2/slot/maxOccurs)
+URI: [dds:slot/maxOccurs](https://cdisc.org/ddsslot/maxOccurs)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/maxOccurs](https://cdisc.org/odm2/slot/maxOccurs)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:maxOccurs |
-| native | odm:maxOccurs |
+| self | dds:maxOccurs |
+| native | dds:maxOccurs |
 
 
 

@@ -14,7 +14,7 @@ _A data cube property that describes a measurable quantity or value_
 
 
 
-URI: [odm:class/Measure](https://cdisc.org/odm2/class/Measure)
+URI: [dds:class/Measure](https://cdisc.org/ddsclass/Measure)
 
 
 ```mermaid
@@ -250,9 +250,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -359,8 +359,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Measure |
-| native | odm:Measure |
+| self | dds:Measure |
+| native | dds:Measure |
 | exact | qb:MeasureProperty, sdmx:Measure |
 
 

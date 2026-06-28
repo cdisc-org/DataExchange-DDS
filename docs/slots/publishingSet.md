@@ -14,7 +14,7 @@ _Publishing Set of a Controlled Terminology_
 
 
 
-URI: [odm:slot/publishingSet](https://cdisc.org/odm2/slot/publishingSet)
+URI: [dds:slot/publishingSet](https://cdisc.org/ddsslot/publishingSet)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/publishingSet](https://cdisc.org/odm2/slot/publishingSet)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:publishingSet |
-| native | odm:publishingSet |
+| self | dds:publishingSet |
+| native | dds:publishingSet |
 
 
 

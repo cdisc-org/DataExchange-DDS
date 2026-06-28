@@ -14,7 +14,7 @@ _A semantic link that defines connections between elements such as Items or Item
 
 
 
-URI: [odm:class/Relationship](https://cdisc.org/odm2/class/Relationship)
+URI: [dds:class/Relationship](https://cdisc.org/ddsclass/Relationship)
 
 
 ```mermaid
@@ -114,8 +114,8 @@ Relationship ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Relationship |
-| native | odm:Relationship |
+| self | dds:Relationship |
+| native | dds:Relationship |
 | related | sdmx:ConceptSchemeMap |
 
 

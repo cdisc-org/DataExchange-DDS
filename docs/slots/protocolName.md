@@ -14,7 +14,7 @@ _Protocol name for the study_
 
 
 
-URI: [odm:slot/protocolName](https://cdisc.org/odm2/slot/protocolName)
+URI: [dds:slot/protocolName](https://cdisc.org/ddsslot/protocolName)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/protocolName](https://cdisc.org/odm2/slot/protocolName)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:protocolName |
-| native | odm:protocolName |
+| self | dds:protocolName |
+| native | dds:protocolName |
 
 
 

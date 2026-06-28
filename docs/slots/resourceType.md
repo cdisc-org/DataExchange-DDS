@@ -14,7 +14,7 @@ _Type of resource (e.g.,  "ODM", "HL7-FHIR", "HL7-CDA", "HL7-v2", "OpenEHR-extra
 
 
 
-URI: [odm:slot/resourceType](https://cdisc.org/odm2/slot/resourceType)
+URI: [dds:slot/resourceType](https://cdisc.org/ddsslot/resourceType)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/resourceType](https://cdisc.org/odm2/slot/resourceType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:resourceType |
-| native | odm:resourceType |
+| self | dds:resourceType |
+| native | dds:resourceType |
 
 
 

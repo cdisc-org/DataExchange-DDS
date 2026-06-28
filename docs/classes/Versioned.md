@@ -14,7 +14,7 @@ _A mixin that provides version and connectivity information, including version n
 
 
 
-URI: [odm:class/Versioned](https://cdisc.org/odm2/class/Versioned)
+URI: [dds:class/Versioned](https://cdisc.org/ddsclass/Versioned)
 
 
 ```mermaid
@@ -96,8 +96,8 @@ Versioned {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Versioned |
-| native | odm:Versioned |
+| self | dds:Versioned |
+| native | dds:Versioned |
 
 
 

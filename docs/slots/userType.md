@@ -14,7 +14,7 @@ _User's role in the study._
 
 
 
-URI: [odm:slot/userType](https://cdisc.org/odm2/slot/userType)
+URI: [dds:slot/userType](https://cdisc.org/ddsslot/userType)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/userType](https://cdisc.org/odm2/slot/userType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:userType |
-| native | odm:userType |
+| self | dds:userType |
+| native | dds:userType |
 
 
 

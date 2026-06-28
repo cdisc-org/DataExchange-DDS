@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
+URI: [dds:slot/dataType](https://cdisc.org/ddsslot/dataType)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Item](../classes/Item.md), [CodeList](../classes/CodeList.md), [Parameter](../classes/Parameter.md), [ReturnValue](../classes/ReturnValue.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/dataType](https://cdisc.org/odm2/slot/dataType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dataType |
-| native | odm:dataType |
+| self | dds:dataType |
+| native | dds:dataType |
 
 
 
@@ -80,6 +80,7 @@ domain_of:
 - CodeList
 - Parameter
 - ReturnValue
+range: string
 
 ```
 </details></div>

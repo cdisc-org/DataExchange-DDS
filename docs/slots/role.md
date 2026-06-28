@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/role](https://cdisc.org/odm2/slot/role)
+URI: [dds:slot/role](https://cdisc.org/ddsslot/role)
 <!-- no inheritance hierarchy -->
 
 
@@ -40,7 +40,7 @@ URI: [odm:slot/role](https://cdisc.org/odm2/slot/role)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsODMItem](../classes/IsODMItem.md), [Organization](../classes/Organization.md), [CubeComponent](../classes/CubeComponent.md) |
 
 ### Cardinality and Requirements
@@ -68,8 +68,8 @@ URI: [odm:slot/role](https://cdisc.org/odm2/slot/role)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:role |
-| native | odm:role |
+| self | dds:role |
+| native | dds:role |
 
 
 
@@ -83,6 +83,7 @@ domain_of:
 - IsODMItem
 - Organization
 - CubeComponent
+range: string
 
 ```
 </details></div>

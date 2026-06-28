@@ -14,7 +14,7 @@ _Slices are specific subset ItemGroups that belong to, or are used by this ItemG
 
 
 
-URI: [odm:slot/slices](https://cdisc.org/odm2/slot/slices)
+URI: [dds:slot/slices](https://cdisc.org/ddsslot/slices)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/slices](https://cdisc.org/odm2/slot/slices)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:slices |
-| native | odm:slices |
+| self | dds:slices |
+| native | dds:slices |
 
 
 

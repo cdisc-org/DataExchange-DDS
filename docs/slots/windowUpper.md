@@ -14,7 +14,7 @@ _End date/time of the timing_
 
 
 
-URI: [odm:slot/windowUpper](https://cdisc.org/odm2/slot/windowUpper)
+URI: [dds:slot/windowUpper](https://cdisc.org/ddsslot/windowUpper)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/windowUpper](https://cdisc.org/odm2/slot/windowUpper)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:windowUpper |
-| native | odm:windowUpper |
+| self | dds:windowUpper |
+| native | dds:windowUpper |
 
 
 

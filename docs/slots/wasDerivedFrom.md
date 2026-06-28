@@ -14,7 +14,7 @@ _Reference to another item that this item implements or extends, e.g. a template
 
 
 
-URI: [odm:slot/wasDerivedFrom](https://cdisc.org/odm2/slot/wasDerivedFrom)
+URI: [dds:slot/wasDerivedFrom](https://cdisc.org/ddsslot/wasDerivedFrom)
 <!-- no inheritance hierarchy -->
 
 
@@ -61,7 +61,7 @@ URI: [odm:slot/wasDerivedFrom](https://cdisc.org/odm2/slot/wasDerivedFrom)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[Item](../classes/Item.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[MetaDataVersion](../classes/MetaDataVersion.md)&nbsp;or&nbsp;<br />[CodeList](../classes/CodeList.md)&nbsp;or&nbsp;<br />[ReifiedConcept](../classes/ReifiedConcept.md)&nbsp;or&nbsp;<br />[ConceptProperty](../classes/ConceptProperty.md)&nbsp;or&nbsp;<br />[Condition](../classes/Condition.md)&nbsp;or&nbsp;<br />[Method](../classes/Method.md)&nbsp;or&nbsp;<br />[NominalOccurrence](../classes/NominalOccurrence.md)&nbsp;or&nbsp;<br />[Dataflow](../classes/Dataflow.md)&nbsp;or&nbsp;<br />[CubeComponent](../classes/CubeComponent.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[ProvisionAgreement](../classes/ProvisionAgreement.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[Item](../classes/Item.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[MetaDataVersion](../classes/MetaDataVersion.md)&nbsp;or&nbsp;<br />[CodeList](../classes/CodeList.md)&nbsp;or&nbsp;<br />[ReifiedConcept](../classes/ReifiedConcept.md)&nbsp;or&nbsp;<br />[ConceptProperty](../classes/ConceptProperty.md)&nbsp;or&nbsp;<br />[Condition](../classes/Condition.md)&nbsp;or&nbsp;<br />[Method](../classes/Method.md)&nbsp;or&nbsp;<br />[NominalOccurrence](../classes/NominalOccurrence.md)&nbsp;or&nbsp;<br />[Dataflow](../classes/Dataflow.md)&nbsp;or&nbsp;<br />[CubeComponent](../classes/CubeComponent.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[ProvisionAgreement](../classes/ProvisionAgreement.md) |
 | Domain Of | [Governed](../classes/Governed.md) |
 
 ### Cardinality and Requirements
@@ -124,8 +124,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:wasDerivedFrom |
-| native | odm:wasDerivedFrom |
+| self | dds:wasDerivedFrom |
+| native | dds:wasDerivedFrom |
 | exact | prov:wasDerivedFrom |
 
 
@@ -145,6 +145,7 @@ rank: 1000
 owner: Governed
 domain_of:
 - Governed
+range: string
 any_of:
 - range: Item
 - range: ItemGroup

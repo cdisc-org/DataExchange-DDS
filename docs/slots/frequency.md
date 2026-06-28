@@ -14,7 +14,7 @@ _Frequency. Use dose frequency terminology e.g. "BID" if applicable._
 
 
 
-URI: [odm:slot/frequency](https://cdisc.org/odm2/slot/frequency)
+URI: [dds:slot/frequency](https://cdisc.org/ddsslot/frequency)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/frequency](https://cdisc.org/odm2/slot/frequency)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:frequency |
-| native | odm:frequency |
+| self | dds:frequency |
+| native | dds:frequency |
 
 
 

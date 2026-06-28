@@ -14,7 +14,7 @@ _A governed collection that represents a purpose-driven assembly of datasets and
 
 
 
-URI: [odm:class/DataProduct](https://cdisc.org/odm2/class/DataProduct)
+URI: [dds:class/DataProduct](https://cdisc.org/ddsclass/DataProduct)
 
 
 ```mermaid
@@ -341,8 +341,8 @@ Timing ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DataProduct |
-| native | odm:DataProduct |
+| self | dds:DataProduct |
+| native | dds:DataProduct |
 | exact | dprod:DataProduct, dcat:DataService |
 
 
@@ -510,6 +510,7 @@ attributes:
     owner: DataProduct
     domain_of:
     - DataProduct
+    range: string
     any_of:
     - range: User
     - range: Organization
@@ -522,6 +523,7 @@ attributes:
     domain_of:
     - ItemGroup
     - DataProduct
+    range: string
   lifecycleStatus:
     name: lifecycleStatus
     description: Current lifecycle status of the data product
@@ -617,6 +619,7 @@ attributes:
     domain_of:
     - Dataset
     - DataProduct
+    range: string
     multivalued: true
     inlined: true
     inlined_as_list: true

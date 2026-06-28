@@ -14,7 +14,7 @@ _Source system that generated the data_
 
 
 
-URI: [odm:slot/sourceSystem](https://cdisc.org/odm2/slot/sourceSystem)
+URI: [dds:slot/sourceSystem](https://cdisc.org/ddsslot/sourceSystem)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/sourceSystem](https://cdisc.org/odm2/slot/sourceSystem)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:sourceSystem |
-| native | odm:sourceSystem |
+| self | dds:sourceSystem |
+| native | dds:sourceSystem |
 
 
 

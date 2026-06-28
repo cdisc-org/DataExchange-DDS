@@ -14,7 +14,7 @@ _Datasets or slices/subsets of datasets asked for by this analysis. If a Item is
 
 
 
-URI: [odm:slot/inputData](https://cdisc.org/odm2/slot/inputData)
+URI: [dds:slot/inputData](https://cdisc.org/ddsslot/inputData)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/inputData](https://cdisc.org/odm2/slot/inputData)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[Dataset](../classes/Dataset.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[Dataset](../classes/Dataset.md) |
 | Domain Of | [Analysis](../classes/Analysis.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:inputData |
-| native | odm:inputData |
+| self | dds:inputData |
+| native | dds:inputData |
 
 
 
@@ -110,6 +110,7 @@ rank: 1000
 owner: Analysis
 domain_of:
 - Analysis
+range: string
 multivalued: true
 inlined: false
 any_of:

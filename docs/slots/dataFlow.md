@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/dataFlow](https://cdisc.org/odm2/slot/dataFlow)
+URI: [dds:slot/dataFlow](https://cdisc.org/ddsslot/dataFlow)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/dataFlow](https://cdisc.org/odm2/slot/dataFlow)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [DataflowRelationship](../classes/DataflowRelationship.md), [ProvisionAgreement](../classes/ProvisionAgreement.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/dataFlow](https://cdisc.org/odm2/slot/dataFlow)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dataFlow |
-| native | odm:dataFlow |
+| self | dds:dataFlow |
+| native | dds:dataFlow |
 
 
 
@@ -76,6 +76,7 @@ name: dataFlow
 domain_of:
 - DataflowRelationship
 - ProvisionAgreement
+range: string
 
 ```
 </details></div>

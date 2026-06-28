@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/item](https://cdisc.org/odm2/slot/item)
+URI: [dds:slot/item](https://cdisc.org/ddsslot/item)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/item](https://cdisc.org/odm2/slot/item)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [RangeCheck](../classes/RangeCheck.md), [SourceItem](../classes/SourceItem.md), [CubeComponent](../classes/CubeComponent.md), [ObservationRelationship](../classes/ObservationRelationship.md) |
 
 ### Cardinality and Requirements
@@ -67,8 +67,8 @@ URI: [odm:slot/item](https://cdisc.org/odm2/slot/item)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:item |
-| native | odm:item |
+| self | dds:item |
+| native | dds:item |
 
 
 
@@ -83,6 +83,7 @@ domain_of:
 - SourceItem
 - CubeComponent
 - ObservationRelationship
+range: string
 
 ```
 </details></div>

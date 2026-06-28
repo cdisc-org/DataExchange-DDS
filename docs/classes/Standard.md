@@ -14,7 +14,7 @@ _A collection element that groups related standards within a specific context, u
 
 
 
-URI: [odm:class/Standard](https://cdisc.org/odm2/class/Standard)
+URI: [dds:class/Standard](https://cdisc.org/ddsclass/Standard)
 
 
 ```mermaid
@@ -110,8 +110,8 @@ Standard ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Standard |
-| native | odm:Standard |
+| self | dds:Standard |
+| native | dds:Standard |
 | exact | odm:Standard |
 
 

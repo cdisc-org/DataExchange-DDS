@@ -14,7 +14,7 @@ _A text representation that provides content in a specific language, used for mu
 
 
 
-URI: [odm:class/Translation](https://cdisc.org/odm2/class/Translation)
+URI: [dds:class/Translation](https://cdisc.org/ddsclass/Translation)
 
 
 ```mermaid
@@ -78,8 +78,8 @@ Translation {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Translation |
-| native | odm:Translation |
+| self | dds:Translation |
+| native | dds:Translation |
 | exact | odm:TranslatedText, sdmx:InternationalString |
 
 

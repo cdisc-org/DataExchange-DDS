@@ -9,21 +9,21 @@ search:
 
 
 
-_An enumeration that defines the sources of data origin_
+_An enumeration that defines the sources of data origin Values sourced from NCI Thesaurus subset C170450._
 
 
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/OriginSource](https://cdisc.org/odm2/enum/OriginSource)
+URI: [dds:enum/OriginSource](https://cdisc.org/ddsenum/OriginSource)
 
 ## Permissible Values
 | Value | Meaning | Description |
 | --- | --- | --- |
-| Investigator | ncit:C25936 |  |
-| Sponsor | ncit:C70793 |  |
-| Subject | ncit:C41189 |  |
-| Vendor | ncit:C68608 |  |
+| Investigator | NCIT:C25936 |  |
+| Sponsor | NCIT:C70793 |  |
+| Subject | NCIT:C41189 |  |
+| Vendor | NCIT:C68608 |  |
 
 
 
@@ -65,22 +65,23 @@ URI: [odm:enum/OriginSource](https://cdisc.org/odm2/enum/OriginSource)
 <details>
 ```yaml
 name: OriginSource
-description: An enumeration that defines the sources of data origin
+description: An enumeration that defines the sources of data origin Values sourced
+  from NCI Thesaurus subset C170450.
 from_schema: https://cdisc.org/dds
 rank: 1000
 permissible_values:
   Investigator:
     text: Investigator
-    meaning: ncit:C25936
+    meaning: NCIT:C25936
   Sponsor:
     text: Sponsor
-    meaning: ncit:C70793
+    meaning: NCIT:C70793
   Subject:
     text: Subject
-    meaning: ncit:C41189
+    meaning: NCIT:C41189
   Vendor:
     text: Vendor
-    meaning: ncit:C68608
+    meaning: NCIT:C68608
 
 ```
 </details>

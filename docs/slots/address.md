@@ -14,7 +14,7 @@ _The address of the organization._
 
 
 
-URI: [odm:slot/address](https://cdisc.org/odm2/slot/address)
+URI: [dds:slot/address](https://cdisc.org/ddsslot/address)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/address](https://cdisc.org/odm2/slot/address)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:address |
-| native | odm:address |
+| self | dds:address |
+| native | dds:address |
 
 
 

@@ -14,7 +14,7 @@ _A technical representation that provides a specific format or access method for
 
 
 
-URI: [odm:class/Distribution](https://cdisc.org/odm2/class/Distribution)
+URI: [dds:class/Distribution](https://cdisc.org/ddsclass/Distribution)
 
 
 ```mermaid
@@ -229,8 +229,8 @@ Timing ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Distribution |
-| native | odm:Distribution |
+| self | dds:Distribution |
+| native | dds:Distribution |
 | exact | dprod:Distribution, dcat:Distribution |
 | narrow | sdmx:JsonDataset, sdmx:CsvDataset, sdmx:StructureSpecificDataset |
 
@@ -329,6 +329,7 @@ attributes:
     domain_of:
     - Dataset
     - Distribution
+    range: string
     any_of:
     - range: string
     - range: DataStructureDefinition
@@ -349,6 +350,7 @@ attributes:
     owner: Distribution
     domain_of:
     - Distribution
+    range: string
 
 ```
 </details></div>

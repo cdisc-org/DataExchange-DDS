@@ -14,7 +14,7 @@ _Reference to the event or occurrence that this timing is relative to._
 
 
 
-URI: [odm:slot/relativeFrom](https://cdisc.org/odm2/slot/relativeFrom)
+URI: [dds:slot/relativeFrom](https://cdisc.org/ddsslot/relativeFrom)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/relativeFrom](https://cdisc.org/odm2/slot/relativeFrom)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:relativeFrom |
-| native | odm:relativeFrom |
+| self | dds:relativeFrom |
+| native | dds:relativeFrom |
 
 
 

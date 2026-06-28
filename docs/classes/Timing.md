@@ -14,7 +14,7 @@ _A temporal element that describes the timing of an event or occurrence, which c
 
 
 
-URI: [odm:class/Timing](https://cdisc.org/odm2/class/Timing)
+URI: [dds:class/Timing](https://cdisc.org/ddsclass/Timing)
 
 
 ```mermaid
@@ -267,8 +267,8 @@ Timing ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Timing |
-| native | odm:Timing |
+| self | dds:Timing |
+| native | dds:Timing |
 | exact | usdm:Timing |
 | narrow | omop:Observation_period, omop:Drug_era, omop:Condition_era, omop:Procedure_era, fhir:Period, fhir:Age, fhir:Duration |
 | broad | fhir:Timing |

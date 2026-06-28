@@ -14,7 +14,7 @@ _A relationship element that associates a DataAttribute with an Observation, all
 
 
 
-URI: [odm:class/ObservationRelationship](https://cdisc.org/odm2/class/ObservationRelationship)
+URI: [dds:class/ObservationRelationship](https://cdisc.org/ddsclass/ObservationRelationship)
 
 
 ```mermaid
@@ -125,9 +125,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -188,8 +188,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ObservationRelationship |
-| native | odm:ObservationRelationship |
+| self | dds:ObservationRelationship |
+| native | dds:ObservationRelationship |
 | exact | sdmx:ObservationRelationship |
 
 

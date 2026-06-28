@@ -14,7 +14,7 @@ _The Data Consumer that is part of this agreement_
 
 
 
-URI: [odm:slot/consumer](https://cdisc.org/odm2/slot/consumer)
+URI: [dds:slot/consumer](https://cdisc.org/ddsslot/consumer)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/consumer](https://cdisc.org/odm2/slot/consumer)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) |
 | Domain Of | [ProvisionAgreement](../classes/ProvisionAgreement.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:consumer |
-| native | odm:consumer |
+| self | dds:consumer |
+| native | dds:consumer |
 
 
 
@@ -108,6 +108,7 @@ rank: 1000
 owner: ProvisionAgreement
 domain_of:
 - ProvisionAgreement
+range: string
 any_of:
 - range: DataProduct
 - range: Organization

@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/applicableWhen](https://cdisc.org/odm2/slot/applicableWhen)
+URI: [dds:slot/applicableWhen](https://cdisc.org/ddsslot/applicableWhen)
 <!-- no inheritance hierarchy -->
 
 
@@ -37,7 +37,7 @@ URI: [odm:slot/applicableWhen](https://cdisc.org/odm2/slot/applicableWhen)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Item](../classes/Item.md), [ItemGroup](../classes/ItemGroup.md), [Parameter](../classes/Parameter.md), [Analysis](../classes/Analysis.md) |
 
 ### Cardinality and Requirements
@@ -65,8 +65,8 @@ URI: [odm:slot/applicableWhen](https://cdisc.org/odm2/slot/applicableWhen)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:applicableWhen |
-| native | odm:applicableWhen |
+| self | dds:applicableWhen |
+| native | dds:applicableWhen |
 
 
 
@@ -81,6 +81,7 @@ domain_of:
 - ItemGroup
 - Parameter
 - Analysis
+range: string
 
 ```
 </details></div>

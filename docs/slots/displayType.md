@@ -14,7 +14,7 @@ _The type of display this result represents. e.g. table, listing, figure, dashbo
 
 
 
-URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
+URI: [dds:slot/displayType](https://cdisc.org/ddsslot/displayType)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Display](../classes/Display.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/displayType](https://cdisc.org/odm2/slot/displayType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:displayType |
-| native | odm:displayType |
+| self | dds:displayType |
+| native | dds:displayType |
 
 
 
@@ -98,6 +98,7 @@ rank: 1000
 owner: Display
 domain_of:
 - Display
+range: string
 
 ```
 </details></div>

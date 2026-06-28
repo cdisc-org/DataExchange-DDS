@@ -14,7 +14,7 @@ _Indicates whether the timing is recalled or not (recalled timings are less reli
 
 
 
-URI: [odm:slot/recalled](https://cdisc.org/odm2/slot/recalled)
+URI: [dds:slot/recalled](https://cdisc.org/ddsslot/recalled)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/recalled](https://cdisc.org/odm2/slot/recalled)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:recalled |
-| native | odm:recalled |
+| self | dds:recalled |
+| native | dds:recalled |
 
 
 

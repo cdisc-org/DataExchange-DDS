@@ -14,7 +14,7 @@ _Dataset this distribution represents_
 
 
 
-URI: [odm:slot/isDistributionOf](https://cdisc.org/odm2/slot/isDistributionOf)
+URI: [dds:slot/isDistributionOf](https://cdisc.org/ddsslot/isDistributionOf)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/isDistributionOf](https://cdisc.org/odm2/slot/isDistributionOf)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:isDistributionOf |
-| native | odm:isDistributionOf |
+| self | dds:isDistributionOf |
+| native | dds:isDistributionOf |
 
 
 

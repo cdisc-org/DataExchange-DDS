@@ -15,7 +15,7 @@ _An enumeration that defines the types of users in a clinical data collection or
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/UserType](https://cdisc.org/odm2/enum/UserType)
+URI: [dds:enum/UserType](https://cdisc.org/ddsenum/UserType)
 
 ## Permissible Values
 | Value | Meaning | Description |

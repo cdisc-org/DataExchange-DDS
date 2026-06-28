@@ -14,7 +14,7 @@ _Standards defined in this version of the metadata_
 
 
 
-URI: [odm:slot/standards](https://cdisc.org/odm2/slot/standards)
+URI: [dds:slot/standards](https://cdisc.org/ddsslot/standards)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/standards](https://cdisc.org/odm2/slot/standards)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:standards |
-| native | odm:standards |
+| self | dds:standards |
+| native | dds:standards |
 
 
 

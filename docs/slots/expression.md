@@ -14,7 +14,7 @@ _The actual text of the formal expression (renamed from 'code' for disambiguatio
 
 
 
-URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
+URI: [dds:slot/expression](https://cdisc.org/ddsslot/expression)
 <!-- no inheritance hierarchy -->
 
 
@@ -86,8 +86,8 @@ URI: [odm:slot/expression](https://cdisc.org/odm2/slot/expression)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:expression |
-| native | odm:expression |
+| self | dds:expression |
+| native | dds:expression |
 
 
 

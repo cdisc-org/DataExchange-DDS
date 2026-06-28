@@ -14,7 +14,7 @@ _Version of the ODM standard used_
 
 
 
-URI: [odm:slot/odmVersion](https://cdisc.org/odm2/slot/odmVersion)
+URI: [dds:slot/odmVersion](https://cdisc.org/ddsslot/odmVersion)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/odmVersion](https://cdisc.org/odm2/slot/odmVersion)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:odmVersion |
-| native | odm:odmVersion |
+| self | dds:odmVersion |
+| native | dds:odmVersion |
 
 
 

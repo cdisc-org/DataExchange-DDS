@@ -14,7 +14,7 @@ _Description of the input interface before concrete Datasets exist. Dataflows re
 
 
 
-URI: [odm:slot/inputDataflow](https://cdisc.org/odm2/slot/inputDataflow)
+URI: [dds:slot/inputDataflow](https://cdisc.org/ddsslot/inputDataflow)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/inputDataflow](https://cdisc.org/odm2/slot/inputDataflow)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:inputDataflow |
-| native | odm:inputDataflow |
+| self | dds:inputDataflow |
+| native | dds:inputDataflow |
 | close | dcat:distribution |
 
 

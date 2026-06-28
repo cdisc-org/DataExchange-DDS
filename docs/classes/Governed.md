@@ -14,7 +14,7 @@ _A mixin that provides slots for audit trail and standards governance, including
 
 
 
-URI: [odm:class/Governed](https://cdisc.org/odm2/class/Governed)
+URI: [dds:class/Governed](https://cdisc.org/ddsclass/Governed)
 
 
 ```mermaid
@@ -138,8 +138,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Governed |
-| native | odm:Governed |
+| self | dds:Governed |
+| native | dds:Governed |
 
 
 
@@ -159,10 +159,6 @@ description: A mixin that provides slots for audit trail and standards governanc
   including mandatory status, comments, and attribution
 from_schema: https://cdisc.org/dds
 mixin: true
-slot_usage:
-  OID:
-    name: OID
-    required: true
 attributes:
   mandatory:
     name: mandatory
@@ -263,10 +259,6 @@ description: A mixin that provides slots for audit trail and standards governanc
   including mandatory status, comments, and attribution
 from_schema: https://cdisc.org/dds
 mixin: true
-slot_usage:
-  OID:
-    name: OID
-    required: true
 attributes:
   mandatory:
     name: mandatory
@@ -309,6 +301,7 @@ attributes:
     owner: Governed
     domain_of:
     - Governed
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -332,6 +325,7 @@ attributes:
     owner: Governed
     domain_of:
     - Governed
+    range: string
     any_of:
     - range: User
     - range: Organization
@@ -347,6 +341,7 @@ attributes:
     owner: Governed
     domain_of:
     - Governed
+    range: string
     any_of:
     - range: Item
     - range: ItemGroup

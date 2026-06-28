@@ -14,7 +14,7 @@ _Machine-readable instructions to obtain the resource e.g. FHIR path, URL_
 
 
 
-URI: [odm:slot/href](https://cdisc.org/odm2/slot/href)
+URI: [dds:slot/href](https://cdisc.org/ddsslot/href)
 <!-- no inheritance hierarchy -->
 
 
@@ -95,8 +95,8 @@ URI: [odm:slot/href](https://cdisc.org/odm2/slot/href)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:href |
-| native | odm:href |
+| self | dds:href |
+| native | dds:href |
 
 
 

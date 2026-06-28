@@ -15,7 +15,7 @@ _Logical operators for combining conditions in Boolean expressions. For complex 
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/LogicalOperator](https://cdisc.org/odm2/enum/LogicalOperator)
+URI: [dds:enum/LogicalOperator](https://cdisc.org/ddsenum/LogicalOperator)
 
 ## Permissible Values
 | Value | Meaning | Description |

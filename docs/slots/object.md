@@ -14,7 +14,7 @@ _The ending element of the relationship._
 
 
 
-URI: [odm:slot/object](https://cdisc.org/odm2/slot/object)
+URI: [dds:slot/object](https://cdisc.org/ddsslot/object)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/object](https://cdisc.org/odm2/slot/object)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:object |
-| native | odm:object |
+| self | dds:object |
+| native | dds:object |
 
 
 

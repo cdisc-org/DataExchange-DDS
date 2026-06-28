@@ -14,7 +14,7 @@ _A validation element that performs a simple comparison check between a referenc
 
 
 
-URI: [odm:class/RangeCheck](https://cdisc.org/odm2/class/RangeCheck)
+URI: [dds:class/RangeCheck](https://cdisc.org/ddsclass/RangeCheck)
 
 
 ```mermaid
@@ -151,8 +151,8 @@ ReturnValue ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:RangeCheck |
-| native | odm:RangeCheck |
+| self | dds:RangeCheck |
+| native | dds:RangeCheck |
 | related | qb:SliceKey, sdmx:DataKey |
 
 
@@ -291,6 +291,7 @@ attributes:
     - SourceItem
     - CubeComponent
     - ObservationRelationship
+    range: string
     any_of:
     - range: Item
     - range: Dimension

@@ -14,7 +14,7 @@ _Unique identifier for the ODM file_
 
 
 
-URI: [odm:slot/fileOID](https://cdisc.org/odm2/slot/fileOID)
+URI: [dds:slot/fileOID](https://cdisc.org/ddsslot/fileOID)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/fileOID](https://cdisc.org/odm2/slot/fileOID)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:fileOID |
-| native | odm:fileOID |
+| self | dds:fileOID |
+| native | dds:fileOID |
 
 
 

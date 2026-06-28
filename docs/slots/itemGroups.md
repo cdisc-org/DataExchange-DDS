@@ -14,7 +14,7 @@ _Item groups, containing items, defined in this version of the metadata_
 
 
 
-URI: [odm:slot/itemGroups](https://cdisc.org/odm2/slot/itemGroups)
+URI: [dds:slot/itemGroups](https://cdisc.org/ddsslot/itemGroups)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/itemGroups](https://cdisc.org/odm2/slot/itemGroups)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:itemGroups |
-| native | odm:itemGroups |
+| self | dds:itemGroups |
+| native | dds:itemGroups |
 
 
 

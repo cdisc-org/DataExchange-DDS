@@ -14,7 +14,7 @@ _A mixin that provides additional metadata specific to SDMX Datasets_
 
 
 
-URI: [odm:class/IsSdmxDataset](https://cdisc.org/odm2/class/IsSdmxDataset)
+URI: [dds:class/IsSdmxDataset](https://cdisc.org/ddsclass/IsSdmxDataset)
 
 
 ```mermaid
@@ -97,8 +97,8 @@ IsSdmxDataset {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:IsSdmxDataset |
-| native | odm:IsSdmxDataset |
+| self | dds:IsSdmxDataset |
+| native | dds:IsSdmxDataset |
 
 
 
@@ -204,6 +204,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   reportingBegin:
     name: reportingBegin
     description: A specific time period in a known system of time periods that identifies
@@ -213,6 +214,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   reportingEnd:
     name: reportingEnd
     description: A specific time period in a known system of time periods that identifies
@@ -222,6 +224,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   dataExtractionDate:
     name: dataExtractionDate
     description: A specific time period that identifies the date and time that the
@@ -231,6 +234,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   validFrom:
     name: validFrom
     description: Indicates the inclusive start time indicating the validity of the
@@ -240,6 +244,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   validTo:
     name: validTo
     description: Indicates the inclusive end time indicating the validity of the information
@@ -249,6 +254,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   publicationYear:
     name: publicationYear
     description: Specifies the year of publication of the data or metadata in terms
@@ -258,6 +264,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
   publicationPeriod:
     name: publicationPeriod
     description: Specifies the period of publication of the data or metadata in terms
@@ -267,6 +274,7 @@ attributes:
     owner: IsSdmxDataset
     domain_of:
     - IsSdmxDataset
+    range: string
 
 ```
 </details></div>

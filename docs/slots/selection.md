@@ -14,7 +14,7 @@ _Machine-executable instructions for selecting data from the resource._
 
 
 
-URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
+URI: [dds:slot/selection](https://cdisc.org/ddsslot/selection)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/selection](https://cdisc.org/odm2/slot/selection)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:selection |
-| native | odm:selection |
+| self | dds:selection |
+| native | dds:selection |
 
 
 

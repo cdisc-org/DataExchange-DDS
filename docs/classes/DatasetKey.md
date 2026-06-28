@@ -16,7 +16,7 @@ _An abstract identifier that comprises the cross-product of dimension values to 
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [odm:class/DatasetKey](https://cdisc.org/odm2/class/DatasetKey)
+URI: [dds:class/DatasetKey](https://cdisc.org/ddsclass/DatasetKey)
 
 
 ```mermaid
@@ -80,8 +80,8 @@ DatasetKey {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DatasetKey |
-| native | odm:DatasetKey |
+| self | dds:DatasetKey |
+| native | dds:DatasetKey |
 | exact | sdmx:Key |
 
 
@@ -156,6 +156,7 @@ attributes:
     domain_of:
     - Dataset
     - DatasetKey
+    range: string
     any_of:
     - range: Dimension
     - range: ComponentList
@@ -168,6 +169,7 @@ attributes:
     owner: DatasetKey
     domain_of:
     - DatasetKey
+    range: string
   attributeValues:
     name: attributeValues
     description: Association to the Attribute Values relating to Key
@@ -176,6 +178,7 @@ attributes:
     owner: DatasetKey
     domain_of:
     - DatasetKey
+    range: string
 
 ```
 </details></div>

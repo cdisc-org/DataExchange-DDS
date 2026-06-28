@@ -14,7 +14,7 @@ _Defines the action to be taken by the recipient system (information, append, re
 
 
 
-URI: [odm:slot/action](https://cdisc.org/odm2/slot/action)
+URI: [dds:slot/action](https://cdisc.org/ddsslot/action)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/action](https://cdisc.org/odm2/slot/action)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
 
 ### Cardinality and Requirements
@@ -81,8 +81,8 @@ URI: [odm:slot/action](https://cdisc.org/odm2/slot/action)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:action |
-| native | odm:action |
+| self | dds:action |
+| native | dds:action |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
+range: string
 
 ```
 </details></div>

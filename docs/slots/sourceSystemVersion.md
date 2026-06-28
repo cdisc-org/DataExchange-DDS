@@ -14,7 +14,7 @@ _Version of the source system_
 
 
 
-URI: [odm:slot/sourceSystemVersion](https://cdisc.org/odm2/slot/sourceSystemVersion)
+URI: [dds:slot/sourceSystemVersion](https://cdisc.org/ddsslot/sourceSystemVersion)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/sourceSystemVersion](https://cdisc.org/odm2/slot/sourceSystemVers
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:sourceSystemVersion |
-| native | odm:sourceSystemVersion |
+| self | dds:sourceSystemVersion |
+| native | dds:sourceSystemVersion |
 
 
 

@@ -14,7 +14,7 @@ _The method for handling missing values in the measure property_
 
 
 
-URI: [odm:slot/missingHandling](https://cdisc.org/odm2/slot/missingHandling)
+URI: [dds:slot/missingHandling](https://cdisc.org/ddsslot/missingHandling)
 <!-- no inheritance hierarchy -->
 
 
@@ -83,8 +83,8 @@ URI: [odm:slot/missingHandling](https://cdisc.org/odm2/slot/missingHandling)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:missingHandling |
-| native | odm:missingHandling |
+| self | dds:missingHandling |
+| native | dds:missingHandling |
 
 
 

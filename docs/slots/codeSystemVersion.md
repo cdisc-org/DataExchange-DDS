@@ -14,7 +14,7 @@ _The code system version_
 
 
 
-URI: [odm:slot/codeSystemVersion](https://cdisc.org/odm2/slot/codeSystemVersion)
+URI: [dds:slot/codeSystemVersion](https://cdisc.org/ddsslot/codeSystemVersion)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/codeSystemVersion](https://cdisc.org/odm2/slot/codeSystemVersion)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:codeSystemVersion |
-| native | odm:codeSystemVersion |
+| self | dds:codeSystemVersion |
+| native | dds:codeSystemVersion |
 
 
 

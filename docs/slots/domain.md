@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/domain](https://cdisc.org/odm2/slot/domain)
+URI: [dds:slot/domain](https://cdisc.org/ddsslot/domain)
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +35,7 @@ URI: [odm:slot/domain](https://cdisc.org/odm2/slot/domain)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [ItemGroup](../classes/ItemGroup.md), [DataProduct](../classes/DataProduct.md) |
 
 ### Cardinality and Requirements
@@ -63,8 +63,8 @@ URI: [odm:slot/domain](https://cdisc.org/odm2/slot/domain)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:domain |
-| native | odm:domain |
+| self | dds:domain |
+| native | dds:domain |
 
 
 
@@ -77,6 +77,7 @@ name: domain
 domain_of:
 - ItemGroup
 - DataProduct
+range: string
 
 ```
 </details></div>

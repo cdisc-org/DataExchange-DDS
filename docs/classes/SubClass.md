@@ -14,7 +14,7 @@ _A specific SubClass within a CDISC model Class._
 
 
 
-URI: [odm:class/SubClass](https://cdisc.org/odm2/class/SubClass)
+URI: [dds:class/SubClass](https://cdisc.org/ddsclass/SubClass)
 
 
 ```mermaid
@@ -80,8 +80,8 @@ SubClass ||--}o SubClass : "subClasses"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:SubClass |
-| native | odm:SubClass |
+| self | dds:SubClass |
+| native | dds:SubClass |
 
 
 

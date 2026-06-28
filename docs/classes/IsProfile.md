@@ -14,7 +14,7 @@ _A mixin that provides additional metadata for FHIR resources and Data Products,
 
 
 
-URI: [odm:class/IsProfile](https://cdisc.org/odm2/class/IsProfile)
+URI: [dds:class/IsProfile](https://cdisc.org/ddsclass/IsProfile)
 
 
 ```mermaid
@@ -160,8 +160,8 @@ Timing ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:IsProfile |
-| native | odm:IsProfile |
+| self | dds:IsProfile |
+| native | dds:IsProfile |
 
 
 
@@ -271,6 +271,7 @@ attributes:
     owner: IsProfile
     domain_of:
     - IsProfile
+    range: string
     required: false
     any_of:
     - range: User

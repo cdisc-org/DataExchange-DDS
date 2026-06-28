@@ -14,7 +14,7 @@ _Date and time when the ODM file was created_
 
 
 
-URI: [odm:slot/creationDateTime](https://cdisc.org/odm2/slot/creationDateTime)
+URI: [dds:slot/creationDateTime](https://cdisc.org/ddsslot/creationDateTime)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,8 +82,8 @@ URI: [odm:slot/creationDateTime](https://cdisc.org/odm2/slot/creationDateTime)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:creationDateTime |
-| native | odm:creationDateTime |
+| self | dds:creationDateTime |
+| native | dds:creationDateTime |
 
 
 

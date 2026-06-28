@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/hasPolicy](https://cdisc.org/odm2/slot/hasPolicy)
+URI: [dds:slot/hasPolicy](https://cdisc.org/ddsslot/hasPolicy)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/hasPolicy](https://cdisc.org/odm2/slot/hasPolicy)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dataset](../classes/Dataset.md), [DataProduct](../classes/DataProduct.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/hasPolicy](https://cdisc.org/odm2/slot/hasPolicy)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:hasPolicy |
-| native | odm:hasPolicy |
+| self | dds:hasPolicy |
+| native | dds:hasPolicy |
 
 
 
@@ -76,6 +76,7 @@ name: hasPolicy
 domain_of:
 - Dataset
 - DataProduct
+range: string
 
 ```
 </details></div>

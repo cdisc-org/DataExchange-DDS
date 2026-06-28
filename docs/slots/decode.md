@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/decode](https://cdisc.org/odm2/slot/decode)
+URI: [dds:slot/decode](https://cdisc.org/ddsslot/decode)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/decode](https://cdisc.org/odm2/slot/decode)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [CodeListItem](../classes/CodeListItem.md), [Coding](../classes/Coding.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/decode](https://cdisc.org/odm2/slot/decode)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:decode |
-| native | odm:decode |
+| self | dds:decode |
+| native | dds:decode |
 
 
 
@@ -76,6 +76,7 @@ name: decode
 domain_of:
 - CodeListItem
 - Coding
+range: string
 
 ```
 </details></div>

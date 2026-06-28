@@ -14,7 +14,7 @@ _An organization element that provides data to a Data Consumer, which can be a s
 
 
 
-URI: [odm:class/DataProvider](https://cdisc.org/odm2/class/DataProvider)
+URI: [dds:class/DataProvider](https://cdisc.org/ddsclass/DataProvider)
 
 
 ```mermaid
@@ -238,8 +238,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:DataProvider |
-| native | odm:DataProvider |
+| self | dds:DataProvider |
+| native | dds:DataProvider |
 | close | sdmx:DataProvider |
 
 

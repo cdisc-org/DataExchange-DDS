@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/items](https://cdisc.org/odm2/slot/items)
+URI: [dds:slot/items](https://cdisc.org/ddsslot/items)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/items](https://cdisc.org/odm2/slot/items)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md), [ItemGroup](../classes/ItemGroup.md), [Parameter](../classes/Parameter.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/items](https://cdisc.org/odm2/slot/items)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:items |
-| native | odm:items |
+| self | dds:items |
+| native | dds:items |
 
 
 
@@ -79,6 +79,7 @@ domain_of:
 - MetaDataVersion
 - ItemGroup
 - Parameter
+range: string
 
 ```
 </details></div>

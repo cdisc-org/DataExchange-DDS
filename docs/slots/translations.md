@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/translations](https://cdisc.org/odm2/slot/translations)
+URI: [dds:slot/translations](https://cdisc.org/ddsslot/translations)
 <!-- no inheritance hierarchy -->
 
 
@@ -20,7 +20,7 @@ URI: [odm:slot/translations](https://cdisc.org/odm2/slot/translations)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TranslatedText](../classes/TranslatedText.md) |  |  no  |
+| [TranslatedText](../classes/TranslatedText.md) | A container of the language-specific translations of a single piece of text (a set of localised strings), as opposed to one Translation. |  no  |
 
 
 
@@ -76,8 +76,8 @@ URI: [odm:slot/translations](https://cdisc.org/odm2/slot/translations)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:translations |
-| native | odm:translations |
+| self | dds:translations |
+| native | dds:translations |
 
 
 

@@ -14,7 +14,7 @@ _A reified property concept that exists within the context of its containing top
 
 
 
-URI: [odm:class/ConceptProperty](https://cdisc.org/odm2/class/ConceptProperty)
+URI: [dds:class/ConceptProperty](https://cdisc.org/ddsclass/ConceptProperty)
 
 
 ```mermaid
@@ -241,8 +241,8 @@ Standard ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ConceptProperty |
-| native | odm:ConceptProperty |
+| self | dds:ConceptProperty |
+| native | dds:ConceptProperty |
 | narrow | usdm:BiomedicalConceptProperty, usdm:DerivationConceptProperty, usdm:AnalysisConceptProperty |
 | related | osb:sdtm_variable, osb:specimen, osb:unit_dimension, osb:std_unit, osb:laterality, osb:location, osb:position |
 | close | sdmx:MetaDataAttribute, sdmx:Concept |

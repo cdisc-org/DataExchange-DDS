@@ -14,7 +14,7 @@ _An agreement element that describes the contractual relationship between a Data
 
 
 
-URI: [odm:class/ProvisionAgreement](https://cdisc.org/odm2/class/ProvisionAgreement)
+URI: [dds:class/ProvisionAgreement](https://cdisc.org/ddsclass/ProvisionAgreement)
 
 
 ```mermaid
@@ -23,7 +23,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -193,6 +192,7 @@ SiteOrSponsorComment {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -350,8 +350,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ProvisionAgreement |
-| native | odm:ProvisionAgreement |
+| self | dds:ProvisionAgreement |
+| native | dds:ProvisionAgreement |
 | close | sdmx:ProvisionAgreement |
 
 
@@ -449,6 +449,7 @@ attributes:
     owner: ProvisionAgreement
     domain_of:
     - ProvisionAgreement
+    range: string
     any_of:
     - range: DataProduct
     - range: Organization

@@ -14,7 +14,7 @@ _Code lists defined in this version of the metadata._
 
 
 
-URI: [odm:slot/codeLists](https://cdisc.org/odm2/slot/codeLists)
+URI: [dds:slot/codeLists](https://cdisc.org/ddsslot/codeLists)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/codeLists](https://cdisc.org/odm2/slot/codeLists)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:codeLists |
-| native | odm:codeLists |
+| self | dds:codeLists |
+| native | dds:codeLists |
 
 
 

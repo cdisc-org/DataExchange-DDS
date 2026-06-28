@@ -14,7 +14,7 @@ _Human-readable label, shown in UIs_
 
 
 
-URI: [odm:slot/label](https://cdisc.org/odm2/slot/label)
+URI: [dds:slot/label](https://cdisc.org/ddsslot/label)
 <!-- no inheritance hierarchy -->
 
 
@@ -77,7 +77,7 @@ URI: [odm:slot/label](https://cdisc.org/odm2/slot/label)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) |
 | Domain Of | [Labelled](../classes/Labelled.md) |
 
 ### Cardinality and Requirements
@@ -129,8 +129,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:label |
-| native | odm:label |
+| self | dds:label |
+| native | dds:label |
 | exact | skos:prefLabel |
 
 
@@ -149,6 +149,7 @@ rank: 1000
 owner: Labelled
 domain_of:
 - Labelled
+range: string
 any_of:
 - range: string
 - range: TranslatedText

@@ -14,7 +14,7 @@ _Return type of the expression_
 
 
 
-URI: [odm:slot/returnType](https://cdisc.org/odm2/slot/returnType)
+URI: [dds:slot/returnType](https://cdisc.org/ddsslot/returnType)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/returnType](https://cdisc.org/odm2/slot/returnType)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:returnType |
-| native | odm:returnType |
+| self | dds:returnType |
+| native | dds:returnType |
 
 
 

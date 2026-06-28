@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/conformsTo](https://cdisc.org/odm2/slot/conformsTo)
+URI: [dds:slot/conformsTo](https://cdisc.org/ddsslot/conformsTo)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/conformsTo](https://cdisc.org/odm2/slot/conformsTo)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Dataset](../classes/Dataset.md), [Distribution](../classes/Distribution.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/conformsTo](https://cdisc.org/odm2/slot/conformsTo)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:conformsTo |
-| native | odm:conformsTo |
+| self | dds:conformsTo |
+| native | dds:conformsTo |
 
 
 
@@ -76,6 +76,7 @@ name: conformsTo
 domain_of:
 - Dataset
 - Distribution
+range: string
 
 ```
 </details></div>

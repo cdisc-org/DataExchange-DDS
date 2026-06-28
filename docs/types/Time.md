@@ -53,7 +53,7 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:time |
-| native | odm:time |
+| native | dds:time |
 | exact | schema:Time |
 
 

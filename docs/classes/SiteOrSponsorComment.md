@@ -14,7 +14,7 @@ _A feedback element that contains comments from a site or sponsor, distinct from
 
 
 
-URI: [odm:class/SiteOrSponsorComment](https://cdisc.org/odm2/class/SiteOrSponsorComment)
+URI: [dds:class/SiteOrSponsorComment](https://cdisc.org/ddsclass/SiteOrSponsorComment)
 
 
 ```mermaid
@@ -174,8 +174,8 @@ SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:SiteOrSponsorComment |
-| native | odm:SiteOrSponsorComment |
+| self | dds:SiteOrSponsorComment |
+| native | dds:SiteOrSponsorComment |
 
 
 
@@ -250,6 +250,7 @@ attributes:
     domain_of:
     - Comment
     - SiteOrSponsorComment
+    range: string
     required: true
     any_of:
     - range: string
@@ -273,6 +274,7 @@ attributes:
     - SiteOrSponsorComment
     - DataProvider
     - ProvisionAgreement
+    range: string
     any_of:
     - range: User
     - range: Organization

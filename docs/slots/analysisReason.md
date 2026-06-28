@@ -14,7 +14,7 @@ _The reason this analysis was performed._
 
 
 
-URI: [odm:slot/analysisReason](https://cdisc.org/odm2/slot/analysisReason)
+URI: [dds:slot/analysisReason](https://cdisc.org/ddsslot/analysisReason)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/analysisReason](https://cdisc.org/odm2/slot/analysisReason)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Analysis](../classes/Analysis.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/analysisReason](https://cdisc.org/odm2/slot/analysisReason)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:analysisReason |
-| native | odm:analysisReason |
+| self | dds:analysisReason |
+| native | dds:analysisReason |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: Analysis
 domain_of:
 - Analysis
+range: string
 
 ```
 </details></div>

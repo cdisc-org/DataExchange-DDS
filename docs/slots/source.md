@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/source](https://cdisc.org/odm2/slot/source)
+URI: [dds:slot/source](https://cdisc.org/ddsslot/source)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/source](https://cdisc.org/odm2/slot/source)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Origin](../classes/Origin.md), [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md), [DataProvider](../classes/DataProvider.md), [ProvisionAgreement](../classes/ProvisionAgreement.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/source](https://cdisc.org/odm2/slot/source)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:source |
-| native | odm:source |
+| self | dds:source |
+| native | dds:source |
 
 
 
@@ -80,6 +80,7 @@ domain_of:
 - SiteOrSponsorComment
 - DataProvider
 - ProvisionAgreement
+range: string
 
 ```
 </details></div>

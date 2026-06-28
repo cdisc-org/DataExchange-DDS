@@ -14,7 +14,7 @@ _The ID of the event in a Schedule._
 
 
 
-URI: [odm:slot/event](https://cdisc.org/odm2/slot/event)
+URI: [dds:slot/event](https://cdisc.org/ddsslot/event)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/event](https://cdisc.org/odm2/slot/event)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:event |
-| native | odm:event |
+| self | dds:event |
+| native | dds:event |
 
 
 

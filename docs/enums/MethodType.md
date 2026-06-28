@@ -15,7 +15,7 @@ _An enumeration that defines the types of computational methods available for da
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/MethodType](https://cdisc.org/odm2/enum/MethodType)
+URI: [dds:enum/MethodType](https://cdisc.org/ddsenum/MethodType)
 
 ## Permissible Values
 | Value | Meaning | Description |

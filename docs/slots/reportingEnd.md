@@ -14,7 +14,7 @@ _A specific time period in a known system of time periods that identifies the en
 
 
 
-URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
+URI: [dds:slot/reportingEnd](https://cdisc.org/ddsslot/reportingEnd)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
 
 ### Cardinality and Requirements
@@ -81,8 +81,8 @@ URI: [odm:slot/reportingEnd](https://cdisc.org/odm2/slot/reportingEnd)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:reportingEnd |
-| native | odm:reportingEnd |
+| self | dds:reportingEnd |
+| native | dds:reportingEnd |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
+range: string
 
 ```
 </details></div>

@@ -14,7 +14,7 @@ _The components that make up this component list_
 
 
 
-URI: [odm:slot/components](https://cdisc.org/odm2/slot/components)
+URI: [dds:slot/components](https://cdisc.org/ddsslot/components)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/components](https://cdisc.org/odm2/slot/components)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[Measure](../classes/Measure.md)&nbsp;or&nbsp;<br />[Dimension](../classes/Dimension.md)&nbsp;or&nbsp;<br />[DataAttribute](../classes/DataAttribute.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[Measure](../classes/Measure.md)&nbsp;or&nbsp;<br />[Dimension](../classes/Dimension.md)&nbsp;or&nbsp;<br />[DataAttribute](../classes/DataAttribute.md) |
 | Domain Of | [ComponentList](../classes/ComponentList.md) |
 
 ### Cardinality and Requirements
@@ -92,8 +92,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:components |
-| native | odm:components |
+| self | dds:components |
+| native | dds:components |
 
 
 
@@ -109,6 +109,7 @@ rank: 1000
 owner: ComponentList
 domain_of:
 - ComponentList
+range: string
 multivalued: true
 inlined: true
 inlined_as_list: true

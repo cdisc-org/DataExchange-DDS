@@ -14,7 +14,7 @@ _The starting element of the relationship (e.g., an Item or ItemGroup)._
 
 
 
-URI: [odm:slot/subject](https://cdisc.org/odm2/slot/subject)
+URI: [dds:slot/subject](https://cdisc.org/ddsslot/subject)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/subject](https://cdisc.org/odm2/slot/subject)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:subject |
-| native | odm:subject |
+| self | dds:subject |
+| native | dds:subject |
 
 
 

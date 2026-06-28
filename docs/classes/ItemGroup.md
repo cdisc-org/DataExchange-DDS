@@ -14,7 +14,7 @@ _A collection element that groups related items or subgroups within a specific c
 
 
 
-URI: [odm:class/ItemGroup](https://cdisc.org/odm2/class/ItemGroup)
+URI: [dds:class/ItemGroup](https://cdisc.org/ddsclass/ItemGroup)
 
 
 ```mermaid
@@ -278,9 +278,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -440,8 +440,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:ItemGroup |
-| native | odm:ItemGroup |
+| self | dds:ItemGroup |
+| native | dds:ItemGroup |
 | narrow | fhir:StructureDefinition, fhir:ViewDefinition, fhir:Questionnaire, omop:Table, qb:DataStructureDefinition, sdmx:DataStructureDefinition, sdmx:MetaDataStructureDefinition |
 | related | qb:Dataset, qb:Observation, qb:ObservationGroup, qb:Slice, osb:Activity |
 | close | odm:ItemGroupDef, odm:ItemGroupRef, osb:ActivityInstance |
@@ -684,6 +684,7 @@ attributes:
     domain_of:
     - ItemGroup
     - Dataflow
+    range: string
     any_of:
     - range: string
     - range: TranslatedText

@@ -14,7 +14,7 @@ _Status of an Implementation Guide or of a Controlled Terminology_
 
 
 
-URI: [odm:slot/status](https://cdisc.org/odm2/slot/status)
+URI: [dds:slot/status](https://cdisc.org/ddsslot/status)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/status](https://cdisc.org/odm2/slot/status)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:status |
-| native | odm:status |
+| self | dds:status |
+| native | dds:status |
 
 
 

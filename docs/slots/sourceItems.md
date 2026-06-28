@@ -14,7 +14,7 @@ _Source items for this origin_
 
 
 
-URI: [odm:slot/sourceItems](https://cdisc.org/odm2/slot/sourceItems)
+URI: [dds:slot/sourceItems](https://cdisc.org/ddsslot/sourceItems)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/sourceItems](https://cdisc.org/odm2/slot/sourceItems)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:sourceItems |
-| native | odm:sourceItems |
+| self | dds:sourceItems |
+| native | dds:sourceItems |
 
 
 

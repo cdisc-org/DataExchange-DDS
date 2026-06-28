@@ -14,7 +14,7 @@ _Identifies the predefined CDISC model Class._
 
 
 
-URI: [odm:slot/observationClass](https://cdisc.org/odm2/slot/observationClass)
+URI: [dds:slot/observationClass](https://cdisc.org/ddsslot/observationClass)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/observationClass](https://cdisc.org/odm2/slot/observationClass)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:observationClass |
-| native | odm:observationClass |
+| self | dds:observationClass |
+| native | dds:observationClass |
 
 
 

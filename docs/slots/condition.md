@@ -14,7 +14,7 @@ _A condition that must be met for this occurrence to be valid._
 
 
 
-URI: [odm:slot/condition](https://cdisc.org/odm2/slot/condition)
+URI: [dds:slot/condition](https://cdisc.org/ddsslot/condition)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/condition](https://cdisc.org/odm2/slot/condition)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:condition |
-| native | odm:condition |
+| self | dds:condition |
+| native | dds:condition |
 
 
 

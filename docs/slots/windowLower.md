@@ -14,7 +14,7 @@ _Start date/time of the timing_
 
 
 
-URI: [odm:slot/windowLower](https://cdisc.org/odm2/slot/windowLower)
+URI: [dds:slot/windowLower](https://cdisc.org/ddsslot/windowLower)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/windowLower](https://cdisc.org/odm2/slot/windowLower)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:windowLower |
-| native | odm:windowLower |
+| self | dds:windowLower |
+| native | dds:windowLower |
 
 
 

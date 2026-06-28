@@ -14,7 +14,7 @@ _Document title_
 
 
 
-URI: [odm:slot/title](https://cdisc.org/odm2/slot/title)
+URI: [dds:slot/title](https://cdisc.org/ddsslot/title)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/title](https://cdisc.org/odm2/slot/title)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:title |
-| native | odm:title |
+| self | dds:title |
+| native | dds:title |
 
 
 

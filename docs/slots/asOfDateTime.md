@@ -14,7 +14,7 @@ _Date and time when the data snapshot was taken_
 
 
 
-URI: [odm:slot/asOfDateTime](https://cdisc.org/odm2/slot/asOfDateTime)
+URI: [dds:slot/asOfDateTime](https://cdisc.org/ddsslot/asOfDateTime)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/asOfDateTime](https://cdisc.org/odm2/slot/asOfDateTime)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:asOfDateTime |
-| native | odm:asOfDateTime |
+| self | dds:asOfDateTime |
+| native | dds:asOfDateTime |
 
 
 

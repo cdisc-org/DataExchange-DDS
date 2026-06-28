@@ -14,7 +14,7 @@ _A mixin that provides additional attributes for CDISC Operational Data Model it
 
 
 
-URI: [odm:class/IsODMItem](https://cdisc.org/odm2/class/IsODMItem)
+URI: [dds:class/IsODMItem](https://cdisc.org/ddsclass/IsODMItem)
 
 
 ```mermaid
@@ -244,8 +244,8 @@ Standard ||--}o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:IsODMItem |
-| native | odm:IsODMItem |
+| self | dds:IsODMItem |
+| native | dds:IsODMItem |
 
 
 
@@ -373,6 +373,7 @@ attributes:
     - IsODMItem
     - Organization
     - CubeComponent
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -404,6 +405,7 @@ attributes:
     owner: IsODMItem
     domain_of:
     - IsODMItem
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -415,6 +417,7 @@ attributes:
     owner: IsODMItem
     domain_of:
     - IsODMItem
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -428,6 +431,7 @@ attributes:
     owner: IsODMItem
     domain_of:
     - IsODMItem
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -449,6 +453,7 @@ attributes:
     owner: IsODMItem
     domain_of:
     - IsODMItem
+    range: string
     any_of:
     - range: string
     - range: TranslatedText

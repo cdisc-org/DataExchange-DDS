@@ -14,7 +14,7 @@ _Specifies the period of publication of the data or metadata in terms of whateve
 
 
 
-URI: [odm:slot/publicationPeriod](https://cdisc.org/odm2/slot/publicationPeriod)
+URI: [dds:slot/publicationPeriod](https://cdisc.org/ddsslot/publicationPeriod)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/publicationPeriod](https://cdisc.org/odm2/slot/publicationPeriod)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
 
 ### Cardinality and Requirements
@@ -81,8 +81,8 @@ URI: [odm:slot/publicationPeriod](https://cdisc.org/odm2/slot/publicationPeriod)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:publicationPeriod |
-| native | odm:publicationPeriod |
+| self | dds:publicationPeriod |
+| native | dds:publicationPeriod |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
+range: string
 
 ```
 </details></div>

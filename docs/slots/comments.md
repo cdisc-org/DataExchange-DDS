@@ -14,7 +14,7 @@ _Comment on the element, such as a rationale for its inclusion or exclusion_
 
 
 
-URI: [odm:slot/comments](https://cdisc.org/odm2/slot/comments)
+URI: [dds:slot/comments](https://cdisc.org/ddsslot/comments)
 <!-- no inheritance hierarchy -->
 
 
@@ -104,8 +104,8 @@ URI: [odm:slot/comments](https://cdisc.org/odm2/slot/comments)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:comments |
-| native | odm:comments |
+| self | dds:comments |
+| native | dds:comments |
 
 
 

@@ -14,7 +14,7 @@ _Parameters used in the expression_
 
 
 
-URI: [odm:slot/parameters](https://cdisc.org/odm2/slot/parameters)
+URI: [dds:slot/parameters](https://cdisc.org/ddsslot/parameters)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/parameters](https://cdisc.org/odm2/slot/parameters)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:parameters |
-| native | odm:parameters |
+| self | dds:parameters |
+| native | dds:parameters |
 
 
 

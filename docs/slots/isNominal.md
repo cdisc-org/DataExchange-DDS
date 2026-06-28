@@ -14,7 +14,7 @@ _Indicates whether the timing is nominal (event-based) or not._
 
 
 
-URI: [odm:slot/isNominal](https://cdisc.org/odm2/slot/isNominal)
+URI: [dds:slot/isNominal](https://cdisc.org/ddsslot/isNominal)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/isNominal](https://cdisc.org/odm2/slot/isNominal)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:isNominal |
-| native | odm:isNominal |
+| self | dds:isNominal |
+| native | dds:isNominal |
 
 
 

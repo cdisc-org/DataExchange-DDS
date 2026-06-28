@@ -14,7 +14,7 @@ _Dictionaries defined in this version of the metadata_
 
 
 
-URI: [odm:slot/dictionaries](https://cdisc.org/odm2/slot/dictionaries)
+URI: [dds:slot/dictionaries](https://cdisc.org/ddsslot/dictionaries)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/dictionaries](https://cdisc.org/odm2/slot/dictionaries)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dictionaries |
-| native | odm:dictionaries |
+| self | dds:dictionaries |
+| native | dds:dictionaries |
 
 
 

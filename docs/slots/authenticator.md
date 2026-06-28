@@ -14,7 +14,7 @@ _Who/what authenticated the resource_
 
 
 
-URI: [odm:slot/authenticator](https://cdisc.org/odm2/slot/authenticator)
+URI: [dds:slot/authenticator](https://cdisc.org/ddsslot/authenticator)
 <!-- no inheritance hierarchy -->
 
 
@@ -41,7 +41,7 @@ URI: [odm:slot/authenticator](https://cdisc.org/odm2/slot/authenticator)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) |
 | Domain Of | [IsProfile](../classes/IsProfile.md) |
 
 ### Cardinality and Requirements
@@ -94,8 +94,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:authenticator |
-| native | odm:authenticator |
+| self | dds:authenticator |
+| native | dds:authenticator |
 
 
 
@@ -111,6 +111,7 @@ rank: 1000
 owner: IsProfile
 domain_of:
 - IsProfile
+range: string
 required: false
 any_of:
 - range: User

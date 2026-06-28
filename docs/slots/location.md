@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
+URI: [dds:slot/location](https://cdisc.org/ddsslot/location)
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +35,7 @@ URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Organization](../classes/Organization.md), [Display](../classes/Display.md) |
 
 ### Cardinality and Requirements
@@ -63,8 +63,8 @@ URI: [odm:slot/location](https://cdisc.org/odm2/slot/location)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:location |
-| native | odm:location |
+| self | dds:location |
+| native | dds:location |
 
 
 
@@ -77,6 +77,7 @@ name: location
 domain_of:
 - Organization
 - Display
+range: string
 
 ```
 </details></div>

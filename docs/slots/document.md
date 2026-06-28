@@ -14,7 +14,7 @@ _Reference to an external document_
 
 
 
-URI: [odm:slot/document](https://cdisc.org/odm2/slot/document)
+URI: [dds:slot/document](https://cdisc.org/ddsslot/document)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/document](https://cdisc.org/odm2/slot/document)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:document |
-| native | odm:document |
+| self | dds:document |
+| native | dds:document |
 
 
 

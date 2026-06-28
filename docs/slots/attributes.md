@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/attributes](https://cdisc.org/odm2/slot/attributes)
+URI: [dds:slot/attributes](https://cdisc.org/ddsslot/attributes)
 <!-- no inheritance hierarchy -->
 
 
@@ -76,8 +76,8 @@ URI: [odm:slot/attributes](https://cdisc.org/odm2/slot/attributes)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:attributes |
-| native | odm:attributes |
+| self | dds:attributes |
+| native | dds:attributes |
 
 
 

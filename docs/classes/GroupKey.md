@@ -14,7 +14,7 @@ _A dimension subset that represents collections of dimensions that are subsets o
 
 
 
-URI: [odm:class/GroupKey](https://cdisc.org/odm2/class/GroupKey)
+URI: [dds:class/GroupKey](https://cdisc.org/ddsclass/GroupKey)
 
 
 ```mermaid
@@ -84,8 +84,8 @@ GroupKey {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:GroupKey |
-| native | odm:GroupKey |
+| self | dds:GroupKey |
+| native | dds:GroupKey |
 | exact | sdmx:GroupKey |
 
 

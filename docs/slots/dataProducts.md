@@ -14,7 +14,7 @@ _Indexed data flows with clear ownership_
 
 
 
-URI: [odm:slot/dataProducts](https://cdisc.org/odm2/slot/dataProducts)
+URI: [dds:slot/dataProducts](https://cdisc.org/ddsslot/dataProducts)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/dataProducts](https://cdisc.org/odm2/slot/dataProducts)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dataProducts |
-| native | odm:dataProducts |
+| self | dds:dataProducts |
+| native | dds:dataProducts |
 
 
 

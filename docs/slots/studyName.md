@@ -14,7 +14,7 @@ _Name of the study_
 
 
 
-URI: [odm:slot/studyName](https://cdisc.org/odm2/slot/studyName)
+URI: [dds:slot/studyName](https://cdisc.org/ddsslot/studyName)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/studyName](https://cdisc.org/odm2/slot/studyName)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:studyName |
-| native | odm:studyName |
+| self | dds:studyName |
+| native | dds:studyName |
 
 
 

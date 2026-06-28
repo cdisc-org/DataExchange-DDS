@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
+URI: [dds:slot/attribute](https://cdisc.org/ddsslot/attribute)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Resource](../classes/Resource.md), [MeasureRelationship](../classes/MeasureRelationship.md), [DataflowRelationship](../classes/DataflowRelationship.md), [GroupRelationship](../classes/GroupRelationship.md), [DimensionRelationship](../classes/DimensionRelationship.md), [ObservationRelationship](../classes/ObservationRelationship.md) |
 
 ### Cardinality and Requirements
@@ -67,8 +67,8 @@ URI: [odm:slot/attribute](https://cdisc.org/odm2/slot/attribute)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:attribute |
-| native | odm:attribute |
+| self | dds:attribute |
+| native | dds:attribute |
 
 
 
@@ -85,6 +85,7 @@ domain_of:
 - GroupRelationship
 - DimensionRelationship
 - ObservationRelationship
+range: string
 
 ```
 </details></div>

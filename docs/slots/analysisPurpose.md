@@ -14,7 +14,7 @@ _The purpose or role of this analysis in the study._
 
 
 
-URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
+URI: [dds:slot/analysisPurpose](https://cdisc.org/ddsslot/analysisPurpose)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Analysis](../classes/Analysis.md) |
 
 ### Cardinality and Requirements
@@ -80,8 +80,8 @@ URI: [odm:slot/analysisPurpose](https://cdisc.org/odm2/slot/analysisPurpose)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:analysisPurpose |
-| native | odm:analysisPurpose |
+| self | dds:analysisPurpose |
+| native | dds:analysisPurpose |
 
 
 
@@ -97,6 +97,7 @@ rank: 1000
 owner: Analysis
 domain_of:
 - Analysis
+range: string
 
 ```
 </details></div>

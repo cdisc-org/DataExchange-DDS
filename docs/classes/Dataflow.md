@@ -14,7 +14,7 @@ _An abstract representation that defines data provision for different reference 
 
 
 
-URI: [odm:class/Dataflow](https://cdisc.org/odm2/class/Dataflow)
+URI: [dds:class/Dataflow](https://cdisc.org/ddsclass/Dataflow)
 
 
 ```mermaid
@@ -23,7 +23,6 @@ Analysis {
     string analysisPurpose  
     string analysisReason  
     stringList inputData  
-    string analysisMethod  
     string name  
     string description  
     string OID  
@@ -311,6 +310,7 @@ WhereClause {
     string wasDerivedFrom  
 }
 
+Analysis ||--|o Method : "analysisMethod"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
@@ -363,9 +363,9 @@ Item ||--|o CodeList : "codeList, roleCodeList"
 Item ||--|o ConceptProperty : "conceptProperty"
 Item ||--|o Condition : "collectionExceptionCondition"
 Item ||--|o Method : "method"
-Item ||--|o Origin : "origin"
 Item ||--}o Coding : "coding"
 Item ||--}o Comment : "comments"
+Item ||--}o Origin : "origin"
 Item ||--}o RangeCheck : "rangeChecks"
 Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Item ||--}o WhereClause : "applicableWhen"
@@ -508,8 +508,8 @@ WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:Dataflow |
-| native | odm:Dataflow |
+| self | dds:Dataflow |
+| native | dds:Dataflow |
 | related | dprod:Distribution, dcat:Distribution, dprod:DataService, dcat:DataService |
 | close | sdmx:Dataflow |
 

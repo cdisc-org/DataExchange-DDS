@@ -14,7 +14,7 @@ _The organization the user belongs to._
 
 
 
-URI: [odm:slot/organization](https://cdisc.org/odm2/slot/organization)
+URI: [dds:slot/organization](https://cdisc.org/ddsslot/organization)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/organization](https://cdisc.org/odm2/slot/organization)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:organization |
-| native | odm:organization |
+| self | dds:organization |
+| native | dds:organization |
 | close | prov:actedOnBehalfOf |
 
 

@@ -14,7 +14,7 @@ _The person or team accountable for this data product_
 
 
 
-URI: [odm:slot/dataProductOwner](https://cdisc.org/odm2/slot/dataProductOwner)
+URI: [dds:slot/dataProductOwner](https://cdisc.org/ddsslot/dataProductOwner)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [odm:slot/dataProductOwner](https://cdisc.org/odm2/slot/dataProductOwner)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Range | [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) |
 | Domain Of | [DataProduct](../classes/DataProduct.md) |
 
 ### Cardinality and Requirements
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dataProductOwner |
-| native | odm:dataProductOwner |
+| self | dds:dataProductOwner |
+| native | dds:dataProductOwner |
 | exact | prov:wasAttributedTo |
 
 
@@ -111,6 +111,7 @@ rank: 1000
 owner: DataProduct
 domain_of:
 - DataProduct
+range: string
 any_of:
 - range: User
 - range: Organization

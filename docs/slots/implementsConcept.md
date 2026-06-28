@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/implementsConcept](https://cdisc.org/odm2/slot/implementsConcept)
+URI: [dds:slot/implementsConcept](https://cdisc.org/ddsslot/implementsConcept)
 <!-- no inheritance hierarchy -->
 
 
@@ -36,7 +36,7 @@ URI: [odm:slot/implementsConcept](https://cdisc.org/odm2/slot/implementsConcept)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [ItemGroup](../classes/ItemGroup.md), [Method](../classes/Method.md) |
 
 ### Cardinality and Requirements
@@ -64,8 +64,8 @@ URI: [odm:slot/implementsConcept](https://cdisc.org/odm2/slot/implementsConcept)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:implementsConcept |
-| native | odm:implementsConcept |
+| self | dds:implementsConcept |
+| native | dds:implementsConcept |
 
 
 
@@ -78,6 +78,7 @@ name: implementsConcept
 domain_of:
 - ItemGroup
 - Method
+range: string
 
 ```
 </details></div>

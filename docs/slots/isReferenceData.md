@@ -14,7 +14,7 @@ _Set to Yes if this is a reference item group._
 
 
 
-URI: [odm:slot/isReferenceData](https://cdisc.org/odm2/slot/isReferenceData)
+URI: [dds:slot/isReferenceData](https://cdisc.org/ddsslot/isReferenceData)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/isReferenceData](https://cdisc.org/odm2/slot/isReferenceData)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:isReferenceData |
-| native | odm:isReferenceData |
+| self | dds:isReferenceData |
+| native | dds:isReferenceData |
 
 
 

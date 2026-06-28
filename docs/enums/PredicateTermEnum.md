@@ -15,7 +15,7 @@ _An enumeration that defines short variable relationship linking phrases for pro
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/PredicateTermEnum](https://cdisc.org/odm2/enum/PredicateTermEnum)
+URI: [dds:enum/PredicateTermEnum](https://cdisc.org/ddsenum/PredicateTermEnum)
 
 ## Permissible Values
 | Value | Meaning | Description |

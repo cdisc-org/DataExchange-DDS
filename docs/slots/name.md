@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/name](https://cdisc.org/odm2/slot/name)
+URI: [dds:slot/name](https://cdisc.org/ddsslot/name)
 <!-- no inheritance hierarchy -->
 
 
@@ -74,7 +74,7 @@ URI: [odm:slot/name](https://cdisc.org/odm2/slot/name)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Labelled](../classes/Labelled.md), [DefClass](../classes/DefClass.md), [SubClass](../classes/SubClass.md), [Standard](../classes/Standard.md) |
 
 ### Cardinality and Requirements
@@ -102,8 +102,8 @@ URI: [odm:slot/name](https://cdisc.org/odm2/slot/name)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:name |
-| native | odm:name |
+| self | dds:name |
+| native | dds:name |
 
 
 
@@ -118,6 +118,7 @@ domain_of:
 - DefClass
 - SubClass
 - Standard
+range: string
 
 ```
 </details></div>

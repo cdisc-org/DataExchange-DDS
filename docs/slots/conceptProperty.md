@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/conceptProperty](https://cdisc.org/odm2/slot/conceptProperty)
+URI: [dds:slot/conceptProperty](https://cdisc.org/ddsslot/conceptProperty)
 <!-- no inheritance hierarchy -->
 
 
@@ -34,7 +34,7 @@ URI: [odm:slot/conceptProperty](https://cdisc.org/odm2/slot/conceptProperty)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Item](../classes/Item.md), [Parameter](../classes/Parameter.md) |
 
 ### Cardinality and Requirements
@@ -62,8 +62,8 @@ URI: [odm:slot/conceptProperty](https://cdisc.org/odm2/slot/conceptProperty)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:conceptProperty |
-| native | odm:conceptProperty |
+| self | dds:conceptProperty |
+| native | dds:conceptProperty |
 
 
 
@@ -76,6 +76,7 @@ name: conceptProperty
 domain_of:
 - Item
 - Parameter
+range: string
 
 ```
 </details></div>

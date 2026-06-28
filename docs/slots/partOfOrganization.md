@@ -14,7 +14,7 @@ _Reference to a parent organization if this organization is part of a larger ent
 
 
 
-URI: [odm:slot/partOfOrganization](https://cdisc.org/odm2/slot/partOfOrganization)
+URI: [dds:slot/partOfOrganization](https://cdisc.org/ddsslot/partOfOrganization)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/partOfOrganization](https://cdisc.org/odm2/slot/partOfOrganizatio
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:partOfOrganization |
-| native | odm:partOfOrganization |
+| self | dds:partOfOrganization |
+| native | dds:partOfOrganization |
 
 
 

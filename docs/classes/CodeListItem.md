@@ -14,7 +14,7 @@ _A structured member of a CodeList that extends the Coding class with additional
 
 
 
-URI: [odm:class/CodeListItem](https://cdisc.org/odm2/class/CodeListItem)
+URI: [dds:class/CodeListItem](https://cdisc.org/ddsclass/CodeListItem)
 
 
 ```mermaid
@@ -94,8 +94,8 @@ CodeListItem ||--|o Coding : "coding"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:CodeListItem |
-| native | odm:CodeListItem |
+| self | dds:CodeListItem |
+| native | dds:CodeListItem |
 | exact | odm:CodeListItem |
 | narrow | sdmx:Code, sdmx:ValueItem |
 | close | usdm:AliasCode, usdm:ResponseCode, fhir:CodeableConcept, omop:Concept |
@@ -244,6 +244,7 @@ attributes:
     domain_of:
     - Labelled
     - CodeListItem
+    range: string
     any_of:
     - range: string
     - range: TranslatedText
@@ -266,6 +267,7 @@ attributes:
     domain_of:
     - Labelled
     - CodeListItem
+    range: string
     multivalued: true
     any_of:
     - range: string

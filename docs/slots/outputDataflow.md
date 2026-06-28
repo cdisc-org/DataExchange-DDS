@@ -14,7 +14,7 @@ _Description of the output interface before concrete Datasets exist. Dataflows r
 
 
 
-URI: [odm:slot/outputDataflow](https://cdisc.org/odm2/slot/outputDataflow)
+URI: [dds:slot/outputDataflow](https://cdisc.org/ddsslot/outputDataflow)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/outputDataflow](https://cdisc.org/odm2/slot/outputDataflow)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:outputDataflow |
-| native | odm:outputDataflow |
+| self | dds:outputDataflow |
+| native | dds:outputDataflow |
 | close | dcat:distribution |
 
 

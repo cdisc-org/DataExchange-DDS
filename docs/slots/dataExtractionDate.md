@@ -14,7 +14,7 @@ _A specific time period that identifies the date and time that the data are extr
 
 
 
-URI: [odm:slot/dataExtractionDate](https://cdisc.org/odm2/slot/dataExtractionDate)
+URI: [dds:slot/dataExtractionDate](https://cdisc.org/ddsslot/dataExtractionDate)
 <!-- no inheritance hierarchy -->
 
 
@@ -39,7 +39,7 @@ URI: [odm:slot/dataExtractionDate](https://cdisc.org/odm2/slot/dataExtractionDat
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
 
 ### Cardinality and Requirements
@@ -81,8 +81,8 @@ URI: [odm:slot/dataExtractionDate](https://cdisc.org/odm2/slot/dataExtractionDat
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:dataExtractionDate |
-| native | odm:dataExtractionDate |
+| self | dds:dataExtractionDate |
+| native | dds:dataExtractionDate |
 
 
 
@@ -99,6 +99,7 @@ rank: 1000
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
+range: string
 
 ```
 </details></div>

@@ -9,7 +9,7 @@ search:
 
 
 
-URI: [odm:slot/imputation](https://cdisc.org/odm2/slot/imputation)
+URI: [dds:slot/imputation](https://cdisc.org/ddsslot/imputation)
 <!-- no inheritance hierarchy -->
 
 
@@ -37,7 +37,7 @@ URI: [odm:slot/imputation](https://cdisc.org/odm2/slot/imputation)
 
 | Property | Value |
 | --- | --- |
-| Range | NONE |
+| Range | [String](../types/String.md) |
 | Domain Of | [Timing](../classes/Timing.md), [CubeComponent](../classes/CubeComponent.md) |
 
 ### Cardinality and Requirements
@@ -65,8 +65,8 @@ URI: [odm:slot/imputation](https://cdisc.org/odm2/slot/imputation)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:imputation |
-| native | odm:imputation |
+| self | dds:imputation |
+| native | dds:imputation |
 
 
 
@@ -79,6 +79,7 @@ name: imputation
 domain_of:
 - Timing
 - CubeComponent
+range: string
 
 ```
 </details></div>

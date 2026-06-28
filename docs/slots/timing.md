@@ -14,7 +14,7 @@ _A named event reference, that can nest further named timing references._
 
 
 
-URI: [odm:slot/timing](https://cdisc.org/odm2/slot/timing)
+URI: [dds:slot/timing](https://cdisc.org/ddsslot/timing)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/timing](https://cdisc.org/odm2/slot/timing)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:timing |
-| native | odm:timing |
+| self | dds:timing |
+| native | dds:timing |
 
 
 

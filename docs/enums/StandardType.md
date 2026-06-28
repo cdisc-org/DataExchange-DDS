@@ -15,7 +15,7 @@ _An enumeration that defines permissible values for standard types_
 
 <div data-search-exclude markdown="1">
 
-URI: [odm:enum/StandardType](https://cdisc.org/odm2/enum/StandardType)
+URI: [dds:enum/StandardType](https://cdisc.org/ddsenum/StandardType)
 
 ## Permissible Values
 | Value | Meaning | Description |

@@ -14,7 +14,7 @@ _A list of possible return values._
 
 
 
-URI: [odm:slot/valueList](https://cdisc.org/odm2/slot/valueList)
+URI: [dds:slot/valueList](https://cdisc.org/ddsslot/valueList)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,8 +81,8 @@ URI: [odm:slot/valueList](https://cdisc.org/odm2/slot/valueList)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:valueList |
-| native | odm:valueList |
+| self | dds:valueList |
+| native | dds:valueList |
 
 
 

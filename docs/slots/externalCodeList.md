@@ -14,7 +14,7 @@ _Reference to a code list that is defined externally to this study_
 
 
 
-URI: [odm:slot/externalCodeList](https://cdisc.org/odm2/slot/externalCodeList)
+URI: [dds:slot/externalCodeList](https://cdisc.org/ddsslot/externalCodeList)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,8 +80,8 @@ URI: [odm:slot/externalCodeList](https://cdisc.org/odm2/slot/externalCodeList)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:externalCodeList |
-| native | odm:externalCodeList |
+| self | dds:externalCodeList |
+| native | dds:externalCodeList |
 
 
 

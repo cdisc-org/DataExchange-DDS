@@ -14,7 +14,7 @@ _A mixin that provides study-level metadata attributes including study identific
 
 
 
-URI: [odm:class/StudyMetadata](https://cdisc.org/odm2/class/StudyMetadata)
+URI: [dds:class/StudyMetadata](https://cdisc.org/ddsclass/StudyMetadata)
 
 
 ```mermaid
@@ -89,8 +89,8 @@ StudyMetadata {
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | odm:StudyMetadata |
-| native | odm:StudyMetadata |
+| self | dds:StudyMetadata |
+| native | dds:StudyMetadata |
 
 
 
