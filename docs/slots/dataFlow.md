@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: dataFlow 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/dataFlow](https://cdisc.org/odm2/slot/dataFlow)
-Alias: dataFlow
-
 <!-- no inheritance hierarchy -->
 
 
@@ -17,8 +20,8 @@ Alias: dataFlow
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [ProvisionAgreement](../classes/ProvisionAgreement.md) | An agreement element that describes the contractual relationship between a Data Provider and a Data Consumer regarding data provision |  no  |
 | [DataflowRelationship](../classes/DataflowRelationship.md) | A relationship element that associates a DataAttribute with a Dataflow, reported at the Dataset level |  no  |
+| [ProvisionAgreement](../classes/ProvisionAgreement.md) | An agreement element that describes the contractual relationship between a Data Provider and a Data Consumer regarding data provision |  no  |
 
 
 
@@ -27,13 +30,28 @@ Alias: dataFlow
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [DataflowRelationship](../classes/DataflowRelationship.md), [ProvisionAgreement](../classes/ProvisionAgreement.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -55,10 +73,9 @@ Alias: dataFlow
 <details>
 ```yaml
 name: dataFlow
-alias: dataFlow
 domain_of:
 - DataflowRelationship
 - ProvisionAgreement
 
 ```
-</details>
+</details></div>

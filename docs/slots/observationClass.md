@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: observationClass 
 
@@ -7,11 +10,11 @@ _Identifies the predefined CDISC model Class._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/observationClass](https://cdisc.org/odm2/slot/observationClass)
-Alias: observationClass
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: observationClass
 
 ## Properties
 
-* Range: [DefClass](../classes/DefClass.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [DefClass](../classes/DefClass.md) |
+| Domain Of | [ItemGroup](../classes/ItemGroup.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ItemGroup](../classes/ItemGroup.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,7 +95,6 @@ name: observationClass
 description: Identifies the predefined CDISC model Class.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: observationClass
 owner: ItemGroup
 domain_of:
 - ItemGroup
@@ -78,4 +102,4 @@ range: DefClass
 required: false
 
 ```
-</details>
+</details></div>

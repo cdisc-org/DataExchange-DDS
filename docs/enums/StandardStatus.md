@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: StandardStatus 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines permissible values for standard status_
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/StandardStatus](https://cdisc.org/odm2/enum/StandardStatus)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | DRAFT | None | Draft version of the standard |
@@ -29,8 +36,12 @@ URI: [odm:enum/StandardStatus](https://cdisc.org/odm2/enum/StandardStatus)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -64,3 +75,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

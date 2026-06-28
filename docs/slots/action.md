@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: action 
 
@@ -7,11 +10,11 @@ _Defines the action to be taken by the recipient system (information, append, re
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/action](https://cdisc.org/odm2/slot/action)
-Alias: action
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: action
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,10 +96,9 @@ description: Defines the action to be taken by the recipient system (information
   append, replace, delete)
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: action
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: distribution 
 
@@ -7,11 +10,11 @@ _Representations of this dataset in various formats or access methods_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/distribution](https://cdisc.org/odm2/slot/distribution)
-Alias: distribution
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: distribution
 
 ## Properties
 
-* Range: [Distribution](../classes/Distribution.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Distribution](../classes/Distribution.md) |
+| Domain Of | [Dataset](../classes/Dataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Dataset](../classes/Dataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -74,7 +98,6 @@ from_schema: https://cdisc.org/dds
 exact_mappings:
 - dcat:distribution
 rank: 1000
-alias: distribution
 owner: Dataset
 domain_of:
 - Dataset
@@ -84,4 +107,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

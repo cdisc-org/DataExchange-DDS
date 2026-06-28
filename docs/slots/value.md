@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: value 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/value](https://cdisc.org/odm2/slot/value)
-Alias: value
-
 <!-- no inheritance hierarchy -->
 
 
@@ -17,8 +20,8 @@ Alias: value
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
 | [Translation](../classes/Translation.md) | A text representation that provides content in a specific language, used for multilingual support |  no  |
+| [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
 | [Timing](../classes/Timing.md) | A temporal element that describes the timing of an event or occurrence, which can be absolute, relative, or nominal |  no  |
 
 
@@ -28,13 +31,28 @@ Alias: value
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [Translation](../classes/Translation.md), [Parameter](../classes/Parameter.md), [Timing](../classes/Timing.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -56,11 +74,10 @@ Alias: value
 <details>
 ```yaml
 name: value
-alias: value
 domain_of:
 - Translation
 - Parameter
 - Timing
 
 ```
-</details>
+</details></div>

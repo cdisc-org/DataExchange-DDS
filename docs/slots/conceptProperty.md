@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: conceptProperty 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/conceptProperty](https://cdisc.org/odm2/slot/conceptProperty)
-Alias: conceptProperty
-
 <!-- no inheritance hierarchy -->
 
 
@@ -17,8 +20,8 @@ Alias: conceptProperty
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
 | [Item](../classes/Item.md) | A data element that represents a specific piece of information within a defined context, with data type, constraints, and derivation methods |  no  |
+| [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
 
 
 
@@ -27,13 +30,28 @@ Alias: conceptProperty
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [Item](../classes/Item.md), [Parameter](../classes/Parameter.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -55,10 +73,9 @@ Alias: conceptProperty
 <details>
 ```yaml
 name: conceptProperty
-alias: conceptProperty
 domain_of:
 - Item
 - Parameter
 
 ```
-</details>
+</details></div>

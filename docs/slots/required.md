@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: required 
 
@@ -7,11 +10,11 @@ _Indicates whether this parameter must be provided when the containing expressio
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/required](https://cdisc.org/odm2/slot/required)
-Alias: required
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,36 @@ Alias: required
 
 ## Properties
 
-* Range: [Boolean](../types/Boolean.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Boolean](../types/Boolean.md) |
+| Domain Of | [Parameter](../classes/Parameter.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| If Absent | `False` |
+| Owner | [Parameter](../classes/Parameter.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,11 +97,10 @@ description: Indicates whether this parameter must be provided when the containi
 from_schema: https://cdisc.org/dds
 rank: 1000
 ifabsent: 'False'
-alias: required
 owner: Parameter
 domain_of:
 - Parameter
 range: boolean
 
 ```
-</details>
+</details></div>

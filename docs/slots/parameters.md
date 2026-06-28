@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: parameters 
 
@@ -7,11 +10,11 @@ _Parameters used in the expression_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/parameters](https://cdisc.org/odm2/slot/parameters)
-Alias: parameters
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: parameters
 
 ## Properties
 
-* Range: [Parameter](../classes/Parameter.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Parameter](../classes/Parameter.md) |
+| Domain Of | [FormalExpression](../classes/FormalExpression.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [FormalExpression](../classes/FormalExpression.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: parameters
 description: Parameters used in the expression
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: parameters
 owner: FormalExpression
 domain_of:
 - FormalExpression
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

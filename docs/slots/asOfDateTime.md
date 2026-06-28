@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: asOfDateTime 
 
@@ -7,11 +10,11 @@ _Date and time when the data snapshot was taken_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/asOfDateTime](https://cdisc.org/odm2/slot/asOfDateTime)
-Alias: asOfDateTime
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: asOfDateTime
 
 ## Properties
 
-* Range: [Datetime](../types/Datetime.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Datetime](../types/Datetime.md) |
+| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ name: asOfDateTime
 description: Date and time when the data snapshot was taken
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: asOfDateTime
 owner: ODMFileMetadata
 domain_of:
 - ODMFileMetadata
 range: datetime
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: predicateTerm 
 
@@ -7,11 +10,11 @@ _Short variable relationship linking phrase for programming purposes._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/predicateTerm](https://cdisc.org/odm2/slot/predicateTerm)
-Alias: predicateTerm
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: predicateTerm
 
 ## Properties
 
-* Range: [PredicateTermEnum](../enums/PredicateTermEnum.md)
+### Type and Range
 
-* Required: True
+| Property | Value |
+| --- | --- |
+| Range | [PredicateTermEnum](../enums/PredicateTermEnum.md) |
+| Domain Of | [Relationship](../classes/Relationship.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Relationship](../classes/Relationship.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: predicateTerm
 description: Short variable relationship linking phrase for programming purposes.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: predicateTerm
 owner: Relationship
 domain_of:
 - Relationship
@@ -79,4 +102,4 @@ range: PredicateTermEnum
 required: true
 
 ```
-</details>
+</details></div>

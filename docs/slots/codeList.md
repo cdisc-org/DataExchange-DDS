@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: codeList 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/codeList](https://cdisc.org/odm2/slot/codeList)
-Alias: codeList
-
 <!-- no inheritance hierarchy -->
 
 
@@ -17,9 +20,9 @@ Alias: codeList
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Item](../classes/Item.md) | A data element that represents a specific piece of information within a defined context, with data type, constraints, and derivation methods |  no  |
 | [ConceptProperty](../classes/ConceptProperty.md) | A reified property concept that exists within the context of its containing topic concept |  no  |
 | [Parameter](../classes/Parameter.md) | A variable element that describes an input used in a formal expression |  no  |
-| [Item](../classes/Item.md) | A data element that represents a specific piece of information within a defined context, with data type, constraints, and derivation methods |  no  |
 
 
 
@@ -28,13 +31,28 @@ Alias: codeList
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [Item](../classes/Item.md), [ConceptProperty](../classes/ConceptProperty.md), [Parameter](../classes/Parameter.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -56,11 +74,10 @@ Alias: codeList
 <details>
 ```yaml
 name: codeList
-alias: codeList
 domain_of:
 - Item
 - ConceptProperty
 - Parameter
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: fileType 
 
@@ -7,11 +10,11 @@ _Type of ODM file (e.g., Snapshot, Transactional)_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/fileType](https://cdisc.org/odm2/slot/fileType)
-Alias: fileType
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,15 +35,36 @@ Alias: fileType
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
 
-* Required: True
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +96,6 @@ name: fileType
 description: Type of ODM file (e.g., Snapshot, Transactional)
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: fileType
 owner: ODMFileMetadata
 domain_of:
 - ODMFileMetadata
@@ -80,4 +103,4 @@ range: string
 required: true
 
 ```
-</details>
+</details></div>

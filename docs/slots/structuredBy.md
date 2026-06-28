@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: structuredBy 
 
@@ -7,11 +10,11 @@ _Associates the Data Structure Definition that defines the structure of the Data
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/structuredBy](https://cdisc.org/odm2/slot/structuredBy)
-Alias: structuredBy
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: structuredBy
 
 ## Properties
 
-* Range: [DataStructureDefinition](../classes/DataStructureDefinition.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+| Domain Of | [Dataset](../classes/Dataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Dataset](../classes/Dataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,11 +96,10 @@ description: Associates the Data Structure Definition that defines the structure
   (non-mandatory) to the Dataflow.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: structuredBy
 owner: Dataset
 domain_of:
 - Dataset
 range: DataStructureDefinition
 
 ```
-</details>
+</details></div>

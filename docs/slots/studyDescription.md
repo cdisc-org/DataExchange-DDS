@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: studyDescription 
 
@@ -7,11 +10,11 @@ _Description of the study_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/studyDescription](https://cdisc.org/odm2/slot/studyDescription)
-Alias: studyDescription
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: studyDescription
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [StudyMetadata](../classes/StudyMetadata.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [StudyMetadata](../classes/StudyMetadata.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ name: studyDescription
 description: Description of the study
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: studyDescription
 owner: StudyMetadata
 domain_of:
 - StudyMetadata
 range: string
 
 ```
-</details>
+</details></div>

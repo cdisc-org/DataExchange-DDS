@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: AliasPredicate 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines permissible values for the relationship between an 
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/AliasPredicate](https://cdisc.org/odm2/enum/AliasPredicate)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | EXACT_SYNONYM | skos:exactMatch | Codes have identical meaning e.g. "diabetes mellitus" and "DM" |
@@ -31,8 +38,12 @@ URI: [odm:enum/AliasPredicate](https://cdisc.org/odm2/enum/AliasPredicate)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -79,3 +90,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

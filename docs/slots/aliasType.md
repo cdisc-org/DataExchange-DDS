@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: aliasType 
 
@@ -7,11 +10,11 @@ _How this coding is related in the context of its parent element_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/aliasType](https://cdisc.org/odm2/slot/aliasType)
-Alias: aliasType
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: aliasType
 
 ## Properties
 
-* Range: [AliasPredicate](../enums/AliasPredicate.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [AliasPredicate](../enums/AliasPredicate.md) |
+| Domain Of | [Coding](../classes/Coding.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Coding](../classes/Coding.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,11 +94,10 @@ name: aliasType
 description: How this coding is related in the context of its parent element
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: aliasType
 owner: Coding
 domain_of:
 - Coding
 range: AliasPredicate
 
 ```
-</details>
+</details></div>

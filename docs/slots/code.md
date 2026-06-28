@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: code 
 
@@ -7,11 +10,11 @@ _The code value_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/code](https://cdisc.org/odm2/slot/code)
-Alias: code
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: code
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
 
-* Required: True
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [Coding](../classes/Coding.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Coding](../classes/Coding.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: code
 description: The code value
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: code
 owner: Coding
 domain_of:
 - Coding
@@ -79,4 +102,4 @@ range: string
 required: true
 
 ```
-</details>
+</details></div>

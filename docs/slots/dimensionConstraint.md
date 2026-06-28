@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: dimensionConstraint 
 
@@ -7,11 +10,11 @@ _Subset of dimensions that are agreed upon by the dataflow and must be included.
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/dimensionConstraint](https://cdisc.org/odm2/slot/dimensionConstraint)
-Alias: dimensionConstraint
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: dimensionConstraint
 
 ## Properties
 
-* Range: [Dimension](../classes/Dimension.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Dimension](../classes/Dimension.md) |
+| Domain Of | [Dataflow](../classes/Dataflow.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Dataflow](../classes/Dataflow.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +96,6 @@ description: Subset of dimensions that are agreed upon by the dataflow and must 
   included.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: dimensionConstraint
 owner: Dataflow
 domain_of:
 - Dataflow
@@ -80,4 +103,4 @@ range: Dimension
 multivalued: true
 
 ```
-</details>
+</details></div>

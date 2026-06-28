@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: keys 
 
@@ -7,11 +10,11 @@ _Series and Group keys in the data that are associated with dimensions in this s
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/keys](https://cdisc.org/odm2/slot/keys)
-Alias: keys
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,17 +34,47 @@ Alias: keys
 
 ## Properties
 
-* Range: NONE&nbsp;or&nbsp;<br />[SeriesKey](../classes/SeriesKey.md)&nbsp;or&nbsp;<br />[GroupKey](../classes/GroupKey.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | NONE&nbsp;or&nbsp;<br />[SeriesKey](../classes/SeriesKey.md)&nbsp;or&nbsp;<br />[GroupKey](../classes/GroupKey.md) |
+| Domain Of | [Dataset](../classes/Dataset.md) |
 
-* Required: True
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Dataset](../classes/Dataset.md) |
+
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'SeriesKey'})
+- AnonymousSlotExpression({'range': 'GroupKey'})
+
+</details>
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -74,7 +107,6 @@ description: Series and Group keys in the data that are associated with dimensio
   in this structure
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: keys
 owner: Dataset
 domain_of:
 - Dataset
@@ -87,4 +119,4 @@ any_of:
 - range: GroupKey
 
 ```
-</details>
+</details></div>

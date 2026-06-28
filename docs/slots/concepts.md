@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: concepts 
 
@@ -7,11 +10,11 @@ _Structured Concepts defined in this version of the metadata_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/concepts](https://cdisc.org/odm2/slot/concepts)
-Alias: concepts
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: concepts
 
 ## Properties
 
-* Range: [ReifiedConcept](../classes/ReifiedConcept.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [ReifiedConcept](../classes/ReifiedConcept.md) |
+| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: concepts
 description: Structured Concepts defined in this version of the metadata
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: concepts
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -79,4 +102,4 @@ range: ReifiedConcept
 multivalued: true
 
 ```
-</details>
+</details></div>

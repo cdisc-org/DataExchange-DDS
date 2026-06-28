@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: dimensions 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/dimensions](https://cdisc.org/odm2/slot/dimensions)
-Alias: dimensions
-
 <!-- no inheritance hierarchy -->
 
 
@@ -17,8 +20,8 @@ Alias: dimensions
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DimensionRelationship](../classes/DimensionRelationship.md) | A relationship element that associates a DataAttribute with a specific Dimension at a specific level |  no  |
 | [DataStructureDefinition](../classes/DataStructureDefinition.md) | A structural element that defines the organization of a data cube for analysis, including dimensions, attributes, and measures |  no  |
+| [DimensionRelationship](../classes/DimensionRelationship.md) | A relationship element that associates a DataAttribute with a specific Dimension at a specific level |  no  |
 
 
 
@@ -27,13 +30,28 @@ Alias: dimensions
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [DataStructureDefinition](../classes/DataStructureDefinition.md), [DimensionRelationship](../classes/DimensionRelationship.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -55,10 +73,9 @@ Alias: dimensions
 <details>
 ```yaml
 name: dimensions
-alias: dimensions
 domain_of:
 - DataStructureDefinition
 - DimensionRelationship
 
 ```
-</details>
+</details></div>

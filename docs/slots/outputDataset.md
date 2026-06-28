@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: outputDataset 
 
@@ -7,11 +10,11 @@ _Output datasets produced by the data product_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/outputDataset](https://cdisc.org/odm2/slot/outputDataset)
-Alias: outputDataset
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: outputDataset
 
 ## Properties
 
-* Range: [Dataset](../classes/Dataset.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Dataset](../classes/Dataset.md) |
+| Domain Of | [DataProduct](../classes/DataProduct.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataProduct](../classes/DataProduct.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: outputDataset
 description: Output datasets produced by the data product
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: outputDataset
 owner: DataProduct
 domain_of:
 - DataProduct
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

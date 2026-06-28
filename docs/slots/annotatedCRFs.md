@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: annotatedCRFs 
 
@@ -7,11 +10,11 @@ _Reference to annotated case report forms_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/annotatedCRFs](https://cdisc.org/odm2/slot/annotatedCRFs)
-Alias: annotatedCRFs
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: annotatedCRFs
 
 ## Properties
 
-* Range: [DocumentReference](../classes/DocumentReference.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [DocumentReference](../classes/DocumentReference.md) |
+| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: annotatedCRFs
 description: Reference to annotated case report forms
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: annotatedCRFs
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

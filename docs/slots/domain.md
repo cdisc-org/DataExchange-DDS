@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: domain 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/domain](https://cdisc.org/odm2/slot/domain)
-Alias: domain
-
 <!-- no inheritance hierarchy -->
 
 
@@ -28,13 +31,28 @@ Alias: domain
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [ItemGroup](../classes/ItemGroup.md), [DataProduct](../classes/DataProduct.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -56,10 +74,9 @@ Alias: domain
 <details>
 ```yaml
 name: domain
-alias: domain
 domain_of:
 - ItemGroup
 - DataProduct
 
 ```
-</details>
+</details></div>

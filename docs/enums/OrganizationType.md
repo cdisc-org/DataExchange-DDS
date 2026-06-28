@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: OrganizationType 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines the types of organizations involved in clinical res
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/OrganizationType](https://cdisc.org/odm2/enum/OrganizationType)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | Sponsor | None |  |
@@ -27,8 +34,12 @@ URI: [odm:enum/OrganizationType](https://cdisc.org/odm2/enum/OrganizationType)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -69,3 +80,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

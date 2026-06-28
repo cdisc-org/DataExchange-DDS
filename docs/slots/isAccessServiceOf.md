@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: isAccessServiceOf 
 
@@ -7,11 +10,11 @@ _Distribution(s) for which this service provides access_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/isAccessServiceOf](https://cdisc.org/odm2/slot/isAccessServiceOf)
-Alias: isAccessServiceOf
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: isAccessServiceOf
 
 ## Properties
 
-* Range: [Distribution](../classes/Distribution.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Distribution](../classes/Distribution.md) |
+| Domain Of | [DataService](../classes/DataService.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataService](../classes/DataService.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,11 +94,10 @@ name: isAccessServiceOf
 description: Distribution(s) for which this service provides access
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: isAccessServiceOf
 owner: DataService
 domain_of:
 - DataService
 range: Distribution
 
 ```
-</details>
+</details></div>

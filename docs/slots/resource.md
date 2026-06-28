@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: resource 
 
@@ -7,11 +10,11 @@ _Path to a resource (e.g. File, FHIR datasource) that is the source of this item
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/resource](https://cdisc.org/odm2/slot/resource)
-Alias: resource
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,46 @@ Alias: resource
 
 ## Properties
 
-* Range: NONE&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md)&nbsp;or&nbsp;<br />[String](../types/String.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | NONE&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Domain Of | [SourceItem](../classes/SourceItem.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [SourceItem](../classes/SourceItem.md) |
+
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'Resource'})
+- AnonymousSlotExpression({'range': 'string'})
+
+</details>
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +106,6 @@ description: Path to a resource (e.g. File, FHIR datasource) that is the source 
   this item
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: resource
 owner: SourceItem
 domain_of:
 - SourceItem
@@ -83,4 +116,4 @@ any_of:
 - range: string
 
 ```
-</details>
+</details></div>

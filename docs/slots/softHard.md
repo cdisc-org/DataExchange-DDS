@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: softHard 
 
@@ -7,11 +10,11 @@ _Indicates whether a validation check is an error ("Hard") or a warning ("Soft")
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/softHard](https://cdisc.org/odm2/slot/softHard)
-Alias: softHard
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: softHard
 
 ## Properties
 
-* Range: [SoftHard](../enums/SoftHard.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [SoftHard](../enums/SoftHard.md) |
+| Domain Of | [RangeCheck](../classes/RangeCheck.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [RangeCheck](../classes/RangeCheck.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ description: Indicates whether a validation check is an error ("Hard") or a warn
   ("Soft")
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: softHard
 owner: RangeCheck
 domain_of:
 - RangeCheck
 range: SoftHard
 
 ```
-</details>
+</details></div>

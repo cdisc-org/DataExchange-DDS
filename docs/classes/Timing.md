@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Timing 
 
@@ -7,6 +10,8 @@ _A temporal element that describes the timing of an event or occurrence, which c
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/Timing](https://cdisc.org/odm2/class/Timing)
@@ -14,179 +19,178 @@ URI: [odm:class/Timing](https://cdisc.org/odm2/class/Timing)
 
 ```mermaid
 erDiagram
-Timing {
-    TimingType type  
-    boolean isNominal  
-    string value  
-    datetime windowLower  
-    datetime windowUpper  
-    boolean recalled  
-    string frequency  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-}
 Coding {
+    AliasPredicate aliasType  
     string code  
-    string decode  
     string codeSystem  
     string codeSystemVersion  
-    AliasPredicate aliasType  
-}
-Method {
-    MethodType type  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-SiteOrSponsorComment {
-    string text  
-    OriginSource sourceType  
-    string source  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
+    string decode  
 }
 Comment {
     string text  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-ReifiedConcept {
-    string version  
-    string href  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
     boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
     string owner  
-    string wasDerivedFrom  
-}
-DocumentReference {
-    string title  
-    string leafID  
-    integerList pages  
-    string relationship  
-    string version  
-    string href  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-}
-FormalExpression {
-    string context  
-    string expression  
-    string returnType  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-}
-NominalOccurrence {
-    string event  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
     string purpose  
-    datetime lastUpdated  
-    string owner  
+    string uuid  
     string wasDerivedFrom  
 }
 Condition {
     string implementsCondition  
     LogicalOperator operator  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
+DocumentReference {
+    string leafID  
+    integerList pages  
+    string relationship  
+    string title  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    string label  
+    string uuid  
+    string version  
+}
+FormalExpression {
+    string expression  
+    string returnType  
+    string context  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
+Method {
+    MethodType type  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+NominalOccurrence {
+    string event  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+ReifiedConcept {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+}
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+Timing {
+    string frequency  
+    boolean isNominal  
+    boolean recalled  
+    datetime windowLower  
+    datetime windowUpper  
+    TimingType type  
+    string value  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
 
-Timing ||--|o NominalOccurrence : "relativeTo"
-Timing ||--|o NominalOccurrence : "relativeFrom"
-Timing ||--|o Method : "imputation"
-Timing ||--}o Coding : "coding"
-Method ||--}o FormalExpression : "expressions"
-Method ||--}o DocumentReference : "documents"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DocumentReference ||--}o Coding : "coding"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--}o Resource : "externalCodeLibs"
 Method ||--|o ReifiedConcept : "implementsConcept"
 Method ||--}o Coding : "coding"
 Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
 Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+NominalOccurrence ||--|| Timing : "timing"
+NominalOccurrence ||--}o Coding : "coding"
+NominalOccurrence ||--}o Comment : "comments"
+NominalOccurrence ||--}o Condition : "condition"
+NominalOccurrence ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ReifiedConcept ||--}o Coding : "coding"
+ReifiedConcept ||--}o Comment : "comments"
+ReifiedConcept ||--}o ConceptProperty : "properties"
+ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 SiteOrSponsorComment ||--}o Coding : "coding"
 SiteOrSponsorComment ||--}o Comment : "comments"
 SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ReifiedConcept ||--}o ConceptProperty : "properties"
-ReifiedConcept ||--}o Coding : "coding"
-ReifiedConcept ||--}o Comment : "comments"
-ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DocumentReference ||--}o Coding : "coding"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-FormalExpression ||--}o Coding : "coding"
-NominalOccurrence ||--|| Timing : "timing"
-NominalOccurrence ||--}o Condition : "condition"
-NominalOccurrence ||--}o Coding : "coding"
-NominalOccurrence ||--}o Comment : "comments"
-NominalOccurrence ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Timing ||--|o Method : "imputation"
+Timing ||--|o NominalOccurrence : "relativeFrom, relativeTo"
+Timing ||--}o Coding : "coding"
 
 ```
 
@@ -196,7 +200,6 @@ Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ## Inheritance
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * **Timing**
-
 
 
 ## Slots
@@ -216,10 +219,10 @@ Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -241,8 +244,12 @@ Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -419,7 +426,6 @@ attributes:
     name: type
     description: 'The type of timing: Fixed, Before (Relative), or After (Relative).'
     from_schema: https://cdisc.org/dds
-    alias: type
     owner: Timing
     domain_of:
     - ItemGroup
@@ -435,7 +441,6 @@ attributes:
     description: Indicates whether the timing is nominal (event-based) or not.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: isNominal
     owner: Timing
     domain_of:
     - Timing
@@ -445,7 +450,6 @@ attributes:
     description: The value of the timing, which can be a date/time, duration, or event
       reference.
     from_schema: https://cdisc.org/dds
-    alias: value
     owner: Timing
     domain_of:
     - Translation
@@ -459,7 +463,6 @@ attributes:
       to.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: relativeTo
     owner: Timing
     domain_of:
     - Timing
@@ -470,7 +473,6 @@ attributes:
       to.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: relativeFrom
     owner: Timing
     domain_of:
     - Timing
@@ -480,7 +482,6 @@ attributes:
     description: Start date/time of the timing
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: windowLower
     owner: Timing
     domain_of:
     - Timing
@@ -490,7 +491,6 @@ attributes:
     description: End date/time of the timing
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: windowUpper
     owner: Timing
     domain_of:
     - Timing
@@ -501,7 +501,6 @@ attributes:
       are less reliable).
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: recalled
     owner: Timing
     domain_of:
     - Timing
@@ -511,7 +510,6 @@ attributes:
     description: Frequency. Use dose frequency terminology e.g. "BID" if applicable.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: frequency
     owner: Timing
     domain_of:
     - Timing
@@ -521,7 +519,6 @@ attributes:
     description: The imputation method used for the Timing.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: imputation
     owner: Timing
     domain_of:
     - Timing
@@ -534,7 +531,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
-    alias: OID
     owner: Timing
     domain_of:
     - Identifiable
@@ -545,7 +541,6 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: uuid
     owner: Timing
     domain_of:
     - Identifiable
@@ -555,7 +550,6 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: name
     owner: Timing
     domain_of:
     - Labelled
@@ -568,7 +562,6 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: description
     owner: Timing
     domain_of:
     - Labelled
@@ -582,7 +575,6 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: coding
     owner: Timing
     domain_of:
     - Labelled
@@ -599,7 +591,6 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
-    alias: label
     owner: Timing
     domain_of:
     - Labelled
@@ -614,7 +605,6 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
-    alias: aliases
     owner: Timing
     domain_of:
     - Labelled
@@ -628,4 +618,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details>
+</details></div>

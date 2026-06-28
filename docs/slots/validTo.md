@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: validTo 
 
@@ -7,11 +10,11 @@ _Indicates the inclusive end time indicating the validity of the information in 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/validTo](https://cdisc.org/odm2/slot/validTo)
-Alias: validTo
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: validTo
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,10 +96,9 @@ description: Indicates the inclusive end time indicating the validity of the inf
   in the data set.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: validTo
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details>
+</details></div>

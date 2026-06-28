@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: PredicateTermEnum 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines short variable relationship linking phrases for pro
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/PredicateTermEnum](https://cdisc.org/odm2/enum/PredicateTermEnum)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | ASSESSES | None |  |
@@ -58,8 +65,12 @@ URI: [odm:enum/PredicateTermEnum](https://cdisc.org/odm2/enum/PredicateTermEnum)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -150,3 +161,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

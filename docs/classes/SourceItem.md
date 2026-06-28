@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: SourceItem 
 
@@ -7,6 +10,8 @@ _A data source that provides the origin of information for an item_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/SourceItem](https://cdisc.org/odm2/class/SourceItem)
@@ -14,222 +19,221 @@ URI: [odm:class/SourceItem](https://cdisc.org/odm2/class/SourceItem)
 
 ```mermaid
 erDiagram
-SourceItem {
-    stringList resource  
+CodeList {
+    string formatName  
+    DataType dataType  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    boolean isNonStandard  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
 }
 Coding {
+    AliasPredicate aliasType  
     string code  
-    string decode  
     string codeSystem  
     string codeSystemVersion  
-    AliasPredicate aliasType  
-}
-DocumentReference {
-    string title  
-    string leafID  
-    integerList pages  
-    string relationship  
-    string version  
-    string href  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-}
-Item {
-    DataType dataType  
-    integer length  
-    string role  
-    boolean hasNoData  
-    string crfCompletionInstructions  
-    string cdiscNotes  
-    string implementationNotes  
-    string preSpecifiedValue  
-    integer decimalDigits  
-    string displayFormat  
-    integer significantDigits  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-SiteOrSponsorComment {
-    string text  
-    OriginSource sourceType  
-    string source  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
+    string decode  
 }
 Comment {
     string text  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+ConceptProperty {
+    integer maxOccurs  
+    integer minOccurs  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 Condition {
     string implementsCondition  
     LogicalOperator operator  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
-CodeList {
-    DataType dataType  
-    string formatName  
-    string version  
+DocumentReference {
+    string leafID  
+    integerList pages  
+    string relationship  
+    string title  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
     string href  
-    boolean isNonStandard  
-    string OID  
+    string label  
     string uuid  
+    string version  
+}
+Item {
+    DataType dataType  
+    integer length  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string cdiscNotes  
+    string crfCompletionInstructions  
+    integer decimalDigits  
+    string displayFormat  
+    boolean hasNoData  
+    string implementationNotes  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string preSpecifiedValue  
+    string purpose  
+    string role  
+    integer significantDigits  
+    string uuid  
     string wasDerivedFrom  
 }
-ConceptProperty {
-    integer minOccurs  
-    integer maxOccurs  
-    string OID  
-    string uuid  
+Method {
+    MethodType type  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 Origin {
-    OriginType type  
     OriginSource source  
-}
-WhereClause {
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
+    OriginType type  
 }
 RangeCheck {
-    Comparator comparator  
     stringList checkValues  
+    Comparator comparator  
     string item  
     SoftHard softHard  
     LogicalOperator operator  
 }
-Method {
-    MethodType type  
-    string OID  
-    string uuid  
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+SourceItem {
+    stringList resource  
+}
+WhereClause {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 
-SourceItem ||--|o Item : "item"
-SourceItem ||--}o DocumentReference : "document"
-SourceItem ||--}o Coding : "coding"
-DocumentReference ||--}o Coding : "coding"
-Item ||--|o CodeList : "codeList"
-Item ||--|o Method : "method"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o WhereClause : "applicableWhen"
-Item ||--|o Origin : "origin"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o CodeList : "roleCodeList"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-CodeList ||--}o CodeListItem : "codeListItems"
 CodeList ||--|o Resource : "externalCodeList"
 CodeList ||--|o Standard : "standard"
+CodeList ||--}o CodeListItem : "codeListItems"
 CodeList ||--}o Coding : "coding"
 CodeList ||--}o Comment : "comments"
 CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ConceptProperty ||--|o CodeList : "codeList"
 ConceptProperty ||--}o Coding : "coding"
 ConceptProperty ||--}o Comment : "comments"
 ConceptProperty ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Origin ||--}o SourceItem : "sourceItems"
-Origin ||--}o DocumentReference : "documents"
-WhereClause ||--}o Condition : "conditions"
-WhereClause ||--}o Coding : "coding"
-WhereClause ||--}o Comment : "comments"
-WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-RangeCheck ||--}o FormalExpression : "expressions"
-Method ||--}o FormalExpression : "expressions"
-Method ||--}o DocumentReference : "documents"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DocumentReference ||--}o Coding : "coding"
+Item ||--|o CodeList : "codeList, roleCodeList"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--|o Method : "method"
+Item ||--|o Origin : "origin"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--}o WhereClause : "applicableWhen"
 Method ||--|o ReifiedConcept : "implementsConcept"
 Method ||--}o Coding : "coding"
 Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
 Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Origin ||--}o DocumentReference : "documents"
+Origin ||--}o SourceItem : "sourceItems"
+RangeCheck ||--}o FormalExpression : "expressions"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SourceItem ||--|o Item : "item"
+SourceItem ||--}o Coding : "coding"
+SourceItem ||--}o DocumentReference : "document"
+WhereClause ||--}o Coding : "coding"
+WhereClause ||--}o Comment : "comments"
+WhereClause ||--}o Condition : "conditions"
+WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
@@ -237,14 +241,13 @@ Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 <!-- no inheritance hierarchy -->
 
-
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [item](../slots/item.md) | 0..1 <br/> [Item](../classes/Item.md) | Reference to an item | direct |
 | [document](../slots/document.md) | * <br/> [DocumentReference](../classes/DocumentReference.md) | Reference to an external document | direct |
-| [resource](../slots/resource.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md)&nbsp;or&nbsp;<br />[String](../types/String.md) | Path to a resource (e.g. File, FHIR datasource) that is the source of this item | direct |
+| [resource](../slots/resource.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md) | Path to a resource (e.g. File, FHIR datasource) that is the source of this item | direct |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | A coding that describes the source of the item | direct |
 
 
@@ -263,8 +266,12 @@ Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -365,7 +372,6 @@ attributes:
     name: item
     description: Reference to an item
     from_schema: https://cdisc.org/dds
-    alias: item
     owner: SourceItem
     domain_of:
     - RangeCheck
@@ -379,7 +385,6 @@ attributes:
     description: Reference to an external document
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: document
     owner: SourceItem
     domain_of:
     - SourceItem
@@ -393,7 +398,6 @@ attributes:
       of this item
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: resource
     owner: SourceItem
     domain_of:
     - SourceItem
@@ -406,7 +410,6 @@ attributes:
     name: coding
     description: A coding that describes the source of the item
     from_schema: https://cdisc.org/dds
-    alias: coding
     owner: SourceItem
     domain_of:
     - Labelled
@@ -418,4 +421,4 @@ attributes:
     inlined_as_list: true
 
 ```
-</details>
+</details></div>

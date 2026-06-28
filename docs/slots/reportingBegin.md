@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: reportingBegin 
 
@@ -7,11 +10,11 @@ _A specific time period in a known system of time periods that identifies the st
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/reportingBegin](https://cdisc.org/odm2/slot/reportingBegin)
-Alias: reportingBegin
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: reportingBegin
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,10 +96,9 @@ description: A specific time period in a known system of time periods that ident
   the start period of a report.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: reportingBegin
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details>
+</details></div>

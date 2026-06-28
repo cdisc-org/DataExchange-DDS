@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Versioned 
 
@@ -6,6 +9,8 @@
 _A mixin that provides version and connectivity information, including version numbers and resource references_
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -15,8 +20,8 @@ URI: [odm:class/Versioned](https://cdisc.org/odm2/class/Versioned)
 ```mermaid
 erDiagram
 Versioned {
-    string version  
     string href  
+    string version  
 }
 
 
@@ -26,6 +31,12 @@ Versioned {
 
 
 <!-- no inheritance hierarchy -->
+
+## Class Properties
+
+| Property | Value |
+| --- | --- |
+| Mixin | Yes |
 
 
 ## Slots
@@ -62,8 +73,12 @@ Versioned {
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -141,7 +156,6 @@ attributes:
     description: The version of the external resources
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: version
     owner: Versioned
     domain_of:
     - Versioned
@@ -153,7 +167,6 @@ attributes:
       URL
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: href
     owner: Versioned
     domain_of:
     - Versioned
@@ -161,4 +174,4 @@ attributes:
     required: false
 
 ```
-</details>
+</details></div>

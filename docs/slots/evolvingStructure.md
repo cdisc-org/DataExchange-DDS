@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: evolvingStructure 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/evolvingStructure](https://cdisc.org/odm2/slot/evolvingStructure)
-Alias: evolvingStructure
-
 <!-- no inheritance hierarchy -->
 
 
@@ -26,13 +29,36 @@ Alias: evolvingStructure
 
 ## Properties
 
-* Range: [Boolean](../types/Boolean.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Boolean](../types/Boolean.md) |
+| Domain Of | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| If Absent | `False` |
+| Owner | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -64,11 +90,10 @@ name: evolvingStructure
 from_schema: https://cdisc.org/dds
 rank: 1000
 ifabsent: 'False'
-alias: evolvingStructure
 owner: DataStructureDefinition
 domain_of:
 - DataStructureDefinition
 range: boolean
 
 ```
-</details>
+</details></div>

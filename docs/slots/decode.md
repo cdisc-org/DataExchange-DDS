@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: decode 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/decode](https://cdisc.org/odm2/slot/decode)
-Alias: decode
-
 <!-- no inheritance hierarchy -->
 
 
@@ -27,13 +30,28 @@ Alias: decode
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [CodeListItem](../classes/CodeListItem.md), [Coding](../classes/Coding.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -55,10 +73,9 @@ Alias: decode
 <details>
 ```yaml
 name: decode
-alias: decode
 domain_of:
 - CodeListItem
 - Coding
 
 ```
-</details>
+</details></div>

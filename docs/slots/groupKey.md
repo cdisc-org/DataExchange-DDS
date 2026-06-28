@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: groupKey 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/groupKey](https://cdisc.org/odm2/slot/groupKey)
-Alias: groupKey
-
 <!-- no inheritance hierarchy -->
 
 
@@ -17,8 +20,8 @@ Alias: groupKey
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DimensionRelationship](../classes/DimensionRelationship.md) | A relationship element that associates a DataAttribute with a specific Dimension at a specific level |  no  |
 | [GroupRelationship](../classes/GroupRelationship.md) | A relationship element that associates a DataAttribute with a set of Dimensions, used when attribute values vary based on all group dimension values |  no  |
+| [DimensionRelationship](../classes/DimensionRelationship.md) | A relationship element that associates a DataAttribute with a specific Dimension at a specific level |  no  |
 
 
 
@@ -27,13 +30,28 @@ Alias: groupKey
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [GroupRelationship](../classes/GroupRelationship.md), [DimensionRelationship](../classes/DimensionRelationship.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -55,10 +73,9 @@ Alias: groupKey
 <details>
 ```yaml
 name: groupKey
-alias: groupKey
 domain_of:
 - GroupRelationship
 - DimensionRelationship
 
 ```
-</details>
+</details></div>

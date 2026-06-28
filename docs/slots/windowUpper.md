@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: windowUpper 
 
@@ -7,11 +10,11 @@ _End date/time of the timing_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/windowUpper](https://cdisc.org/odm2/slot/windowUpper)
-Alias: windowUpper
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: windowUpper
 
 ## Properties
 
-* Range: [Datetime](../types/Datetime.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Datetime](../types/Datetime.md) |
+| Domain Of | [Timing](../classes/Timing.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Timing](../classes/Timing.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,11 +94,10 @@ name: windowUpper
 description: End date/time of the timing
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: windowUpper
 owner: Timing
 domain_of:
 - Timing
 range: datetime
 
 ```
-</details>
+</details></div>

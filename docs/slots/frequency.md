@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: frequency 
 
@@ -7,11 +10,11 @@ _Frequency. Use dose frequency terminology e.g. "BID" if applicable._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/frequency](https://cdisc.org/odm2/slot/frequency)
-Alias: frequency
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: frequency
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [Timing](../classes/Timing.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Timing](../classes/Timing.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,11 +94,10 @@ name: frequency
 description: Frequency. Use dose frequency terminology e.g. "BID" if applicable.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: frequency
 owner: Timing
 domain_of:
 - Timing
 range: string
 
 ```
-</details>
+</details></div>

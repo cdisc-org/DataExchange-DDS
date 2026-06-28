@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: language 
 
@@ -7,11 +10,11 @@ _The language of the translation_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/language](https://cdisc.org/odm2/slot/language)
-Alias: language
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: language
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
 
-* Required: True
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [Translation](../classes/Translation.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Translation](../classes/Translation.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: language
 description: The language of the translation
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: language
 owner: Translation
 domain_of:
 - Translation
@@ -79,4 +102,4 @@ range: string
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: slices 
 
@@ -7,11 +10,11 @@ _Slices are specific subset ItemGroups that belong to, or are used by this ItemG
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/slices](https://cdisc.org/odm2/slot/slices)
-Alias: slices
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,15 +35,36 @@ Alias: slices
 
 ## Properties
 
-* Range: [ItemGroup](../classes/ItemGroup.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [ItemGroup](../classes/ItemGroup.md) |
+| Domain Of | [ItemGroup](../classes/ItemGroup.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ItemGroup](../classes/ItemGroup.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -73,7 +97,6 @@ description: Slices are specific subset ItemGroups that belong to, or are used b
   this ItemGroup
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: slices
 owner: ItemGroup
 domain_of:
 - ItemGroup
@@ -83,4 +106,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

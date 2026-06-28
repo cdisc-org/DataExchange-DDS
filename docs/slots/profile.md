@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: profile 
 
@@ -7,11 +10,11 @@ _Profiles this resource claims to conform to_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/profile](https://cdisc.org/odm2/slot/profile)
-Alias: profile
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,10 +25,10 @@ Alias: profile
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dataset](../classes/Dataset.md) | A collection element that groups observations sharing the same dimensionality, expressed as a set of unique dimensions within a Data Product context |  no  |
+| [IsProfile](../classes/IsProfile.md) | A mixin that provides additional metadata for FHIR resources and Data Products, including profiles, security tags, and validity periods |  no  |
 | [ItemGroup](../classes/ItemGroup.md) | A collection element that groups related items or subgroups within a specific context, used for tables, FHIR resource profiles, biomedical concept specializations, or form sections |  no  |
 | [DataStructureDefinition](../classes/DataStructureDefinition.md) | A structural element that defines the organization of a data cube for analysis, including dimensions, attributes, and measures |  no  |
-| [IsProfile](../classes/IsProfile.md) | A mixin that provides additional metadata for FHIR resources and Data Products, including profiles, security tags, and validity periods |  no  |
+| [Dataset](../classes/Dataset.md) | A collection element that groups observations sharing the same dimensionality, expressed as a set of unique dimensions within a Data Product context |  no  |
 
 
 
@@ -34,15 +37,36 @@ Alias: profile
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [IsProfile](../classes/IsProfile.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [IsProfile](../classes/IsProfile.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -74,7 +98,6 @@ name: profile
 description: Profiles this resource claims to conform to
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: profile
 owner: IsProfile
 domain_of:
 - IsProfile
@@ -82,4 +105,4 @@ range: string
 multivalued: true
 
 ```
-</details>
+</details></div>

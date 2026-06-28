@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: relativeTo 
 
@@ -7,11 +10,11 @@ _Reference to the event or occurrence that this timing is relative to._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/relativeTo](https://cdisc.org/odm2/slot/relativeTo)
-Alias: relativeTo
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: relativeTo
 
 ## Properties
 
-* Range: [NominalOccurrence](../classes/NominalOccurrence.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [NominalOccurrence](../classes/NominalOccurrence.md) |
+| Domain Of | [Timing](../classes/Timing.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Timing](../classes/Timing.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,11 +94,10 @@ name: relativeTo
 description: Reference to the event or occurrence that this timing is relative to.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: relativeTo
 owner: Timing
 domain_of:
 - Timing
 range: NominalOccurrence
 
 ```
-</details>
+</details></div>

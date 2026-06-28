@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: providesDataFor 
 
@@ -7,11 +10,11 @@ _The Dataflows that this provider supplies data for_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/providesDataFor](https://cdisc.org/odm2/slot/providesDataFor)
-Alias: providesDataFor
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: providesDataFor
 
 ## Properties
 
-* Range: [Dataflow](../classes/Dataflow.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Dataflow](../classes/Dataflow.md) |
+| Domain Of | [DataProvider](../classes/DataProvider.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataProvider](../classes/DataProvider.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: providesDataFor
 description: The Dataflows that this provider supplies data for
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: providesDataFor
 owner: DataProvider
 domain_of:
 - DataProvider
@@ -79,4 +102,4 @@ range: Dataflow
 multivalued: true
 
 ```
-</details>
+</details></div>

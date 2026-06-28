@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: context 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/context](https://cdisc.org/odm2/slot/context)
-Alias: context
-
 <!-- no inheritance hierarchy -->
 
 
@@ -18,8 +21,8 @@ Alias: context
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [ODMFileMetadata](../classes/ODMFileMetadata.md) | A mixin that provides ODM file-level metadata attributes including file identifiers, timestamps, and system information |  no  |
-| [FormalExpression](../classes/FormalExpression.md) | A computational element that defines the execution of a data derivation within a specific context |  no  |
 | [MetaDataVersion](../classes/MetaDataVersion.md) | A container element that represents a given version of a specification, linking to a particular usage context such as a study, dataset, or data collection instrument. |  no  |
+| [FormalExpression](../classes/FormalExpression.md) | A computational element that defines the execution of a data derivation within a specific context |  no  |
 
 
 
@@ -28,13 +31,28 @@ Alias: context
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md), [FormalExpression](../classes/FormalExpression.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -56,10 +74,9 @@ Alias: context
 <details>
 ```yaml
 name: context
-alias: context
 domain_of:
 - ODMFileMetadata
 - FormalExpression
 
 ```
-</details>
+</details></div>

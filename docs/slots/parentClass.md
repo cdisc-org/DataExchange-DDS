@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: parentClass 
 
@@ -7,11 +10,11 @@ _Name of the parent Class or SubClass following CDISC Controlled Terminology._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/parentClass](https://cdisc.org/odm2/slot/parentClass)
-Alias: parentClass
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: parentClass
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [SubClass](../classes/SubClass.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [SubClass](../classes/SubClass.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,7 +94,6 @@ name: parentClass
 description: Name of the parent Class or SubClass following CDISC Controlled Terminology.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: parentClass
 owner: SubClass
 domain_of:
 - SubClass
@@ -77,4 +101,4 @@ range: string
 required: false
 
 ```
-</details>
+</details></div>

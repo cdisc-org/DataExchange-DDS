@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: provisionAgreements 
 
@@ -7,11 +10,11 @@ _The ProvisionAgreements that this provider has with Data Consumers_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/provisionAgreements](https://cdisc.org/odm2/slot/provisionAgreements)
-Alias: provisionAgreements
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: provisionAgreements
 
 ## Properties
 
-* Range: [ProvisionAgreement](../classes/ProvisionAgreement.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [ProvisionAgreement](../classes/ProvisionAgreement.md) |
+| Domain Of | [DataProvider](../classes/DataProvider.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataProvider](../classes/DataProvider.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: provisionAgreements
 description: The ProvisionAgreements that this provider has with Data Consumers
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: provisionAgreements
 owner: DataProvider
 domain_of:
 - DataProvider
@@ -79,4 +102,4 @@ range: ProvisionAgreement
 multivalued: true
 
 ```
-</details>
+</details></div>

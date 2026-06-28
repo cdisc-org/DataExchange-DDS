@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: organization 
 
@@ -7,11 +10,11 @@ _The organization the user belongs to._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/organization](https://cdisc.org/odm2/slot/organization)
-Alias: organization
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: organization
 
 ## Properties
 
-* Range: [Organization](../classes/Organization.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Organization](../classes/Organization.md) |
+| Domain Of | [User](../classes/User.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [User](../classes/User.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,11 +97,10 @@ from_schema: https://cdisc.org/dds
 close_mappings:
 - prov:actedOnBehalfOf
 rank: 1000
-alias: organization
 owner: User
 domain_of:
 - User
 range: Organization
 
 ```
-</details>
+</details></div>

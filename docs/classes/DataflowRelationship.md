@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: DataflowRelationship 
 
@@ -7,6 +10,8 @@ _A relationship element that associates a DataAttribute with a Dataflow, reporte
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/DataflowRelationship](https://cdisc.org/odm2/class/DataflowRelationship)
@@ -14,246 +19,240 @@ URI: [odm:class/DataflowRelationship](https://cdisc.org/odm2/class/DataflowRelat
 
 ```mermaid
 erDiagram
-DataflowRelationship {
-
-}
-DataAttribute {
-    string role  
-    string OID  
-    string uuid  
+Analysis {
+    string analysisPurpose  
+    string analysisReason  
+    stringList inputData  
+    string analysisMethod  
     string name  
     string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-SiteOrSponsorComment {
-    string text  
-    OriginSource sourceType  
-    string source  
     string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string href  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
+    string version  
     string wasDerivedFrom  
+    MethodType type  
+}
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
 }
 Comment {
     string text  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
-Coding {
-    string code  
-    string decode  
-    string codeSystem  
-    string codeSystemVersion  
-    AliasPredicate aliasType  
-}
-Method {
-    MethodType type  
-    string OID  
-    string uuid  
+DataAttribute {
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
+    string role  
+}
+DataStructureDefinition {
+    boolean evolvingStructure  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string authenticator  
+    string domain  
+    string href  
+    boolean isNonStandard  
+    boolean isReferenceData  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    stringList profile  
+    string purpose  
+    string structure  
+    ItemGroupType type  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+    boolean hasNoData  
+}
+Dataflow {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+}
+DataflowRelationship {
+
+}
+Dimension {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+    string role  
 }
 Item {
     DataType dataType  
     integer length  
-    string role  
-    boolean hasNoData  
-    string crfCompletionInstructions  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
     string cdiscNotes  
-    string implementationNotes  
-    string preSpecifiedValue  
+    string crfCompletionInstructions  
     integer decimalDigits  
     string displayFormat  
-    integer significantDigits  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-Dataflow {
-    string version  
-    string href  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-Analysis {
-    string analysisReason  
-    string analysisPurpose  
-    string analysisMethod  
-    stringList inputData  
-    string version  
-    string href  
-    MethodType type  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-Dimension {
-    string role  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-DataStructureDefinition {
-    boolean evolvingStructure  
-    string domain  
-    string structure  
-    boolean isReferenceData  
-    ItemGroupType type  
     boolean hasNoData  
-    stringList profile  
-    string authenticator  
-    boolean isNonStandard  
-    string OID  
+    string implementationNotes  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string preSpecifiedValue  
+    string purpose  
+    string role  
+    integer significantDigits  
     string uuid  
+    string wasDerivedFrom  
+}
+Method {
+    MethodType type  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
-    string version  
-    string href  
+}
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
 }
 
-DataflowRelationship ||--|o Dataflow : "dataFlow"
-DataflowRelationship ||--|o DataAttribute : "attribute"
-DataAttribute ||--|| Item : "item"
-DataAttribute ||--|o Method : "missingHandling"
-DataAttribute ||--|o Method : "imputation"
-DataAttribute ||--}o Coding : "coding"
-DataAttribute ||--}o Comment : "comments"
-DataAttribute ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Method ||--}o FormalExpression : "expressions"
-Method ||--}o DocumentReference : "documents"
-Method ||--|o ReifiedConcept : "implementsConcept"
-Method ||--}o Coding : "coding"
-Method ||--}o Comment : "comments"
-Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--|o CodeList : "codeList"
-Item ||--|o Method : "method"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o WhereClause : "applicableWhen"
-Item ||--|o Origin : "origin"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o CodeList : "roleCodeList"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Dataflow ||--|| DataStructureDefinition : "structure"
-Dataflow ||--}o Dimension : "dimensionConstraint"
-Dataflow ||--|o Analysis : "analysisMethod"
-Dataflow ||--}o Coding : "coding"
-Dataflow ||--}o Comment : "comments"
-Dataflow ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Analysis ||--}o WhereClause : "applicableWhen"
-Analysis ||--}o FormalExpression : "expressions"
-Analysis ||--}o DocumentReference : "documents"
 Analysis ||--|o ReifiedConcept : "implementsConcept"
 Analysis ||--}o Coding : "coding"
 Analysis ||--}o Comment : "comments"
+Analysis ||--}o DocumentReference : "documents"
+Analysis ||--}o FormalExpression : "expressions"
 Analysis ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Analysis ||--}o WhereClause : "applicableWhen"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataAttribute ||--|o Method : "imputation, missingHandling"
+DataAttribute ||--|| Item : "item"
+DataAttribute ||--}o Coding : "coding"
+DataAttribute ||--}o Comment : "comments"
+DataAttribute ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataStructureDefinition ||--|o ComponentList : "grouping"
+DataStructureDefinition ||--|o DefClass : "observationClass"
+DataStructureDefinition ||--|o ReifiedConcept : "implementsConcept"
+DataStructureDefinition ||--|o Standard : "standard"
+DataStructureDefinition ||--|o Timing : "validityPeriod"
+DataStructureDefinition ||--}o Coding : "coding, security"
+DataStructureDefinition ||--}o Comment : "comments"
+DataStructureDefinition ||--}o DataAttribute : "attributes"
+DataStructureDefinition ||--}o Dimension : "dimensions"
+DataStructureDefinition ||--}o Item : "items, keySequence"
+DataStructureDefinition ||--}o ItemGroup : "slices"
+DataStructureDefinition ||--}o Measure : "measures"
+DataStructureDefinition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataStructureDefinition ||--}o WhereClause : "applicableWhen"
+Dataflow ||--|o Analysis : "analysisMethod"
+Dataflow ||--|| DataStructureDefinition : "structure"
+Dataflow ||--}o Coding : "coding"
+Dataflow ||--}o Comment : "comments"
+Dataflow ||--}o Dimension : "dimensionConstraint"
+Dataflow ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataflowRelationship ||--|o DataAttribute : "attribute"
+DataflowRelationship ||--|o Dataflow : "dataFlow"
+Dimension ||--|o Method : "imputation, missingHandling"
 Dimension ||--|| Item : "item"
-Dimension ||--|o Method : "missingHandling"
-Dimension ||--|o Method : "imputation"
 Dimension ||--}o Coding : "coding"
 Dimension ||--}o Comment : "comments"
 Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DataStructureDefinition ||--}o Dimension : "dimensions"
-DataStructureDefinition ||--}o Measure : "measures"
-DataStructureDefinition ||--}o DataAttribute : "attributes"
-DataStructureDefinition ||--|o ComponentList : "grouping"
-DataStructureDefinition ||--}o Item : "items"
-DataStructureDefinition ||--}o Item : "keySequence"
-DataStructureDefinition ||--}o ItemGroup : "slices"
-DataStructureDefinition ||--|o ReifiedConcept : "implementsConcept"
-DataStructureDefinition ||--}o WhereClause : "applicableWhen"
-DataStructureDefinition ||--|o DefClass : "observationClass"
-DataStructureDefinition ||--}o Coding : "security"
-DataStructureDefinition ||--|o Timing : "validityPeriod"
-DataStructureDefinition ||--|o Standard : "standard"
-DataStructureDefinition ||--}o Coding : "coding"
-DataStructureDefinition ||--}o Comment : "comments"
-DataStructureDefinition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--|o CodeList : "codeList, roleCodeList"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--|o Method : "method"
+Item ||--|o Origin : "origin"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--}o WhereClause : "applicableWhen"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
 
 
 <!-- no inheritance hierarchy -->
-
 
 ## Slots
 
@@ -271,8 +270,12 @@ DataStructureDefinition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -352,7 +355,6 @@ attributes:
     name: dataFlow
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: dataFlow
     owner: DataflowRelationship
     domain_of:
     - DataflowRelationship
@@ -361,7 +363,6 @@ attributes:
   attribute:
     name: attribute
     from_schema: https://cdisc.org/dds
-    alias: attribute
     owner: DataflowRelationship
     domain_of:
     - Resource
@@ -373,4 +374,4 @@ attributes:
     range: DataAttribute
 
 ```
-</details>
+</details></div>

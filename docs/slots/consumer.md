@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: consumer 
 
@@ -7,11 +10,11 @@ _The Data Consumer that is part of this agreement_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/consumer](https://cdisc.org/odm2/slot/consumer)
-Alias: consumer
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,46 @@ Alias: consumer
 
 ## Properties
 
-* Range: NONE&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Domain Of | [ProvisionAgreement](../classes/ProvisionAgreement.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ProvisionAgreement](../classes/ProvisionAgreement.md) |
+
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'DataProduct'})
+- AnonymousSlotExpression({'range': 'Organization'})
+- AnonymousSlotExpression({'range': 'string'})
+
+</details>
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,7 +105,6 @@ name: consumer
 description: The Data Consumer that is part of this agreement
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: consumer
 owner: ProvisionAgreement
 domain_of:
 - ProvisionAgreement
@@ -79,4 +114,4 @@ any_of:
 - range: string
 
 ```
-</details>
+</details></div>

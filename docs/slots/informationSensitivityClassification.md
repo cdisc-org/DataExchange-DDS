@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: informationSensitivityClassification 
 
@@ -7,11 +10,11 @@ _Classification of the dataset's sensitivity or confidentiality_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/informationSensitivityClassification](https://cdisc.org/odm2/slot/informationSensitivityClassification)
-Alias: informationSensitivityClassification
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: informationSensitivityClassification
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [Dataset](../classes/Dataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Dataset](../classes/Dataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,10 +94,9 @@ name: informationSensitivityClassification
 description: Classification of the dataset's sensitivity or confidentiality
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: informationSensitivityClassification
 owner: Dataset
 domain_of:
 - Dataset
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: relationship 
 
@@ -7,11 +10,11 @@ _Relationship to the referencing entity_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/relationship](https://cdisc.org/odm2/slot/relationship)
-Alias: relationship
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: relationship
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [DocumentReference](../classes/DocumentReference.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DocumentReference](../classes/DocumentReference.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,7 +94,6 @@ name: relationship
 description: Relationship to the referencing entity
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: relationship
 owner: DocumentReference
 domain_of:
 - DocumentReference
@@ -77,4 +101,4 @@ range: string
 required: false
 
 ```
-</details>
+</details></div>

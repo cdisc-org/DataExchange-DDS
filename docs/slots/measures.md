@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: measures 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/measures](https://cdisc.org/odm2/slot/measures)
-Alias: measures
-
 <!-- no inheritance hierarchy -->
 
 
@@ -26,15 +29,36 @@ Alias: measures
 
 ## Properties
 
-* Range: [Measure](../classes/Measure.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Measure](../classes/Measure.md) |
+| Domain Of | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -65,7 +89,6 @@ Alias: measures
 name: measures
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: measures
 owner: DataStructureDefinition
 domain_of:
 - DataStructureDefinition
@@ -73,4 +96,4 @@ range: Measure
 multivalued: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: inputData 
 
@@ -7,11 +10,11 @@ _Datasets or slices/subsets of datasets asked for by this analysis. If a Item is
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/inputData](https://cdisc.org/odm2/slot/inputData)
-Alias: inputData
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,46 @@ Alias: inputData
 
 ## Properties
 
-* Range: NONE&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[Dataset](../classes/Dataset.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | NONE&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[Dataset](../classes/Dataset.md) |
+| Domain Of | [Analysis](../classes/Analysis.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [Analysis](../classes/Analysis.md) |
+
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'ItemGroup'})
+- AnonymousSlotExpression({'range': 'Dataset'})
+
+</details>
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -73,7 +107,6 @@ description: Datasets or slices/subsets of datasets asked for by this analysis. 
   its parent ItemGroup here.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: inputData
 owner: Analysis
 domain_of:
 - Analysis
@@ -84,4 +117,4 @@ any_of:
 - range: Dataset
 
 ```
-</details>
+</details></div>

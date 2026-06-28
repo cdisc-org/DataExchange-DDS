@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: inputDataset 
 
@@ -7,11 +10,11 @@ _Source datasets used by the data product_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/inputDataset](https://cdisc.org/odm2/slot/inputDataset)
-Alias: inputDataset
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: inputDataset
 
 ## Properties
 
-* Range: [Dataset](../classes/Dataset.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Dataset](../classes/Dataset.md) |
+| Domain Of | [DataProduct](../classes/DataProduct.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataProduct](../classes/DataProduct.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: inputDataset
 description: Source datasets used by the data product
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: inputDataset
 owner: DataProduct
 domain_of:
 - DataProduct
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

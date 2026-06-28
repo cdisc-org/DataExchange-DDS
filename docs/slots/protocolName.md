@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: protocolName 
 
@@ -7,11 +10,11 @@ _Protocol name for the study_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/protocolName](https://cdisc.org/odm2/slot/protocolName)
-Alias: protocolName
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: protocolName
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [StudyMetadata](../classes/StudyMetadata.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [StudyMetadata](../classes/StudyMetadata.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ name: protocolName
 description: Protocol name for the study
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: protocolName
 owner: StudyMetadata
 domain_of:
 - StudyMetadata
 range: string
 
 ```
-</details>
+</details></div>

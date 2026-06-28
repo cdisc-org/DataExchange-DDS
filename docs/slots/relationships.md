@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: relationships 
 
@@ -7,11 +10,11 @@ _Relationships between items, item groups, and other elements in this version of
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/relationships](https://cdisc.org/odm2/slot/relationships)
-Alias: relationships
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: relationships
 
 ## Properties
 
-* Range: [Relationship](../classes/Relationship.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Relationship](../classes/Relationship.md) |
+| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +96,6 @@ description: Relationships between items, item groups, and other elements in thi
   version of the metadata.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: relationships
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -82,4 +105,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

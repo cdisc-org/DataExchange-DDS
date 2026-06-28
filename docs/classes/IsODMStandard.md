@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: IsODMStandard 
 
@@ -7,6 +10,8 @@ _A mixin that provides properties to indicate standards compliance_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/IsODMStandard](https://cdisc.org/odm2/class/IsODMStandard)
@@ -14,27 +19,27 @@ URI: [odm:class/IsODMStandard](https://cdisc.org/odm2/class/IsODMStandard)
 
 ```mermaid
 erDiagram
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
+}
 IsODMStandard {
     boolean isNonStandard  
 }
 Standard {
-    StandardName name  
-    StandardType type  
     PublishingSet publishingSet  
-    string version  
     StandardStatus status  
-    string OID  
-    string uuid  
+    StandardType type  
+    string version  
+    StandardName name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-}
-Coding {
-    string code  
-    string decode  
-    string codeSystem  
-    string codeSystemVersion  
-    AliasPredicate aliasType  
+    string label  
+    string uuid  
 }
 
 IsODMStandard ||--|o Standard : "standard"
@@ -45,6 +50,12 @@ Standard ||--}o Coding : "coding"
 
 
 <!-- no inheritance hierarchy -->
+
+## Class Properties
+
+| Property | Value |
+| --- | --- |
+| Mixin | Yes |
 
 
 ## Slots
@@ -71,8 +82,12 @@ Standard ||--}o Coding : "coding"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -145,7 +160,6 @@ attributes:
     description: Reference to the standard being implemented
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: standard
     owner: IsODMStandard
     domain_of:
     - IsODMStandard
@@ -155,11 +169,10 @@ attributes:
     description: One or more members of this set are non-standard extensions
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: isNonStandard
     owner: IsODMStandard
     domain_of:
     - IsODMStandard
     range: boolean
 
 ```
-</details>
+</details></div>

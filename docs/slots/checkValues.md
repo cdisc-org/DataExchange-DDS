@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: checkValues 
 
@@ -7,11 +10,11 @@ _Values to compare against_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/checkValues](https://cdisc.org/odm2/slot/checkValues)
-Alias: checkValues
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: checkValues
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [RangeCheck](../classes/RangeCheck.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [RangeCheck](../classes/RangeCheck.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: checkValues
 description: Values to compare against
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: checkValues
 owner: RangeCheck
 domain_of:
 - RangeCheck
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

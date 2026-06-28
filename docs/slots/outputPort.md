@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: outputPort 
 
@@ -7,11 +10,11 @@ _Services that expose output from this data product_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/outputPort](https://cdisc.org/odm2/slot/outputPort)
-Alias: outputPort
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: outputPort
 
 ## Properties
 
-* Range: [DataService](../classes/DataService.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [DataService](../classes/DataService.md) |
+| Domain Of | [DataProduct](../classes/DataProduct.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataProduct](../classes/DataProduct.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: outputPort
 description: Services that expose output from this data product
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: outputPort
 owner: DataProduct
 domain_of:
 - DataProduct
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: IsODMItem 
 
@@ -7,6 +10,8 @@ _A mixin that provides additional attributes for CDISC Operational Data Model it
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/IsODMItem](https://cdisc.org/odm2/class/IsODMItem)
@@ -14,165 +19,165 @@ URI: [odm:class/IsODMItem](https://cdisc.org/odm2/class/IsODMItem)
 
 ```mermaid
 erDiagram
-IsODMItem {
-    string role  
-    boolean hasNoData  
-    string crfCompletionInstructions  
-    string cdiscNotes  
-    string implementationNotes  
-    string preSpecifiedValue  
+CodeList {
+    string formatName  
+    DataType dataType  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    boolean isNonStandard  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+}
+CodeListItem {
+    string description  
+    string codedValue  
+    string decode  
+    boolean other  
+    decimal weight  
+    stringList aliases  
+}
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
+}
+Comment {
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
 }
 Condition {
     string implementsCondition  
     LogicalOperator operator  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-SiteOrSponsorComment {
-    string text  
-    OriginSource sourceType  
-    string source  
     string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-Comment {
-    string text  
-    string OID  
-    string uuid  
-    string name  
-    string description  
     string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
-}
-Coding {
-    string code  
-    string decode  
-    string codeSystem  
-    string codeSystemVersion  
-    AliasPredicate aliasType  
 }
 FormalExpression {
-    string context  
     string expression  
     string returnType  
-    string OID  
-    string uuid  
+    string context  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
+    string label  
+    string uuid  
+}
+IsODMItem {
+    string cdiscNotes  
+    string crfCompletionInstructions  
+    boolean hasNoData  
+    string implementationNotes  
+    string preSpecifiedValue  
+    string role  
 }
 RangeCheck {
-    Comparator comparator  
     stringList checkValues  
+    Comparator comparator  
     string item  
     SoftHard softHard  
     LogicalOperator operator  
 }
-CodeList {
-    DataType dataType  
-    string formatName  
-    string version  
-    string href  
-    boolean isNonStandard  
-    string OID  
-    string uuid  
+Resource {
+    string attribute  
+    string resourceType  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string href  
+    string label  
+    string uuid  
+    string version  
+}
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 Standard {
-    StandardName name  
-    StandardType type  
     PublishingSet publishingSet  
-    string version  
     StandardStatus status  
-    string OID  
-    string uuid  
-    string description  
-    string label  
-    stringList aliases  
-}
-Resource {
-    string resourceType  
-    string attribute  
+    StandardType type  
     string version  
-    string href  
+    StandardName name  
+    string description  
     string OID  
-    string uuid  
-    string name  
-    string description  
+    stringList aliases  
     string label  
-    stringList aliases  
-}
-CodeListItem {
-    string codedValue  
-    string decode  
-    string description  
-    stringList aliases  
-    decimal weight  
-    boolean other  
+    string uuid  
 }
 
-IsODMItem ||--|o CodeList : "roleCodeList"
-IsODMItem ||--|o Condition : "collectionExceptionCondition"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Comment ||--}o DocumentReference : "documents"
-Comment ||--}o Coding : "coding"
-Comment ||--}o Comment : "comments"
-Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-FormalExpression ||--}o Coding : "coding"
-RangeCheck ||--}o FormalExpression : "expressions"
-CodeList ||--}o CodeListItem : "codeListItems"
 CodeList ||--|o Resource : "externalCodeList"
 CodeList ||--|o Standard : "standard"
+CodeList ||--}o CodeListItem : "codeListItems"
 CodeList ||--}o Coding : "coding"
 CodeList ||--}o Comment : "comments"
 CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Standard ||--}o Coding : "coding"
-Resource ||--}o FormalExpression : "selection"
-Resource ||--}o Coding : "coding"
 CodeListItem ||--|o Coding : "coding"
+Comment ||--}o Coding : "coding"
+Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
+Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+IsODMItem ||--|o CodeList : "roleCodeList"
+IsODMItem ||--|o Condition : "collectionExceptionCondition"
+RangeCheck ||--}o FormalExpression : "expressions"
+Resource ||--}o Coding : "coding"
+Resource ||--}o FormalExpression : "selection"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Standard ||--}o Coding : "coding"
 
 ```
 
@@ -180,19 +185,25 @@ CodeListItem ||--|o Coding : "coding"
 
 <!-- no inheritance hierarchy -->
 
+## Class Properties
+
+| Property | Value |
+| --- | --- |
+| Mixin | Yes |
+
 
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [role](../slots/role.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Identifies the role of the item within the containing context, taken from the roleCodeList | direct |
+| [role](../slots/role.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Identifies the role of the item within the containing context, taken from the roleCodeList | direct |
 | [roleCodeList](../slots/roleCodeList.md) | 0..1 <br/> [CodeList](../classes/CodeList.md) | Reference to the CodeList that defines the roles for this item | direct |
 | [hasNoData](../slots/hasNoData.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | True if this is a manifest and there is no data for this item | direct |
-| [crfCompletionInstructions](../slots/crfCompletionInstructions.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CRFCompletionInstructions reference: Instructions for the clinical site on how to enter collected information on the CRF | direct |
-| [cdiscNotes](../slots/cdiscNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CDISCNotes reference: Explanatory text for the variable | direct |
-| [implementationNotes](../slots/implementationNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | ImplementationNotes reference: Further information, such as rationale and implementation instructions, on how to implement the CRF data collection fields | direct |
+| [crfCompletionInstructions](../slots/crfCompletionInstructions.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CRFCompletionInstructions reference: Instructions for the clinical site on how to enter collected information on the CRF | direct |
+| [cdiscNotes](../slots/cdiscNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | CDISCNotes reference: Explanatory text for the variable | direct |
+| [implementationNotes](../slots/implementationNotes.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | ImplementationNotes reference: Further information, such as rationale and implementation instructions, on how to implement the CRF data collection fields | direct |
 | [collectionExceptionCondition](../slots/collectionExceptionCondition.md) | 0..1 <br/> [Condition](../classes/Condition.md) | Condition that defines when collection may be exempted | direct |
-| [preSpecifiedValue](../slots/preSpecifiedValue.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Prefill value or a default value for a field that is automatically populated. | direct |
+| [preSpecifiedValue](../slots/preSpecifiedValue.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Prefill value or a default value for a field that is automatically populated. | direct |
 
 
 
@@ -210,8 +221,12 @@ CodeListItem ||--|o Coding : "coding"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -353,7 +368,6 @@ attributes:
       from the roleCodeList
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: role
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -367,7 +381,6 @@ attributes:
     description: Reference to the CodeList that defines the roles for this item
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: roleCodeList
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -377,7 +390,6 @@ attributes:
     description: True if this is a manifest and there is no data for this item
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: hasNoData
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -389,7 +401,6 @@ attributes:
       site on how to enter collected information on the CRF'
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: crfCompletionInstructions
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -401,7 +412,6 @@ attributes:
     description: 'CDISCNotes reference: Explanatory text for the variable'
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: cdiscNotes
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -415,7 +425,6 @@ attributes:
       fields'
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: implementationNotes
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -427,7 +436,6 @@ attributes:
     description: Condition that defines when collection may be exempted
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: collectionExceptionCondition
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -438,7 +446,6 @@ attributes:
       populated.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: preSpecifiedValue
     owner: IsODMItem
     domain_of:
     - IsODMItem
@@ -447,4 +454,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details>
+</details></div>

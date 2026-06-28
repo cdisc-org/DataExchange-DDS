@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: dataProducts 
 
@@ -7,11 +10,11 @@ _Indexed data flows with clear ownership_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/dataProducts](https://cdisc.org/odm2/slot/dataProducts)
-Alias: dataProducts
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: dataProducts
 
 ## Properties
 
-* Range: [DataProduct](../classes/DataProduct.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [DataProduct](../classes/DataProduct.md) |
+| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: dataProducts
 description: Indexed data flows with clear ownership
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: dataProducts
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

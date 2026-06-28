@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: resources 
 
@@ -7,11 +10,11 @@ _References to resources and documents that describe this version of the metadat
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/resources](https://cdisc.org/odm2/slot/resources)
-Alias: resources
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,46 @@ Alias: resources
 
 ## Properties
 
-* Range: NONE&nbsp;or&nbsp;<br />[DocumentReference](../classes/DocumentReference.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | NONE&nbsp;or&nbsp;<br />[DocumentReference](../classes/DocumentReference.md)&nbsp;or&nbsp;<br />[Resource](../classes/Resource.md) |
+| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'DocumentReference'})
+- AnonymousSlotExpression({'range': 'Resource'})
+
+</details>
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +106,6 @@ description: References to resources and documents that describe this version of
   metadata.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: resources
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -84,4 +117,4 @@ any_of:
 - range: Resource
 
 ```
-</details>
+</details></div>

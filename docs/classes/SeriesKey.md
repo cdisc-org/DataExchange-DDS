@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: SeriesKey 
 
@@ -6,6 +9,8 @@
 _A unique identifier that comprises the cross-product of dimension values including Time to identify observations, representing dimensions shared by all observations in a conceptual series_
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -15,9 +20,9 @@ URI: [odm:class/SeriesKey](https://cdisc.org/odm2/class/SeriesKey)
 ```mermaid
 erDiagram
 SeriesKey {
-    string describedBy  
-    string keyValues  
     string attributeValues  
+    string keyValues  
+    string describedBy  
 }
 
 
@@ -30,7 +35,6 @@ SeriesKey {
 ## Inheritance
 * [DatasetKey](../classes/DatasetKey.md)
     * **SeriesKey**
-
 
 
 ## Slots
@@ -57,8 +61,12 @@ SeriesKey {
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -123,7 +131,6 @@ attributes:
     description: Associates the Dimension Descriptor defined in the Data Structure
       Definition
     from_schema: https://cdisc.org/dds
-    alias: describedBy
     owner: SeriesKey
     domain_of:
     - Dataset
@@ -138,7 +145,6 @@ attributes:
       SUBJ001.VISIT2.BMI
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: keyValues
     owner: SeriesKey
     domain_of:
     - DatasetKey
@@ -148,11 +154,10 @@ attributes:
     description: Association to the Attribute Values relating to Key
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: attributeValues
     owner: SeriesKey
     domain_of:
     - DatasetKey
     range: string
 
 ```
-</details>
+</details></div>

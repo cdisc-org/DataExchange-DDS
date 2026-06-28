@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: DefClass 
 
@@ -6,6 +9,8 @@
 _The predefined CDISC model Class that applies to an ItemGroupDef._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -31,7 +36,6 @@ SubClass ||--}o SubClass : "subClasses"
 
 <!-- no inheritance hierarchy -->
 
-
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
@@ -56,8 +60,12 @@ SubClass ||--}o SubClass : "subClasses"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -138,7 +146,6 @@ attributes:
     description: Name of the General Observation Class following CDISC Controlled
       Terminology.
     from_schema: https://cdisc.org/dds
-    alias: name
     owner: DefClass
     domain_of:
     - Labelled
@@ -153,7 +160,6 @@ attributes:
       within a Class.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: subClasses
     owner: DefClass
     domain_of:
     - DefClass
@@ -165,4 +171,4 @@ attributes:
     inlined_as_list: true
 
 ```
-</details>
+</details></div>

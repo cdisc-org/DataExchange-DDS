@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: maxOccurs 
 
@@ -7,11 +10,11 @@ _Maximum number of occurrences of this property in the context. Leave empty for 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/maxOccurs](https://cdisc.org/odm2/slot/maxOccurs)
-Alias: maxOccurs
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: maxOccurs
 
 ## Properties
 
-* Range: [Integer](../types/Integer.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Integer](../types/Integer.md) |
+| Domain Of | [ConceptProperty](../classes/ConceptProperty.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ConceptProperty](../classes/ConceptProperty.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ description: Maximum number of occurrences of this property in the context. Leav
   empty for unbounded. Set to 0 to disable property
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: maxOccurs
 owner: ConceptProperty
 domain_of:
 - ConceptProperty
 range: integer
 
 ```
-</details>
+</details></div>

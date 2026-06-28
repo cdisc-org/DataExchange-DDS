@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: codeListItems 
 
@@ -7,11 +10,11 @@ _The individual values that make up this CodeList. The type of CodeListItem incl
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/codeListItems](https://cdisc.org/odm2/slot/codeListItems)
-Alias: codeListItems
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: codeListItems
 
 ## Properties
 
-* Range: [CodeListItem](../classes/CodeListItem.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [CodeListItem](../classes/CodeListItem.md) |
+| Domain Of | [CodeList](../classes/CodeList.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [CodeList](../classes/CodeList.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +96,6 @@ description: The individual values that make up this CodeList. The type of CodeL
   included determines its behaviour
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: codeListItems
 owner: CodeList
 domain_of:
 - CodeList
@@ -82,4 +105,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

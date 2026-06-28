@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Coding 
 
@@ -6,6 +9,8 @@
 _A semantic reference that provides standardized codes and their meanings from controlled vocabularies_
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -15,11 +20,11 @@ URI: [odm:class/Coding](https://cdisc.org/odm2/class/Coding)
 ```mermaid
 erDiagram
 Coding {
+    AliasPredicate aliasType  
     string code  
-    string decode  
     string codeSystem  
     string codeSystemVersion  
-    AliasPredicate aliasType  
+    string decode  
 }
 
 
@@ -30,13 +35,12 @@ Coding {
 
 <!-- no inheritance hierarchy -->
 
-
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [code](../slots/code.md) | 1 <br/> [String](../types/String.md) | The code value | direct |
-| [decode](../slots/decode.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable meaning | direct |
+| [decode](../slots/decode.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable meaning | direct |
 | [codeSystem](../slots/codeSystem.md) | 1 <br/> [String](../types/String.md) | The code system identifier | direct |
 | [codeSystemVersion](../slots/codeSystemVersion.md) | 0..1 <br/> [String](../types/String.md) | The code system version | direct |
 | [aliasType](../slots/aliasType.md) | 0..1 <br/> [AliasPredicate](../enums/AliasPredicate.md) | How this coding is related in the context of its parent element | direct |
@@ -104,8 +108,12 @@ Coding {
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -232,7 +240,6 @@ attributes:
     description: The code value
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: code
     owner: Coding
     domain_of:
     - Coding
@@ -244,7 +251,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     exact_mappings:
     - skos:prefLabel
-    alias: decode
     owner: Coding
     domain_of:
     - CodeListItem
@@ -257,7 +263,6 @@ attributes:
     description: The code system identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: codeSystem
     owner: Coding
     domain_of:
     - Coding
@@ -268,7 +273,6 @@ attributes:
     description: The code system version
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: codeSystemVersion
     owner: Coding
     domain_of:
     - Coding
@@ -278,11 +282,10 @@ attributes:
     description: How this coding is related in the context of its parent element
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: aliasType
     owner: Coding
     domain_of:
     - Coding
     range: AliasPredicate
 
 ```
-</details>
+</details></div>

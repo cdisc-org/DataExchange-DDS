@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: OriginType 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines the types of origins for data items._
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/OriginType](https://cdisc.org/odm2/enum/OriginType)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | Assigned | ncit:C170547 | A value that is derived through designation, such as values from a look up table or a label on a CRF. |
@@ -28,8 +35,12 @@ URI: [odm:enum/OriginType](https://cdisc.org/odm2/enum/OriginType)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -87,3 +98,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

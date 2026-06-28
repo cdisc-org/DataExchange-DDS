@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: ODMFileMetadata 
 
@@ -6,6 +9,8 @@
 _A mixin that provides ODM file-level metadata attributes including file identifiers, timestamps, and system information_
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -15,16 +20,16 @@ URI: [odm:class/ODMFileMetadata](https://cdisc.org/odm2/class/ODMFileMetadata)
 ```mermaid
 erDiagram
 ODMFileMetadata {
-    string fileOID  
     datetime asOfDateTime  
+    string context  
     datetime creationDateTime  
-    string odmVersion  
+    string defineVersion  
+    string fileOID  
     string fileType  
+    string odmVersion  
     string originator  
     string sourceSystem  
     string sourceSystemVersion  
-    string context  
-    string defineVersion  
 }
 
 
@@ -34,6 +39,12 @@ ODMFileMetadata {
 
 
 <!-- no inheritance hierarchy -->
+
+## Class Properties
+
+| Property | Value |
+| --- | --- |
+| Mixin | Yes |
 
 
 ## Slots
@@ -67,8 +78,12 @@ ODMFileMetadata {
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -212,7 +227,6 @@ attributes:
     description: Unique identifier for the ODM file
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: fileOID
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -223,7 +237,6 @@ attributes:
     description: Date and time when the data snapshot was taken
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: asOfDateTime
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -233,7 +246,6 @@ attributes:
     description: Date and time when the ODM file was created
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: creationDateTime
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -244,7 +256,6 @@ attributes:
     description: Version of the ODM standard used
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: odmVersion
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -255,7 +266,6 @@ attributes:
     description: Type of ODM file (e.g., Snapshot, Transactional)
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: fileType
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -266,7 +276,6 @@ attributes:
     description: Organization or system that created the ODM file
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: originator
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -276,7 +285,6 @@ attributes:
     description: Source system that generated the data
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: sourceSystem
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -286,7 +294,6 @@ attributes:
     description: Version of the source system
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: sourceSystemVersion
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -296,7 +303,6 @@ attributes:
     description: Define-XML context (usually "Other" for Define-XML)
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: context
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
@@ -307,11 +313,10 @@ attributes:
     description: Version of Define-XML specification used
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: defineVersion
     owner: ODMFileMetadata
     domain_of:
     - ODMFileMetadata
     range: string
 
 ```
-</details>
+</details></div>

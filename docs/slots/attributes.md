@@ -1,12 +1,15 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: attributes 
+
+<div data-search-exclude markdown="1">
 
 
 
 URI: [odm:slot/attributes](https://cdisc.org/odm2/slot/attributes)
-Alias: attributes
-
 <!-- no inheritance hierarchy -->
 
 
@@ -26,15 +29,36 @@ Alias: attributes
 
 ## Properties
 
-* Range: [DataAttribute](../classes/DataAttribute.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [DataAttribute](../classes/DataAttribute.md) |
+| Domain Of | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataStructureDefinition](../classes/DataStructureDefinition.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -65,7 +89,6 @@ Alias: attributes
 name: attributes
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: attributes
 owner: DataStructureDefinition
 domain_of:
 - DataStructureDefinition
@@ -73,4 +96,4 @@ range: DataAttribute
 multivalued: true
 
 ```
-</details>
+</details></div>

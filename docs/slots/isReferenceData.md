@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: isReferenceData 
 
@@ -7,11 +10,11 @@ _Set to Yes if this is a reference item group._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/isReferenceData](https://cdisc.org/odm2/slot/isReferenceData)
-Alias: isReferenceData
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: isReferenceData
 
 ## Properties
 
-* Range: [Boolean](../types/Boolean.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Boolean](../types/Boolean.md) |
+| Domain Of | [ItemGroup](../classes/ItemGroup.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ItemGroup](../classes/ItemGroup.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ name: isReferenceData
 description: Set to Yes if this is a reference item group.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: isReferenceData
 owner: ItemGroup
 domain_of:
 - ItemGroup
 range: boolean
 
 ```
-</details>
+</details></div>

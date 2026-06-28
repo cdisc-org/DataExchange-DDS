@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: RangeCheck 
 
@@ -7,6 +10,8 @@ _A validation element that performs a simple comparison check between a referenc
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/RangeCheck](https://cdisc.org/odm2/class/RangeCheck)
@@ -14,87 +19,86 @@ URI: [odm:class/RangeCheck](https://cdisc.org/odm2/class/RangeCheck)
 
 ```mermaid
 erDiagram
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
+}
+FormalExpression {
+    string expression  
+    string returnType  
+    string context  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
+Parameter {
+    string defaultValue  
+    boolean required  
+    DataType dataType  
+    stringList items  
+    string value  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
 RangeCheck {
-    Comparator comparator  
     stringList checkValues  
+    Comparator comparator  
     string item  
     SoftHard softHard  
     LogicalOperator operator  
 }
-FormalExpression {
-    string context  
-    string expression  
-    string returnType  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-}
-Coding {
-    string code  
-    string decode  
-    string codeSystem  
-    string codeSystemVersion  
-    AliasPredicate aliasType  
-}
 Resource {
-    string resourceType  
     string attribute  
-    string version  
-    string href  
-    string OID  
-    string uuid  
+    string resourceType  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
+    string href  
+    string label  
+    string uuid  
+    string version  
 }
 ReturnValue {
-    DataType dataType  
     stringList valueList  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-}
-Parameter {
     DataType dataType  
-    string value  
-    string defaultValue  
-    stringList items  
-    boolean required  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
+    string label  
+    string uuid  
 }
 
-RangeCheck ||--}o FormalExpression : "expressions"
-FormalExpression ||--}o Parameter : "parameters"
 FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Resource : "externalCodeLibs"
 FormalExpression ||--}o Coding : "coding"
-Resource ||--}o FormalExpression : "selection"
-Resource ||--}o Coding : "coding"
-ReturnValue ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--}o Resource : "externalCodeLibs"
 Parameter ||--}o CodeList : "codeList"
-Parameter ||--}o ConceptProperty : "conceptProperty"
-Parameter ||--}o WhereClause : "applicableWhen"
-Parameter ||--}o Condition : "conditions"
 Parameter ||--}o Coding : "coding"
+Parameter ||--}o ConceptProperty : "conceptProperty"
+Parameter ||--}o Condition : "conditions"
+Parameter ||--}o WhereClause : "applicableWhen"
+RangeCheck ||--}o FormalExpression : "expressions"
+Resource ||--}o Coding : "coding"
+Resource ||--}o FormalExpression : "selection"
+ReturnValue ||--}o Coding : "coding"
 
 ```
 
 
 
 <!-- no inheritance hierarchy -->
-
 
 ## Slots
 
@@ -124,8 +128,12 @@ Parameter ||--}o Coding : "coding"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -255,7 +263,6 @@ attributes:
     description: The type of comparison to be performed
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: comparator
     owner: RangeCheck
     domain_of:
     - RangeCheck
@@ -265,7 +272,6 @@ attributes:
     description: Values to compare against
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: checkValues
     owner: RangeCheck
     domain_of:
     - RangeCheck
@@ -279,7 +285,6 @@ attributes:
       specified, check applies to the enclosing context
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: item
     owner: RangeCheck
     domain_of:
     - RangeCheck
@@ -297,7 +302,6 @@ attributes:
       ("Soft")
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: softHard
     owner: RangeCheck
     domain_of:
     - RangeCheck
@@ -306,7 +310,6 @@ attributes:
     name: expressions
     description: A formal expression for complex checks
     from_schema: https://cdisc.org/dds
-    alias: expressions
     owner: RangeCheck
     domain_of:
     - Condition
@@ -321,7 +324,6 @@ attributes:
     description: Logical operator for combining child conditions or range checks.
       Defaults to ALL if not specified.
     from_schema: https://cdisc.org/dds
-    alias: operator
     owner: RangeCheck
     domain_of:
     - Condition
@@ -330,4 +332,4 @@ attributes:
     required: false
 
 ```
-</details>
+</details></div>

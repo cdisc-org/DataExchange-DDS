@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: minOccurs 
 
@@ -7,11 +10,11 @@ _Minimum number of occurrences of this property in the context. Set to >0 to man
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/minOccurs](https://cdisc.org/odm2/slot/minOccurs)
-Alias: minOccurs
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: minOccurs
 
 ## Properties
 
-* Range: [Integer](../types/Integer.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Integer](../types/Integer.md) |
+| Domain Of | [ConceptProperty](../classes/ConceptProperty.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ConceptProperty](../classes/ConceptProperty.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -70,11 +95,10 @@ description: Minimum number of occurrences of this property in the context. Set 
   >0 to mandate some number of occurrences
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: minOccurs
 owner: ConceptProperty
 domain_of:
 - ConceptProperty
 range: integer
 
 ```
-</details>
+</details></div>

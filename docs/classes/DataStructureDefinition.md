@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: DataStructureDefinition 
 
@@ -7,6 +10,8 @@ _A structural element that defines the organization of a data cube for analysis,
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/DataStructureDefinition](https://cdisc.org/odm2/class/DataStructureDefinition)
@@ -14,387 +19,378 @@ URI: [odm:class/DataStructureDefinition](https://cdisc.org/odm2/class/DataStruct
 
 ```mermaid
 erDiagram
-DataStructureDefinition {
-    boolean evolvingStructure  
-    string domain  
-    string structure  
-    boolean isReferenceData  
-    ItemGroupType type  
-    boolean hasNoData  
-    stringList profile  
-    string authenticator  
-    boolean isNonStandard  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-    string version  
-    string href  
-}
-SiteOrSponsorComment {
-    string text  
-    OriginSource sourceType  
-    string source  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
+Coding {
+    AliasPredicate aliasType  
+    string code  
+    string codeSystem  
+    string codeSystemVersion  
+    string decode  
 }
 Comment {
     string text  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
-Coding {
-    string code  
-    string decode  
-    string codeSystem  
-    string codeSystemVersion  
-    AliasPredicate aliasType  
-}
-Standard {
-    StandardName name  
-    StandardType type  
-    PublishingSet publishingSet  
-    string version  
-    StandardStatus status  
-    string OID  
-    string uuid  
-    string description  
-    string label  
-    stringList aliases  
-}
-Timing {
-    TimingType type  
-    boolean isNominal  
-    string value  
-    datetime windowLower  
-    datetime windowUpper  
-    boolean recalled  
-    string frequency  
-    string OID  
-    string uuid  
+ComponentList {
+    stringList components  
     string name  
     string description  
-    string label  
-    stringList aliases  
-}
-Method {
-    MethodType type  
     string OID  
+    stringList aliases  
+    string label  
     string uuid  
+}
+ConceptProperty {
+    integer maxOccurs  
+    integer minOccurs  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-NominalOccurrence {
-    string event  
-    string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
     boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
     string owner  
-    string wasDerivedFrom  
-}
-DefClass {
-    string name  
-}
-SubClass {
-    string name  
-    string parentClass  
-}
-WhereClause {
-    string OID  
+    string purpose  
     string uuid  
-    string name  
-    string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
     string wasDerivedFrom  
 }
 Condition {
     string implementsCondition  
     LogicalOperator operator  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
-ReifiedConcept {
-    string version  
-    string href  
-    string OID  
-    string uuid  
+DataAttribute {
     string name  
     string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-ConceptProperty {
-    integer minOccurs  
-    integer maxOccurs  
     string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
     string uuid  
+    string wasDerivedFrom  
+    string role  
+}
+DataStructureDefinition {
+    boolean evolvingStructure  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-ItemGroup {
-    string domain  
-    string structure  
-    boolean isReferenceData  
-    ItemGroupType type  
-    boolean hasNoData  
-    stringList profile  
     string authenticator  
+    string domain  
+    string href  
     boolean isNonStandard  
-    string OID  
+    boolean isReferenceData  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    stringList profile  
+    string purpose  
+    string structure  
+    ItemGroupType type  
     string uuid  
+    string version  
+    string wasDerivedFrom  
+    boolean hasNoData  
+}
+DefClass {
+    string name  
+}
+Dimension {
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
-    string version  
-    string href  
+    string role  
 }
 Item {
     DataType dataType  
     integer length  
-    string role  
-    boolean hasNoData  
-    string crfCompletionInstructions  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
     string cdiscNotes  
-    string implementationNotes  
-    string preSpecifiedValue  
+    string crfCompletionInstructions  
     integer decimalDigits  
     string displayFormat  
-    integer significantDigits  
-    string OID  
-    string uuid  
-    string name  
-    string description  
+    boolean hasNoData  
+    string implementationNotes  
     string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string preSpecifiedValue  
+    string purpose  
+    string role  
+    integer significantDigits  
+    string uuid  
     string wasDerivedFrom  
 }
-ComponentList {
-    stringList components  
-    string OID  
-    string uuid  
+ItemGroup {
+    string domain  
+    boolean isReferenceData  
+    string structure  
+    ItemGroupType type  
+    boolean hasNoData  
     string name  
     string description  
-    string label  
-    stringList aliases  
-}
-DataAttribute {
-    string role  
     string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string authenticator  
+    string href  
+    boolean isNonStandard  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    stringList profile  
+    string purpose  
+    string uuid  
+    string version  
     string wasDerivedFrom  
 }
 Measure {
-    string role  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+    string role  
+}
+Method {
+    MethodType type  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
-Dimension {
-    string role  
-    string OID  
-    string uuid  
+NominalOccurrence {
+    string event  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
+    string label  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+ReifiedConcept {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string href  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
+}
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+Standard {
+    PublishingSet publishingSet  
+    StandardStatus status  
+    StandardType type  
+    string version  
+    StandardName name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
+SubClass {
+    string name  
+    string parentClass  
+}
+Timing {
+    string frequency  
+    boolean isNominal  
+    boolean recalled  
+    datetime windowLower  
+    datetime windowUpper  
+    TimingType type  
+    string value  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
+}
+WhereClause {
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 
-DataStructureDefinition ||--}o Dimension : "dimensions"
-DataStructureDefinition ||--}o Measure : "measures"
-DataStructureDefinition ||--}o DataAttribute : "attributes"
-DataStructureDefinition ||--|o ComponentList : "grouping"
-DataStructureDefinition ||--}o Item : "items"
-DataStructureDefinition ||--}o Item : "keySequence"
-DataStructureDefinition ||--}o ItemGroup : "slices"
-DataStructureDefinition ||--|o ReifiedConcept : "implementsConcept"
-DataStructureDefinition ||--}o WhereClause : "applicableWhen"
-DataStructureDefinition ||--|o DefClass : "observationClass"
-DataStructureDefinition ||--}o Coding : "security"
-DataStructureDefinition ||--|o Timing : "validityPeriod"
-DataStructureDefinition ||--|o Standard : "standard"
-DataStructureDefinition ||--}o Coding : "coding"
-DataStructureDefinition ||--}o Comment : "comments"
-DataStructureDefinition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Comment ||--}o DocumentReference : "documents"
 Comment ||--}o Coding : "coding"
 Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
 Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Standard ||--}o Coding : "coding"
-Timing ||--|o NominalOccurrence : "relativeTo"
-Timing ||--|o NominalOccurrence : "relativeFrom"
-Timing ||--|o Method : "imputation"
-Timing ||--}o Coding : "coding"
-Method ||--}o FormalExpression : "expressions"
-Method ||--}o DocumentReference : "documents"
-Method ||--|o ReifiedConcept : "implementsConcept"
-Method ||--}o Coding : "coding"
-Method ||--}o Comment : "comments"
-Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-NominalOccurrence ||--|| Timing : "timing"
-NominalOccurrence ||--}o Condition : "condition"
-NominalOccurrence ||--}o Coding : "coding"
-NominalOccurrence ||--}o Comment : "comments"
-NominalOccurrence ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-DefClass ||--}o SubClass : "subClasses"
-SubClass ||--}o SubClass : "subClasses"
-WhereClause ||--}o Condition : "conditions"
-WhereClause ||--}o Coding : "coding"
-WhereClause ||--}o Comment : "comments"
-WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ReifiedConcept ||--}o ConceptProperty : "properties"
-ReifiedConcept ||--}o Coding : "coding"
-ReifiedConcept ||--}o Comment : "comments"
-ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ComponentList ||--}o Coding : "coding"
 ConceptProperty ||--|o CodeList : "codeList"
 ConceptProperty ||--}o Coding : "coding"
 ConceptProperty ||--}o Comment : "comments"
 ConceptProperty ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ItemGroup ||--}o Item : "items"
-ItemGroup ||--}o Item : "keySequence"
-ItemGroup ||--}o ItemGroup : "slices"
-ItemGroup ||--|o ReifiedConcept : "implementsConcept"
-ItemGroup ||--}o WhereClause : "applicableWhen"
-ItemGroup ||--|o DefClass : "observationClass"
-ItemGroup ||--}o Coding : "security"
-ItemGroup ||--|o Timing : "validityPeriod"
-ItemGroup ||--|o Standard : "standard"
-ItemGroup ||--}o Coding : "coding"
-ItemGroup ||--}o Comment : "comments"
-ItemGroup ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Item ||--|o CodeList : "codeList"
-Item ||--|o Method : "method"
-Item ||--}o RangeCheck : "rangeChecks"
-Item ||--}o WhereClause : "applicableWhen"
-Item ||--|o Origin : "origin"
-Item ||--|o ConceptProperty : "conceptProperty"
-Item ||--|o CodeList : "roleCodeList"
-Item ||--|o Condition : "collectionExceptionCondition"
-Item ||--}o Coding : "coding"
-Item ||--}o Comment : "comments"
-Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-ComponentList ||--}o Coding : "coding"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataAttribute ||--|o Method : "imputation, missingHandling"
 DataAttribute ||--|| Item : "item"
-DataAttribute ||--|o Method : "missingHandling"
-DataAttribute ||--|o Method : "imputation"
 DataAttribute ||--}o Coding : "coding"
 DataAttribute ||--}o Comment : "comments"
 DataAttribute ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Measure ||--|| Item : "item"
-Measure ||--|o Method : "missingHandling"
-Measure ||--|o Method : "imputation"
-Measure ||--}o Coding : "coding"
-Measure ||--}o Comment : "comments"
-Measure ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataStructureDefinition ||--|o ComponentList : "grouping"
+DataStructureDefinition ||--|o DefClass : "observationClass"
+DataStructureDefinition ||--|o ReifiedConcept : "implementsConcept"
+DataStructureDefinition ||--|o Standard : "standard"
+DataStructureDefinition ||--|o Timing : "validityPeriod"
+DataStructureDefinition ||--}o Coding : "coding, security"
+DataStructureDefinition ||--}o Comment : "comments"
+DataStructureDefinition ||--}o DataAttribute : "attributes"
+DataStructureDefinition ||--}o Dimension : "dimensions"
+DataStructureDefinition ||--}o Item : "items, keySequence"
+DataStructureDefinition ||--}o ItemGroup : "slices"
+DataStructureDefinition ||--}o Measure : "measures"
+DataStructureDefinition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+DataStructureDefinition ||--}o WhereClause : "applicableWhen"
+DefClass ||--}o SubClass : "subClasses"
+Dimension ||--|o Method : "imputation, missingHandling"
 Dimension ||--|| Item : "item"
-Dimension ||--|o Method : "missingHandling"
-Dimension ||--|o Method : "imputation"
 Dimension ||--}o Coding : "coding"
 Dimension ||--}o Comment : "comments"
 Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--|o CodeList : "codeList, roleCodeList"
+Item ||--|o ConceptProperty : "conceptProperty"
+Item ||--|o Condition : "collectionExceptionCondition"
+Item ||--|o Method : "method"
+Item ||--|o Origin : "origin"
+Item ||--}o Coding : "coding"
+Item ||--}o Comment : "comments"
+Item ||--}o RangeCheck : "rangeChecks"
+Item ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Item ||--}o WhereClause : "applicableWhen"
+ItemGroup ||--|o DefClass : "observationClass"
+ItemGroup ||--|o ReifiedConcept : "implementsConcept"
+ItemGroup ||--|o Standard : "standard"
+ItemGroup ||--|o Timing : "validityPeriod"
+ItemGroup ||--}o Coding : "coding, security"
+ItemGroup ||--}o Comment : "comments"
+ItemGroup ||--}o Item : "items, keySequence"
+ItemGroup ||--}o ItemGroup : "slices"
+ItemGroup ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ItemGroup ||--}o WhereClause : "applicableWhen"
+Measure ||--|o Method : "imputation, missingHandling"
+Measure ||--|| Item : "item"
+Measure ||--}o Coding : "coding"
+Measure ||--}o Comment : "comments"
+Measure ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Method ||--|o ReifiedConcept : "implementsConcept"
+Method ||--}o Coding : "coding"
+Method ||--}o Comment : "comments"
+Method ||--}o DocumentReference : "documents"
+Method ||--}o FormalExpression : "expressions"
+Method ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+NominalOccurrence ||--|| Timing : "timing"
+NominalOccurrence ||--}o Coding : "coding"
+NominalOccurrence ||--}o Comment : "comments"
+NominalOccurrence ||--}o Condition : "condition"
+NominalOccurrence ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+ReifiedConcept ||--}o Coding : "coding"
+ReifiedConcept ||--}o Comment : "comments"
+ReifiedConcept ||--}o ConceptProperty : "properties"
+ReifiedConcept ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Standard ||--}o Coding : "coding"
+SubClass ||--}o SubClass : "subClasses"
+Timing ||--|o Method : "imputation"
+Timing ||--|o NominalOccurrence : "relativeFrom, relativeTo"
+Timing ||--}o Coding : "coding"
+WhereClause ||--}o Coding : "coding"
+WhereClause ||--}o Comment : "comments"
+WhereClause ||--}o Condition : "conditions"
+WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
@@ -407,7 +403,6 @@ Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
         * **DataStructureDefinition**
 
 
-
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
@@ -418,7 +413,7 @@ Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [grouping](../slots/grouping.md) | 0..1 <br/> [ComponentList](../classes/ComponentList.md) | An association to a set of metadata concepts that have an identified structural role in a Data Structure Definition. | direct |
 | [evolvingStructure](../slots/evolvingStructure.md) | 0..1 <br/> [Boolean](../types/Boolean.md) |  | direct |
 | [domain](../slots/domain.md) | 0..1 <br/> [String](../types/String.md) | Domain abbreviation for the dataset. | [ItemGroup](../classes/ItemGroup.md) |
-| [structure](../slots/structure.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Data structure of the item group, indicating how the records are organized. If this is a FHIR Resource, is it nested or flattened? If this is a structured concept, is it a Biomedical/Derivation/Analysis concept? | [ItemGroup](../classes/ItemGroup.md) |
+| [structure](../slots/structure.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Data structure of the item group, indicating how the records are organized. If this is a FHIR Resource, is it nested or flattened? If this is a structured concept, is it a Biomedical/Derivation/Analysis concept? | [ItemGroup](../classes/ItemGroup.md) |
 | [isReferenceData](../slots/isReferenceData.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | Set to Yes if this is a reference item group. | [ItemGroup](../classes/ItemGroup.md) |
 | [type](../slots/type.md) | 0..1 <br/> [ItemGroupType](../enums/ItemGroupType.md) | Type of item group | [ItemGroup](../classes/ItemGroup.md) |
 | [items](../slots/items.md) | * <br/> [Item](../classes/Item.md) | Items in this group | [ItemGroup](../classes/ItemGroup.md) |
@@ -430,23 +425,23 @@ Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [observationClass](../slots/observationClass.md) | 0..1 <br/> [DefClass](../classes/DefClass.md) | Identifies the predefined CDISC model Class. | [ItemGroup](../classes/ItemGroup.md) |
 | [profile](../slots/profile.md) | * <br/> [String](../types/String.md) | Profiles this resource claims to conform to | [IsProfile](../classes/IsProfile.md) |
 | [security](../slots/security.md) | * <br/> [Coding](../classes/Coding.md) | Security tags applied to this resource | [IsProfile](../classes/IsProfile.md) |
-| [authenticator](../slots/authenticator.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) | Who/what authenticated the resource | [IsProfile](../classes/IsProfile.md) |
+| [authenticator](../slots/authenticator.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) | Who/what authenticated the resource | [IsProfile](../classes/IsProfile.md) |
 | [validityPeriod](../slots/validityPeriod.md) | 0..1 <br/> [Timing](../classes/Timing.md) | Time period during which the resouce is valid | [IsProfile](../classes/IsProfile.md) |
 | [standard](../slots/standard.md) | 0..1 <br/> [Standard](../classes/Standard.md) | Reference to the standard being implemented | [IsODMStandard](../classes/IsODMStandard.md) |
 | [isNonStandard](../slots/isNonStandard.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | One or more members of this set are non-standard extensions | [IsODMStandard](../classes/IsODMStandard.md) |
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 | [mandatory](../slots/mandatory.md) | 0..1 <br/> [Boolean](../types/Boolean.md) | Is this element required? | [Governed](../classes/Governed.md) |
 | [comments](../slots/comments.md) | * <br/> [Comment](../classes/Comment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
 | [siteOrSponsorComments](../slots/siteOrSponsorComments.md) | * <br/> [SiteOrSponsorComment](../classes/SiteOrSponsorComment.md) | Comment on the element, such as a rationale for its inclusion or exclusion | [Governed](../classes/Governed.md) |
-| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
+| [purpose](../slots/purpose.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Purpose or rationale for this data element | [Governed](../classes/Governed.md) |
 | [lastUpdated](../slots/lastUpdated.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | When the resource was last updated | [Governed](../classes/Governed.md) |
-| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
+| [owner](../slots/owner.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md) | Party responsible for this element | [Governed](../classes/Governed.md) |
 | [wasDerivedFrom](../slots/wasDerivedFrom.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[Item](../classes/Item.md)&nbsp;or&nbsp;<br />[ItemGroup](../classes/ItemGroup.md)&nbsp;or&nbsp;<br />[MetaDataVersion](../classes/MetaDataVersion.md)&nbsp;or&nbsp;<br />[CodeList](../classes/CodeList.md)&nbsp;or&nbsp;<br />[ReifiedConcept](../classes/ReifiedConcept.md)&nbsp;or&nbsp;<br />[ConceptProperty](../classes/ConceptProperty.md)&nbsp;or&nbsp;<br />[Condition](../classes/Condition.md)&nbsp;or&nbsp;<br />[Method](../classes/Method.md)&nbsp;or&nbsp;<br />[NominalOccurrence](../classes/NominalOccurrence.md)&nbsp;or&nbsp;<br />[Dataflow](../classes/Dataflow.md)&nbsp;or&nbsp;<br />[CubeComponent](../classes/CubeComponent.md)&nbsp;or&nbsp;<br />[DataProduct](../classes/DataProduct.md)&nbsp;or&nbsp;<br />[ProvisionAgreement](../classes/ProvisionAgreement.md) | Reference to another item that this item implements or extends, e.g. a template Item definition. | [Governed](../classes/Governed.md) |
 | [version](../slots/version.md) | 0..1 <br/> [String](../types/String.md) | The version of the external resources | [Versioned](../classes/Versioned.md) |
 | [href](../slots/href.md) | 0..1 <br/> [String](../types/String.md) | Machine-readable instructions to obtain the resource e.g. FHIR path, URL | [Versioned](../classes/Versioned.md) |
@@ -469,8 +464,12 @@ Dimension ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -577,7 +576,6 @@ attributes:
     name: dimensions
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: dimensions
     owner: DataStructureDefinition
     domain_of:
     - DataStructureDefinition
@@ -588,7 +586,6 @@ attributes:
     name: measures
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: measures
     owner: DataStructureDefinition
     domain_of:
     - DataStructureDefinition
@@ -598,7 +595,6 @@ attributes:
     name: attributes
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: attributes
     owner: DataStructureDefinition
     domain_of:
     - DataStructureDefinition
@@ -610,7 +606,6 @@ attributes:
       structural role in a Data Structure Definition.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: grouping
     owner: DataStructureDefinition
     domain_of:
     - DataStructureDefinition
@@ -620,7 +615,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     ifabsent: 'False'
-    alias: evolvingStructure
     owner: DataStructureDefinition
     domain_of:
     - DataStructureDefinition
@@ -630,7 +624,6 @@ attributes:
     description: Domain abbreviation for the dataset.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: domain
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -643,7 +636,6 @@ attributes:
       a structured concept, is it a Biomedical/Derivation/Analysis concept?
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: structure
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -657,7 +649,6 @@ attributes:
     description: Set to Yes if this is a reference item group.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: isReferenceData
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -667,7 +658,6 @@ attributes:
     description: Type of item group
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: type
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -684,7 +674,6 @@ attributes:
     close_mappings:
     - fhir:StructureDefinition/snapshot
     - fhir:StructureDefinition/differential
-    alias: items
     owner: DataStructureDefinition
     domain_of:
     - MetaDataVersion
@@ -706,7 +695,6 @@ attributes:
     - odm:ItemRef.KeySequence
     - sdmx:DimensionDescriptor
     rank: 1000
-    alias: keySequence
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -718,7 +706,6 @@ attributes:
       by this ItemGroup
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: slices
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -732,7 +719,6 @@ attributes:
       of
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: implementsConcept
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -757,7 +743,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     close_mappings:
     - fhir:StructureDefinition/context
-    alias: applicableWhen
     owner: DataStructureDefinition
     domain_of:
     - Item
@@ -771,7 +756,6 @@ attributes:
     name: hasNoData
     description: Used to indicate that this ItemGroup has no data, e.g. for a manifest.
     from_schema: https://cdisc.org/dds
-    alias: hasNoData
     owner: DataStructureDefinition
     domain_of:
     - IsODMItem
@@ -782,7 +766,6 @@ attributes:
     description: Identifies the predefined CDISC model Class.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: observationClass
     owner: DataStructureDefinition
     domain_of:
     - ItemGroup
@@ -793,7 +776,6 @@ attributes:
     description: Profiles this resource claims to conform to
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: profile
     owner: DataStructureDefinition
     domain_of:
     - IsProfile
@@ -804,7 +786,6 @@ attributes:
     description: Security tags applied to this resource
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: security
     owner: DataStructureDefinition
     domain_of:
     - IsProfile
@@ -817,7 +798,6 @@ attributes:
     description: Who/what authenticated the resource
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: authenticator
     owner: DataStructureDefinition
     domain_of:
     - IsProfile
@@ -832,7 +812,6 @@ attributes:
     description: Time period during which the resouce is valid
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: validityPeriod
     owner: DataStructureDefinition
     domain_of:
     - IsProfile
@@ -843,7 +822,6 @@ attributes:
     description: Reference to the standard being implemented
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: standard
     owner: DataStructureDefinition
     domain_of:
     - IsODMStandard
@@ -853,7 +831,6 @@ attributes:
     description: One or more members of this set are non-standard extensions
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: isNonStandard
     owner: DataStructureDefinition
     domain_of:
     - IsODMStandard
@@ -865,7 +842,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
-    alias: OID
     owner: DataStructureDefinition
     domain_of:
     - Identifiable
@@ -876,7 +852,6 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: uuid
     owner: DataStructureDefinition
     domain_of:
     - Identifiable
@@ -886,7 +861,6 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: name
     owner: DataStructureDefinition
     domain_of:
     - Labelled
@@ -899,7 +873,6 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: description
     owner: DataStructureDefinition
     domain_of:
     - Labelled
@@ -913,7 +886,6 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: coding
     owner: DataStructureDefinition
     domain_of:
     - Labelled
@@ -930,7 +902,6 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
-    alias: label
     owner: DataStructureDefinition
     domain_of:
     - Labelled
@@ -945,7 +916,6 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
-    alias: aliases
     owner: DataStructureDefinition
     domain_of:
     - Labelled
@@ -962,7 +932,6 @@ attributes:
     description: Is this element required?
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: mandatory
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -973,7 +942,6 @@ attributes:
       exclusion
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: comments
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -986,7 +954,6 @@ attributes:
       exclusion
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: siteOrSponsorComments
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -998,7 +965,6 @@ attributes:
     description: Purpose or rationale for this data element
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: purpose
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -1011,7 +977,6 @@ attributes:
     description: When the resource was last updated
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: lastUpdated
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -1024,7 +989,6 @@ attributes:
     - prov:wasAttributedTo
     - prov:wasAssociatedBy
     rank: 1000
-    alias: owner
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -1041,7 +1005,6 @@ attributes:
     exact_mappings:
     - prov:wasDerivedFrom
     rank: 1000
-    alias: wasDerivedFrom
     owner: DataStructureDefinition
     domain_of:
     - Governed
@@ -1065,7 +1028,6 @@ attributes:
     description: The version of the external resources
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: version
     owner: DataStructureDefinition
     domain_of:
     - Versioned
@@ -1077,7 +1039,6 @@ attributes:
       URL
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: href
     owner: DataStructureDefinition
     domain_of:
     - Versioned
@@ -1085,4 +1046,4 @@ attributes:
     required: false
 
 ```
-</details>
+</details></div>

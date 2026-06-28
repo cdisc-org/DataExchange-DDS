@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: fullName 
 
@@ -7,11 +10,11 @@ _The full name of the user._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/fullName](https://cdisc.org/odm2/slot/fullName)
-Alias: fullName
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,35 @@ Alias: fullName
 
 ## Properties
 
-* Range: [String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](../types/String.md) |
+| Domain Of | [User](../classes/User.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [User](../classes/User.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -69,11 +94,10 @@ name: fullName
 description: The full name of the user.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: fullName
 owner: User
 domain_of:
 - User
 range: string
 
 ```
-</details>
+</details></div>

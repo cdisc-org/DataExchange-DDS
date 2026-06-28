@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: publicationYear 
 
@@ -7,11 +10,11 @@ _Specifies the year of publication of the data or metadata in terms of whatever 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/publicationYear](https://cdisc.org/odm2/slot/publicationYear)
-Alias: publicationYear
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,13 +35,35 @@ Alias: publicationYear
 
 ## Properties
 
-* Range: NONE
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE |
+| Domain Of | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [IsSdmxDataset](../classes/IsSdmxDataset.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,10 +96,9 @@ description: Specifies the year of publication of the data or metadata in terms 
   whatever provisioning agreements might be in force.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: publicationYear
 owner: IsSdmxDataset
 domain_of:
 - IsSdmxDataset
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analyses 
 
@@ -7,11 +10,11 @@ _Analyses defined in this version of the metadata._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/analyses](https://cdisc.org/odm2/slot/analyses)
-Alias: analyses
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,15 +34,36 @@ Alias: analyses
 
 ## Properties
 
-* Range: [Analysis](../classes/Analysis.md)
+### Type and Range
 
-* Multivalued: True
+| Property | Value |
+| --- | --- |
+| Range | [Analysis](../classes/Analysis.md) |
+| Domain Of | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [MetaDataVersion](../classes/MetaDataVersion.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -71,7 +95,6 @@ name: analyses
 description: Analyses defined in this version of the metadata.
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: analyses
 owner: MetaDataVersion
 domain_of:
 - MetaDataVersion
@@ -81,4 +104,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

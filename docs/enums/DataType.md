@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: DataType 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines the fundamental data types available for items_
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/DataType](https://cdisc.org/odm2/enum/DataType)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | text | None | Character text with no length restriction. |
@@ -39,8 +46,12 @@ URI: [odm:enum/DataType](https://cdisc.org/odm2/enum/DataType)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -105,3 +116,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

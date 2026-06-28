@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: dataProductOwner 
 
@@ -7,11 +10,11 @@ _The person or team accountable for this data product_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/dataProductOwner](https://cdisc.org/odm2/slot/dataProductOwner)
-Alias: dataProductOwner
-
 <!-- no inheritance hierarchy -->
 
 
@@ -31,13 +34,46 @@ Alias: dataProductOwner
 
 ## Properties
 
-* Range: NONE&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md)
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | NONE&nbsp;or&nbsp;<br />[User](../classes/User.md)&nbsp;or&nbsp;<br />[Organization](../classes/Organization.md)&nbsp;or&nbsp;<br />[String](../types/String.md) |
+| Domain Of | [DataProduct](../classes/DataProduct.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [DataProduct](../classes/DataProduct.md) |
+
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'User'})
+- AnonymousSlotExpression({'range': 'Organization'})
+- AnonymousSlotExpression({'range': 'string'})
+
+</details>
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +108,6 @@ from_schema: https://cdisc.org/dds
 exact_mappings:
 - prov:wasAttributedTo
 rank: 1000
-alias: dataProductOwner
 owner: DataProduct
 domain_of:
 - DataProduct
@@ -82,4 +117,4 @@ any_of:
 - range: string
 
 ```
-</details>
+</details></div>

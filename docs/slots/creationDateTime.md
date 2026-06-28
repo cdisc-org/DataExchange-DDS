@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: creationDateTime 
 
@@ -7,11 +10,11 @@ _Date and time when the ODM file was created_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:slot/creationDateTime](https://cdisc.org/odm2/slot/creationDateTime)
-Alias: creationDateTime
-
 <!-- no inheritance hierarchy -->
 
 
@@ -32,15 +35,36 @@ Alias: creationDateTime
 
 ## Properties
 
-* Range: [Datetime](../types/Datetime.md)
+### Type and Range
 
-* Required: True
+| Property | Value |
+| --- | --- |
+| Range | [Datetime](../types/Datetime.md) |
+| Domain Of | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Owner | [ODMFileMetadata](../classes/ODMFileMetadata.md) |
+
+
+
+
+
+
+
+
 
 
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -72,7 +96,6 @@ name: creationDateTime
 description: Date and time when the ODM file was created
 from_schema: https://cdisc.org/dds
 rank: 1000
-alias: creationDateTime
 owner: ODMFileMetadata
 domain_of:
 - ODMFileMetadata
@@ -80,4 +103,4 @@ range: datetime
 required: true
 
 ```
-</details>
+</details></div>

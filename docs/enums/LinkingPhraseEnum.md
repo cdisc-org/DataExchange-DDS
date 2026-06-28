@@ -1,3 +1,9 @@
+---
+search:
+  boost: 2.0
+---
+
+
 # Enum: LinkingPhraseEnum 
 
 
@@ -7,10 +13,11 @@ _An enumeration that defines variable relationship descriptive linking phrases f
 
 
 
+<div data-search-exclude markdown="1">
+
 URI: [odm:enum/LinkingPhraseEnum](https://cdisc.org/odm2/enum/LinkingPhraseEnum)
 
 ## Permissible Values
-
 | Value | Meaning | Description |
 | --- | --- | --- |
 | assesses seriousness of | None |  |
@@ -112,8 +119,12 @@ URI: [odm:enum/LinkingPhraseEnum](https://cdisc.org/odm2/enum/LinkingPhraseEnum)
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -318,3 +329,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

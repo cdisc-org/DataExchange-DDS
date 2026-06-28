@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Parameter 
 
@@ -7,6 +10,8 @@ _A variable element that describes an input used in a formal expression_
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [odm:class/Parameter](https://cdisc.org/odm2/class/Parameter)
@@ -14,173 +19,173 @@ URI: [odm:class/Parameter](https://cdisc.org/odm2/class/Parameter)
 
 ```mermaid
 erDiagram
-Parameter {
+CodeList {
+    string formatName  
     DataType dataType  
-    string value  
-    string defaultValue  
-    stringList items  
-    boolean required  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
+    string href  
+    boolean isNonStandard  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string version  
+    string wasDerivedFrom  
 }
 Coding {
+    AliasPredicate aliasType  
     string code  
-    string decode  
     string codeSystem  
     string codeSystemVersion  
-    AliasPredicate aliasType  
+    string decode  
+}
+Comment {
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
+ConceptProperty {
+    integer maxOccurs  
+    integer minOccurs  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
 }
 Condition {
     string implementsCondition  
     LogicalOperator operator  
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-SiteOrSponsorComment {
-    string text  
-    OriginSource sourceType  
-    string source  
     string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-Comment {
-    string text  
-    string OID  
-    string uuid  
-    string name  
-    string description  
     string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 FormalExpression {
-    string context  
     string expression  
     string returnType  
-    string OID  
-    string uuid  
+    string context  
     string name  
     string description  
-    string label  
+    string OID  
     stringList aliases  
+    string label  
+    string uuid  
+}
+Parameter {
+    string defaultValue  
+    boolean required  
+    DataType dataType  
+    stringList items  
+    string value  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    string uuid  
 }
 RangeCheck {
-    Comparator comparator  
     stringList checkValues  
+    Comparator comparator  
     string item  
     SoftHard softHard  
     LogicalOperator operator  
 }
+SiteOrSponsorComment {
+    OriginSource sourceType  
+    string source  
+    string text  
+    string name  
+    string description  
+    string OID  
+    stringList aliases  
+    string label  
+    datetime lastUpdated  
+    boolean mandatory  
+    string owner  
+    string purpose  
+    string uuid  
+    string wasDerivedFrom  
+}
 WhereClause {
-    string OID  
-    string uuid  
     string name  
     string description  
-    string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-ConceptProperty {
-    integer minOccurs  
-    integer maxOccurs  
     string OID  
-    string uuid  
-    string name  
-    string description  
-    string label  
     stringList aliases  
-    boolean mandatory  
-    string purpose  
-    datetime lastUpdated  
-    string owner  
-    string wasDerivedFrom  
-}
-CodeList {
-    DataType dataType  
-    string formatName  
-    string version  
-    string href  
-    boolean isNonStandard  
-    string OID  
-    string uuid  
-    string name  
-    string description  
     string label  
-    stringList aliases  
-    boolean mandatory  
-    string purpose  
     datetime lastUpdated  
+    boolean mandatory  
     string owner  
+    string purpose  
+    string uuid  
     string wasDerivedFrom  
 }
 
-Parameter ||--}o CodeList : "codeList"
-Parameter ||--}o ConceptProperty : "conceptProperty"
-Parameter ||--}o WhereClause : "applicableWhen"
-Parameter ||--}o Condition : "conditions"
-Parameter ||--}o Coding : "coding"
-Condition ||--}o RangeCheck : "rangeChecks"
-Condition ||--}o FormalExpression : "expressions"
-Condition ||--}o Condition : "conditions"
-Condition ||--}o Coding : "coding"
-Condition ||--}o Comment : "comments"
-Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-SiteOrSponsorComment ||--}o Coding : "coding"
-SiteOrSponsorComment ||--}o Comment : "comments"
-SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-Comment ||--}o DocumentReference : "documents"
+CodeList ||--|o Resource : "externalCodeList"
+CodeList ||--|o Standard : "standard"
+CodeList ||--}o CodeListItem : "codeListItems"
+CodeList ||--}o Coding : "coding"
+CodeList ||--}o Comment : "comments"
+CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 Comment ||--}o Coding : "coding"
 Comment ||--}o Comment : "comments"
+Comment ||--}o DocumentReference : "documents"
 Comment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-FormalExpression ||--}o Parameter : "parameters"
-FormalExpression ||--|o ReturnValue : "returnValue"
-FormalExpression ||--}o Resource : "externalCodeLibs"
-FormalExpression ||--}o Coding : "coding"
-RangeCheck ||--}o FormalExpression : "expressions"
-WhereClause ||--}o Condition : "conditions"
-WhereClause ||--}o Coding : "coding"
-WhereClause ||--}o Comment : "comments"
-WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ConceptProperty ||--|o CodeList : "codeList"
 ConceptProperty ||--}o Coding : "coding"
 ConceptProperty ||--}o Comment : "comments"
 ConceptProperty ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
-CodeList ||--}o CodeListItem : "codeListItems"
-CodeList ||--|o Resource : "externalCodeList"
-CodeList ||--|o Standard : "standard"
-CodeList ||--}o Coding : "coding"
-CodeList ||--}o Comment : "comments"
-CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+Condition ||--}o Coding : "coding"
+Condition ||--}o Comment : "comments"
+Condition ||--}o Condition : "conditions"
+Condition ||--}o FormalExpression : "expressions"
+Condition ||--}o RangeCheck : "rangeChecks"
+Condition ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+FormalExpression ||--|o ReturnValue : "returnValue"
+FormalExpression ||--}o Coding : "coding"
+FormalExpression ||--}o Parameter : "parameters"
+FormalExpression ||--}o Resource : "externalCodeLibs"
+Parameter ||--}o CodeList : "codeList"
+Parameter ||--}o Coding : "coding"
+Parameter ||--}o ConceptProperty : "conceptProperty"
+Parameter ||--}o Condition : "conditions"
+Parameter ||--}o WhereClause : "applicableWhen"
+RangeCheck ||--}o FormalExpression : "expressions"
+SiteOrSponsorComment ||--}o Coding : "coding"
+SiteOrSponsorComment ||--}o Comment : "comments"
+SiteOrSponsorComment ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
+WhereClause ||--}o Coding : "coding"
+WhereClause ||--}o Comment : "comments"
+WhereClause ||--}o Condition : "conditions"
+WhereClause ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 ```
 
@@ -190,7 +195,6 @@ CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 ## Inheritance
 * [IdentifiableElement](../classes/IdentifiableElement.md) [ [Identifiable](../classes/Identifiable.md) [Labelled](../classes/Labelled.md)]
     * **Parameter**
-
 
 
 ## Slots
@@ -209,10 +213,10 @@ CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 | [OID](../slots/OID.md) | 1 <br/> [String](../types/String.md) | Local identifier within this study/context. Use CDISC OID format for regulatory submissions, or simple strings for internal use. | [Identifiable](../classes/Identifiable.md) |
 | [uuid](../slots/uuid.md) | 0..1 <br/> [String](../types/String.md) | Universal unique identifier | [Identifiable](../classes/Identifiable.md) |
 | [name](../slots/name.md) | 0..1 <br/> [String](../types/String.md) | Short name or identifier, used for field names | [Labelled](../classes/Labelled.md) |
-| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
+| [description](../slots/description.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Detailed description, shown in tooltips | [Labelled](../classes/Labelled.md) |
 | [coding](../slots/coding.md) | * <br/> [Coding](../classes/Coding.md) | Semantic tags for this element | [Labelled](../classes/Labelled.md) |
-| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
-| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
+| [label](../slots/label.md) | 0..1 <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Human-readable label, shown in UIs | [Labelled](../classes/Labelled.md) |
+| [aliases](../slots/aliases.md) | * <br/> [String](../types/String.md)&nbsp;or&nbsp;<br />[TranslatedText](../classes/TranslatedText.md) | Alternative name or identifier | [Labelled](../classes/Labelled.md) |
 
 
 
@@ -230,8 +234,12 @@ CodeList ||--}o SiteOrSponsorComment : "siteOrSponsorComments"
 
 
 
-## Identifier and Mapping Information
 
+
+
+
+
+## Identifier and Mapping Information
 
 
 
@@ -397,7 +405,6 @@ attributes:
     name: dataType
     description: The data type of the parameter.
     from_schema: https://cdisc.org/dds
-    alias: dataType
     owner: Parameter
     domain_of:
     - Item
@@ -409,7 +416,6 @@ attributes:
     name: codeList
     description: A list of allowed values for the parameter.
     from_schema: https://cdisc.org/dds
-    alias: codeList
     owner: Parameter
     domain_of:
     - Item
@@ -421,7 +427,6 @@ attributes:
     name: value
     description: A specific bound value for the parameter.
     from_schema: https://cdisc.org/dds
-    alias: value
     owner: Parameter
     domain_of:
     - Translation
@@ -433,7 +438,6 @@ attributes:
     description: A default value for the parameter.
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: defaultValue
     owner: Parameter
     domain_of:
     - Parameter
@@ -442,7 +446,6 @@ attributes:
     name: items
     description: A list of item dependencies for the parameter.
     from_schema: https://cdisc.org/dds
-    alias: items
     owner: Parameter
     domain_of:
     - MetaDataVersion
@@ -460,7 +463,6 @@ attributes:
     description: Reference to a specific concept property that this parameter represents
       or modifies.
     from_schema: https://cdisc.org/dds
-    alias: conceptProperty
     owner: Parameter
     domain_of:
     - Item
@@ -479,7 +481,6 @@ attributes:
       ["WC.ADULT", "WC.PEDIATRIC"] means the parameter is needed when (all conditions
       in WC.ADULT are true) OR (all conditions in WC.PEDIATRIC are true).'
     from_schema: https://cdisc.org/dds
-    alias: applicableWhen
     owner: Parameter
     domain_of:
     - Item
@@ -499,7 +500,6 @@ attributes:
       Example: A parameter AGE might have conditions ensuring it''s >= 0 and <= 120.
       or conditions might make up part of a componsed expression.'
     from_schema: https://cdisc.org/dds
-    alias: conditions
     owner: Parameter
     domain_of:
     - MetaDataVersion
@@ -516,7 +516,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     ifabsent: 'False'
-    alias: required
     owner: Parameter
     domain_of:
     - Parameter
@@ -528,7 +527,6 @@ attributes:
     from_schema: https://cdisc.org/dds
     rank: 1000
     identifier: true
-    alias: OID
     owner: Parameter
     domain_of:
     - Identifiable
@@ -539,7 +537,6 @@ attributes:
     description: Universal unique identifier
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: uuid
     owner: Parameter
     domain_of:
     - Identifiable
@@ -549,7 +546,6 @@ attributes:
     description: Short name or identifier, used for field names
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: name
     owner: Parameter
     domain_of:
     - Labelled
@@ -562,7 +558,6 @@ attributes:
     description: Detailed description, shown in tooltips
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: description
     owner: Parameter
     domain_of:
     - Labelled
@@ -576,7 +571,6 @@ attributes:
     description: Semantic tags for this element
     from_schema: https://cdisc.org/dds
     rank: 1000
-    alias: coding
     owner: Parameter
     domain_of:
     - Labelled
@@ -593,7 +587,6 @@ attributes:
     exact_mappings:
     - skos:prefLabel
     rank: 1000
-    alias: label
     owner: Parameter
     domain_of:
     - Labelled
@@ -608,7 +601,6 @@ attributes:
     exact_mappings:
     - skos:altLabel
     rank: 1000
-    alias: aliases
     owner: Parameter
     domain_of:
     - Labelled
@@ -622,4 +614,4 @@ attributes:
     - range: TranslatedText
 
 ```
-</details>
+</details></div>
