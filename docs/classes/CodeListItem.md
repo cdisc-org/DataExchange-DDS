@@ -135,7 +135,6 @@ attributes:
     rank: 1000
     domain_of:
     - CodeListItem
-    range: string
     required: true
   decode:
     name: decode
@@ -145,7 +144,6 @@ attributes:
     domain_of:
     - CodeListItem
     - Coding
-    range: string
   description:
     name: description
     description: A detailed description of the code (e.g., for documentation purposes)

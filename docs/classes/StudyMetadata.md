@@ -118,7 +118,6 @@ attributes:
     rank: 1000
     domain_of:
     - StudyMetadata
-    range: string
     required: true
   studyName:
     name: studyName
@@ -127,7 +126,6 @@ attributes:
     rank: 1000
     domain_of:
     - StudyMetadata
-    range: string
   studyDescription:
     name: studyDescription
     description: Description of the study
@@ -135,7 +133,6 @@ attributes:
     rank: 1000
     domain_of:
     - StudyMetadata
-    range: string
   protocolName:
     name: protocolName
     description: Protocol name for the study
@@ -143,7 +140,6 @@ attributes:
     rank: 1000
     domain_of:
     - StudyMetadata
-    range: string
 
 ```
 </details>

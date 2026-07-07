@@ -126,7 +126,6 @@ attributes:
     domain_of:
     - Versioned
     - Standard
-    range: string
   href:
     name: href
     description: Machine-readable instructions to obtain the resource e.g. FHIR path,
@@ -135,7 +134,6 @@ attributes:
     rank: 1000
     domain_of:
     - Versioned
-    range: string
     required: false
 
 ```

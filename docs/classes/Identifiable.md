@@ -117,7 +117,6 @@ attributes:
     identifier: true
     domain_of:
     - Identifiable
-    range: string
     required: false
   uuid:
     name: uuid
@@ -126,7 +125,6 @@ attributes:
     rank: 1000
     domain_of:
     - Identifiable
-    range: string
 
 ```
 </details>

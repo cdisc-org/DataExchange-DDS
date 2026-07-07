@@ -276,7 +276,6 @@ attributes:
     domain_of:
     - ODMFileMetadata
     - FormalExpression
-    range: string
   expression:
     name: expression
     description: The actual text of the formal expression (renamed from 'code' for
@@ -287,7 +286,6 @@ attributes:
     rank: 1000
     domain_of:
     - FormalExpression
-    range: string
     required: true
   returnType:
     name: returnType
@@ -296,7 +294,6 @@ attributes:
     rank: 1000
     domain_of:
     - FormalExpression
-    range: string
   parameters:
     name: parameters
     description: Parameters used in the expression

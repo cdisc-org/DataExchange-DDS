@@ -172,7 +172,6 @@ attributes:
     rank: 1000
     domain_of:
     - Coding
-    range: string
     required: true
   decode:
     name: decode
@@ -193,7 +192,6 @@ attributes:
     rank: 1000
     domain_of:
     - Coding
-    range: string
     required: true
   codeSystemVersion:
     name: codeSystemVersion
@@ -202,7 +200,6 @@ attributes:
     rank: 1000
     domain_of:
     - Coding
-    range: string
   aliasType:
     name: aliasType
     description: How this coding is related in the context of its parent element

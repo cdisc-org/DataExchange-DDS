@@ -109,7 +109,6 @@ attributes:
     - DefClass
     - SubClass
     - Standard
-    range: string
     required: true
   parentClass:
     name: parentClass
@@ -118,7 +117,6 @@ attributes:
     rank: 1000
     domain_of:
     - SubClass
-    range: string
     required: false
   subClasses:
     name: subClasses

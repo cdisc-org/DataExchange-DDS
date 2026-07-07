@@ -312,7 +312,6 @@ attributes:
     rank: 1000
     domain_of:
     - NominalOccurrence
-    range: string
     required: false
   condition:
     name: condition
