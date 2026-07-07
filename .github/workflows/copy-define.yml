@@ -1,0 +1,27 @@
+name: Push File
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "model/define.yaml"
+  workflow_dispatch:
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes define.yaml
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.COPY_DEFINE_YAML }}
+      with:
+        source_file: 'model/define.yaml'
+        destination_repo: 'cdisc-org/data-definition-engine'
+        destination_folder: 'schemas/dds'
+        user_email: 'ljansen@cdisc.org'
+        user_name: 'lexjansen'
+        commit_message: 'A new define.yaml file has been added to the repo'
