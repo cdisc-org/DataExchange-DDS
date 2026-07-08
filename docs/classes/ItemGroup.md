@@ -495,7 +495,6 @@ attributes:
     domain_of:
     - ItemGroup
     - DataProduct
-    range: string
   structure:
     name: structure
     description: Data structure of the item group, indicating how the records are

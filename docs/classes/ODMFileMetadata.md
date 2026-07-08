@@ -130,7 +130,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
     required: true
   asOfDateTime:
     name: asOfDateTime
@@ -156,7 +155,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
     required: true
   fileType:
     name: fileType
@@ -165,7 +163,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
     required: true
   originator:
     name: originator
@@ -174,7 +171,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
   sourceSystem:
     name: sourceSystem
     description: Source system that generated the data
@@ -182,7 +178,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
   sourceSystemVersion:
     name: sourceSystemVersion
     description: Version of the source system
@@ -190,7 +185,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
   context:
     name: context
     description: Define-XML context (usually "Other" for Define-XML)
@@ -199,7 +193,6 @@ attributes:
     domain_of:
     - ODMFileMetadata
     - FormalExpression
-    range: string
   defineVersion:
     name: defineVersion
     description: Version of Define-XML specification used
@@ -207,7 +200,6 @@ attributes:
     rank: 1000
     domain_of:
     - ODMFileMetadata
-    range: string
 
 ```
 </details>

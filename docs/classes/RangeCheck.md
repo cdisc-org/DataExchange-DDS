@@ -191,7 +191,6 @@ attributes:
     rank: 1000
     domain_of:
     - RangeCheck
-    range: string
     multivalued: true
     inlined: true
     inlined_as_list: true

@@ -156,7 +156,6 @@ attributes:
     rank: 1000
     domain_of:
     - DocumentReference
-    range: string
   pages:
     name: pages
     description: Reference to specific pages in a PDF document
@@ -174,7 +173,6 @@ attributes:
     rank: 1000
     domain_of:
     - DocumentReference
-    range: string
     required: false
 
 ```

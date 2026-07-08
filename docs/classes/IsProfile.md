@@ -191,7 +191,6 @@ attributes:
     rank: 1000
     domain_of:
     - IsProfile
-    range: string
     multivalued: true
   security:
     name: security

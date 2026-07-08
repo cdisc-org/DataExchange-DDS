@@ -141,7 +141,6 @@ attributes:
     rank: 1000
     domain_of:
     - ReturnValue
-    range: string
     multivalued: true
 
 ```

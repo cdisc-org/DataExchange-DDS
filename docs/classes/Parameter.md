@@ -306,7 +306,6 @@ attributes:
     - Translation
     - Parameter
     - Timing
-    range: string
   defaultValue:
     name: defaultValue
     description: A default value for the parameter.
@@ -314,7 +313,6 @@ attributes:
     rank: 1000
     domain_of:
     - Parameter
-    range: string
   items:
     name: items
     description: A list of item dependencies for the parameter.

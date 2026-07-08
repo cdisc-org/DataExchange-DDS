@@ -172,7 +172,6 @@ attributes:
     domain_of:
     - Versioned
     - Standard
-    range: string
   status:
     name: status
     description: Status of an Implementation Guide or of a Controlled Terminology

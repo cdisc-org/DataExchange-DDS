@@ -193,7 +193,6 @@ attributes:
     rank: 1000
     domain_of:
     - Resource
-    range: string
     required: false
   attribute:
     name: attribute
@@ -208,7 +207,6 @@ attributes:
     - GroupRelationship
     - DimensionRelationship
     - ObservationRelationship
-    range: string
   selection:
     name: selection
     description: Machine-executable instructions for selecting data from the resource.

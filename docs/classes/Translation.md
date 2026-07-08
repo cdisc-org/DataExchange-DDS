@@ -110,7 +110,6 @@ attributes:
     rank: 1000
     domain_of:
     - Translation
-    range: string
     required: true
   value:
     name: value
@@ -121,7 +120,6 @@ attributes:
     - Translation
     - Parameter
     - Timing
-    range: string
     required: true
 
 ```

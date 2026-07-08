@@ -334,7 +334,6 @@ attributes:
     - Translation
     - Parameter
     - Timing
-    range: string
     required: true
   relativeTo:
     name: relativeTo
@@ -386,7 +385,6 @@ attributes:
     rank: 1000
     domain_of:
     - Timing
-    range: string
   imputation:
     name: imputation
     description: The imputation method used for the Timing.

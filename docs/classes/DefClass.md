@@ -113,7 +113,6 @@ attributes:
     - DefClass
     - SubClass
     - Standard
-    range: string
     required: true
   subClasses:
     name: subClasses

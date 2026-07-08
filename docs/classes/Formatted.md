@@ -127,7 +127,6 @@ attributes:
     rank: 1000
     domain_of:
     - Formatted
-    range: string
   significantDigits:
     name: significantDigits
     description: For numeric values, the number of significant digits

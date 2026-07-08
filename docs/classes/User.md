@@ -192,7 +192,6 @@ attributes:
     rank: 1000
     domain_of:
     - User
-    range: string
   fullName:
     name: fullName
     description: The full name of the user.
@@ -200,7 +199,6 @@ attributes:
     rank: 1000
     domain_of:
     - User
-    range: string
   organization:
     name: organization
     description: The organization the user belongs to.

@@ -305,7 +305,6 @@ attributes:
     rank: 1000
     domain_of:
     - CodeList
-    range: string
   codeListItems:
     name: codeListItems
     description: The individual values that make up this CodeList. The type of CodeListItem

@@ -182,7 +182,6 @@ attributes:
     - IsODMItem
     - Organization
     - CubeComponent
-    range: string
   type:
     name: type
     description: The type of organization (e.g., site, sponsor, vendor).
@@ -203,7 +202,6 @@ attributes:
     domain_of:
     - Organization
     - Display
-    range: string
   address:
     name: address
     description: The address of the organization.
@@ -211,7 +209,6 @@ attributes:
     rank: 1000
     domain_of:
     - Organization
-    range: string
   partOfOrganization:
     name: partOfOrganization
     description: Reference to a parent organization if this organization is part of

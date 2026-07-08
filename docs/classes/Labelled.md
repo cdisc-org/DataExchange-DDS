@@ -129,7 +129,6 @@ attributes:
     - DefClass
     - SubClass
     - Standard
-    range: string
   description:
     name: description
     description: Detailed description, shown in tooltips
