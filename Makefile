@@ -31,32 +31,32 @@ install:
 
 check-syntax:
 	@echo "Checking YAML syntax..."
-	python -c "import yaml; yaml.safe_load(open('model/define.yaml'))"
+	python -c "import yaml; yaml.safe_load(open('model/dds.yaml'))"
 	@echo "YAML syntax is valid"
 
 validate:
 	@echo "Validating LinkML schema structure..."
-	python -c "from linkml_runtime import SchemaView; sv = SchemaView('model/define.yaml'); print('Schema loaded successfully')"
+	python -c "from linkml_runtime import SchemaView; sv = SchemaView('model/dds.yaml'); print('Schema loaded successfully')"
 	@echo "LinkML schema validation passed"
 
 lint:
 	@echo "Linting YAML file..."
-	yamllint model/define.yaml || echo "YAML linting issues found (yamllint)"
+	yamllint model/dds.yaml || echo "YAML linting issues found (yamllint)"
 
 linkml-lint:
 	@echo "Running LinkML schema linter..."
-	linkml-lint model/define.yaml || echo "LinkML linting issues found (non-blocking)"
+	linkml-lint model/dds.yaml || echo "LinkML linting issues found (non-blocking)"
 	@echo "LinkML linting complete"
 
 generate-json-schema:
 	@echo "Generating JSON Schema from LinkML..."
-	linkml generate json-schema model/define.yaml > generated/define-json-schema.json
-	@echo "JSON Schema generated: generated/define-json-schema.json"
+	linkml generate json-schema model/dds.yaml > generated/dds-json-schema.json
+	@echo "JSON Schema generated: generated/dds-json-schema.json"
 
 generate-pydantic:
 	@echo "Generating Pydantic models from LinkML..."
-	linkml generate pydantic --meta auto model/define.yaml > generated/define.py
-	@echo "Pydantic models generated: generated/define.py"
+	linkml generate pydantic --meta auto model/dds.yaml > generated/dds.py
+	@echo "Pydantic models generated: generated/dds.py"
 
 # Documentation generation (suppress gen-doc warnings)
 docs:
@@ -72,7 +72,7 @@ docs:
 	cp src/js/* docs/js/;
 	# cp CONVERSION_README.md docs/CONVERSION_README.md;
 	# cp QUICK_REFERENCE.md docs/QUICK_REFERENCE.md;
-	gen-doc model/define.yaml --directory docs/ --subfolder-type-separation --hierarchical-class-view --diagram-type er_diagram \
+	gen-doc model/dds.yaml --directory docs/ --subfolder-type-separation --hierarchical-class-view --diagram-type er_diagram \
 	--sort-by rank --include-top-level-diagram --truncate-descriptions false
 
 docs-serve:

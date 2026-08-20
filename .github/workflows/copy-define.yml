@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "model/define.yaml"
+      - "model/dds.yaml"
   workflow_dispatch:
 
 jobs:
@@ -14,14 +14,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Pushes define.yaml
+    - name: Pushes dds.yaml
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.COPY_DEFINE_YAML }}
       with:
-        source_file: 'model/define.yaml'
+        source_file: 'model/dds.yaml'
         destination_repo: 'cdisc-org/data-definition-engine'
         destination_folder: 'schemas/dds'
-        user_email: 'ljansen@cdisc.org'
-        user_name: 'lexjansen'
-        commit_message: 'A new define.yaml file has been added to the repo'
+        user_email: 'shume@cdisc.org'
+        user_name: 'swhume'
+        commit_message: 'A new dds.yaml file has been added to the repo'
