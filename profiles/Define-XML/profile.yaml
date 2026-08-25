@@ -1,0 +1,170 @@
+id: https://cdisc.org/dds/profiles/define-xml
+name: dds-profile-define-xml
+title: DDS Profile - Define-XML Generation
+description: >-
+  Constrains DDS to the content required to generate Define-XML v2.1.
+version: 1.0.0
+license: MIT
+
+prefixes:
+  dds: https://cdisc.org/dds
+  ddsp: https://cdisc.org/dds/profiles/define-xml/
+  linkml: https://w3id.org/linkml/
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+default_prefix: ddsp
+default_range: string
+
+imports:
+  - linkml:types
+  - dds
+
+annotations:
+  dds.profile.baseModel: https://cdisc.org/dds
+  dds.profile.baseVersion: "1.0.0"
+  dds.profile.status: draft
+  dds.profile.useCase: Generation of Define-XML v2.1 documents.
+
+classes:
+
+  MetaDataVersion:            # base tree_root retained as profile root
+    slot_usage:
+      OID:
+        required: true
+      name:
+        required: true
+      defineVersion:
+        required: true
+        pattern: "^2\\.1(\\.\\d+)?$"
+      fileOID:
+        required: true
+      studyOID:
+        required: true
+      studyName:
+        required: true
+      standards:
+        required: true
+        minimum_cardinality: 1        # the IG and CT standards referenced by content
+      itemGroups:
+        required: true
+        minimum_cardinality: 1
+      # Document-level subtrees out of scope for Define-XML generation.
+      # Prohibiting them here is what lets R6 reachability drop the SDMX
+      # cube, data-product, and display classes from the snapshot (spec 4.6).
+      analyses:
+        maximum_cardinality: 0
+      dataProducts:
+        maximum_cardinality: 0
+      displays:
+        maximum_cardinality: 0
+      dictionaries:
+        maximum_cardinality: 0
+      resources:
+        maximum_cardinality: 0
+
+  Governed:
+    slot_usage:
+      wasDerivedFrom:
+        # Narrow the provenance union to the element kinds this use case
+        # derives from (value-list slices derive from Items; groups and code
+        # lists may derive from their standard counterparts). Narrowing here,
+        # on the mixin, propagates to every class that mixes Governed in and
+        # severs reachability into the SDMX/data-product subtrees.
+        any_of:
+          - range: Item
+          - range: ItemGroup
+          - range: CodeList
+
+  RangeCheck:
+    slot_usage:
+      item:
+        range: Item                   # collapse the Item/Dimension/Measure/
+                                      # DataAttribute union: checks target Items
+
+  Parameter:
+    slot_usage:
+      items:
+        range: Item                   # method parameters bind to Items here
+
+  ItemGroup:
+    slot_usage:
+      OID:
+        required: true
+        pattern: "^(IG|VL)\\..+"      # dataset-level definitions and value-list slices
+      name:
+        required: true
+      purpose:
+        range: string                 # collapse the any_of; the use case emits plain text
+      structure:
+        range: string
+      # purpose, domain, standard, observationClass, keySequence, slices: required
+      # for dataset-level groups but legitimately absent on value-list slices, so
+      # the profile leaves them optional and defers dataset-vs-slice rules to its
+      # documentation (LinkML rules could express them; see the Item length rule).
+
+  Item:
+    slot_usage:
+      OID:
+        required: true
+        pattern: "^IT\\..+"
+      name:
+        required: true
+      mandatory:
+        required: true                # feeds ItemRef/@Mandatory
+      # role feeds ItemRef/@Role on dataset variables but is legitimately absent
+      # on value-level items, so it stays optional here.
+      dataType:
+        range: DefineDataType         # subset enum
+      rangeChecks:
+        maximum_cardinality: 0        # edit checks live on Condition in this use case
+    rules:
+      - description: >-
+          Define-XML v2.1 requires Length for text, integer, and float items.
+          (Rule support varies by generator/validator; treat as a documented
+          check where the toolchain cannot enforce it.)
+        preconditions:
+          slot_conditions:
+            dataType:
+              any_of:
+                - equals_string: text
+                - equals_string: integer
+                - equals_string: float
+        postconditions:
+          slot_conditions:
+            length:
+              required: true
+
+  Origin:
+    slot_usage:
+      type:
+        required: true
+        range: DefineOriginType       # subset enum
+      source:
+        required: true
+
+  WhereClause:
+    slot_usage:
+      conditions:
+        required: true
+        minimum_cardinality: 1
+
+enums:
+
+  DefineDataType:
+    description: ODM data types permitted in Define-XML v2.1.
+    permissible_values:
+      text: {}
+      integer: {}
+      float: {}
+      date: {}
+      time: {}
+      datetime: {}
+      durationDatetime: {}
+
+  DefineOriginType:
+    description: Origin types permitted in Define-XML v2.1.
+    permissible_values:
+      Assigned:    { meaning: NCIT:C170547 }
+      Collected:   { meaning: NCIT:C170548 }
+      Derived:     { meaning: NCIT:C170549 }
+      Predecessor: { meaning: NCIT:C170550 }
+      Protocol:    { meaning: NCIT:C170551 }
