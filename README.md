@@ -83,16 +83,16 @@ analysis visualization, and dataset specializations with surrogates.
 
 ## Repository Layout
 
-| Path | Contents |
-|------|----------|
+| Path             | Contents |
+|------------------|----------|
 | `model/dds.yaml` | The DDS LinkML model — the single source of truth |
-| `docs/` | Generated model documentation (MkDocs site source) |
-| `generated/` | Build artifacts: JSON Schema, Pydantic models |
-| `documents/` | Design notes and working documents |
-| `data/` | Example instance data |
-| `images/` | Images referenced by other files |
-| `src/js/` | JavaScript assets for the documentation site |
-| `HowTos/` | Contributor how-to guides |
+| `docs/`          | Generated model documentation (MkDocs site source) |
+| `generated/`     | Build artifacts: JSON Schema, Pydantic models |
+| `articles/`      | Design notes and working documents |
+| `data/`          | Example instance data |
+| `images/`        | Images referenced by other files |
+| `src/js/`        | JavaScript assets for the documentation site |
+| `HowTos/`        | Contributor how-to guides |
 
 ## Getting Started
 
