@@ -49,7 +49,7 @@ generative AI agents in implementing DDS-based solutions.
 
 ## Use Cases
 
-The prioritized use cases guiding model development are listed in the table below. The top 4 use cases are prioritized
+The prioritized use cases guiding model development are listed in the table below. The top 3 use cases are prioritized
 in this phase of the project.
 
 | # | Use Case | Description |
@@ -64,7 +64,8 @@ in this phase of the project.
 | 8 | **RWD interoperability** | Data exchange with real-world data standards such as FHIR and OMOP. |
 
 Some use cases map 1:1 to a profile, some group together into a single profile, and others — traceability, for
-example — are features expressed across profiles.
+example — are features expressed across profiles. Provenance/traceability has been identified as a key feature for DDS 
+given that generative AI will be used to load the DDS as well as to drive automation using the DDS metadata.
 
 Secondary use cases outside the initial project scope include Biomedical Concept conversion, BC registry/MDR,
 SDTM→ADaM and ADaM→ARD metaprogramming, analysis dimensions and groupings in Analysis Results Data, impact
@@ -72,27 +73,28 @@ analysis visualization, and dataset specializations with surrogates.
 
 ## Deliverables
 
-| # | Deliverable | Description |
-|---|-------------|-------------|
-| 1 | **Specification** | Normative DDS standard specification in Markdown |
-| 2 | **Model and Schema** | DDS model in LinkML plus the generated DDS JSON Schema |
-| 3 | **User Guide** | How to implement DDS and profiles; a living document |
-| 4 | **Profiles** | Four initial profiles: Define-XML, CRF/aCRF, DTA, and Raw-to-SDTM conversions |
-| 5 | **Examples** | Profile example files in this repository |
+| # | Deliverable | Description                                                      |
+|---|-------------|------------------------------------------------------------------|
+| 1 | **Specification** | Normative DDS standard specification in Markdown                 |
+| 2 | **Model and Schema** | DDS model in LinkML plus the generated DDS JSON Schema           |
+| 3 | **User Guide** | How to implement DDS and profiles; a living document             |
+| 4 | **Profiles** | Three initial profiles: Define-XML, CRF/aCRF, DTA                |
+| 5 | **Examples** | Profile example files in this repository                         |
 | 6 | **Skills** | `SKILL.md` files to guide DDS-P implementations by generative AI |
 
 ## Repository Layout
 
-| Path             | Contents |
-|------------------|----------|
-| `model/dds.yaml` | The DDS LinkML model — the single source of truth |
-| `docs/`          | Generated model documentation (MkDocs site source) |
-| `generated/`     | Build artifacts: JSON Schema, Pydantic models |
-| `articles/`      | Design notes and working documents |
-| `data/`          | Example instance data |
-| `images/`        | Images referenced by other files |
-| `src/js/`        | JavaScript assets for the documentation site |
-| `HowTos/`        | Contributor how-to guides |
+| Path                   | Contents                                                      |
+|------------------------|---------------------------------------------------------------|
+| `model/dds.yaml`       | The DDS LinkML model — the single source of truth             |
+| `docs/`                | Generated model documentation (MkDocs site source)            |
+| `generated/`           | Build artifacts: JSON Schema, Pydantic models                 |
+| `media/articles/`      | Articles on the design and implementation of DDS and profiles |
+| `media/presentations/` | Internal and external DDS focused slide decks                 |
+| `data/`                | Example instance data                                         |
+| `images/`              | Images referenced by other files                              |
+| `src/js/`              | JavaScript assets for the documentation site                  |
+| `HowTos/`              | Contributor how-to guides                                     |
 
 ## Getting Started
 

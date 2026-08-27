@@ -40,9 +40,14 @@ The objective of this project is to incrementally develop the DDS model for publ
 | 7 | End-to-end traceability | Represents the metadata to establish end-to-end traceability, providing sufficient lineage data to represent traceability in a manner that supports regulatory review. Extends the pipeline automation use case. |
 | 8 | RWD Interoperability | DDS supports data exchange with RWD standards such as FHIR and OMOP. Special case of Raw → SDTM. |
 
+### Use Cases Targeted for v0.1.0 Release
+
+The initial DDS v0.1.0 release will include the first 3 use cases. A plan for provenance/traceability will also be part
+of this initial release.
+
 ### Secondary Use Cases
 
-Outside of the initial project scope:
+Outside of the initial project scope, but may be included in the scope of a future release:
 
 - BC conversion
 - BC registry / MDR
@@ -60,14 +65,14 @@ Certain use cases will map to a profile. Other use cases, such as traceability, 
 
 ## High-level Deliverables
 
-| # | Name | Description |
-| --- | --- | --- |
-| 1 | Specification | DDS standard specification (normative) in Markdown |
-| 2 | Model and Schema | DDS model in LinkML; DDS JSON schema |
+| # | Name | Description                                                                                                       |
+| --- | --- |-------------------------------------------------------------------------------------------------------------------|
+| 1 | Specification | DDS standard specification (normative) in Markdown                                                                |
+| 2 | Model and Schema | DDS model in LinkML; DDS JSON schema                                                                              |
 | 3 | User Guide | User Guide describing how to implement DDS and Profiles; living document with new articles added post-publication |
-| 4 | Profiles | 4 initial Profiles: Define-XML, CRF/aCRF, DTA, Raw-to-SDTM Conversions |
-| 5 | Examples | Profile example files in the project GitHub repo |
-| 6 | Skills | Skill.md files to guide DDS-P implementations by generative AI |
+| 4 | Profiles | 3 initial Profiles: Define-XML, CRF/aCRF, DTA                                            |
+| 5 | Examples | Profile example files in the project GitHub repo                                                                  |
+| 6 | Skills | Skill.md files to guide DDS-P implementations by generative AI                                                    |
 
 ---
 
@@ -75,8 +80,9 @@ Certain use cases will map to a profile. Other use cases, such as traceability, 
 
 1. DDS Profiles will be normative, but they can be extended and constrained to meet research needs
 2. DDS Profiles simplify the development and implementation of the DDS model
-3. The 360i project uses DDS to represent the metadata needed to drive automation
-4. XML support is not required
+3. The 360i project uses DDS to represent Raw-to-SDTM Conversions
+4. DDS provides the metadata needed to drive automation througout the clinical research pipeline
+4. XML support is not required except as outputs generated from the DDS, such as Define-XML or aCRFs
 5. A DDS toolchain will be important to the model's development and adoption
 6. DDS improves the quality of AI use with the CDISC standards
 7. DDS requires profiles (i.e., extensions) to constrain or extend the model to address specific use cases
