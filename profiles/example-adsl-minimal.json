@@ -1,0 +1,61 @@
+{
+ "OID": "MDV.ADAM",
+ "name": "ADaM MDV",
+ "fileOID": "ODM.ADAM",
+ "creationDateTime": "2026-08-31T00:00:00+00:00",
+ "odmVersion": "1.3.2",
+ "fileType": "Snapshot",
+ "defineVersion": "2.1.0",
+ "studyOID": "ODM.LZZT",
+ "studyName": "LZZT",
+ "standards": [
+  {
+   "OID": "STD.ADAMIG",
+   "name": "ADaMIG",
+   "type": "IG",
+   "version": "1.3"
+  }
+ ],
+ "itemGroups": [
+  {
+   "OID": "IG.ADSL",
+   "name": "ADSL",
+   "purpose": "Analysis",
+   "structure": "One record per subject",
+   "observationClass": {
+    "name": "SUBJECT LEVEL ANALYSIS DATASET"
+   },
+   "items": [
+    {
+     "OID": "IT.ADSL.USUBJID",
+     "name": "USUBJID",
+     "mandatory": true,
+     "dataType": "text",
+     "length": 20,
+     "origin": [
+      {
+       "type": "Predecessor",
+       "sourceItems": [
+        {
+         "item": "IT.DM.USUBJID"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "OID": "IT.ADSL.AGEGR1",
+     "name": "AGEGR1",
+     "mandatory": false,
+     "dataType": "text",
+     "length": 8,
+     "origin": [
+      {
+       "type": "Derived"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

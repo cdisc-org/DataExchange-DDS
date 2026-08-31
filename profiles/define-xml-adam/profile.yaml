@@ -1,0 +1,105 @@
+id: https://cdisc.org/dds/profiles/define-xml/adam
+name: dds-profile-define-xml-adam
+title: DDS Profile - Define-XML Generation (ADaM)
+description: >-
+  Derived from the Define-XML profile. Tightens it for ADaM analysis datasets:
+  purpose, dataset classes, naming, origin types, and analysis results metadata.
+version: 1.0.0
+license: MIT
+
+prefixes:
+  dds: https://cdisc.org/dds
+  ddsp: https://cdisc.org/dds/profiles/define-xml/
+  ddspa: https://cdisc.org/dds/profiles/define-xml/adam/
+  linkml: https://w3id.org/linkml/
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+default_prefix: ddspa
+default_range: string
+
+imports:
+  - linkml:types
+  - dds-profile-define-xml-snapshot
+
+annotations:
+  dds.profile.baseModel: https://cdisc.org/dds/profiles/define-xml
+  dds.profile.baseVersion: "1.0.0"
+  dds.profile.status: draft
+  dds.profile.useCase: Define-XML v2.1 for ADaM analysis datasets, including analysis results metadata.
+
+classes:
+
+  ItemGroup:
+    slot_usage:
+      purpose:
+        equals_string: Analysis
+      name:
+        pattern: "^(AD[A-Z0-9]{1,6}|VL_.+)$"
+      domain:
+        maximum_cardinality: 0                 # def:Domain is not used for ADaM
+      isReferenceData:
+        maximum_cardinality: 0                 # analysis datasets are never reference data
+    rules:
+      - description: Analysis datasets must carry class and structure.
+        preconditions:
+          slot_conditions:
+            purpose:
+              equals_string: Analysis
+        postconditions:
+          slot_conditions:
+            observationClass:
+              required: true
+            structure:
+              required: true
+
+  DefClass:
+    slot_usage:
+      name:
+        pattern: "^(SUBJECT LEVEL ANALYSIS DATASET|BASIC DATA STRUCTURE|OCCURRENCE DATA STRUCTURE|ADAM OTHER)$"
+
+  Item:
+    slot_usage:
+      role:
+        maximum_cardinality: 0                 # Role is not used for ADaM
+      roleCodeList:
+        maximum_cardinality: 0
+
+  Origin:
+    slot_usage:
+      type:
+        range: AdamOriginType                  # narrows the parent's DefineOriginType
+    rules:
+      - description: Predecessor origins must identify their source item(s).
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: Predecessor
+        postconditions:
+          slot_conditions:
+            sourceItems:
+              required: true
+              minimum_cardinality: 1
+
+  Standard:
+    slot_usage:
+      name:
+        range: AdamStandardName
+
+  Analysis:
+    slot_usage:
+      inputData:
+        required: true
+        minimum_cardinality: 1                 # every analysis names its input datasets
+
+enums:
+  AdamOriginType:
+    description: Origin types permitted in an ADaM Define-XML (no Collected).
+    permissible_values:
+      Assigned:    { meaning: NCIT:C170547 }
+      Derived:     { meaning: NCIT:C170549 }
+      Predecessor: { meaning: NCIT:C170550 }
+
+  AdamStandardName:
+    description: Standards that may appear in an ADaM Define-XML.
+    permissible_values:
+      ADaMIG: {}
+      CDISC/NCI: {}

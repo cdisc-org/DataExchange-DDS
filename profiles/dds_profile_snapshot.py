@@ -27,7 +27,8 @@ The snapshot is deterministic: same inputs -> byte-identical output. Hand
 edits to a snapshot are never permitted; regenerate instead.
 
 Dependencies: pyyaml, linkml-runtime (SchemaView is used to induce effective
-base slot values for the R4/R5 merge-and-check step).
+base slot values for the R4/R5 merge-and-check step); the optional
+--json-schema step additionally needs the linkml generator package.
 
 Usage:
   python dds_profile_snapshot.py --base define.yaml \
@@ -46,7 +47,7 @@ import yaml
 from linkml_runtime import SchemaView
 
 TOOL_NAME = "dds-profile-snapshot"
-TOOL_VERSION = "0.1.0"
+TOOL_VERSION = "0.2.0"
 
 EXTENSION_ANNOTATION = "dds.profile.extension"
 REQUIRED_PROFILE_ANNOTATIONS = (
@@ -518,6 +519,7 @@ class SnapshotResolver:
         base_enums = self.base.get("enums") or {}
         keep_classes: set[str] = set()
         keep_enums: set[str] = set()
+        self.via: dict[str, str] = {root: "(profile root)"}   # class -> how reached
         stack = [root]
         while stack:
             cname = stack.pop()
@@ -528,27 +530,31 @@ class SnapshotResolver:
                 # structural parents: is_a + mixins closure
                 for anc in self.sv.class_ancestors(cname, mixins=True):
                     if anc != cname and anc not in keep_classes:
+                        self.via.setdefault(anc, f"{cname} (inheritance)")
                         stack.append(anc)
-                for _, raw in self._effective_slot_view(cname):
+                for sname, raw in self._effective_slot_view(cname):
                     for r in slot_ranges(raw):
-                        self._push_range(r, base_enums, keep_enums, stack)
+                        self._push_range(r, f"{cname}.{sname}", base_enums,
+                                         keep_enums, stack)
                 # extension attributes on this class
                 ext = ((self.diff.get("classes") or {}).get(cname) or {}
                        ).get("attributes") or {}
-                for adef in ext.values():
+                for aname, adef in ext.items():
                     for r in slot_ranges(adef or {}):
-                        self._push_range(r, base_enums, keep_enums, stack)
+                        self._push_range(r, f"{cname}.{aname} (extension)",
+                                         base_enums, keep_enums, stack)
             elif cname in self.extension_classes:
                 keep_classes.add(cname)
-                for adef in (self.extension_classes[cname].get("attributes")
-                             or {}).values():
+                for aname, adef in (self.extension_classes[cname]
+                                    .get("attributes") or {}).items():
                     for r in slot_ranges(adef or {}):
-                        self._push_range(r, base_enums, keep_enums, stack)
+                        self._push_range(r, f"{cname}.{aname} (extension)",
+                                         base_enums, keep_enums, stack)
 
     # ranges may point at classes, enums, or builtin types
         return keep_classes, keep_enums
 
-    def _push_range(self, r: str, base_enums: dict, keep_enums: set,
+    def _push_range(self, r: str, via: str, base_enums: dict, keep_enums: set,
                     stack: list) -> None:
         if not r or r in LINKML_TYPES:
             return
@@ -556,7 +562,47 @@ class SnapshotResolver:
                 or r in self.extension_enums):
             keep_enums.add(r)
         else:
+            self.via.setdefault(r, via)
             stack.append(r)
+
+    def _reference_path(self, cname: str, max_hops: int = 6) -> str:
+        """Walk the via-map back toward the root for an error message."""
+        hops, cur, seen = [], cname, set()
+        while cur and cur not in seen and len(hops) < max_hops:
+            seen.add(cur)
+            via = self.via.get(cur)
+            if via is None:
+                break
+            hops.append(f"{cur} <- {via}")
+            cur = via.split(".")[0].split(" ")[0]
+            if via == "(profile root)":
+                break
+        return "  |  ".join(hops)
+
+    # -- R6a --------------------------------------------------------------
+
+    def check_declared_exclusions(self, keep_classes: set) -> None:
+        raw = get_annotation(self.diff, "dds.profile.excludes")
+        if not raw:
+            return
+        names = [n.strip() for n in str(raw).replace("\n", " ").split(",")
+                 if n.strip()]
+        base_classes = self.base.get("classes") or {}
+        for name in names:
+            if name not in base_classes:
+                self.report.error(
+                    f"R6a: excluded class '{name}' does not exist in the "
+                    "base model (typo, or renamed in this base release?)")
+            elif name in keep_classes:
+                self.report.error(
+                    f"R6a: class '{name}' is declared excluded but is still "
+                    f"reachable: {self._reference_path(name)} — prohibit "
+                    "the referencing slot or narrow the union that includes it")
+        ok = [n for n in names if n in base_classes and n not in keep_classes]
+        if ok:
+            self.report.note(
+                f"declared exclusions verified: {len(ok)} class(es) "
+                "unreachable as asserted")
 
     # -- assembly (incl. R7) ----------------------------------------------
 
@@ -572,7 +618,15 @@ class SnapshotResolver:
             prefixes[pfx] = uri
 
         annotations = dict(self.diff.get("annotations") or {})
+        # R7: provenance chain — extend the base's chain if the base is itself
+        # a snapshot (layered profile), otherwise start one at the base model.
+        base_chain = get_annotation(self.base, "dds.profile.snapshot.chain")
+        if not base_chain:
+            base_chain = (f"{self.base.get('id')}@"
+                          f"{self.base.get('version') or 'unversioned'}")
+        chain = f"{base_chain} -> {self.diff.get('id')}@{self.diff.get('version')}"
         annotations.update({
+            "dds.profile.snapshot.chain": chain,
             "dds.profile.snapshot": "true",                       # R7
             "dds.profile.snapshot.profileId": self.diff.get("id"),
             "dds.profile.snapshot.profileVersion": self.diff.get("version"),
@@ -628,8 +682,10 @@ class SnapshotResolver:
         merged = self.merge_classes()
         root = self.find_root(merged)
         self.report.note(f"profile root class: {root}")
+        closure_classes, closure_enums = self.compute_closure(merged, root)
+        self.check_declared_exclusions(closure_classes)           # R6a
         if self.prune:
-            keep_classes, keep_enums = self.compute_closure(merged, root)
+            keep_classes, keep_enums = closure_classes, closure_enums
             dropped = len(merged) - len(keep_classes & set(merged))
             self.report.note(
                 f"reachability closure: {len(keep_classes)} classes, "
@@ -644,6 +700,77 @@ class SnapshotResolver:
                 f"{len(self.report.errors)} resolution error(s); "
                 "snapshot not written")
         return self.snapshot
+
+
+# --------------------------------------------------------------------------
+# JSON Schema emission (spec §8)
+# --------------------------------------------------------------------------
+
+def emit_json_schema(snapshot_path: str, out_path: str, root: str,
+                     closed: bool = True, strip_nulls: bool = True,
+                     report: Report | None = None) -> None:
+    """Generate JSON Schema from a snapshot and post-process it.
+
+    LinkML's generator renders ``maximum_cardinality: 0`` only for
+    multivalued slots (as ``maxItems: 0``); prohibitions on single-valued
+    slots are silently dropped. This emitter therefore replaces every
+    prohibited property (as induced per class, so slot_usage placed on
+    ancestors and mixins is honoured) with the ``false`` subschema, which
+    rejects any value regardless of type and regardless of whether the
+    schema is closed. Optionally it also removes the ``null`` alternative
+    the generator adds to optional properties, so that JSON ``null`` is
+    not accepted as a stand-in for absence (spec Appendix A).
+    """
+    import json
+    from linkml.generators.jsonschemagen import JsonSchemaGenerator
+
+    gen = JsonSchemaGenerator(snapshot_path, top_class=root, not_closed=not closed)
+    schema = json.loads(gen.serialize())
+    sv = SchemaView(snapshot_path)
+
+    prohibited = 0
+    for cname, cdef in schema.get("$defs", {}).items():
+        if cname not in sv.all_classes() or "properties" not in cdef:
+            continue
+        for slot in sv.class_induced_slots(cname):
+            if slot.maximum_cardinality == 0 and slot.name in cdef["properties"]:
+                cdef["properties"][slot.name] = False
+                if slot.name in cdef.get("required", []):
+                    cdef["required"].remove(slot.name)
+                prohibited += 1
+
+    nulls = 0
+    def _strip(node):
+        nonlocal nulls
+        if isinstance(node, dict):
+            t = node.get("type")
+            if isinstance(t, list) and "null" in t:
+                t = [x for x in t if x != "null"]
+                node["type"] = t[0] if len(t) == 1 else t
+                nulls += 1
+            if isinstance(node.get("anyOf"), list):
+                before = len(node["anyOf"])
+                node["anyOf"] = [a for a in node["anyOf"]
+                                 if not (isinstance(a, dict) and a.get("type") == "null")]
+                nulls += before - len(node["anyOf"])
+                if len(node["anyOf"]) == 1:
+                    only = node.pop("anyOf")[0]
+                    node.update({k: v for k, v in only.items() if k not in node})
+            for v in node.values():
+                _strip(v)
+        elif isinstance(node, list):
+            for v in node:
+                _strip(v)
+    if strip_nulls:
+        _strip(schema)
+
+    with open(out_path, "w", encoding="utf-8") as fh:
+        json.dump(schema, fh, indent=2)
+        fh.write("\n")
+    if report:
+        report.note(f"json schema written: {out_path} "
+                    f"(closed={closed}, {prohibited} prohibited properties "
+                    f"enforced, {nulls} null alternatives removed)")
 
 
 # --------------------------------------------------------------------------
@@ -666,6 +793,15 @@ def main(argv=None) -> int:
     ap.add_argument("--allow-unversioned-base", action="store_true",
                     help="permit a base model without a 'version' field "
                          "(R1 gate downgraded to a warning)")
+    ap.add_argument("--json-schema", metavar="PATH",
+                    help="also emit JSON Schema from the snapshot, with "
+                         "prohibitions on single-valued slots enforced")
+    ap.add_argument("--open", action="store_true",
+                    help="emit an open JSON Schema (additionalProperties "
+                         "allowed) instead of the closed default")
+    ap.add_argument("--allow-nulls", action="store_true",
+                    help="keep the generator's 'null' alternatives on "
+                         "optional properties")
     args = ap.parse_args(argv)
 
     try:
@@ -686,6 +822,11 @@ def main(argv=None) -> int:
                  f"snapshot are never permitted.\n")
         yaml.safe_dump(snapshot, fh, sort_keys=False, allow_unicode=True,
                        default_flow_style=False, width=100)
+    if args.json_schema:
+        root = resolver.find_root(snapshot["classes"])
+        emit_json_schema(args.output, args.json_schema, root,
+                         closed=not args.open, strip_nulls=not args.allow_nulls,
+                         report=resolver.report)
     resolver.report.emit()
     print(f"snapshot written: {args.output}")
     return 0
