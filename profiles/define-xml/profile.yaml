@@ -23,6 +23,10 @@ annotations:
   dds.profile.baseVersion: "1.0.0"
   dds.profile.status: draft
   dds.profile.useCase: Generation of Define-XML v2.1 documents.
+  dds.profile.excludes: >-
+    DataStructureDefinition, Dataflow, Dataset, SeriesKey, GroupKey,
+    DatasetKey, Dimension, Measure, DataAttribute, ComponentList,
+    DataProduct, DataService, Distribution, Display, Dictionary
 
 classes:
 
@@ -47,11 +51,11 @@ classes:
       itemGroups:
         required: true
         minimum_cardinality: 1
-      # Document-level subtrees out of scope for Define-XML generation.
+      # Document-level subtrees out of scope for every Define-XML variant.
       # Prohibiting them here is what lets R6 reachability drop the SDMX
       # cube, data-product, and display classes from the snapshot (spec 4.6).
-      analyses:
-        maximum_cardinality: 0
+      # (analyses is deliberately NOT prohibited here: a parent must be the
+      # common denominator of its children, and the ADaM child needs it.)
       dataProducts:
         maximum_cardinality: 0
       displays:
@@ -84,6 +88,13 @@ classes:
     slot_usage:
       items:
         range: Item                   # method parameters bind to Items here
+
+  Analysis:
+    slot_usage:
+      inputData:
+        range: ItemGroup              # analyses reference ItemGroups, never SDMX Datasets.
+                                      # Analysis stays reachable in this parent so the ADaM
+                                      # child can use it for ARM; the SDTM child prohibits it.
 
   ItemGroup:
     slot_usage:
@@ -138,8 +149,18 @@ classes:
       type:
         required: true
         range: DefineOriginType       # subset enum
-      source:
-        required: true
+      # source is NOT unconditionally required: Define-XML Source does not apply
+      # to Predecessor origins (the ADaM norm). Children may tighten further.
+    rules:
+      - description: Collected origins must state their Source.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: Collected
+        postconditions:
+          slot_conditions:
+            source:
+              required: true
 
   WhereClause:
     slot_usage:

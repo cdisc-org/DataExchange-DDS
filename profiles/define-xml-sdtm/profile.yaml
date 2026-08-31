@@ -1,0 +1,90 @@
+id: https://cdisc.org/dds/profiles/define-xml/sdtm
+name: dds-profile-define-xml-sdtm
+title: DDS Profile - Define-XML Generation (SDTM)
+description: >-
+  Derived from the Define-XML profile. Tightens it for SDTM tabulation datasets:
+  purpose, observation classes, roles, dataset naming, and standards.
+version: 1.0.0
+license: MIT
+
+prefixes:
+  dds: https://cdisc.org/dds
+  ddsp: https://cdisc.org/dds/profiles/define-xml/        # parent (must match exactly)
+  ddsps: https://cdisc.org/dds/profiles/define-xml/sdtm/  # this profile's namespace
+  linkml: https://w3id.org/linkml/
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+default_prefix: ddsps
+default_range: string
+
+imports:
+  - linkml:types
+  - dds-profile-define-xml-snapshot        # layered: the PARENT SNAPSHOT is the base
+
+annotations:
+  dds.profile.baseModel: https://cdisc.org/dds/profiles/define-xml
+  dds.profile.baseVersion: "1.0.0"         # pins the parent profile version
+  dds.profile.status: draft
+  dds.profile.useCase: Define-XML v2.1 for SDTM tabulation datasets.
+  dds.profile.excludes: Analysis            # ARM is an ADaM concern
+
+classes:
+
+  MetaDataVersion:
+    slot_usage:
+      analyses:
+        maximum_cardinality: 0
+
+  ItemGroup:
+    slot_usage:
+      purpose:
+        equals_string: Tabulation
+      name:
+        # Domains, split/associated-persons/supplemental datasets, RELREC/RELSUB,
+        # plus value-list slices (VL_...), which are ItemGroups too.
+        pattern: "^(SUPP[A-Z][A-Z0-9]|SQAP[A-Z][A-Z0-9]|AP[A-Z][A-Z0-9]|RELREC|RELSUB|[A-Z][A-Z0-9]{1,3}|VL_.+)$"
+    rules:
+      - description: >-
+          Dataset-level SDTM groups (purpose = Tabulation) must carry domain,
+          class, structure, and key sequence; value-list slices have no purpose
+          and are therefore not subject to this rule.
+        preconditions:
+          slot_conditions:
+            purpose:
+              equals_string: Tabulation
+        postconditions:
+          slot_conditions:
+            domain:
+              required: true
+              pattern: "^[A-Z][A-Z0-9]$"
+            observationClass:
+              required: true
+            structure:
+              required: true
+            keySequence:
+              required: true
+              minimum_cardinality: 1
+
+  DefClass:
+    slot_usage:
+      name:
+        pattern: "^(EVENTS|FINDINGS|FINDINGS ABOUT|INTERVENTIONS|SPECIAL PURPOSE|TRIAL DESIGN|RELATIONSHIP|STUDY REFERENCE)$"
+
+  Item:
+    slot_usage:
+      role:
+        range: string                          # collapse string/TranslatedText
+        pattern: "^(Identifier|Topic|Timing|Grouping Qualifier|Result Qualifier|Synonym Qualifier|Record Qualifier|Variable Qualifier|Rule)$"
+
+  Standard:
+    slot_usage:
+      name:
+        range: SdtmStandardName
+
+enums:
+  SdtmStandardName:
+    description: Standards that may appear in an SDTM Define-XML.
+    permissible_values:
+      SDTMIG: {}
+      SDTMIG-AP: {}
+      SDTMIG-MD: {}
+      CDISC/NCI: {}

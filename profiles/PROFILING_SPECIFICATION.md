@@ -120,7 +120,7 @@ Inside the differential, a profile redefines a base class by declaring a class o
 | Bound a list | `multivalued: true` | add `minimum_cardinality` / `maximum_cardinality` | Yes (min may only rise, max may only fall) |
 | Prohibit a slot | any optional slot | `maximum_cardinality: 0` | Yes |
 
-Prohibition (`maximum_cardinality: 0`) is the profile's pruning tool at slot level: it tells implementers "this element plays no role in this use case, and conformant instances must not populate it." Use it sparingly — an unmentioned optional slot is merely *ignored* by the profile, which is usually enough. Reserve prohibition for slots whose presence would actively confuse the use case (for example, a Define-XML profile prohibiting the SDMX `DataStructureDefinition` reference slots on `ItemGroup`).
+Prohibition (`maximum_cardinality: 0`) is the profile's pruning tool at slot level (see Section 8 for why generated JSON Schema must come from the resolver for prohibitions on single-valued slots to take effect): it tells implementers "this element plays no role in this use case, and conformant instances must not populate it." Use it sparingly — an unmentioned optional slot is merely *ignored* by the profile, which is usually enough. Reserve prohibition for slots whose presence would actively confuse the use case (for example, a Define-XML profile prohibiting the SDMX `DataStructureDefinition` reference slots on `ItemGroup`).
 
 ```yaml
 classes:
@@ -227,6 +227,13 @@ classes:
       items:
         range: Item                   # method parameters bind to Items here
 
+  Analysis:
+    slot_usage:
+      inputData:
+        range: ItemGroup              # analyses reference ItemGroups, never SDMX Datasets.
+                                      # Analysis stays reachable in this parent so the ADaM
+                                      # child can use it for ARM; the SDTM child prohibits it.
+
   ItemGroup:
     slot_usage:
       OID:
@@ -247,6 +254,17 @@ A profile does not need to prohibit every base class it ignores. The **profile b
 3. Everything else is *out of scope* and is dropped from generated JSON Schema (Section 8). Out-of-scope classes need no mention in the differential.
 
 This means a Define-XML profile that never references `Dataflow`, `SeriesKey`, or `DataProduct` simply excludes them by reachability — no prohibition boilerplate required.
+
+**Declared exclusions.** Reachability exclusion is implicit, which leaves a maintenance hazard: the *intent* to exclude a model area (say, the SDMX cube classes) lives only in the particular prohibitions and range narrowings that happen to sever the paths, and a future base-model release that adds a new slot reaching that area would silently re-include it on rebase. A profile therefore **should** make its exclusions explicit with the schema-level annotation `dds.profile.excludes`, a comma-separated list of base class names:
+
+```yaml
+annotations:
+  dds.profile.excludes: >-
+    DataStructureDefinition, Dataflow, Dataset, SeriesKey, GroupKey,
+    Dimension, Measure, DataAttribute, DataProduct, Display, Analysis
+```
+
+The annotation is an *assertion, not an operation*: it removes nothing by itself. At resolution time (rule R6a, Section 6) the resolver verifies that every listed class is outside the reachability closure and fails the build — reporting the surviving reference path — if any prohibition or narrowing is missing. Exclusion of a class is thus still *expressed* through the constraint primitives (prohibit the slots that reach it, narrow the unions that include it); the annotation is what makes the intent reviewable and rebase-safe. Listing a class that is structurally required (for example, a mixin ancestor of a kept class) is a resolution error the profile cannot satisfy, which is exactly the signal that the exclusion is not achievable without a base-model change. Should the base model later organize its classes into named LinkML `subsets` (e.g., `sdmx`, `dataProduct`), this annotation can naturally extend to accept subset names as shorthand for their member classes.
 
 ### 4.7 Operations that are never allowed
 
@@ -319,6 +337,8 @@ The snapshot is produced by a deterministic merge of the differential onto the p
 
 **R6 — root and reachability.** If the differential set `tree_root: true` on a class, the flag is cleared elsewhere. The reachability closure from the root through non-prohibited slots is computed; classes and enums outside the closure are dropped from the snapshot.
 
+**R6a — declared-exclusion check.** Every class named in the profile's `dds.profile.excludes` annotation must lie outside the closure computed in R6. Any excluded class still reachable is a resolution error, reported with the reference path that keeps it reachable, so the author knows which slot to prohibit or which union to narrow. Classes named in the annotation that do not exist in the base model are likewise errors (they usually indicate a typo or a rebase onto a model that renamed the class).
+
 **R7 — provenance stamping.** The snapshot records, as schema-level annotations, the profile id and version, the base id and version, and the resolution tool version, so any generated artifact is traceable to exact inputs.
 
 The snapshot is a generated artifact. It is committed alongside the differential for reviewability (a snapshot diff makes the effect of a differential change obvious), but hand edits to a snapshot are never permitted.
@@ -341,13 +361,16 @@ A profile is subject to three layers of checking, all automatable in CI:
 
 ## 8. Generating JSON Schema (and other artifacts)
 
-JSON Schema is generated from the **snapshot**, rooted at the profile's root class:
+JSON Schema is generated from the **snapshot**, rooted at the profile's root class. Generation **must** go through the resolver's `--json-schema` step rather than a bare `gen-json-schema` call:
 
 ```bash
-gen-json-schema --closed --top-class MetaDataVersion \
-    profiles/define-xml/snapshot.yaml \
-    > profiles/define-xml/define-xml.schema.json
+python dds_profile_snapshot.py --base define.yaml \
+    --differential profiles/define-xml/profile.yaml \
+    --output profiles/define-xml/snapshot.yaml \
+    --json-schema profiles/define-xml/define-xml.schema.json
 ```
+
+The resolver wraps LinkML's generator and post-processes its output for two behaviours the generator does not provide. First, LinkML renders `maximum_cardinality: 0` only for multivalued slots (as `maxItems: 0`) and silently drops prohibitions on single-valued slots; the resolver replaces every prohibited property (as induced per class, so prohibitions inherited from ancestor or mixin redefinitions are honoured) with the `false` subschema, which rejects any value of any type in both open and closed schemas. Second, the generator emits `null` as an accepted alternative for every optional property; because this specification treats JSON `null` as a value rather than as absence (Appendix A), the resolver strips those alternatives by default (`--allow-nulls` restores them).
 
 `--closed` is the recommended default for profiles: it sets `additionalProperties: false`, so instance documents containing slots outside the profile (including base-model slots the profile ignores) are rejected. This is usually what a profile implementer wants — the whole point of the profile is a closed contract. A profile that must tolerate unprofiled base-model content (for example, a validation profile applied over full DDS documents) may generate open schemas instead; it should say so in its documentation, and its `dds.profile.useCase` annotation should make the reading-vs-authoring intent clear.
 
@@ -369,6 +392,17 @@ itemGroups:
 For whole-document claims where the root class does not mix in `IsProfile`, the claim is carried out of band (e.g., in the exchange envelope or API content negotiation) — profiles should document which mechanism they expect. Consumers must treat conformance claims as claims, not proof; validation (Section 7) is what establishes conformance.
 
 ---
+
+## 9a. Layered profiles (profiles of profiles)
+
+A profile may take another profile's **snapshot** as its base instead of the DDS model. The mechanics are identical: the child differential pins the parent via `dds.profile.baseModel` (the parent's canonical id) and `dds.profile.baseVersion` (the parent's profile version); resolution runs with `--base <parent snapshot>`; every rule R1–R7 applies with the parent snapshot in the role of "base model", so a child can only tighten its parent, and subset enums may narrow the parent's own subset enums. The snapshot's `dds.profile.snapshot.chain` annotation records the full lineage (`dds@1.0.0 -> define-xml@1.0.0 -> define-xml/sdtm@1.0.0`).
+
+Layering is the recommended way to serve variants of one use case — for example a common `define-xml` parent with `define-xml/sdtm` and `define-xml/adam` children — rather than duplicating a flat profile per variant or encoding variant selection in `rules`. Two design rules follow from tightening-only inheritance:
+
+- **The parent is the common denominator.** It may contain only constraints, prohibitions, and exclusions that *every* child agrees with; anything variant-specific belongs in the child. A parent that prohibits a slot or excludes a class one child needs cannot be repaired by the child (R5 rejects the loosening) — the fix is always to move the constraint down. In practice the children reveal these over-tightenings: the Define-XML parent originally excluded `Analysis` and required `Origin.source` unconditionally, both of which the ADaM child needed relaxed (analysis results metadata; `Source` does not apply to `Predecessor` origins).
+- **Keep children thin.** A child restating parent constraints is a sign the parent is missing them. Two layers are usually enough; each additional layer is another version to pin.
+
+Conformance to a derived profile implies conformance to every ancestor in its chain. Instances should claim the most specific profile they conform to; generic tooling written against the parent accepts them unchanged.
 
 ## 10. Publication, naming, and versioning
 
@@ -441,6 +475,10 @@ annotations:
   dds.profile.baseVersion: "1.0.0"
   dds.profile.status: draft
   dds.profile.useCase: Generation of Define-XML v2.1 documents.
+  dds.profile.excludes: >-
+    DataStructureDefinition, Dataflow, Dataset, SeriesKey, GroupKey,
+    DatasetKey, Dimension, Measure, DataAttribute, ComponentList,
+    DataProduct, DataService, Distribution, Display, Dictionary
 
 classes:
 
@@ -465,11 +503,11 @@ classes:
       itemGroups:
         required: true
         minimum_cardinality: 1
-      # Document-level subtrees out of scope for Define-XML generation.
+      # Document-level subtrees out of scope for every Define-XML variant.
       # Prohibiting them here is what lets R6 reachability drop the SDMX
       # cube, data-product, and display classes from the snapshot (spec 4.6).
-      analyses:
-        maximum_cardinality: 0
+      # (analyses is deliberately NOT prohibited here: a parent must be the
+      # common denominator of its children, and the ADaM child needs it.)
       dataProducts:
         maximum_cardinality: 0
       displays:
@@ -532,8 +570,18 @@ classes:
       type:
         required: true
         range: DefineOriginType       # subset enum
-      source:
-        required: true
+      # source is NOT unconditionally required: Define-XML Source does not apply
+      # to Predecessor origins (the ADaM norm). Children may tighten further.
+    rules:
+      - description: Collected origins must state their Source.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: Collected
+        postconditions:
+          slot_conditions:
+            source:
+              required: true
 
   WhereClause:
     slot_usage:
@@ -575,5 +623,7 @@ Two workflow notes from the reference instance are worth generalizing:
 **Templates and placeholder substitution.** The reference instance is deliberately a *template*: where metadata was not yet available, the generator emitted the literal marker `__PLACEHOLDER__` (in `Origin.type`, `Origin.source`, and `keySequence`), to be swapped for real values by a downstream substitution step. Profile validation applies to the *resolved* document, after substitution — a template will (and should) fail enum bindings and reference-range checks on its markers, and that failure is meaningless before substitution runs. Pipelines using this pattern should therefore run profile validation as a post-substitution gate, and may additionally run a template-stage check that ignores marker-valued slots. A profile itself must not be relaxed to admit markers: adding `__PLACEHOLDER__` to a subset enum or loosening a reference range would violate Section 4.7, and would let unresolved templates masquerade as finished documents.
 
 **Serialization shape is part of the contract.** `Item.origin` is declared `multivalued: true, inlined_as_list: true`, so conformant JSON is `"origin": [ { ... } ]` even when there is exactly one origin. A producer emitting a bare object is a bug to fix in the producer, not a shape for the profile to canonize by tightening to `multivalued: false` — the list form keeps every profiled instance directly valid against the base model, per the subset rule. The same reasoning covers `null` versus absence (`length: null` is a type violation; omit the key instead) and unknown document-level keys (`annotatedCRF` for the base slot `annotatedCRFs`, or `conceptProperties`, which is not a base slot), both rejected by the closed schema. A profile does not paper over such divergences by loosening — under Section 4.7 it cannot — which is precisely what makes profile validation a useful quality gate for generator output.
+
+This parent is deliberately the common denominator of two layered children (Section 9a): `define-xml/sdtm` fixes `purpose` to `Tabulation`, binds `DefClass.name` to the SDTM general observation classes, constrains `Item.role` to the SDTM role set, requires `domain`/`observationClass`/`structure`/`keySequence` on dataset-level groups via a rule keyed on `purpose`, restricts standards to the SDTMIG family, and prohibits `analyses`; `define-xml/adam` fixes `purpose` to `Analysis`, prohibits `domain`, `role`, and `isReferenceData`, binds `DefClass.name` to the ADaM dataset classes, narrows origins to `Assigned`/`Derived`/`Predecessor` with a rule requiring `sourceItems` on `Predecessor`, and keeps `Analysis` reachable for analysis results metadata. Validated against the SDTM child, the LZZT reference instance (with its producer bugs corrected) passes except for three `observationClass` values written as `SPECIAL-PURPOSE` rather than the controlled term `SPECIAL PURPOSE`.
 
 For contrast, the aCRF profile would follow the identical pattern but constrain rendering-relevant slots (`Formatted`, `crfCompletionInstructions`), require `Collected`-centric origins, and add the `acrfRenderingHint` extension from Section 5; the raw-to-SDTM transformation profile would center on `Method`, `FormalExpression`, `SourceItem`, `Parameter`, and `ReturnValue`, requiring `Item.method` for derived variables and fixing `FormalExpression` context values to the transformation engine's identifier.
