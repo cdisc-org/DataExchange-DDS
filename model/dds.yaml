@@ -267,7 +267,7 @@ classes:
     attributes:
       standard:
         description: Reference to the standard being implemented
-        range: Standard
+        range: Identifiable
       isNonStandard:
         description: One or more members of this set are non-standard extensions
         range: boolean
@@ -472,6 +472,7 @@ classes:
     is_a: GovernedElement
     mixins:
       - IsODMItem
+      - IsODMStandard
       - Formatted
     attributes:
       dataType:
@@ -628,7 +629,7 @@ classes:
       name:
         description: >-
           Name of the General Observation Class following CDISC Controlled Terminology.
-        required: true
+        range: DefClassNameEnum
       subClasses:
         description: >-
           One or more SubClasses that further identify the specific SubClass within a Class.
@@ -645,10 +646,13 @@ classes:
       name:
         description: >-
           Name of the SubClass following CDISC Controlled Terminology for SubClass.
-        required: true
+        range: SubClassNameEnum
       parentClass:
         description: >-
           Name of the parent Class or SubClass following CDISC Controlled Terminology.
+        any_of:
+          - range: DefClassNameEnum
+          - range: SubClassNameEnum
         required: false
       subClasses:
         description: >-
@@ -1350,6 +1354,8 @@ classes:
     exact_mappings:
       - odm:Standard
     is_a: IdentifiableElement
+    mixins:
+      - Governed 
     attributes:
       name:
         description: >-
@@ -2509,3 +2515,32 @@ enums:
       NOT:
         description: >-
           Negates the child condition(s) (not_any_of).
+
+  DefClassNameEnum:
+    description: Class names permitted in Define-XML v2.1.
+    permissible_values:
+      BASIC DATA STRUCTURE: {}
+      MEDICAL DEVICE BASIC DATA STRUCTURE: {}
+      OCCURRENCE DATA STRUCTURE: {}
+      SUBJECT LEVEL ANALYSIS DATASET: {}
+      ADAM OTHER: {}
+      DEVICE LEVEL ANALYSIS DATASET: {}
+      MEDICAL DEVICE OCCURRENCE DATA STRUCTURE: {}
+      REFERENCE DATA STRUCTURE: {}
+      EVENTS: {}
+      FINDINGS ABOUT: {}
+      FINDINGS: {}
+      INTERVENTIONS: {}
+      RELATIONSHIP: {}
+      SPECIAL PURPOSE: {}
+      STUDY REFERENCE: {}
+      TRIAL DESIGN: {}
+
+  SubClassNameEnum:
+    description: Union of every legal SubClass name across all Classes.
+    permissible_values:
+      NON-COMPARTMENTAL ANALYSIS: {}
+      POPULATION PHARMACOKINETIC ANALYSIS: {}
+      TIME-TO-EVENT: {}
+      MEDICAL DEVICE TIME-TO-EVENT: {}
+      ADVERSE EVENT: {}
