@@ -26,107 +26,253 @@ annotations:
   dds.profile.excludes: >-
     DataStructureDefinition, Dataflow, Dataset, SeriesKey, GroupKey,
     DatasetKey, Dimension, Measure, DataAttribute, ComponentList,
-    DataProduct, DataService, Distribution, Display, Dictionary
+    DataProduct, DataService, Distribution, Display, ConceptProperty
 
 classes:
 
   MetaDataVersion:            # base tree_root retained as profile root
     slot_usage:
-      OID:
+      name:                           # from Labelled
         required: true
-      name:
-        required: true
-      defineVersion:
-        required: true
-        pattern: "^2\\.1(\\.\\d+)?$"
-      fileOID:
-        required: true
-      studyOID:
-        required: true
-      studyName:
-        required: true
-      standards:
-        required: true
-        minimum_cardinality: 1        # the IG and CT standards referenced by content
-      itemGroups:
+      coding:                         # from Labelled
+        maximum_cardinality: 0
+      mandatory:                      # from Governed
+        maximum_cardinality: 0
+      comments:                       # from Governed
+        maximum_cardinality: 1
+      purpose:                        # from Governed
+        maximum_cardinality: 0
+      wasDerivedFrom:                 # from Governed
+        maximum_cardinality: 0
+      itemGroups:                          
         required: true
         minimum_cardinality: 1
-      # Document-level subtrees out of scope for every Define-XML variant.
-      # Prohibiting them here is what lets R6 reachability drop the SDMX
-      # cube, data-product, and display classes from the snapshot (spec 4.6).
-      # (analyses is deliberately NOT prohibited here: a parent must be the
-      # common denominator of its children, and the ADaM child needs it.)
+      items:                               
+        minimum_cardinality: 0
+      codings:
+        maximum_cardinality: 0
+      concepts:
+        maximum_cardinality: 0
+      relationships:
+        maximum_cardinality: 0
+      standards:                      
+        minimum_cardinality: 1        # required only conditionally; see rules below
+      annotatedCRFs:
+        multivalued: false
+      resources:
+        maximum_cardinality: 0
       dataProducts:
         maximum_cardinality: 0
       displays:
         maximum_cardinality: 0
-      dictionaries:
+
+    rules:
+      - description: >-
+          Submission context requires at least one Standard to be declared;
+          non-submission (Other) contexts may omit it despite the minimum
+          cardinality of 1 above (which only bites once standards is present).
+        preconditions:
+          slot_conditions:
+            context:
+              equals_string: Submission
+        postconditions:
+          slot_conditions:
+            standards:
+              required: true
+
+  Identifiable:
+    slot_usage:
+      OID:                            
+        required: true
+      uuid:
         maximum_cardinality: 0
-      resources:
+
+  Labelled:
+    slot_usage:
+      label:
+        maximum_cardinality: 0
+      aliases:
         maximum_cardinality: 0
 
   Governed:
     slot_usage:
       wasDerivedFrom:
-        # Narrow the provenance union to the element kinds this use case
-        # derives from (value-list slices derive from Items; groups and code
-        # lists may derive from their standard counterparts). Narrowing here,
-        # on the mixin, propagates to every class that mixes Governed in and
-        # severs reachability into the SDMX/data-product subtrees.
         any_of:
           - range: Item
           - range: ItemGroup
           - range: CodeList
+      siteOrSponsorComments:
+        maximum_cardinality: 0
+      lastUpdated:
+        maximum_cardinality: 0
+      owner:
+        maximum_cardinality: 0
 
-  RangeCheck:
+  ODMFileMetadata:
     slot_usage:
-      item:
-        range: Item                   # collapse the Item/Dimension/Measure/
-                                      # DataAttribute union: checks target Items
+      fileOID:                        
+        required: true
+      odmVersion:
+        pattern: "^1\\.3\\.2$"
+      fileType:
+        pattern: "^Snapshot$"
+      context:
+        required: true
+        pattern: "^(Other|Submission)$"
+      defineVersion:
+        required: true
+        pattern: "^2\\.1(\\.\\d+)?$"
 
-  Parameter:
+  StudyMetadata:
     slot_usage:
-      items:
-        range: Item                   # method parameters bind to Items here
-
-  Analysis:
-    slot_usage:
-      inputData:
-        range: ItemGroup              # analyses reference ItemGroups, never SDMX Datasets.
-                                      # Analysis stays reachable in this parent so the ADaM
-                                      # child can use it for ARM; the SDTM child prohibits it.
+      studyOID:                       
+        required: true
+      studyName:                      
+        required: true
+      studyDescription:               
+        required: true
+      protocolName:                   
+        required: true
 
   ItemGroup:
     slot_usage:
-      OID:
-        required: true
-        pattern: "^(IG|VL)\\..+"      # dataset-level definitions and value-list slices
       name:
-        required: true
+        required: false          # required only for dataset-level groups; see rules below
+      description:
+        required: false          # required only for dataset-level groups; see rules below
+      coding:
+        maximum_cardinality: 0
+      mandatory:
+        maximum_cardinality: 0
+      comments:
+        maximum_cardinality: 1
       purpose:
-        range: string                 # collapse the any_of; the use case emits plain text
+        range: string
+        required: false          # required only for dataset-level groups; see rules below
+      version:
+        maximum_cardinality: 0
+      href:
+        maximum_cardinality: 0
+      profile:
+        maximum_cardinality: 0
+      security:
+        maximum_cardinality: 0
+      authenticator:
+        maximum_cardinality: 0
+      validityPeriod:
+        maximum_cardinality: 0
       structure:
         range: string
-      # purpose, domain, standard, observationClass, keySequence, slices: required
-      # for dataset-level groups but legitimately absent on value-list slices, so
-      # the profile leaves them optional and defers dataset-vs-slice rules to its
-      # documentation (LinkML rules could express them; see the Item length rule).
+        required: false          # required only for dataset-level groups; see rules below
+      keySequence:
+        required: false          # required only for dataset-level groups; see rules below
+        minimum_cardinality: 1
+      implementsConcept:
+        maximum_cardinality: 0
+      applicableWhen:
+        maximum_cardinality: 0
+      observationClass:
+        required: false          # required only for dataset-level groups; see rules below
+
+    rules:
+      - description: >-
+          Value-list slices (type: ValueList).
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: ValueList
+        postconditions:
+          slot_conditions:
+            name:
+              required: false
+            description:
+              required: false
+            comments:
+              maximum_cardinality: 0
+            purpose:
+              maximum_cardinality: 0
+            wasDerivedFrom:
+              any_of:
+                - range: Item
+            standard:
+              maximum_cardinality: 0
+            isNonStandard:
+              maximum_cardinality: 0
+            domain:
+              maximum_cardinality: 0
+            structure:
+              maximum_cardinality: 0
+            isReferenceData:
+              maximum_cardinality: 0
+            keySequence:
+              maximum_cardinality: 0
+            slices:
+              maximum_cardinality: 0
+            hasNoData:
+              maximum_cardinality: 0
+            observationClass:
+              maximum_cardinality: 0
+
+      - description: >-
+          Dataset-level ItemGroups (not ValueList slices) must declare
+          Name, Description, Purpose, Structure, KeySequence, and
+          Observation Class.
+        preconditions:
+          slot_conditions:
+            type:
+              none_of:
+                - equals_string: ValueList
+        postconditions:
+          slot_conditions:
+            name:
+              required: true
+            description:
+              required: true
+            purpose:
+              required: true
+            structure:
+              required: true
+            keySequence:
+              required: true
+              minimum_cardinality: 1
+            observationClass:
+              required: true
+            wasDerivedFrom:
+              maximum_cardinality: 0
 
   Item:
     slot_usage:
-      OID:
+      name:                           # from Labelled
         required: true
-        pattern: "^IT\\..+"
-      name:
-        required: true
-      mandatory:
-        required: true                # feeds ItemRef/@Mandatory
-      # role feeds ItemRef/@Role on dataset variables but is legitimately absent
-      # on value-level items, so it stays optional here.
+      coding:                         # from Labelled
+        maximum_cardinality: 0
+      mandatory:                      # from Governed
+        required: true                
+      comments:                       # from Governed
+        maximum_cardinality: 1
+      purpose:                        # from Governed
+        maximum_cardinality: 0
+      wasDerivedFrom:                 # from Governed
+        maximum_cardinality: 0
+      crfCompletionInstructions:      # IsODMItem
+        maximum_cardinality: 0
+      cdiscNotes:                     # IsODMItem
+        maximum_cardinality: 0
+      implementationNotes:            # IsODMItem 
+        maximum_cardinality: 0
+      collectionExceptionCondition:   # IsODMItem
+        maximum_cardinality: 0
+      preSpecifiedValue:              # IsODMItem  
+        maximum_cardinality: 0
+      standard:                       # IsODMStandard
+        maximum_cardinality: 0        
       dataType:
-        range: DefineDataType         # subset enum
+        range: DefineDataType         
       rangeChecks:
-        maximum_cardinality: 0        # edit checks live on Condition in this use case
+        maximum_cardinality: 0        
+      conceptProperty:
+        maximum_cardinality: 0
+
     rules:
       - description: >-
           Define-XML v2.1 requires Length for text, integer, and float items.
@@ -144,29 +290,214 @@ classes:
             length:
               required: true
 
+      - description: >-
+          Define-XML v2.1 requires SignificantDigits for float items.
+        preconditions:
+          slot_conditions:
+            dataType:
+              equals_string: float
+        postconditions:
+          slot_conditions:
+            significantDigits:
+              required: true
+
   Origin:
     slot_usage:
       type:
         required: true
-        range: DefineOriginType       # subset enum
-      # source is NOT unconditionally required: Define-XML Source does not apply
-      # to Predecessor origins (the ADaM norm). Children may tighten further.
+        range: DefineOriginType       
     rules:
-      - description: Collected origins must state their Source.
+      - description: Predecessor origins must identify their source item(s).
         preconditions:
           slot_conditions:
             type:
-              equals_string: Collected
+              equals_string: Predecessor
+        postconditions:
+          slot_conditions:
+            sourceItems:
+              required: true
+              minimum_cardinality: 1
+
+      - description: Source required.
+        preconditions:
+          slot_conditions:
+            type:
+              any_of:
+                - equals_string: Collected
+                - equals_string: Assigned
+                - equals_string: Derived
+                - equals_string: Protocol
         postconditions:
           slot_conditions:
             source:
               required: true
+
+  Method:
+    slot_usage:
+      type:
+        required: true
+        range: DefineMethodType
+      implementsConcept:
+        maximum_cardinality: 0
 
   WhereClause:
     slot_usage:
       conditions:
         required: true
         minimum_cardinality: 1
+
+  RangeCheck:
+    slot_usage:
+      item:
+        range: Item                   
+
+  Condition:
+    slot_usage:
+      implementsCondition:
+        maximum_cardinality: 0
+
+  FormalExpression:
+    slot_usage:
+      returnType:
+        maximum_cardinality: 0
+      parameters:
+        maximum_cardinality: 0
+      returnValue:
+        maximum_cardinality: 0
+      externalCodeLibs:
+        maximum_cardinality: 0
+
+  CodeList:
+    slot_usage:
+      dataType:
+        range: DefineCodeListDataType
+      externalCodeList:
+        maximum_cardinality: 0
+
+  CodeListItem:
+    slot_usage:
+      aliases:
+        maximum_cardinality: 0
+      other:
+        maximum_cardinality: 0
+
+  Standard:
+    slot_usage:
+      version:
+        required: true
+    rules:
+      - description: Publishing set is required for CT type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: CT
+        postconditions:
+          slot_conditions:
+            name:
+              pattern: "^CDISC/NCI$"
+            publishingSet:
+              required: true
+            version:
+              pattern: "^20\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$"
+
+  DocumentReference:
+    slot_usage:
+      relationship:
+        maximum_cardinality: 0
+    attributes:
+      type:
+        description: Type of the document reference
+        range: TypeDocumentReference
+        slot_uri: ddsp:type
+        annotations:
+          dds.profile.extension: true
+      firstPage:
+        description: Reference to the first page in a PDF document
+        range: integer
+        slot_uri: ddsp:firstPage
+        annotations:
+          dds.profile.extension: true
+      lastPage:
+        description: Reference to the last page in a PDF document
+        range: integer
+        slot_uri: ddsp:lastPage
+        annotations:
+          dds.profile.extension: true
+      destination:
+        description: Destination of the document reference
+        range: string
+        slot_uri: ddsp:destination
+        annotations:
+          dds.profile.extension: true
+
+    rules:
+      - description: Publishing set is required for CT type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: NamedDestination
+        postconditions:
+          slot_conditions:
+            destination:
+              required: true
+            pages:
+              maximum_cardinality: 0
+            firstPage:
+              maximum_cardinality: 0
+            lastPage:
+              maximum_cardinality: 0
+
+      - description: Publishing set is required for CT type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: PhysicalRef
+        postconditions:
+          slot_conditions:
+            destination:
+              maximum_cardinality: 0
+
+      - description: If Pages is given, FirstPage/LastPage do not apply.
+        preconditions:
+          slot_conditions:
+            pages:
+              required: true
+        postconditions:
+          slot_conditions:
+            firstPage:
+              maximum_cardinality: 0
+            lastPage:
+              maximum_cardinality: 0
+
+      - description: If FirstPage or LastPage is given, Pages does not apply.
+        preconditions:
+          any_of:
+            - slot_conditions:
+                firstPage:
+                  required: true
+            - slot_conditions:
+                lastPage:
+                  required: true
+        postconditions:
+          slot_conditions:
+            pages:
+              maximum_cardinality: 0
+
+      - description: FirstPage and LastPage must be given together.
+        bidirectional: true
+        preconditions:
+          slot_conditions:
+            firstPage:
+              required: true
+        postconditions:
+          slot_conditions:
+            lastPage:
+              required: true
+
+  Analysis:
+    slot_usage:
+      inputData:
+        range: ItemGroup              
 
 enums:
 
@@ -181,6 +512,13 @@ enums:
       datetime: {}
       durationDatetime: {}
 
+  DefineCodeListDataType:
+    description: ODM data types permitted for CodeList in Define-XML v2.1.
+    permissible_values:
+      text: {}
+      integer: {}
+      float: {}
+
   DefineOriginType:
     description: Origin types permitted in Define-XML v2.1.
     permissible_values:
@@ -189,3 +527,18 @@ enums:
       Derived:     { meaning: NCIT:C170549 }
       Predecessor: { meaning: NCIT:C170550 }
       Protocol:    { meaning: NCIT:C170551 }
+
+  DefineMethodType:
+    description: Method types permitted in Define-XML v2.1.
+    permissible_values:
+      Computation: {}
+      Imputation: {}
+
+  TypeDocumentReference:
+    description: Types of document references permitted in Define-XML v2.1.
+    enum_uri: ddsp:TypeDocumentReference
+    annotations:
+      dds.profile.extension: true
+    permissible_values:
+      PhysicalRef: {}
+      NamedDestination: {}

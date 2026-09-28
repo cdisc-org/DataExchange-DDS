@@ -720,6 +720,17 @@ def emit_json_schema(snapshot_path: str, out_path: str, root: str,
     schema is closed. Optionally it also removes the ``null`` alternative
     the generator adds to optional properties, so that JSON ``null`` is
     not accepted as a stand-in for absence (spec Appendix A).
+
+    The same mistranslation happens for slots prohibited by a *rule's*
+    postcondition (``maximum_cardinality: 0`` under ``rules: -
+    postconditions``): the generator renders the slot as an unconstrained
+    ``{}`` property inside the conditional ``allOf[].then``/``else`` branch
+    and, because it has no other constraint to key off, lists it in that
+    branch's ``required`` array instead of prohibiting it. This is fixed
+    up below by walking each class's induced rules in lockstep with the
+    generated ``allOf`` branches (the generator emits exactly one ``allOf``
+    entry per rule, in schema order) and applying the same ``false``
+    substitution scoped to that branch only.
     """
     import json
     from linkml.generators.jsonschemagen import JsonSchemaGenerator
@@ -738,6 +749,33 @@ def emit_json_schema(snapshot_path: str, out_path: str, root: str,
                 if slot.name in cdef.get("required", []):
                     cdef["required"].remove(slot.name)
                 prohibited += 1
+
+    rule_prohibited = 0
+    for cname, cdef in schema.get("$defs", {}).items():
+        if cname not in sv.all_classes():
+            continue
+        allof = cdef.get("allOf")
+        rules = getattr(sv.get_class(cname), "rules", None)
+        if not allof or not rules:
+            continue
+        for branch, rule in zip(allof, rules):
+            postconditions = getattr(rule, "postconditions", None)
+            slot_conditions = getattr(postconditions, "slot_conditions", None) \
+                if postconditions else None
+            if not slot_conditions:
+                continue
+            for slot_name, cond in dict(slot_conditions).items():
+                if getattr(cond, "maximum_cardinality", None) != 0:
+                    continue
+                for branch_key in ("then", "else"):
+                    sub = branch.get(branch_key)
+                    if not sub:
+                        continue
+                    if slot_name in sub.get("properties", {}):
+                        sub["properties"][slot_name] = False
+                    if slot_name in sub.get("required", []):
+                        sub["required"].remove(slot_name)
+                        rule_prohibited += 1
 
     nulls = 0
     def _strip(node):
@@ -770,6 +808,7 @@ def emit_json_schema(snapshot_path: str, out_path: str, root: str,
     if report:
         report.note(f"json schema written: {out_path} "
                     f"(closed={closed}, {prohibited} prohibited properties "
+                    f"enforced, {rule_prohibited} rule-scoped prohibitions "
                     f"enforced, {nulls} null alternatives removed)")
 
 

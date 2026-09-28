@@ -35,56 +35,119 @@ classes:
         maximum_cardinality: 0
 
   ItemGroup:
-    slot_usage:
-      purpose:
-        equals_string: Tabulation
-      name:
-        # Domains, split/associated-persons/supplemental datasets, RELREC/RELSUB,
-        # plus value-list slices (VL_...), which are ItemGroups too.
-        pattern: "^(SUPP[A-Z][A-Z0-9]|SQAP[A-Z][A-Z0-9]|AP[A-Z][A-Z0-9]|RELREC|RELSUB|[A-Z][A-Z0-9]{1,3}|VL_.+)$"
     rules:
       - description: >-
-          Dataset-level SDTM groups (purpose = Tabulation) must carry domain,
-          class, structure, and key sequence; value-list slices have no purpose
-          and are therefore not subject to this rule.
+          Dataset-level ItemGroups (not ValueList slices) must declare Domain,
+          Structure, KeySequence, and Observation Class.
         preconditions:
           slot_conditions:
-            purpose:
-              equals_string: Tabulation
+            type:
+              none_of:
+                - equals_string: ValueList
         postconditions:
           slot_conditions:
+            name:
+              pattern: "^(SUPP[A-Z][A-Z0-9]|SQAP[A-Z][A-Z0-9]|AP[A-Z][A-Z0-9]|RELREC|RELSUB|[A-Z][A-Z0-9]{1,3})$"
+            purpose:
+              pattern: "^Tabulation$"
             domain:
               required: true
-              pattern: "^[A-Z][A-Z0-9]$"
-            observationClass:
-              required: true
-            structure:
-              required: true
-            keySequence:
-              required: true
-              minimum_cardinality: 1
-
-  DefClass:
-    slot_usage:
-      name:
-        pattern: "^(EVENTS|FINDINGS|FINDINGS ABOUT|INTERVENTIONS|SPECIAL PURPOSE|TRIAL DESIGN|RELATIONSHIP|STUDY REFERENCE)$"
+              pattern: "^(SUPP[A-Z][A-Z0-9]|SQAP[A-Z][A-Z0-9]|AP[A-Z][A-Z0-9]|RELREC|RELSUB|[A-Z][A-Z0-9]{1,3})$"
 
   Item:
     slot_usage:
       role:
-        range: string                          # collapse string/TranslatedText
+        range: string                          
         pattern: "^(Identifier|Topic|Timing|Grouping Qualifier|Result Qualifier|Synonym Qualifier|Record Qualifier|Variable Qualifier|Rule)$"
 
+  Origin:
+    rules:
+      - description: Source limited to collected origins.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: Collected
+        postconditions:
+          slot_conditions:
+            source:
+              any_of:
+                - equals_string: Subject
+                - equals_string: Investigator
+                - equals_string: Vendor
+
+      - description: Source limited to assigned and derived origins.
+        preconditions:
+          slot_conditions:
+            type:
+              any_of:
+                - equals_string: Assigned
+                - equals_string: Derived
+        postconditions:
+          slot_conditions:
+            source:
+              any_of:
+                - equals_string: Sponsor
+                - equals_string: Vendor
+
+      - description: Source limited to protocol origins.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: Protocol
+        postconditions:
+          slot_conditions:
+            source:
+              equals_string: Sponsor
+
   Standard:
+    rules:
+      - description: Publishing set is required for IG type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: IG
+        postconditions:
+          slot_conditions:
+            name:
+              any_of:
+                - equals_string: SDTMIG
+                - equals_string: SDTMIG-AP
+                - equals_string: SDTMIG-MD
+            version:
+              pattern: "^\\d+\\.\\d+(\\.\\d+)?$"
+
+      - description: Publishing set is required for CT type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: CT
+        postconditions:
+          slot_conditions:
+            publishingSet:
+              any_of:
+                - equals_string: DEFINE-XML
+                - equals_string: SDTM
+
+  DefClass:
     slot_usage:
       name:
-        range: SdtmStandardName
+        maximum_cardinality: 1
+        range: SdtmDefClassNameEnum
+      subClasses:
+        maximum_cardinality: 0
 
 enums:
-  SdtmStandardName:
-    description: Standards that may appear in an SDTM Define-XML.
+
+  SdtmDefClassNameEnum:
+    description: Class names permitted in Define-XML v2.1.
     permissible_values:
-      SDTMIG: {}
-      SDTMIG-AP: {}
-      SDTMIG-MD: {}
-      CDISC/NCI: {}
+      EVENTS: {}
+      FINDINGS ABOUT: {}
+      FINDINGS: {}
+      INTERVENTIONS: {}
+      RELATIONSHIP: {}
+      SPECIAL PURPOSE: {}
+      STUDY REFERENCE: {}
+      TRIAL DESIGN: {}
+
+      

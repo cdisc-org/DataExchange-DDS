@@ -28,33 +28,34 @@ annotations:
 
 classes:
 
-  ItemGroup:
+  MetaDataVersion:            
     slot_usage:
-      purpose:
-        equals_string: Analysis
-      name:
-        pattern: "^(AD[A-Z0-9]{1,6}|VL_.+)$"
-      domain:
-        maximum_cardinality: 0                 # def:Domain is not used for ADaM
-      isReferenceData:
-        maximum_cardinality: 0                 # analysis datasets are never reference data
+      annotatedCRFs:
+        maximum_cardinality: 0
+
+  ItemGroup:
     rules:
-      - description: Analysis datasets must carry class and structure.
+      - description: >-
+          Dataset-level ItemGroups (not ValueList slices) must declare Domain,
+          Structure, KeySequence, and Observation Class.
         preconditions:
           slot_conditions:
-            purpose:
-              equals_string: Analysis
+            type:
+              none_of:
+                - equals_string: ValueList
         postconditions:
           slot_conditions:
+            name:
+              pattern: "^AD[A-Z0-9]{1,6}$"
+            purpose:
+              pattern: "^Analysis$"
+            domain:
+              maximum_cardinality: 0
+            isReferenceData:
+              maximum_cardinality: 0 
             observationClass:
-              required: true
-            structure:
-              required: true
-
-  DefClass:
-    slot_usage:
-      name:
-        pattern: "^(SUBJECT LEVEL ANALYSIS DATASET|BASIC DATA STRUCTURE|OCCURRENCE DATA STRUCTURE|ADAM OTHER)$"
+            observationClass:
+              range: DefClassNameEnum
 
   Item:
     slot_usage:
@@ -62,33 +63,53 @@ classes:
         maximum_cardinality: 0                 # Role is not used for ADaM
       roleCodeList:
         maximum_cardinality: 0
+      isNonStandard:
+        maximum_cardinality: 0                 # IsODMStandard (standard, isNonStandard) is not used for ADaM
 
   Origin:
     slot_usage:
       type:
         range: AdamOriginType                  # narrows the parent's DefineOriginType
     rules:
-      - description: Predecessor origins must identify their source item(s).
+      - description: Source limited to assigned and derived origins.
         preconditions:
           slot_conditions:
             type:
-              equals_string: Predecessor
+              any_of:
+                - equals_string: Assigned
+                - equals_string: Derived
         postconditions:
           slot_conditions:
-            sourceItems:
-              required: true
-              minimum_cardinality: 1
+            source:
+              range: AssignedDerivedSource
 
   Standard:
-    slot_usage:
-      name:
-        range: AdamStandardName
+    rules:
+      - description: Publishing set is required for IG type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: IG
+        postconditions:
+          slot_conditions:
+            name:
+              range: AdamStandardName
+
+      - description: Publishing set is required for CT type standards.
+        preconditions:
+          slot_conditions:
+            type:
+              equals_string: CT
+        postconditions:
+          slot_conditions:
+            publishingSet:
+              range: AdamPublishingSet
 
   Analysis:
     slot_usage:
       inputData:
         required: true
-        minimum_cardinality: 1                 # every analysis names its input datasets
+        minimum_cardinality: 1                 
 
 enums:
   AdamOriginType:
@@ -103,3 +124,28 @@ enums:
     permissible_values:
       ADaMIG: {}
       CDISC/NCI: {}
+
+  AdamPublishingSet:
+    description: Publishing sets that may appear in an ADaM Define-XML.
+    permissible_values:
+      DEFINE-XML: {}
+      ADaM: {}
+
+  AssignedDerivedSource:
+    description: Types of assigned and derived origins.
+    permissible_values:
+      Sponsor: { meaning: NCIT:C70793 }
+
+  DefClassNameEnum:
+    description: Class names permitted in Define-XML v2.1.
+    permissible_values:
+      BASIC DATA STRUCTURE: {}
+      MEDICAL DEVICE BASIC DATA STRUCTURE: {}
+      OCCURRENCE DATA STRUCTURE: {}
+      SUBJECT LEVEL ANALYSIS DATASET: {}
+      ADAM OTHER: {}
+      DEVICE LEVEL ANALYSIS DATASET: {}
+      MEDICAL DEVICE OCCURRENCE DATA STRUCTURE: {}
+      REFERENCE DATA STRUCTURE: {}
+
+
