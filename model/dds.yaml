@@ -1074,8 +1074,17 @@ classes:
       expression:
         description: >-
           The actual text of the formal expression (renamed from 'code' for disambiguation).
+          Exactly one of expression or externalCodeLib is present.
         aliases: [code]
-        required: true
+        required: false
+      externalCodeLib:
+        description: >-
+          Reference to an implementation in an external code library, used instead of inline code.
+          Exactly one of expression or externalCodeLib is present.
+        exact_mappings:
+          - odm:ExternalCodeLib
+        range: ExternalCodeLib
+        inlined: true
       returnType:
         description: Return type of the expression
       parameters:
@@ -1091,6 +1100,50 @@ classes:
         description: External code libraries referenced
         range: Resource
         multivalued: true
+        deprecated: >-
+          Use externalCodeLib. ODM v2.0 allows one ExternalCodeLib per FormalExpression.
+    exactly_one_of:
+      - slot_conditions:
+          expression:
+            required: true
+      - slot_conditions:
+          externalCodeLib:
+            required: true
+
+  ExternalCodeLib:
+    description: >-
+      A reference to a routine in an external code library that implements a formal expression.
+    exact_mappings:
+      - odm:ExternalCodeLib
+    mixins:
+      - Versioned
+    attributes:
+      library:
+        description: Name of the code library, e.g. sdtm.oak
+        required: true
+      method:
+        description: Routine within the library, e.g. derive_study_day
+      ref:
+        description: Reference into the library, such as a file path or anchor
+
+  MethodSignature:
+    description: >-
+      The inputs and outputs of a Method: its named, typed and ordered parameters and return values.
+    exact_mappings:
+      - odm:MethodSignature
+    attributes:
+      parameters:
+        description: Inputs of the method
+        range: Parameter
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      returnValues:
+        description: Outputs of the method
+        range: ReturnValue
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
 
   Method:
     description: >-
@@ -1110,6 +1163,11 @@ classes:
         description: >-
           The type of method e.g. Computation, Imputation, Transformation.
         range: MethodType
+      signature:
+        description: >-
+          Parameters and return values of this method. The signature governs its expressions.
+        range: MethodSignature
+        inlined: true
       expressions:
         description: >-
           Formal expressions used by this method
@@ -1158,6 +1216,9 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
+      parameter:
+        description: >-
+          Name of the parameter, in the signature of the owning item's method, that this source item feeds.
 
   Parameter:
     description: >-
@@ -1227,6 +1288,10 @@ classes:
           containing expression is evaluated (technical constraint).
         range: boolean
         ifabsent: 'False'
+      orderNumber:
+        description: Position of the parameter in its method signature, starting at 1
+        range: integer
+        minimum_value: 1
 
   ReturnValue:
     description: >-
@@ -1241,6 +1306,10 @@ classes:
         description: >-
           A list of possible return values.
         multivalued: true
+      orderNumber:
+        description: Position of the return value in its method signature, starting at 1
+        range: integer
+        minimum_value: 1
 
   Origin:
     description: >-
@@ -2210,6 +2279,27 @@ enums:
       durationDatetime:
         description: >-
           ISO 8601 duration value representing a span of time (e.g., P1Y2M3DT4H5M6S).
+      partialDate:
+        description: >-
+          ISO 8601 date, possibly with right-truncated components (e.g., 2026, 2026-11).
+      partialTime:
+        description: >-
+          ISO 8601 time, possibly with right-truncated components (e.g., 14, 14:30).
+      partialDatetime:
+        description: >-
+          ISO 8601 date and time, possibly with right-truncated components (e.g., 2026-11-19T14).
+      intervalDatetime:
+        description: >-
+          ISO 8601 time interval (e.g., 2026-11-01/2026-11-19).
+      incompleteDatetime:
+        description: >-
+          ISO 8601 date and time with missing components marked by a hyphen (e.g., 2026---19T14:30:-).
+      incompleteDate:
+        description: >-
+          ISO 8601 date with missing components marked by a hyphen (e.g., 2026---19).
+      incompleteTime:
+        description: >-
+          ISO 8601 time with missing components marked by a hyphen (e.g., 14:-:30).
 
   OriginType:
     description: >-
