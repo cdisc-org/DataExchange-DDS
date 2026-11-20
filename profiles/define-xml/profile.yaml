@@ -367,6 +367,15 @@ classes:
       externalCodeLibs:
         maximum_cardinality: 0
 
+  Parameter:
+    # Reachable through Method.signature (MethodSignature.parameters). Define-XML 2.1 has no
+    # MethodSignature, so generators drop the signature; these keep it inside the profile's classes.
+    slot_usage:
+      items:
+        range: Item
+      conceptProperty:
+        maximum_cardinality: 0
+
   CodeList:
     slot_usage:
       dataType:

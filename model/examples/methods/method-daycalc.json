@@ -1,0 +1,117 @@
+{
+  "OID": "MDV.EXAMPLE.METHODS",
+  "name": "Methods example",
+  "fileOID": "DDS.EXAMPLE.METHODS",
+  "creationDateTime": "2026-11-19T00:00:00Z",
+  "odmVersion": "2.0",
+  "fileType": "Snapshot",
+  "studyOID": "ODM.EXAMPLE",
+  "studyName": "EXAMPLE",
+  "itemGroups": [
+    {
+      "OID": "IG.AE",
+      "name": "AE",
+      "domain": "AE",
+      "items": [
+        {
+          "OID": "IT.AE.AESTDTC",
+          "name": "AESTDTC",
+          "dataType": "partialDatetime",
+          "origin": [
+            {
+              "type": "Collected",
+              "source": "Investigator"
+            }
+          ]
+        },
+        {
+          "OID": "IT.AE.AESTDY",
+          "name": "AESTDY",
+          "dataType": "integer",
+          "method": "MT.DAYCALC",
+          "origin": [
+            {
+              "type": "Derived",
+              "source": "Sponsor",
+              "sourceItems": [
+                {
+                  "item": "IT.AE.AESTDTC",
+                  "parameter": "DTC"
+                },
+                {
+                  "item": "IT.DM.RFSTDTC",
+                  "parameter": "RFSTDTC"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "OID": "IG.DM",
+      "name": "DM",
+      "domain": "DM",
+      "items": [
+        {
+          "OID": "IT.DM.RFSTDTC",
+          "name": "RFSTDTC",
+          "dataType": "partialDatetime",
+          "origin": [
+            {
+              "type": "Derived",
+              "source": "Sponsor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "OID": "MT.DAYCALC",
+      "name": "Algorithm to derive --DY",
+      "type": "Computation",
+      "description": "Study day relative to RFSTDTC. Date - RFSTDTC + 1 if on or after RFSTDTC. Date - RFSTDTC if date precedes RFSTDTC.",
+      "signature": {
+        "parameters": [
+          {
+            "OID": "PA.DAYCALC.DTC",
+            "name": "DTC",
+            "dataType": "partialDatetime",
+            "description": "Date of the observation (--DTC, --STDTC or --ENDTC)",
+            "orderNumber": 1
+          },
+          {
+            "OID": "PA.DAYCALC.RFSTDTC",
+            "name": "RFSTDTC",
+            "dataType": "partialDatetime",
+            "description": "Subject reference start date from DM",
+            "orderNumber": 2
+          }
+        ],
+        "returnValues": [
+          {
+            "OID": "RV.DAYCALC.DY",
+            "name": "DY",
+            "dataType": "integer",
+            "description": "Study day of the observation",
+            "orderNumber": 1
+          }
+        ]
+      },
+      "expressions": [
+        {
+          "OID": "FE.DAYCALC.1",
+          "context": "R (sdtm.oak 0.2.0)",
+          "externalCodeLib": {
+            "library": "sdtm.oak",
+            "method": "derive_study_day",
+            "version": "0.2.0",
+            "href": "https://pharmaverse.github.io/sdtm.oak/reference/derive_study_day.html"
+          }
+        }
+      ]
+    }
+  ]
+}
