@@ -53,9 +53,6 @@ classes:
               maximum_cardinality: 0
             isReferenceData:
               maximum_cardinality: 0 
-            observationClass:
-            observationClass:
-              range: DefClassNameEnum
 
   Item:
     slot_usage:
@@ -81,9 +78,10 @@ classes:
         postconditions:
           slot_conditions:
             source:
-              range: AssignedDerivedSource
+              equals_string: Sponsor
 
   Standard:
+    rules:
     rules:
       - description: Publishing set is required for IG type standards.
         preconditions:
@@ -93,7 +91,11 @@ classes:
         postconditions:
           slot_conditions:
             name:
-              range: AdamStandardName
+              any_of:
+                - equals_string: ADaMIG
+                - equals_string: ADaMIG-MD
+            version:
+              pattern: "^\\d+\\.\\d+(\\.\\d+)?$"
 
       - description: Publishing set is required for CT type standards.
         preconditions:
@@ -103,13 +105,22 @@ classes:
         postconditions:
           slot_conditions:
             publishingSet:
-              range: AdamPublishingSet
+              any_of:
+                - equals_string: DEFINE-XML
+                - equals_string: SDTM
+                - equals_string: ADaM
 
   Analysis:
     slot_usage:
       inputData:
         required: true
-        minimum_cardinality: 1                 
+        minimum_cardinality: 1       
+
+  DefClass:
+    slot_usage:
+      name:
+        maximum_cardinality: 1
+        range: AdamDefClassNameEnum
 
 enums:
   AdamOriginType:
@@ -119,24 +130,7 @@ enums:
       Derived:     { meaning: NCIT:C170549 }
       Predecessor: { meaning: NCIT:C170550 }
 
-  AdamStandardName:
-    description: Standards that may appear in an ADaM Define-XML.
-    permissible_values:
-      ADaMIG: {}
-      CDISC/NCI: {}
-
-  AdamPublishingSet:
-    description: Publishing sets that may appear in an ADaM Define-XML.
-    permissible_values:
-      DEFINE-XML: {}
-      ADaM: {}
-
-  AssignedDerivedSource:
-    description: Types of assigned and derived origins.
-    permissible_values:
-      Sponsor: { meaning: NCIT:C70793 }
-
-  DefClassNameEnum:
+  AdamDefClassNameEnum:
     description: Class names permitted in Define-XML v2.1.
     permissible_values:
       BASIC DATA STRUCTURE: {}
